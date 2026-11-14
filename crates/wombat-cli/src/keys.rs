@@ -66,13 +66,76 @@ fn restrict_permissions(path: &Path) -> Result<(), CliError> {
     })
 }
 
-/// DECISIÓN: en Windows el CLI **no** toca los permisos y lo dice.
+/// En Windows, equivalente a 0600: elimina la herencia de permisos y otorga
+/// acceso total exclusivamente al usuario actual, usando `icacls`.
 ///
-/// El equivalente real de 0600 en NTFS es reescribir la ACL del archivo, que
-/// desde Rust puro significa llamar a la API de Windows. Poner el atributo
-/// de solo lectura no restringe a nadie: lo único que hace es sugerir que la
-/// clave está protegida cuando no lo está. Preferimos el aviso a la ilusión.
-#[cfg(not(unix))]
+/// IMPLEMENTACIÓN (prototipo): se invoca `icacls` via `std::process::Command`.
+/// Es el camino más portable sin añadir crates adicionales (windows-acl, winapi).
+/// Para producción debería usarse `SetNamedSecurityInfoW` directamente.
+///
+/// El comando es:
+///   icacls <ruta> /inheritance:r /grant:r <USERNAME>:F
+///
+/// `/inheritance:r` elimina todas las ACEs heredadas del directorio padre.
+/// `/grant:r` reemplaza los permisos del usuario (en lugar de agregar).
+/// `:F` = Full Control solo para ese usuario.
+///
+/// Si `icacls` no está disponible o falla, el CLI emite un aviso pero no
+/// aborta: el archivo ya fue escrito y la clave sigue siendo funcional.
+#[cfg(target_os = "windows")]
+fn restrict_permissions(path: &Path) -> Result<(), CliError> {
+    // Resolvemos a una ruta absoluta para pasarla a icacls sin ambigüedad.
+    let abs = path
+        .canonicalize()
+        .unwrap_or_else(|_| path.to_path_buf());
+
+    // Obtenemos el nombre de usuario del entorno; fallamos silenciosamente si
+    // no está disponible (no queremos abortar una generación de clave por esto).
+    let username = std::env::var("USERNAME").unwrap_or_else(|_| std::env::var("USER").unwrap_or_default());
+    if username.is_empty() {
+        eprintln!(
+            "ATENCIÓN: no se pudo determinar el usuario actual; \
+             los permisos del archivo de clave no fueron endurecidos."
+        );
+        return Ok(());
+    }
+
+    // icacls <ruta> /inheritance:r /grant:r <user>:F
+    let status = std::process::Command::new("icacls")
+        .arg(&abs)
+        .arg("/inheritance:r")
+        .arg("/grant:r")
+        .arg(format!("{username}:F"))
+        .status();
+
+    match status {
+        Ok(s) if s.success() => Ok(()),
+        Ok(s) => {
+            eprintln!(
+                "ATENCIÓN: icacls terminó con código {código}; \
+                 los permisos del archivo de clave pueden no estar endurecidos. \
+                 Ejecutá manualmente: icacls \"{ruta}\" /inheritance:r /grant:r {usuario}:F",
+                código = s.code().unwrap_or(-1),
+                ruta = abs.display(),
+                usuario = username,
+            );
+            Ok(())
+        }
+        Err(e) => {
+            eprintln!(
+                "ATENCIÓN: no se pudo ejecutar icacls ({e}); \
+                 los permisos del archivo de clave no fueron endurecidos. \
+                 Ejecutá manualmente: icacls \"{ruta}\" /inheritance:r /grant:r {usuario}:F",
+                ruta = abs.display(),
+                usuario = username,
+            );
+            Ok(())
+        }
+    }
+}
+
+/// En sistemas que no son Unix ni Windows (ej. WASI, bare-metal), no hacemos nada.
+#[cfg(all(not(unix), not(target_os = "windows")))]
 fn restrict_permissions(_path: &Path) -> Result<(), CliError> {
     Ok(())
 }
@@ -81,9 +144,12 @@ fn restrict_permissions(_path: &Path) -> Result<(), CliError> {
 pub fn permissions_note() -> &'static str {
     if cfg!(unix) {
         "permisos 0600 (solo tu usuario)"
-    } else {
-        "ATENCIÓN: en Windows este archivo hereda los permisos de su carpeta. \
+    } else if cfg!(target_os = "windows") {
+        "permisos endurecidos via icacls (herencia eliminada, acceso solo para tu usuario). \
          Guardalo fuera de carpetas sincronizadas (OneDrive, Dropbox) y fuera de cualquier repo"
+    } else {
+        "ATENCIÓN: en este sistema no se aplicaron permisos restrictivos. \
+         Protegé manualmente el archivo de clave."
     }
 }
 
