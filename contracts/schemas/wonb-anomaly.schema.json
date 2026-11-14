@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WONB Anomaly",
+  "description": "WONB de anomalía geoespacial (desplazamiento superficial simulado)",
+  "type": "object",
+  "required": [
+    "spec_version", "id", "type", "schema", "source", "payload",
+    "provenance", "routing", "evidence_refs", "signature"
+  ],
+  "properties": {
+    "spec_version": { "const": "wombat/0.1" },
+    "id": { "type": "string", "pattern": "^wonb:anomaly:" },
+    "type": { "const": "anomaly" },
+    "schema": { "type": "string" },
+    "source": {
+      "type": "object",
+      "required": ["provider", "adapter", "source_ref"],
+      "properties": {
+        "provider": { "type": "string" },
+        "adapter": { "type": "string" },
+        "source_ref": { "type": "string" }
+      }
+    },
+    "payload": {},
+    "provenance": {
+      "type": "object",
+      "required": ["created_at", "created_by", "confidence", "data_hash", "rule_version"],
+      "properties": {
+        "created_at": { "type": "string", "format": "date-time" },
+        "created_by": { "type": "string" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "data_hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+        "rule_version": { "type": "string" }
+      }
+    },
+    "routing": {
+      "type": "object",
+      "required": ["topic", "ttl_seconds", "priority"],
+      "properties": {
+        "topic": { "type": "string", "pattern": "^wombat/" },
+        "ttl_seconds": { "type": "integer", "minimum": 1 },
+        "priority": { "enum": ["low", "medium", "high"] }
+      }
+    },
+    "evidence_refs": { "type": "array", "items": { "type": "string" } },
+    "signature": { "type": "string" }
+  },
+  "additionalProperties": false
+}

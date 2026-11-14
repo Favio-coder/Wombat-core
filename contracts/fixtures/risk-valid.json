@@ -1,0 +1,38 @@
+{
+  "spec_version": "wombat/0.1",
+  "id": "wonb:risk:demo-001",
+  "type": "risk",
+  "schema": "risk.landslide/1.0",
+  "source": {
+    "provider": "demo-risk-adapter",
+    "adapter": "wombat-risk-agent",
+    "source_ref": "simulated-risk-evaluation"
+  },
+  "payload": {
+    "level": "high",
+    "score": 0.89,
+    "factors": ["surface-displacement", "steep-slope", "informal-settlement"],
+    "references": {
+      "anomaly_id": "wonb:anomaly:demo-001",
+      "context_id": "wonb:context:demo-001"
+    },
+    "note": "REGLA DEMOSTRATIVA, NO MODELO CIENTÍFICO OPERACIONAL"
+  },
+  "provenance": {
+    "created_at": "2027-01-15T12:10:00Z",
+    "created_by": "did:wombat:node-demo",
+    "confidence": 0.89,
+    "data_hash": "sha256:placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-",
+    "rule_version": "landslide-rule/0.1"
+  },
+  "routing": {
+    "topic": "wombat/lima/costa-verde/risk",
+    "ttl_seconds": 3600,
+    "priority": "high"
+  },
+  "evidence_refs": [
+    "wonb:anomaly:demo-001",
+    "wonb:context:demo-001"
+  ],
+  "signature": ""
+}

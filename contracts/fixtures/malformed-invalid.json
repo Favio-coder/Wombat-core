@@ -1,0 +1,26 @@
+{
+  "spec_version": "wombat/0.1",
+  "id": "wonb:anomaly:malformed-001",
+  "type": "anomaly",
+  "schema": "geospatial.surface-displacement/1.0",
+  "source": {
+    "provider": "",
+    "adapter": "",
+    "source_ref": ""
+  },
+  "payload": {},
+  "provenance": {
+    "created_at": "",
+    "created_by": "",
+    "confidence": 0.5,
+    "data_hash": "",
+    "rule_version": ""
+  },
+  "routing": {
+    "topic": "",
+    "ttl_seconds": 0,
+    "priority": "low"
+  },
+  "evidence_refs": [],
+  "signature": ""
+}
