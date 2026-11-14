@@ -1,4 +1,16 @@
 {
+  "_readme": "DEMO / DEV CONFIG — replace or extend before any production use. Run `wombat keygen` to generate a real keypair, then add the printed public key as a new entry in `issuers` with the roles you need. The entry below uses the fixture demo key whose private seed was intentionally discarded (R19); it can sign the piura-demo fixture bundles but NOT any new bundle.",
   "version": 1,
-  "issuers": []
+  "issuers": [
+    {
+      "issuer": "ed25519:92b8169774b5f100de3f37b5ec63b9a10100ae6d1983c4bbdc9b9e7ca6f014be",
+      "name": "wombat-fixture-demo (clave privada descartada — solo para verificar el bundle piura-demo/v0)",
+      "roles": [
+        "change",
+        "context",
+        "risk",
+        "action"
+      ]
+    }
+  ]
 }
