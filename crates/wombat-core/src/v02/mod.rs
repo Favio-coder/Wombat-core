@@ -12,17 +12,34 @@
 //! | TTL | `ttl_seconds` relativo | `valid_until` absoluto |
 //! | Confianza del emisor | clave suelta | `trusted-issuers.json` + roles |
 //!
-//! **R14: solo Rust firma.** Este módulo puede firmar, pero no escribe ni lee
-//! claves privadas en disco: la clave se pasa en memoria y en los tests se
-//! genera al vuelo.
+//! Camino normal de uso:
+//!
+//! ```no_run
+//! use wombat_core::v02::{Block, TrustedIssuers};
+//!
+//! let block = Block::from_json(&std::fs::read_to_string("wonb/change.json")?)?;
+//! let trusted = TrustedIssuers::from_json(&std::fs::read_to_string("trusted-issuers.json")?)?;
+//! block.verify(Some("2026-11-14T17:00:00Z"), &trusted)?;
+//! # Ok::<(), Box<dyn std::error::Error>>(())
+//! ```
+//!
+//! **R14: solo Rust firma.** Este módulo puede firmar ([`Block::seal`]), pero no
+//! escribe ni lee claves privadas en disco: la clave se pasa en memoria y en los
+//! tests se genera al vuelo.
 
+pub mod chain;
 pub mod envelope;
 pub mod error;
 pub mod payload;
+pub mod sign;
+pub mod trusted;
 
+pub use chain::verify_chain;
 pub use envelope::{Block, BlockBody, BlockType, Provenance, Source, WONB_VERSION};
 pub use error::WonbError;
 pub use payload::{
     ActionKind, ActionPayload, ChangePayload, ComponentsBp, ContextPayload, DataOrigin, Frequency,
     OperaStatus, OverlayHashes, Payload, RiskMetrics, RiskPayload, RiskStatus,
 };
+pub use sign::{generate_ephemeral_keypair, issuer_string};
+pub use trusted::{TrustedIssuer, TrustedIssuers};

@@ -304,7 +304,7 @@ fn join_path(path: &str, key: &str) -> String {
 }
 
 #[cfg(test)]
-mod tests {
+pub(crate) mod tests {
     use super::*;
 
     /// Un bloque `context` mínimo y bien formado, en JSON.
