@@ -1,7 +1,8 @@
 //! Punto de entrada del nodo WOMBAT.
 //!
 //! Comandos:
-//!   wombat-node run                -> inicia el nodo P2P (modo demo por defecto)
+//!   wombat-node run --demo         -> modo local sin red
+//!   cargo run -p wombat-node --features p2p -- run -> P2P TCP/GossipSub
 //!   wombat-node publish --file ... -> publica un WONB desde JSON
 //!   wombat-node validate --file ...-> valida un WONB sin publicarlo
 
@@ -16,6 +17,8 @@ use crate::config::{Cli, Commands, NodeConfig};
 
 mod behaviour;
 mod config;
+#[cfg(feature = "p2p")]
+mod p2p;
 
 fn init_tracing() {
     tracing_subscriber::fmt()
@@ -31,15 +34,15 @@ async fn run_cmd(config: NodeConfig) -> Result<()> {
         info!("Modo demo local: sin red P2P. Usa publish/validate para probar.");
         return Ok(());
     }
-    info!(
-        "Modo demo activo: sin red P2P. Topics configurados: {:?}",
-        config.topics
-    );
-    info!(
-        "Para conectar peers reales, habilite la característica `p2p` con libp2p \
-         y configure Multiaddrs. Ver docs/demo-runbook.md."
-    );
-    Ok(())
+    #[cfg(feature = "p2p")]
+    {
+        p2p::run(config).await
+    }
+    #[cfg(not(feature = "p2p"))]
+    {
+        let _ = config;
+        anyhow::bail!("modo P2P no disponible: recompila con `--features p2p`")
+    }
 }
 
 async fn publish_cmd(file: std::path::PathBuf) -> Result<()> {
@@ -80,11 +83,23 @@ async fn main() -> Result<()> {
     let cli = Cli::parse();
 
     match cli.command {
-        Commands::Run { listen, demo } => {
+        Commands::Run {
+            listen,
+            demo,
+            peers,
+            topics,
+            publish,
+            trusted_issuers,
+            timeout_secs,
+        } => {
             let config = NodeConfig {
                 listen_addr: listen,
                 demo,
-                ..NodeConfig::default()
+                peers,
+                topics,
+                publish,
+                trusted_issuers,
+                timeout_secs,
             };
             run_cmd(config).await
         }
@@ -99,6 +114,9 @@ async fn main() -> Result<()> {
 
 #[cfg(test)]
 mod tests {
+    use std::path::PathBuf;
+
+    use super::*;
     use crate::config::{DEFAULT_TOPICS, TOPIC_PREFIX};
 
     #[test]
@@ -106,5 +124,29 @@ mod tests {
         for t in DEFAULT_TOPICS {
             assert!(t.starts_with(TOPIC_PREFIX));
         }
+    }
+
+    #[tokio::test]
+    async fn demo_returns_without_starting_p2p() {
+        run_cmd(NodeConfig {
+            demo: true,
+            ..NodeConfig::default()
+        })
+        .await
+        .unwrap();
+    }
+
+    #[cfg(not(feature = "p2p"))]
+    #[tokio::test]
+    async fn real_mode_without_feature_returns_clear_error() {
+        let error = run_cmd(NodeConfig::default()).await.unwrap_err();
+        assert!(error.to_string().contains("--features p2p"));
+    }
+
+    #[tokio::test]
+    async fn isolated_publish_command_is_only_local_validation() {
+        let file = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("../../contracts/fixtures/anomaly-valid.json");
+        publish_cmd(file).await.unwrap();
     }
 }

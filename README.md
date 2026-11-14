@@ -8,7 +8,7 @@ El MVP usa **Rust + Tokio + libp2p** como nodo P2P, con **Python** para un futur
 adaptador geoespacial, **TypeScript/React** para el futuro dashboard y agente de
 riesgo, y **Raspberry Pi** como futuro nodo edge.
 
-> ⚠️ Estado: núcleo, contratos compartidos, pruebas y estructura de integración.
+> ⚠️ Estado: núcleo, contratos compartidos, modo P2P TCP/GossipSub local, pruebas y estructura de integración.
 > No incluye dashboard completo, procesamiento SAR real, integración NISAR real ni
 > GPIO de Raspberry. Los valores NISAR de los fixtures son **simulados para la
 > demo**.
@@ -45,7 +45,7 @@ adaptadores conectarán fuentes y herramientas locales (no implementados todaví
 
 ## Requisitos
 
-- Rust toolchain estable (1.78+). Verificado con `rustc 1.98.1`.
+- Rust toolchain estable (1.88+ para el modo P2P libp2p 0.57.1).
 - `cargo` y `clang`/`gcc` (libp2p compila código nativo).
 - Opcional: Docker y Docker Compose para la demo local.
 
@@ -62,6 +62,10 @@ cargo clippy --workspace -- -D warnings
 
 # Pruebas automatizadas (criterio de aceptación #1)
 cargo test --workspace
+
+# Validar también transporte TCP/GossipSub opcional
+cargo clippy --workspace --all-features -- -D warnings
+cargo test --workspace --all-features
 
 # Construir el nodo
 cargo build --workspace
@@ -90,8 +94,9 @@ python scripts/verify_all.py --quick    # sin cargo fmt, clippy ni test
 
 ## Levantar dos nodos locales
 
-El nodo está en **modo demo local** por defecto: no abre red P2P hasta que la
-infra de libp2p esté lista. Para validar el flujo entre dos nodos sin red:
+El nodo conserva un **modo demo local sin red**. El modo P2P real requiere
+compilar con `--features p2p`, TCP en loopback y una dirección del peer explícita;
+no usa mDNS, DNS, WebSocket, QUIC ni servicios externos.
 
 1. Terminal 1 — nodo A en modo demo:
    ```bash
@@ -104,23 +109,50 @@ infra de libp2p esté lista. Para validar el flujo entre dos nodos sin red:
      contracts/fixtures/anomaly-valid.json
    ```
 
-3. Publicar el fixture desde cualquier terminal:
-   ```bash
-   cargo run -p wombat-node -- publish --file \
-     contracts/fixtures/anomaly-valid.json
-   ```
+3. El subcomando `publish` solo valida e imprime el bloque localmente; no
+   transmite porque no comparte el Swarm de un proceso `run`.
 
-Cuando la red P2P esté habilitada, cada nodo escuchará en
-`/ip4/0.0.0.0/tcp/<puerto>` y se conectarán intercambiando sus `Multiaddr`
-(libp2p identify). El comando para conectar peers es:
+### Dos nodos reales en loopback
+
+Primero inicia el publicador A. Anota el PeerId y la multiaddr que imprime; el
+proceso esperará a que un peer remoto se suscriba al topic antes de publicar:
 
 ```bash
-# Ejemplo ilustrativo (requiere libp2p completo habilitado):
-# wombat-node run --listen /ip4/0.0.0.0/tcp/9000
-# Luego, desde el otro nodo:
-# libp2p identify /ip4/<IP_A>/tcp/9000/p2p/<PEER_ID_A>
+cargo run -p wombat-node --features p2p -- run \
+  --listen /ip4/127.0.0.1/tcp/9000 \
+  --topic wombat/pe/piura/piura-demo/change \
+  --trusted-issuers contracts/v1/fixtures/bundle/piura-demo/v0/trusted-issuers.json \
+  --publish contracts/v1/fixtures/bundle/piura-demo/v0/wonb/change.json \
+  --timeout-secs 60
 ```
 
+En una segunda terminal inicia B. Reemplaza `<PEER_ID_A>` por el PeerId impreso
+por A:
+
+```bash
+cargo run -p wombat-node --features p2p -- run \
+  --listen /ip4/127.0.0.1/tcp/9001 \
+  --peer /ip4/127.0.0.1/tcp/9000/p2p/<PEER_ID_A> \
+  --topic wombat/pe/piura/piura-demo/change \
+  --trusted-issuers contracts/v1/fixtures/bundle/piura-demo/v0/trusted-issuers.json \
+  --timeout-secs 60
+```
+
+La demo se considera exitosa cuando B registra recepción del mismo ID WONB,
+topic y peer de origen. GossipSub no almacena mensajes históricos ni ofrece ACK
+de aplicación: el resultado solo puede verificarse mientras B está conectado y
+antes del timeout. Ambos nodos validan el contrato WONB 0.2, la firma, el emisor
+confiable, TTL y topic; A publica únicamente después del evento de suscripción
+remota correspondiente.
+
+Para validar el fixture de anomalía localmente:
+
+```bash
+cargo run -p wombat-node -- publish --file \
+  contracts/fixtures/anomaly-valid.json
+```
+
+Este comando es una validación local y **no publica en la red**.
 Consulta `docs/demo-runbook.md` para la guía detallada.
 
 ## Contratos y revisión

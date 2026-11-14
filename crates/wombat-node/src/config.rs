@@ -7,6 +7,7 @@ use clap::Parser;
 use std::path::PathBuf;
 
 /// Topics por defecto del MVP WOMBAT.
+#[allow(dead_code)]
 pub const DEFAULT_TOPICS: &[&str] = &[
     "wombat/lima/costa-verde/anomaly",
     "wombat/lima/costa-verde/context",
@@ -21,15 +22,35 @@ pub const TOPIC_PREFIX: &str = "wombat/";
 /// Subcomandos soportados por la CLI del nodo.
 #[derive(Debug, clap::Subcommand)]
 pub enum Commands {
-    /// Ejecuta el nodo P2P (modo demo local por defecto).
+    /// Ejecuta el nodo en modo demo o P2P (este último requiere la feature p2p).
     Run {
-        /// Escuchar en esta dirección multiaddr (ej. /ip4/0.0.0.0/tcp/0).
-        #[arg(long, default_value = "/ip4/0.0.0.0/tcp/0")]
+        /// Escuchar en esta dirección multiaddr.
+        #[arg(long, default_value = "/ip4/127.0.0.1/tcp/0")]
         listen: String,
 
         /// Modo demo sin red: solo valida y publica localmente.
         #[arg(long)]
         demo: bool,
+
+        /// Dirección completa del peer remoto, incluyendo /p2p/<PeerId>.
+        #[arg(long = "peer", conflicts_with = "demo")]
+        peers: Vec<String>,
+
+        /// Topic GossipSub al que suscribirse. Se puede repetir.
+        #[arg(long = "topic", conflicts_with = "demo")]
+        topics: Vec<String>,
+
+        /// Bloque WONB 0.2 que se publicará desde este nodo.
+        #[arg(long, conflicts_with = "demo")]
+        publish: Option<PathBuf>,
+
+        /// Emisores Ed25519 confiables para verificar WONB 0.2.
+        #[arg(long, conflicts_with = "demo")]
+        trusted_issuers: Option<PathBuf>,
+
+        /// Timeout de arranque, conexión y espera de suscripción (segundos).
+        #[arg(long, default_value_t = 30, value_parser = clap::value_parser!(u64).range(1..))]
+        timeout_secs: u64,
     },
     /// Publica un WONB desde un archivo JSON.
     Publish {
@@ -55,20 +76,28 @@ pub struct Cli {
 }
 
 /// Configuración cargada del nodo.
+#[cfg_attr(not(feature = "p2p"), allow(dead_code))]
 #[derive(Debug, Clone)]
 pub struct NodeConfig {
-    #[allow(dead_code)]
     pub listen_addr: String,
     pub demo: bool,
+    pub peers: Vec<String>,
     pub topics: Vec<String>,
+    pub publish: Option<PathBuf>,
+    pub trusted_issuers: Option<PathBuf>,
+    pub timeout_secs: u64,
 }
 
 impl Default for NodeConfig {
     fn default() -> Self {
         Self {
-            listen_addr: "/ip4/0.0.0.0/tcp/0".to_string(),
+            listen_addr: "/ip4/127.0.0.1/tcp/0".to_string(),
             demo: false,
-            topics: DEFAULT_TOPICS.iter().map(|t| (*t).to_string()).collect(),
+            peers: Vec::new(),
+            topics: Vec::new(),
+            publish: None,
+            trusted_issuers: None,
+            timeout_secs: 30,
         }
     }
 }
