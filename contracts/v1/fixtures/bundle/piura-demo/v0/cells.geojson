@@ -1,0 +1,678 @@
+{
+  "type": "FeatureCollection",
+  "crs_note": "SIMULADO. geometry en EPSG:4326; en producción los cálculos se hacen en EPSG:32717",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.72,
+              -5.2
+            ],
+            [
+              -80.710955,
+              -5.2
+            ],
+            [
+              -80.710955,
+              -5.209045
+            ],
+            [
+              -80.72,
+              -5.209045
+            ],
+            [
+              -80.72,
+              -5.2
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r00c00",
+        "valid_fraction": 0.95,
+        "decrease_fraction": 0.02,
+        "increase_fraction": 0.01,
+        "changed_fraction": 0.03,
+        "p90_abs_delta_db": 3.3,
+        "opera_status": "not_corroborated",
+        "opera_overlap_ratio": 0.05,
+        "road_m_near_change": 300,
+        "road_m_total": 2100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.710955,
+              -5.2
+            ],
+            [
+              -80.70191,
+              -5.2
+            ],
+            [
+              -80.70191,
+              -5.209045
+            ],
+            [
+              -80.710955,
+              -5.209045
+            ],
+            [
+              -80.710955,
+              -5.2
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r00c01",
+        "valid_fraction": 0.93,
+        "decrease_fraction": 0.05,
+        "increase_fraction": 0.02,
+        "changed_fraction": 0.07,
+        "p90_abs_delta_db": 3.7,
+        "opera_status": "not_corroborated",
+        "opera_overlap_ratio": 0.08,
+        "road_m_near_change": 800,
+        "road_m_total": 3000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.70191,
+              -5.2
+            ],
+            [
+              -80.692865,
+              -5.2
+            ],
+            [
+              -80.692865,
+              -5.209045
+            ],
+            [
+              -80.70191,
+              -5.209045
+            ],
+            [
+              -80.70191,
+              -5.2
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r00c02",
+        "valid_fraction": 0.94,
+        "decrease_fraction": 0.03,
+        "increase_fraction": 0.03,
+        "changed_fraction": 0.06,
+        "p90_abs_delta_db": 3.6,
+        "opera_status": "not_corroborated",
+        "opera_overlap_ratio": 0.04,
+        "road_m_near_change": 0,
+        "road_m_total": 1500
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.692865,
+              -5.2
+            ],
+            [
+              -80.68382,
+              -5.2
+            ],
+            [
+              -80.68382,
+              -5.209045
+            ],
+            [
+              -80.692865,
+              -5.209045
+            ],
+            [
+              -80.692865,
+              -5.2
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r00c03",
+        "valid_fraction": 0.9,
+        "decrease_fraction": 0.01,
+        "increase_fraction": 0.01,
+        "changed_fraction": 0.02,
+        "p90_abs_delta_db": 3.2,
+        "opera_status": "not_corroborated",
+        "opera_overlap_ratio": 0.0,
+        "road_m_near_change": 0,
+        "road_m_total": 900
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.72,
+              -5.209045
+            ],
+            [
+              -80.710955,
+              -5.209045
+            ],
+            [
+              -80.710955,
+              -5.21809
+            ],
+            [
+              -80.72,
+              -5.21809
+            ],
+            [
+              -80.72,
+              -5.209045
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r01c00",
+        "valid_fraction": 0.92,
+        "decrease_fraction": 0.1,
+        "increase_fraction": 0.03,
+        "changed_fraction": 0.13,
+        "p90_abs_delta_db": 4.3,
+        "opera_status": "corroborated",
+        "opera_overlap_ratio": 0.24,
+        "road_m_near_change": 1500,
+        "road_m_total": 4200
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.710955,
+              -5.209045
+            ],
+            [
+              -80.70191,
+              -5.209045
+            ],
+            [
+              -80.70191,
+              -5.21809
+            ],
+            [
+              -80.710955,
+              -5.21809
+            ],
+            [
+              -80.710955,
+              -5.209045
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r01c01",
+        "valid_fraction": 0.91,
+        "decrease_fraction": 0.18,
+        "increase_fraction": 0.04,
+        "changed_fraction": 0.22,
+        "p90_abs_delta_db": 5.2,
+        "opera_status": "corroborated",
+        "opera_overlap_ratio": 0.31,
+        "road_m_near_change": 2400,
+        "road_m_total": 5100
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.70191,
+              -5.209045
+            ],
+            [
+              -80.692865,
+              -5.209045
+            ],
+            [
+              -80.692865,
+              -5.21809
+            ],
+            [
+              -80.70191,
+              -5.21809
+            ],
+            [
+              -80.70191,
+              -5.209045
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r01c02",
+        "valid_fraction": 0.9,
+        "decrease_fraction": 0.12,
+        "increase_fraction": 0.06,
+        "changed_fraction": 0.18,
+        "p90_abs_delta_db": 4.8,
+        "opera_status": "corroborated",
+        "opera_overlap_ratio": 0.22,
+        "road_m_near_change": 1900,
+        "road_m_total": 4700
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.692865,
+              -5.209045
+            ],
+            [
+              -80.68382,
+              -5.209045
+            ],
+            [
+              -80.68382,
+              -5.21809
+            ],
+            [
+              -80.692865,
+              -5.21809
+            ],
+            [
+              -80.692865,
+              -5.209045
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r01c03",
+        "valid_fraction": 0.55,
+        "decrease_fraction": 0.3,
+        "increase_fraction": 0.02,
+        "changed_fraction": 0.32,
+        "p90_abs_delta_db": 6.2,
+        "opera_status": "not_corroborated",
+        "opera_overlap_ratio": 0.1,
+        "road_m_near_change": 200,
+        "road_m_total": 800
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.72,
+              -5.21809
+            ],
+            [
+              -80.710955,
+              -5.21809
+            ],
+            [
+              -80.710955,
+              -5.227135
+            ],
+            [
+              -80.72,
+              -5.227135
+            ],
+            [
+              -80.72,
+              -5.21809
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r02c00",
+        "valid_fraction": 0.94,
+        "decrease_fraction": 0.08,
+        "increase_fraction": 0.02,
+        "changed_fraction": 0.1,
+        "p90_abs_delta_db": 4.0,
+        "opera_status": "not_corroborated",
+        "opera_overlap_ratio": 0.12,
+        "road_m_near_change": 700,
+        "road_m_total": 2600
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.710955,
+              -5.21809
+            ],
+            [
+              -80.70191,
+              -5.21809
+            ],
+            [
+              -80.70191,
+              -5.227135
+            ],
+            [
+              -80.710955,
+              -5.227135
+            ],
+            [
+              -80.710955,
+              -5.21809
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r02c01",
+        "valid_fraction": 0.89,
+        "decrease_fraction": 0.21,
+        "increase_fraction": 0.05,
+        "changed_fraction": 0.26,
+        "p90_abs_delta_db": 5.6,
+        "opera_status": "corroborated",
+        "opera_overlap_ratio": 0.38,
+        "road_m_near_change": 2800,
+        "road_m_total": 5600
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.70191,
+              -5.21809
+            ],
+            [
+              -80.692865,
+              -5.21809
+            ],
+            [
+              -80.692865,
+              -5.227135
+            ],
+            [
+              -80.70191,
+              -5.227135
+            ],
+            [
+              -80.70191,
+              -5.21809
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r02c02",
+        "valid_fraction": 0.92,
+        "decrease_fraction": 0.15,
+        "increase_fraction": 0.04,
+        "changed_fraction": 0.19,
+        "p90_abs_delta_db": 4.9,
+        "opera_status": "corroborated",
+        "opera_overlap_ratio": 0.27,
+        "road_m_near_change": 3100,
+        "road_m_total": 6000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.692865,
+              -5.21809
+            ],
+            [
+              -80.68382,
+              -5.21809
+            ],
+            [
+              -80.68382,
+              -5.227135
+            ],
+            [
+              -80.692865,
+              -5.227135
+            ],
+            [
+              -80.692865,
+              -5.21809
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r02c03",
+        "valid_fraction": 0.93,
+        "decrease_fraction": 0.06,
+        "increase_fraction": 0.02,
+        "changed_fraction": 0.08,
+        "p90_abs_delta_db": 3.8,
+        "opera_status": "unavailable",
+        "opera_overlap_ratio": null,
+        "road_m_near_change": 1200,
+        "road_m_total": 3500
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.72,
+              -5.227135
+            ],
+            [
+              -80.710955,
+              -5.227135
+            ],
+            [
+              -80.710955,
+              -5.23618
+            ],
+            [
+              -80.72,
+              -5.23618
+            ],
+            [
+              -80.72,
+              -5.227135
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r03c00",
+        "valid_fraction": 0.96,
+        "decrease_fraction": 0.01,
+        "increase_fraction": 0.0,
+        "changed_fraction": 0.01,
+        "p90_abs_delta_db": 3.1,
+        "opera_status": "not_corroborated",
+        "opera_overlap_ratio": 0.02,
+        "road_m_near_change": 100,
+        "road_m_total": 1800
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.710955,
+              -5.227135
+            ],
+            [
+              -80.70191,
+              -5.227135
+            ],
+            [
+              -80.70191,
+              -5.23618
+            ],
+            [
+              -80.710955,
+              -5.23618
+            ],
+            [
+              -80.710955,
+              -5.227135
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r03c01",
+        "valid_fraction": 0.95,
+        "decrease_fraction": 0.04,
+        "increase_fraction": 0.01,
+        "changed_fraction": 0.05,
+        "p90_abs_delta_db": 3.5,
+        "opera_status": "not_corroborated",
+        "opera_overlap_ratio": 0.09,
+        "road_m_near_change": 500,
+        "road_m_total": 2400
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.70191,
+              -5.227135
+            ],
+            [
+              -80.692865,
+              -5.227135
+            ],
+            [
+              -80.692865,
+              -5.23618
+            ],
+            [
+              -80.70191,
+              -5.23618
+            ],
+            [
+              -80.70191,
+              -5.227135
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r03c02",
+        "valid_fraction": 0.91,
+        "decrease_fraction": 0.07,
+        "increase_fraction": 0.07,
+        "changed_fraction": 0.14,
+        "p90_abs_delta_db": 4.4,
+        "opera_status": "corroborated",
+        "opera_overlap_ratio": 0.2,
+        "road_m_near_change": 900,
+        "road_m_total": 3300
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.692865,
+              -5.227135
+            ],
+            [
+              -80.68382,
+              -5.227135
+            ],
+            [
+              -80.68382,
+              -5.23618
+            ],
+            [
+              -80.692865,
+              -5.23618
+            ],
+            [
+              -80.692865,
+              -5.227135
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "piura-demo-r03c03",
+        "valid_fraction": 0.94,
+        "decrease_fraction": 0.02,
+        "increase_fraction": 0.01,
+        "changed_fraction": 0.03,
+        "p90_abs_delta_db": 3.3,
+        "opera_status": "not_corroborated",
+        "opera_overlap_ratio": 0.03,
+        "road_m_near_change": 0,
+        "road_m_total": 1000
+      }
+    }
+  ]
+}

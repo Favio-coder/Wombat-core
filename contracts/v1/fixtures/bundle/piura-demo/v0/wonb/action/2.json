@@ -1,0 +1,39 @@
+{
+  "wonb_version": "0.2",
+  "id": "sha256:846b0cac3c9f634075f92a93111b17a27fe007c4368cee0f3f5e8eeeaa6aed01",
+  "type": "action",
+  "topic": "wombat/pe/piura/piura-demo/action",
+  "issued_at": "2026-11-14T17:00:00Z",
+  "valid_until": "2026-11-14T18:00:00Z",
+  "issuer": "ed25519:92b8169774b5f100de3f37b5ec63b9a10100ae6d1983c4bbdc9b9e7ca6f014be",
+  "parents": [
+    "sha256:aa3d7b60015763afc292862a2cf060c4ae20e3465ea168feb1cbb8ab68a11a1f"
+  ],
+  "payload": {
+    "cell_id": "piura-demo-r01c01",
+    "rank": 2,
+    "action": "field_verification_first",
+    "audience": "GORE Piura risk analyst"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "product": "NISAR_L2_GCOV",
+        "granule": "SIMULATED-T1/T2",
+        "maturity": "PROVISIONAL"
+      },
+      {
+        "product": "OPERA_L3_DSWx-S1",
+        "derived_from": "Sentinel-1",
+        "granule": "SIMULATED-OPERA"
+      },
+      {
+        "product": "OpenStreetMap",
+        "retrieved_at": "2026-11-14"
+      }
+    ],
+    "method": "risk-config/0.1",
+    "code_commit": "fixture"
+  },
+  "signature": "2e949e84091f58a8564f54785d3592450e4e0bf6c0bee0532e3ead6b334335fdc2524aa0fa020c0ec5445c29cfedd799870b9ede0a7e771156f2d408cf2bc905"
+}

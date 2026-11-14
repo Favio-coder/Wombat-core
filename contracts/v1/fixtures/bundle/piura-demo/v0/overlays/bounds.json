@@ -1,0 +1,22 @@
+{
+  "crs": "EPSG:4326",
+  "coordinates": [
+    [
+      -80.72,
+      -5.2
+    ],
+    [
+      -80.68382,
+      -5.2
+    ],
+    [
+      -80.68382,
+      -5.23618
+    ],
+    [
+      -80.72,
+      -5.23618
+    ]
+  ],
+  "order": "top-left, top-right, bottom-right, bottom-left"
+}

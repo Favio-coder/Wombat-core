@@ -1,0 +1,41 @@
+{
+  "wonb_version": "0.2",
+  "id": "sha256:02da13aa3d9cfb4c94ed1512d9728ddb3ed7a945e98c9a3bbd98c9cb791de683",
+  "type": "change",
+  "topic": "wombat/pe/piura/piura-demo/change",
+  "issued_at": "2026-11-14T17:00:00Z",
+  "valid_until": null,
+  "issuer": "ed25519:92b8169774b5f100de3f37b5ec63b9a10100ae6d1983c4bbdc9b9e7ca6f014be",
+  "parents": [],
+  "payload": {
+    "aoi_id": "piura-demo",
+    "data_origin": "simulated",
+    "t1": "2026-10-14T23:00:00Z",
+    "t2": "2026-10-26T23:00:00Z",
+    "polarization": "HHHH",
+    "frequency": "A",
+    "pixel_spacing_m": 20,
+    "delta_db_threshold_cdb": 300,
+    "aoi_valid_bp": 9025,
+    "aoi_decrease_bp": 906,
+    "aoi_increase_bp": 275,
+    "overlay_sha256": {
+      "t1.png": "227a47e0c0fc9a15a096686ec73df8358f4ced856e99f6fbf272a6b6015ab15d",
+      "t2.png": "db6c659cdc1f6884b34936ce8883edd03de5e7dc95604fb795a1af904f7d5105",
+      "delta.png": "29ed09cef2e7a68b7095c0cb139da01ef4e24de8875db483d819150ebcde356c"
+    },
+    "cells_geojson_sha256": "9a80e0008999d436f4b5db894e5da0b0f4206707fa2b295a9550685f6bc2acb9"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "product": "NISAR_L2_GCOV",
+        "granule": "SIMULATED-T1/T2",
+        "maturity": "PROVISIONAL"
+      }
+    ],
+    "method": "risk-config/0.1",
+    "code_commit": "fixture"
+  },
+  "signature": "e9d7c05d8ccc1f773d62e224f0f82db9038df10f8109990836ef4b22f0a3a8bd0b988f295a1badfa318138ee8ca393767d5c0a14bac47f42311ec1a5c0a7d200"
+}

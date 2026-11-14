@@ -1,0 +1,7 @@
+{
+  "name": "wonb-verify-ref-js",
+  "private": true,
+  "type": "module",
+  "description": "Verificador de referencia en JS (JCS + SHA-256 + Ed25519). Es el código que Mireya adapta a src/verify/ del dashboard.",
+  "dependencies": { "@noble/ed25519": "^2.2.3", "@noble/hashes": "^1.7.1", "canonicalize": "^2.0.0" }
+}

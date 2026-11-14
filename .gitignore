@@ -4,3 +4,15 @@
 *.env.local
 .DS_Store
 node_modules
+
+# --- WOMBAT v1 (plan maestro v2) ---
+**/target/
+**/node_modules/
+.keys/
+*.key
+*.pem
+dist/
+data-pipeline/out/
+*.h5
+*.hdf5
+*.he5

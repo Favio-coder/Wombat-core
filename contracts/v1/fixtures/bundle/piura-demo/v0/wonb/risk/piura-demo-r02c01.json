@@ -1,0 +1,61 @@
+{
+  "wonb_version": "0.2",
+  "id": "sha256:38f77182b8b229cb00724820027fb6bd965462b7d28ba7ce9954f67371f68325",
+  "type": "risk",
+  "topic": "wombat/pe/piura/piura-demo/risk",
+  "issued_at": "2026-11-14T17:00:00Z",
+  "valid_until": "2026-11-15T17:00:00Z",
+  "issuer": "ed25519:92b8169774b5f100de3f37b5ec63b9a10100ae6d1983c4bbdc9b9e7ca6f014be",
+  "parents": [
+    "sha256:02da13aa3d9cfb4c94ed1512d9728ddb3ed7a945e98c9a3bbd98c9cb791de683",
+    "sha256:f5e7bd0f6e3c316fb8c97f15af3bb03cc515a9282ecfd3f1c8be18e7f3cc2fb2"
+  ],
+  "payload": {
+    "cell_id": "piura-demo-r02c01",
+    "status": "review_high",
+    "rank": 1,
+    "score_bp": 7636,
+    "components_bp": {
+      "change": 10000,
+      "opera": 3800,
+      "road": 9032
+    },
+    "metrics": {
+      "valid_bp": 8900,
+      "decrease_bp": 2100,
+      "increase_bp": 500,
+      "changed_bp": 2600,
+      "p90_abs_delta_cdb": 560,
+      "opera_status": "corroborated",
+      "opera_overlap_bp": 3800,
+      "road_m_near_change": 2800,
+      "road_m_total": 5600
+    },
+    "explanation": [
+      "21% of valid pixels decreased ≥3 dB; 5% increased ≥3 dB.",
+      "OPERA DSWx-S1 (Sentinel-1) shows new water on 38% of changed area (threshold 20%).",
+      "2.8 km of road lie within 250 m of changed pixels."
+    ]
+  },
+  "provenance": {
+    "sources": [
+      {
+        "product": "NISAR_L2_GCOV",
+        "granule": "SIMULATED-T1/T2",
+        "maturity": "PROVISIONAL"
+      },
+      {
+        "product": "OPERA_L3_DSWx-S1",
+        "derived_from": "Sentinel-1",
+        "granule": "SIMULATED-OPERA"
+      },
+      {
+        "product": "OpenStreetMap",
+        "retrieved_at": "2026-11-14"
+      }
+    ],
+    "method": "risk-config/0.1",
+    "code_commit": "fixture"
+  },
+  "signature": "a6a9026f1b2e621aeb10a155f4d302905eeaaee27b163a11ddb4368aab148821874a34a7479401a449a113560452576254b2e2172c5282c6df3137a819994103"
+}

@@ -1,0 +1,15 @@
+[package]
+name = "wonb-verify-ref"
+version = "0.1.0"
+edition = "2021"
+description = "Verificador de referencia (hash JCS + Ed25519) para bundles contracts/v1. Prueba cruzada Python/Rust."
+
+[dependencies]
+serde_json = "1"
+serde_jcs = "0.1"
+sha2 = "0.10"
+ed25519-dalek = "2"
+hex = "0.4"
+
+# Fuera del workspace de la raíz: no afecta a cargo fmt/clippy/test del CI principal.
+[workspace]
