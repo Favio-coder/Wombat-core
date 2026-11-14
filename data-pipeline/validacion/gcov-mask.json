@@ -1,0 +1,7 @@
+{
+  "confirmed": true,
+  "valid_values": [1, 2, 3, 4, 5],
+  "invalid_value": 0,
+  "fill_value": 255,
+  "source": "JPL D-102274 Rev F, NISAR L2 GCOV Product Specification v1.5.0 (8 jul 2026), seccion 4.3.3 'Mask' y seccion 5 (dataset /science/LSAR/GCOV/grids/frequency[A|B]/mask, UByte, _FillValue 255). '0': invalido o parcialmente enfocado. '1' a '5': valido; el valor es el numero de sub-swath. '255': relleno, fuera de la adquisicion. https://cumulus.asf.earthdatacloud.nasa.gov/PUBLIC/DATA/NISAR/NISAR_D-102274_RevF_NASA_SDS_Product_Specification_L2_GCOV_w-esigs.pdf (leido 2026-11-14). Contrastar igual con inspect_granule.py sobre el granule real."
+}
