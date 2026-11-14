@@ -1,8 +1,8 @@
 [package]
 name = "wombat-core"
 description = "WOMBAT Protocol core: WONB model, validation, crypto and signature handling"
-version = "0.1.0"
-edition = "2021"
+version.workspace = true
+edition.workspace = true
 
 [dependencies]
 serde = { workspace = true, features = ["derive"] }
@@ -14,8 +14,6 @@ sha2 = { workspace = true }
 ed25519-dalek = { workspace = true }
 rand = { workspace = true }
 thiserror = { workspace = true }
-anyhow = { workspace = true }
-tracing = { workspace = true }
 hex = { workspace = true }
 
 [dev-dependencies]

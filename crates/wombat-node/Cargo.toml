@@ -1,8 +1,8 @@
 [package]
 name = "wombat-node"
 description = "Nodo P2P WOMBAT: libp2p + GossipSub, CLI y validación de WONBs"
-version = "0.1.0"
-edition = "2021"
+version.workspace = true
+edition.workspace = true
 
 [dependencies]
 wombat-core = { path = "../wombat-core" }
