@@ -1,4 +1,6 @@
 {
   "version": 1,
-  "issuers": []
+  "issuers": [
+    { "issuer": "ed25519:49be596f7fe05158fcc03e0f9d1bef7949f6c1378742cd82de93cbf86f26b843", "name": "wombat-piura-demo", "roles": ["change", "context", "risk", "action"] }
+  ]
 }

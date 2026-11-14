@@ -17,3 +17,5 @@ data-pipeline/out/
 *.h5
 *.hdf5
 *.he5
+
+/out/
