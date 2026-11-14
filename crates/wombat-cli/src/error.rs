@@ -42,10 +42,11 @@ pub enum CliError {
     )]
     BundleExists { path: String, existing: String },
 
-    /// R1: dato no comparable solo se admite si se declara simulado.
+    /// R1: las escenas no comparables no se puntúan ni se firman.
     #[error(
-        "R1: manifest.nisar.comparable es false y data_origin es \"{data_origin}\". \
-         Un par no comparable solo puede publicarse como data_origin \"simulated\""
+        "R1: manifest.nisar.comparable o comparable_checks indica escenas no comparables \
+         (data_origin \"{data_origin}\"). \
+         Las escenas NISAR deben ser comparables para calcular el ranking y construir el bundle"
     )]
     NotComparable { data_origin: String },
 

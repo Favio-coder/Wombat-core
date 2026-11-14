@@ -63,5 +63,5 @@
   "pipeline": {
     "commit": "fixture",
     "risk_config_version": "risk-config/0.1"
-  }  
+  }
 }

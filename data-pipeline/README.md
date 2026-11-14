@@ -89,11 +89,11 @@ Validar ciencia no equivale a superar el verificador oficial del bundle.
 
 ## Estado y referencias
 
-Consulta ASF del 14 nov 2026, ventana 1 oct–10 nov: `out/piura-01/candidates.json` conserva 4 PROVISIONAL
-(7 y 19 oct), 2 VALIDATED (31 oct), 0 BETA, IDs, URLs y seis checks. **comparable=false**:
-no hay par de igual madurez a ambos lados del evento en esa respuesta.
-`access-preflight.json` conserva el HEAD real: HTTP 200, rangos disponibles, 1 488 977 920 bytes;
-no se descargó el cuerpo. No hay métricas ni imágenes científicas reales de Piura. Faltan par comparable,
+Una consulta ASF ejecutada el 14 nov 2026 para la ventana 1 oct–10 nov encontró 4 escenas PROVISIONAL
+(7 y 19 oct), 2 VALIDATED (31 oct) y 0 BETA; no se encontró un par de igual madurez a ambos lados del
+evento. Las respuestas y preflight de ASF quedan en `out/piura-01/`, que es salida generada, ignorada y
+no versionada. El HEAD consultado respondió HTTP 200 con rangos disponibles (1 488 977 920 bytes); no se
+descargó el cuerpo. No hay métricas ni imágenes científicas reales de Piura. Faltan un par comparable,
 HDF5 y vías de Jelibeth; OPERA puede quedar unavailable. El verificador oficial ejecutado anteriormente
 falló por falta de `index.json`. Los HDF5 de los tests son fabricados y permanecen en temporales.
 

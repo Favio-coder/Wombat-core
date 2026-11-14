@@ -8,7 +8,7 @@ from rasterio.transform import from_origin
 from shapely.geometry import box, LineString
 import cells
 import subset
-from common import collection, feature, project, read_json, write_json, ROOT
+from common import collection, feature, project, read_json, write_json
 from contracts import validate
 from jsonschema import ValidationError
 from create_grid import make_grid
@@ -58,10 +58,11 @@ def test_selection_maturity_and_dates():
     assert select_pair([scene('19'),scene('31','VALIDATED')]) is None
     assert select_pair([scene('19','VALIDATED'),scene('31','VALIDATED'),scene('07'),scene('25')])['t1']['maturity'] == 'PROVISIONAL'
 
-def test_saved_catalog_comparability():
-    catalog = read_json(ROOT/'out/piura-01/candidates.json')
-    assert select_pair(catalog['candidates']) == catalog['selected_pair']
-    assert catalog['comparable'] == (catalog['selected_pair'] is not None)
+def test_selected_pair_preserves_maturity_and_comparability():
+    pair = select_pair([scene('07'), scene('19'), scene('31'), scene('31', 'VALIDATED')])
+    assert pair is not None
+    assert pair['comparable'] is True
+    assert pair['t1']['maturity'] == pair['t2']['maturity'] == 'PROVISIONAL'
 
 def test_normalize_missing_and_frequency():
     assert not all(checks(normalize({}, 'PROVISIONAL'), normalize({}, 'PROVISIONAL')).values())
