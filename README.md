@@ -1,148 +1,56 @@
-# WOMBAT — Protocolo de intercambio de bloques de evidencia (WONB)
+# WOMBAT — El Niño Evidence Mesh
 
-WOMBAT (Wombat Observation and Monitoring Blockchain-style Transport) es un
-prototipo de protocolo P2P para intercambiar bloques JSON de evidencia llamados
-**WONB** (*Wombat Observation Notation Block*) entre nodos heterogéneos.
+WOMBAT convierte cambios observados por **NISAR GCOV** en evidencia firmada: contrasta la señal con **OPERA DSWx-S1**, calcula exposición vial por celdas de **1 km × 1 km** y prioriza qué zona verificar primero. Cada resultado se expresa como bloques WONB verificables con Ed25519. El usuario objetivo es el analista del **Gobierno Regional de Piura (GORE Piura)**: esto sirve para **preparación, no para emitir alertas**.
 
-El MVP usa **Rust + Tokio + libp2p** como nodo P2P, con **Python** para un futuro
-adaptador geoespacial, **TypeScript/React** para el futuro dashboard y agente de
-riesgo, y **Raspberry Pi** como futuro nodo edge.
+> **Los datos de los fixtures son SIMULADOS.** El bundle `piura-demo/v0` no representa observaciones NISAR reales ni una evaluación científica operacional. Un cambio observado no confirma ni predice una inundación.
 
-> ⚠️ Estado: núcleo, contratos compartidos, pruebas y estructura de integración.
-> No incluye dashboard completo, procesamiento SAR real, integración NISAR real ni
-> GPIO de Raspberry. Los valores NISAR de los fixtures son **simulados para la
-> demo**.
+## Estado del proyecto
 
-## ¿Qué es un WONB?
+| IMPLEMENTADO | LEGADO | PLANIFICADO |
+|---|---|---|
+| `contracts/v1/`: contrato, bundle y verificadores. | `wombat-node` todavía usa WONB 0.1. | `wombat-cli` para ingestión, firma y exportación. |
+| WONB 0.2 en `wombat-core` (`wonb-core` en el plan): JCS, hash, firma y verificación. | El nodo funciona en modo demo; **no tiene transporte P2P real**. | `wombat-gateway` REST/WS. |
+| `wombat-risk`: ranking determinista con prueba de ranking dorado. | `publish` valida e imprime el WONB; **no transmite**. | Pipeline geoespacial completo en `data-pipeline/`. |
+| Fixture firmado y simulado `contracts/v1/fixtures/bundle/piura-demo/v0`. | Los esquemas y fixtures WONB 0.1 siguen en CI mientras exista compatibilidad. | Dashboard en el repositorio aparte `wombat-dashboard`; modo static obligatorio, remote/live como opciones. |
+|  |  | Edge P2; hardware y conexión P2P no están implementados. |
 
-Un WONB es un bloque JSON de evidencia firmado que contiene:
+WONB 0.1 y 0.2 son contratos distintos. El nodo actual continúa usando 0.1; el contrato v1 y el ranking usan 0.2. Consulta [la documentación del contrato v1](contracts/v1/README.md) y [la especificación legada 0.1](docs/wonb-spec.md).
 
-- `spec_version`: versión del esquema (`wombat/0.1`).
-- `id`: identificador único (`wonb:<tipo>:<uuid>`).
-- `type`: `anomaly` | `context` | `risk` | `tool`.
-- `schema`: esquema de dominio (ej. `geospatial.surface-displacement/1.0`).
-- `source`: proveedor, adaptador y referencia de origen.
-- `payload`: datos del bloque (objeto JSON arbitrario).
-- `provenance`: cuándo, por quién, confianza, hash SHA-256 y versión de regla.
-- `routing`: topic, TTL y prioridad.
-- `evidence_refs`: referencias a evidencia externa.
-- `signature`: firma Ed25519 (hex) sobre el hash canónico del contenido.
+## Repositorios y componentes
 
-## Arquitectura breve
+- **Core:** este repositorio `wombat-core`, con contratos, Rust y el directorio `data-pipeline/` reservado al pipeline.
+- **Dashboard:** repositorio separado `wombat-dashboard`; no vive en este core.
+- **Pipeline:** `data-pipeline/` dentro de este repositorio.
+- **Edge:** `edge/` cuando exista; el prototipo Raspberry anterior no forma parte del árbol actual.
+- **Landing/pitch:** no hay una aplicación landing implementada en este repositorio.
 
-```
-crates/wombat-core   -> Modelo WONB, validación, hash SHA-256, firmas Ed25519
-crates/wombat-node   -> Nodo libp2p + GossipSub, CLI (run/publish/validate)
-contracts/schemas    -> Esquemas JSON de los 4 tipos de WONB
-contracts/fixtures   -> Ejemplos válidos e inválidos para pruebas y demo
-adapters/*           -> Futuro adaptador geoespacial Python y nodo edge Pi
-apps/*               -> Futuro dashboard y landing
-docs/*               -> Especificación WONB, arquitectura, guía de demo
-```
+## Comprobar el estado Rust actual
 
-P2P es transporte; A2A es coordinación semántica mediante WONBs. MCP o
-adaptadores conectarán fuentes y herramientas locales (no implementados todavía).
-
-## Requisitos
-
-- Rust toolchain estable (1.78+). Verificado con `rustc 1.98.1`.
-- `cargo` y `clang`/`gcc` (libp2p compila código nativo).
-- Opcional: Docker y Docker Compose para la demo local.
-
-## Comandos exactos
-
-Desde la raíz del workspace (`wombat/`):
+Desde la raíz:
 
 ```bash
-# Formato
 cargo fmt --check
-
-# Lint (clippy, errores como advertencias)
 cargo clippy --workspace -- -D warnings
-
-# Pruebas automatizadas (criterio de aceptación #1)
 cargo test --workspace
-
-# Construir el nodo
-cargo build --workspace
-
-# Validar el fixture de anomalía (criterio de aceptación #3)
-cargo run -p wombat-node -- validate --file \
-  contracts/fixtures/anomaly-valid.json
-
-# Publicar el fixture de anomalía (modo demo, sin red)
-cargo run -p wombat-node -- publish --file \
-  contracts/fixtures/anomaly-valid.json
+cargo run -p wombat-node -- validate --file contracts/fixtures/anomaly-valid.json
 ```
 
-## Levantar dos nodos locales
+El CLI legado también acepta `publish`, pero solo valida e imprime el JSON; no publica por la red. No hay comunicación entre nodos en esta versión.
 
-El nodo está en **modo demo local** por defecto: no abre red P2P hasta que la
-infra de libp2p esté lista. Para validar el flujo entre dos nodos sin red:
+## Arquitectura objetivo
 
-1. Terminal 1 — nodo A en modo demo:
-   ```bash
-   cargo run -p wombat-node -- run --demo
-   ```
+El flujo planificado es **NISAR GCOV → cambio observado → contraste OPERA → exposición vial por celda → ranking Rust → bloques WONB firmados → bundle → dashboard**. El contrato de datos es la interfaz entre `wombat-core` y `wombat-dashboard`; el navegador no habla libp2p.
 
-2. Terminal 2 — nodo B, valida el fixture:
-   ```bash
-   cargo run -p wombat-node -- validate --file \
-     contracts/fixtures/anomaly-valid.json
-   ```
+Los modos del dashboard descritos por el plan son:
 
-3. Publicar el fixture desde cualquier terminal:
-   ```bash
-   cargo run -p wombat-node -- publish --file \
-     contracts/fixtures/anomaly-valid.json
-   ```
+- **static:** bundle fijado dentro del build del dashboard; no depende de un backend.
+- **remote:** bundle publicado en GitHub Pages, cargado desde el repositorio core.
+- **live:** gateway REST/WS para estado y bloques recientes.
 
-Cuando la red P2P esté habilitada, cada nodo escuchará en
-`/ip4/0.0.0.0/tcp/<puerto>` y se conectarán intercambiando sus `Multiaddr`
-(libp2p identify). El comando para conectar peers es:
+El dashboard y el gateway que consumirían esos modos aún están planificados. El flujo existente de CI valida el fixture del contrato; eso no significa que haya una aplicación dashboard disponible.
 
-```bash
-# Ejemplo ilustrativo (requiere libp2p completo habilitado):
-# wombat-node run --listen /ip4/0.0.0.0/tcp/9000
-# Luego, desde el otro nodo:
-# libp2p identify /ip4/<IP_A>/tcp/9000/p2p/<PEER_ID_A>
-```
-
-Consulta `docs/demo-runbook.md` para la guía detallada.
-
-## Contratos y revisión
-
-Los archivos bajo `contracts/schemas/` y `contracts/fixtures/` son **contratos
-compartidos**. No modificarlos sin revisión del equipo (ver tabla de
-responsables más abajo). Cualquier cambio de esquema debe ir acompañado de
-actualización de fixtures y pruebas.
-
-## Contribuir
-
-1. Crea una rama desde `main`.
-2. No modifiques `contracts/` sin revisión.
-3. Ejecuta `cargo fmt --check`, `cargo clippy --workspace -- -D warnings` y
-   `cargo test --workspace` antes de enviar el PR.
-4. Abre un PR y espera la revisión del responsable del módulo.
-
-## Tabla: módulo / responsable sugerido
-
-| Módulo                        | Responsable sugerido |
-|-------------------------------|----------------------|
-| Core Rust / P2P               | Richard              |
-| Adaptador geoespacial Python  | Gustavo              |
-| Nodo edge Raspberry Pi        | Jelibeth             |
-| Agente de riesgo / dashboard  | Mireya               |
-| Landing / pitch / UI          | Ximena               |
-| QA, integración, GitHub Actions, fixtures, modo demo | Jayo |
-
-## Avisos importantes
-
-- Una anomalía de deformación superficial **no confirma ni predice por sí sola**
-  un deslizamiento de tierra.
-- El MVP usa una **regla demostrativa**, no un modelo científico operacional.
-- No incluir claves privadas ni secretos en el repositorio.
+Más detalles: [arquitectura](docs/architecture.md), [runbook](docs/demo-runbook.md) y [contrato WONB 0.2](contracts/v1/README.md).
 
 ## Licencia
 
-MIT. Véase `LICENSE`.
+MIT. Véase [LICENSE](LICENSE).
