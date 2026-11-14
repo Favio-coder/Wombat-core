@@ -1,0 +1,15 @@
+# data-pipeline/validacion (Plan Maestro §6). Probado con Python 3.11.
+numpy
+scipy
+h5py
+rasterio
+pyproj
+shapely
+geopandas
+pillow
+asf_search
+earthaccess
+jsonschema
+referencing
+truststore
+pytest
