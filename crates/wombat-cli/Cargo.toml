@@ -1,11 +1,24 @@
 [package]
 name = "wombat-cli"
+description = "WOMBAT CLI: el productor oficial del bundle firmado (R14, solo Rust firma)"
 version.workspace = true
 edition.workspace = true
 
+[[bin]]
+name = "wombat"
+path = "src/main.rs"
+
 [dependencies]
-anyhow = { workspace = true }
-clap = { workspace = true }
-serde = { workspace = true }
-serde_json = { workspace = true }
+wombat-core = { path = "../wombat-core" }
 wombat-risk = { path = "../wombat-risk" }
+clap = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+ed25519-dalek = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }

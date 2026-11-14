@@ -75,6 +75,19 @@ cargo run -p wombat-node -- publish --file \
   contracts/fixtures/anomaly-valid.json
 ```
 
+## Verificar todo de una vez
+
+`scripts/verify_all.py` corre las tres puertas de calidad, los tres verificadores
+de bundle (Rust, Python, JS), el hash de cada archivo del `index.json` y la
+higiene del árbol versionado, y lo resume en una tabla ✔/✘ con tiempos. Solo
+biblioteca estándar: no hay nada que instalar, y corre igual en Windows y Linux.
+Sale con 1 si algo falla; un paso saltado se marca ⊘ y **nunca** cuenta como ✔.
+
+```bash
+python scripts/verify_all.py            # todo
+python scripts/verify_all.py --quick    # sin cargo fmt, clippy ni test
+```
+
 ## Levantar dos nodos locales
 
 El nodo está en **modo demo local** por defecto: no abre red P2P hasta que la

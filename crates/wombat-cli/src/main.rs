@@ -1,232 +1,181 @@
-use anyhow::{bail, Context, Result};
+//! `wombat`: el productor oficial del bundle firmado.
+//!
+//! R14 dice que **solo Rust firma**. El fixture `piura-demo/v0` lo generó
+//! `contracts/v1/tools/gen_fixture_bundle.py` como bootstrap, para destrabar al
+//! dashboard antes de que existiera este binario; este CLI es su reemplazo, y el
+//! test de extremo a extremo comprueba que produce los mismos payloads.
+//!
+//! Tres comandos y un flujo:
+//!
+//! ```text
+//! wombat keygen --out ~/.wombat-keys/demo.key     # una vez, fuera del repo (R19)
+//! wombat build  --in <insumos> --aoi <id> --version vN --key <clave> --out <dir>
+//! wombat verify <dir>
+//! ```
+//!
+//! `publish` (libp2p) es P1 y no está acá a propósito.
+//!
+//! DECISIÓN: los subcomandos son los del enunciado de esta rama
+//! (`keygen`/`build`/`verify`) y no los de §8.4 del plan maestro
+//! (`ingest`/`export-static`/`publish`/`verify`). `build` hace en un paso lo que
+//! el plan partía en `ingest` + `export-static`: no hay consumidor del estado
+//! intermedio, y un paso menos es un paso que no puede desincronizarse.
+
+mod build;
+mod bundle;
+mod error;
+mod gitguard;
+mod inputs;
+mod keys;
+mod verify;
+
+use std::path::PathBuf;
+use std::process::ExitCode;
+
 use clap::{Parser, Subcommand};
-use serde::Deserialize;
-use std::fs;
-use std::path::{Path, PathBuf};
-use wombat_risk::{evaluate, load, CellRisk};
+
+use error::CliError;
+
+/// Directorio de configuración por defecto, relativo al directorio de trabajo.
+///
+/// DECISIÓN: es un flag (`--config`) y no una ruta fija. El flujo documentado
+/// usa el `config/` del repo, pero los tests necesitan su propia lista de
+/// emisores de confianza, y la alternativa —que un test mute `config/` del
+/// repositorio— es peor que un flag.
+const DEFAULT_CONFIG_DIR: &str = "config";
 
 #[derive(Parser)]
 #[command(
-    name = "wombat-cli",
-    about = "CLI de evidencia auditable para WOMBAT",
+    name = "wombat",
+    about = "Construye y verifica bundles WONB 0.2 firmados",
     version
 )]
 struct Cli {
     #[command(subcommand)]
-    command: Commands,
+    command: Command,
 }
 
 #[derive(Subcommand)]
-enum Commands {
-    /// Valida evidencia de entrada y prepara el ranking
-    Ingest {
+enum Command {
+    /// Genera una clave Ed25519 nueva fuera del repositorio (R19).
+    Keygen {
+        /// Dónde escribir el secreto. No puede estar dentro de un repo git.
         #[arg(long)]
-        cells: PathBuf,
+        out: PathBuf,
 
-        #[arg(long)]
-        manifest: PathBuf,
+        /// Nombre del emisor en la línea lista para pegar.
+        #[arg(long, default_value = "wombat-local")]
+        name: String,
+    },
 
+    /// Construye un bundle firmado a partir de los insumos sin firmar.
+    Build {
+        /// Directorio con manifest.json, cells.geojson, roads.geojson y overlays/.
+        #[arg(long = "in")]
+        input: PathBuf,
+
+        /// Identificador del AOI, p. ej. `piura-demo`.
         #[arg(long)]
+        aoi: String,
+
+        /// Versión del bundle, p. ej. `v1`. Inmutable una vez publicada (R28).
+        #[arg(long)]
+        version: String,
+
+        /// Clave de firma generada con `wombat keygen`.
+        #[arg(long)]
+        key: PathBuf,
+
+        /// Instante de emisión RFC 3339. Por defecto, la hora actual.
+        #[arg(long = "issued-at")]
+        issued_at: Option<String>,
+
+        /// Directorio de salida. Debe no existir o estar vacío (R28).
+        #[arg(long)]
+        out: PathBuf,
+
+        /// Directorio con risk-config.json y trusted-issuers.json.
+        #[arg(long, default_value = DEFAULT_CONFIG_DIR)]
         config: PathBuf,
     },
 
-    /// Exporta un bundle estático para el dashboard
-    ExportStatic {
-        #[arg(long)]
-        input: PathBuf,
-
-        #[arg(long)]
-        out: PathBuf,
-    },
-
-    /// Verifica un bloque WONB firmado
+    /// Verifica un bundle completo: sha256, ids, firmas, emisores, TTL y cadena.
     Verify {
-        #[arg(long)]
-        file: PathBuf,
+        /// Directorio del bundle.
+        bundle: PathBuf,
+
+        /// Instante contra el que se mide el TTL. Por defecto,
+        /// `index.generated_at`: un bundle estático es una foto histórica.
+        #[arg(long = "as-of")]
+        as_of: Option<String>,
     },
 }
 
-#[derive(Debug, Deserialize)]
-struct PipelineManifest {
-    aoi_id: String,
-    comparable: bool,
-}
-
-fn read_manifest(path: &Path) -> Result<PipelineManifest> {
-    let content = fs::read_to_string(path)
-        .with_context(|| format!("no se pudo leer el manifest: {}", path.display()))?;
-
-    serde_json::from_str(&content)
-        .with_context(|| format!("manifest JSON inválido: {}", path.display()))
-}
-
-#[derive(Debug)]
-struct IngestSummary {
-    aoi_id: String,
-    cells: Vec<CellRisk>,
-    ranked_count: usize,
-    excluded_quality_count: usize,
-}
-
-fn ingest(manifest_path: &Path, cells_path: &Path, config_path: &Path) -> Result<IngestSummary> {
-    let manifest = read_manifest(manifest_path)?;
-    ingest_manifest(manifest, cells_path, config_path)
-}
-
-fn ingest_manifest(
-    manifest: PipelineManifest,
-    cells_path: &Path,
-    config_path: &Path,
-) -> Result<IngestSummary> {
-    if !manifest.comparable {
-        bail!("ingest rechazado: las escenas no son comparables; no se puede calcular ranking");
+fn main() -> ExitCode {
+    match run() {
+        Ok(()) => ExitCode::SUCCESS,
+        Err(err) => {
+            eprintln!("error: {err}");
+            let mut source = std::error::Error::source(&err);
+            while let Some(cause) = source {
+                eprintln!("  causa: {cause}");
+                source = cause.source();
+            }
+            ExitCode::FAILURE
+        }
     }
-
-    let inputs = load::load_inputs(&manifest.aoi_id, cells_path)
-        .with_context(|| format!("no se pudo cargar cells.geojson: {}", cells_path.display()))?;
-    let config = load::load_config(config_path).with_context(|| {
-        format!(
-            "no se pudo cargar la configuración de riesgo: {}",
-            config_path.display()
-        )
-    })?;
-    let cells = evaluate(&config, &inputs).context("no se pudo calcular el ranking")?;
-    let ranked_count = cells.iter().filter(|cell| cell.is_ranked()).count();
-    let excluded_quality_count = cells.len() - ranked_count;
-
-    Ok(IngestSummary {
-        aoi_id: inputs.aoi_id,
-        cells,
-        ranked_count,
-        excluded_quality_count,
-    })
 }
 
-fn print_ingest_summary(summary: &IngestSummary) -> Result<()> {
-    println!("AOI: {}", summary.aoi_id);
-    println!("Celdas totales: {}", summary.cells.len());
-    println!("Celdas rankeadas: {}", summary.ranked_count);
-    println!(
-        "Celdas excluidas por calidad: {}",
-        summary.excluded_quality_count
-    );
-    println!("Top 3:");
-
-    for cell in summary.cells.iter().filter(|cell| cell.is_ranked()).take(3) {
-        let rank = cell.rank.context("celda rankeada sin rank")?;
-        let score_bp = cell.score_bp.context("celda rankeada sin score")?;
-        let status = serde_json::to_value(cell.status)?;
-        let status = status
-            .as_str()
-            .context("estado de riesgo no serializó como texto")?;
-        println!(
-            "  rank={rank} cell_id={} score={score_bp} bp status={status}",
-            cell.cell_id
-        );
-    }
-
-    Ok(())
-}
-
-fn main() -> Result<()> {
-    let cli = Cli::parse();
-
-    match cli.command {
-        Commands::Ingest {
-            cells,
-            manifest,
+fn run() -> Result<(), CliError> {
+    match Cli::parse().command {
+        Command::Keygen { out, name } => keygen(&out, &name),
+        Command::Build {
+            input,
+            aoi,
+            version,
+            key,
+            issued_at,
+            out,
             config,
         } => {
-            let summary = ingest(&manifest, &cells, &config)?;
-            print_ingest_summary(&summary)?;
+            let request = build::Request {
+                input_dir: input,
+                aoi_id: aoi,
+                bundle_version: version,
+                key_path: key,
+                issued_at,
+                out_dir: out,
+                config_dir: config,
+            };
+            let report = build::run(&request)?;
+            println!(
+                "OK   {}  |  {} bloques | issued_at {} | issuer {}…",
+                report.out_dir.display(),
+                report.blocks,
+                report.issued_at,
+                &report.issuer[..20.min(report.issuer.len())]
+            );
+            Ok(())
         }
-        Commands::ExportStatic { input, out } => {
-            println!("Pendiente de exportar: input={input:?}, out={out:?}");
-        }
-        Commands::Verify { file } => {
-            println!("Pendiente de verificar: file={file:?}");
-        }
+        Command::Verify { bundle, as_of } => verify::run(&bundle, as_of.as_deref()).map(|_| ()),
     }
-
-    Ok(())
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+/// Genera la clave e imprime lo único que se puede compartir: la pública.
+fn keygen(out: &std::path::Path, name: &str) -> Result<(), CliError> {
+    let verifying = keys::generate_to_file(out)?;
+    let issuer = wombat_core::v02::issuer_string(&verifying);
 
-    fn repo_root() -> PathBuf {
-        Path::new(env!("CARGO_MANIFEST_DIR")).join("../..")
-    }
-
-    fn manifest(comparable: bool) -> PipelineManifest {
-        PipelineManifest {
-            aoi_id: "piura-demo".to_owned(),
-            comparable,
-        }
-    }
-
-    #[test]
-    fn ingest_ranks_the_canonical_piura_fixture() {
-        let root = repo_root();
-        let summary = ingest(
-            &root.join("fixtures/piura-demo/manifest.json"),
-            &root.join("contracts/v1/fixtures/bundle/piura-demo/v0/cells.geojson"),
-            &root.join("config/risk-config.json"),
-        )
-        .unwrap();
-
-        assert_eq!(summary.aoi_id, "piura-demo");
-        assert_eq!(summary.cells.len(), 16);
-        assert_eq!(summary.ranked_count, 15);
-        assert_eq!(summary.excluded_quality_count, 1);
-        assert_eq!(
-            summary
-                .cells
-                .iter()
-                .take(3)
-                .map(|cell| (cell.rank, cell.cell_id.as_str(), cell.score_bp))
-                .collect::<Vec<_>>(),
-            [
-                (Some(1), "piura-demo-r02c01", Some(7636)),
-                (Some(2), "piura-demo-r01c01", Some(6593)),
-                (Some(3), "piura-demo-r02c02", Some(6365)),
-            ]
-        );
-    }
-
-    #[test]
-    fn ingest_rejects_non_comparable_manifest() {
-        let root = repo_root();
-        let error = ingest_manifest(
-            manifest(false),
-            Path::new("cells.geojson"),
-            &root.join("config/risk-config.json"),
-        )
-        .unwrap_err();
-
-        assert!(error.to_string().contains("no son comparables"));
-    }
-
-    #[test]
-    fn ingest_rejects_missing_or_invalid_cells_input() {
-        let root = repo_root();
-        let config = root.join("config/risk-config.json");
-
-        let missing_error = ingest_manifest(
-            manifest(true),
-            &root.join("fixtures/piura-demo/missing-cells.geojson"),
-            &config,
-        )
-        .unwrap_err();
-        assert!(missing_error.to_string().contains("missing-cells.geojson"));
-
-        let invalid_error = ingest_manifest(
-            manifest(true),
-            &root.join("fixtures/piura-demo/manifest.json"),
-            &config,
-        )
-        .unwrap_err();
-        assert!(invalid_error.to_string().contains("cells.geojson"));
-    }
+    println!("clave privada escrita en {}", out.display());
+    println!("  {}", keys::permissions_note());
+    println!();
+    println!("clave pública:");
+    println!("  {issuer}");
+    println!();
+    println!("línea para config/trusted-issuers.json:");
+    println!(
+        "  {{ \"issuer\": \"{issuer}\", \"name\": \"{name}\", \
+         \"roles\": [\"change\", \"context\", \"risk\", \"action\"] }}"
+    );
+    Ok(())
 }

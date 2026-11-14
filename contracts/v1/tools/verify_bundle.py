@@ -9,6 +9,30 @@ porque un bundle estático es una FOTO histórica (ver contracts/v1/README.md, '
 import argparse, hashlib, json, sys
 from datetime import datetime, timezone
 from pathlib import Path
+
+# UTF-8 en la salida, antes de imprimir cualquier cosa.
+#
+# Este verificador marca cada error con "✗" y cierra con "✓"/"OK". En Windows,
+# cuando su salida es una tubería y no una consola, Python la abre en la página
+# de códigos local (cp1252), donde esos caracteres no existen: el `print` muere
+# con UnicodeEncodeError **justo cuando hay algo que reportar**, porque mientras
+# todo va bien no se imprime ninguna "✗". El fallo queda escondido detrás del
+# caso feliz, y lo que ve quien corre el script sobre un bundle roto es un
+# volcado de Python en vez del motivo.
+#
+# Va antes de los imports de terceros a propósito: si uno de ellos falla, su
+# traceback también sale por stderr y puede llevar rutas con acentos. No lo
+# muevas debajo para contentar a un linter.
+#
+# `reconfigure` existe desde Python 3.7; el try protege a intérpretes viejos y
+# a las salidas que no lo soportan (algunas tuberías y capturas de test).
+# `errors="replace"` es el cinturón: si aun así hay un carácter que no entra,
+# sale un "?" y el informe se imprime, en vez de perderse entero por un glifo.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError, OSError):
+        pass
 from jsonschema import Draft202012Validator, FormatChecker
 from referencing import Registry, Resource
 from referencing.jsonschema import DRAFT202012
