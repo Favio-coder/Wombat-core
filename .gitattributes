@@ -1,0 +1,4 @@
+contracts/v1/fixtures/** -text
+fixtures/** -text
+data/** -text
+*.png binary

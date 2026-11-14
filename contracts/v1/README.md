@@ -58,6 +58,10 @@ Los bloques `risk` caducan a las 24 h y `action` a 1 h. Un bundle estático se a
 actual, todo saldría "expirado" y el botón Verificar mostraría ✗. Regla propuesta: en modo estático el TTL se evalúa contra `generated_at`
 del `index.json` (`verify_bundle.py` ya lo hace así; `--as-of` lo cambia) y la UI muestra "instantánea histórica". En modo vivo se evalúa con la hora real.
 
+## Fixtures
+
+Los fixtures tienen sha256 fijos; no los abras ni los guardes con editores que cambien saltos de línea.
+
 ## Versionado
 
 `VERSION` es semver. Cambio que rompe → mayor +1 y aviso en el grupo **antes** del merge (R27). El dashboard declara qué mayor acepta.
