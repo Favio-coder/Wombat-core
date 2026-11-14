@@ -1,5 +1,7 @@
 {
+  "contract_version": "1.0.0",
   "aoi_id": "piura-demo",
+  "comparable": true,
   "aoi_name": "SIMULATED — fixture de desarrollo (no es un AOI real)",
   "data_origin": "simulated",
   "crs_compute": "EPSG:32717",
@@ -61,5 +63,5 @@
   "pipeline": {
     "commit": "fixture",
     "risk_config_version": "risk-config/0.1"
-  }
+  }  
 }

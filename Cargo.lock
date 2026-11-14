@@ -1117,6 +1117,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "wombat-cli"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+ "serde",
+ "serde_json",
+ "wombat-risk",
+]
+
+[[package]]
 name = "wombat-core"
 version = "0.1.0"
 dependencies = [
