@@ -6,15 +6,19 @@
 
 use crate::error::{WonbError, WonbError::*};
 use crate::wonb::Wonb;
-use ed25519_dalek::{Signer, SigningKey, VerifyingKey, Verifier};
+use ed25519_dalek::{Signer, SigningKey, Verifier, VerifyingKey};
 use sha2::{Digest, Sha256};
-use std::fmt;
 
 /// Calcula el hash SHA-256 de la representación canónica JSON de un WONB.
 ///
 /// El hash se devuelve con el prefijo `sha256:`.
 pub fn compute_content_hash(wonb: &Wonb) -> Result<String, WonbError> {
-    let canonical = wonb
+    // Clonamos y vaciamos `data_hash` y `signature` para evitar dependencias
+    // circulares: el hash no debe incluir su propio valor ni la firma.
+    let mut wonb_for_hash = wonb.clone();
+    wonb_for_hash.provenance.data_hash = String::new();
+    wonb_for_hash.signature = String::new();
+    let canonical = wonb_for_hash
         .to_canonical_json()
         .map_err(|e| Crypto(format!("serialización canónica falló: {e}")))?;
     let mut hasher = Sha256::new();

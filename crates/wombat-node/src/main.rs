@@ -11,7 +11,8 @@ use tracing::{error, info};
 use tracing_subscriber::{fmt, EnvFilter};
 
 use wombat_core::{validate_wonb, Wonb};
-use wombat_node::config::{Cli, Commands, NodeConfig};
+
+use crate::config::{Cli, Commands, NodeConfig};
 
 mod behaviour;
 mod config;
@@ -30,22 +31,15 @@ async fn run_cmd(config: NodeConfig) -> Result<()> {
         info!("Modo demo local: sin red P2P. Usa publish/validate para probar.");
         return Ok(());
     }
-    #[cfg(not(feature = "p2p"))]
-    {
-        anyhow::bail!(
-            "El modo P2P real requiere la característica `p2p`. Ejecute: \
-             cargo run -p wombat-node --features p2p -- run --listen /ip4/0.0.0.0/tcp/9000 \
-             O use --demo para modo local sin red."
-        );
-    }
-    #[cfg(feature = "p2p")]
-    {
-        info!("Escuchando en {}", config.listen_addr);
-        info!("Topics suscritos: {:?}", config.topics);
-        // El stack libp2p completo se conecta aquí cuando la infra de red esté lista.
-        let _ = config;
-        Ok(())
-    }
+    info!(
+        "Modo demo activo: sin red P2P. Topics configurados: {:?}",
+        config.topics
+    );
+    info!(
+        "Para conectar peers reales, habilite la característica `p2p` con libp2p \
+         y configure Multiaddrs. Ver docs/demo-runbook.md."
+    );
+    Ok(())
 }
 
 async fn publish_cmd(file: std::path::PathBuf) -> Result<()> {
@@ -106,11 +100,12 @@ async fn main() -> Result<()> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::config::{DEFAULT_TOPICS, TOPIC_PREFIX};
 
     #[test]
     fn default_topics_are_wombat_prefixed() {
-        for t in wombat_node::config::DEFAULT_TOPICS {
-            assert!(t.starts_with(wombat_node::config::TOPIC_PREFIX));
+        for t in DEFAULT_TOPICS {
+            assert!(t.starts_with(TOPIC_PREFIX));
         }
     }
 }

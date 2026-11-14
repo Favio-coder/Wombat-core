@@ -13,21 +13,16 @@ use chrono::{DateTime, Utc};
 use std::collections::HashSet;
 
 use crate::error::{WonbError, WonbError::*};
-use crate::wonb::{Wonb, WonbPriority, WonbType};
+use crate::wonb::{Wonb, WonbType};
 
 /// Política de expiración para validar si un WONB está vencido.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 pub enum ExpiryPolicy {
     /// Rechazar WONBs cuya ventana de validez ya cerró.
+    #[default]
     RejectExpired,
     /// Permitir WONBs expirados (solo para tests / modos pasivos).
     AllowExpired,
-}
-
-impl Default for ExpiryPolicy {
-    fn default() -> Self {
-        ExpiryPolicy::RejectExpired
-    }
 }
 
 /// Validador de WONBs con estado de duplicados en memoria.
@@ -259,18 +254,6 @@ mod tests {
     use crate::wonb::tests::*;
     use crate::wonb::WonbPriority;
 
-    fn valid_wonb() -> Wonb {
-        Wonb::new(
-            WonbType::Anomaly,
-            "geospatial.surface-displacement/1.0",
-            sample_source(),
-            serde_json::json!({"displacement_cm": 3.4, "days": 12, "slope_deg": 34.2}),
-            sample_provenance(),
-            sample_routing(),
-            "did:wombat:node-demo",
-        )
-    }
-
     #[test]
     fn valid_wonb_passes() {
         let mut v = WonbValidator::new();
@@ -352,6 +335,7 @@ mod tests {
             WonbType::Risk,
             WonbType::Tool,
         ] {
+            let ty_label = format!("{:?}", ty);
             let wonb = Wonb::new(
                 ty,
                 "test.schema/1.0",
@@ -362,7 +346,7 @@ mod tests {
                 "did:wombat:node-demo",
             );
             let mut v = WonbValidator::new();
-            assert!(v.validate(&wonb).is_ok(), "tipo {:?} rechazado", ty);
+            assert!(v.validate(&wonb).is_ok(), "tipo {} rechazado", ty_label);
         }
     }
 

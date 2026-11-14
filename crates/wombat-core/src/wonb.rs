@@ -33,11 +33,12 @@ impl std::fmt::Display for WonbType {
 }
 
 /// Prioridad de enrutamiento de un WONB.
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, Default)]
 #[serde(rename_all = "lowercase")]
 pub enum WonbPriority {
     Low,
     Medium,
+    #[default]
     High,
 }
 
@@ -149,12 +150,12 @@ impl Default for WonbPriority {
 }
 
 #[cfg(test)]
-mod tests {
+pub(crate) mod tests {
     use super::*;
 
-    fn sample_provenance() -> WonbProvenance {
+    pub(crate) fn sample_provenance() -> WonbProvenance {
         WonbProvenance {
-            created_at: "2026-01-01T00:00:00Z".to_string(),
+            created_at: chrono::Utc::now().to_rfc3339(),
             created_by: "did:wombat:node-demo".to_string(),
             confidence: 0.89,
             data_hash: "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -163,7 +164,7 @@ mod tests {
         }
     }
 
-    fn sample_routing() -> WonbRouting {
+    pub(crate) fn sample_routing() -> WonbRouting {
         WonbRouting {
             topic: "wombat/lima/costa-verde/anomaly".to_string(),
             ttl_seconds: 3600,
@@ -171,12 +172,24 @@ mod tests {
         }
     }
 
-    fn sample_source() -> WonbSource {
+    pub(crate) fn sample_source() -> WonbSource {
         WonbSource {
             provider: "demo-geospatial-adapter".to_string(),
             adapter: "wombat-geospatial-python".to_string(),
             source_ref: "simulated-nisar-observation".to_string(),
         }
+    }
+
+    pub(crate) fn valid_wonb() -> Wonb {
+        Wonb::new(
+            WonbType::Anomaly,
+            "geospatial.surface-displacement/1.0",
+            sample_source(),
+            serde_json::json!({"displacement_cm": 3.4, "days": 12, "slope_deg": 34.2}),
+            sample_provenance(),
+            sample_routing(),
+            "did:wombat:node-demo",
+        )
     }
 
     #[test]

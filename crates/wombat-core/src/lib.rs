@@ -12,5 +12,6 @@ pub mod wonb;
 
 // Re-export commonly used types.
 pub use crypto::sign_wonb;
+pub use error::WonbError;
 pub use validation::{validate_wonb, ExpiryPolicy, WonbValidator};
 pub use wonb::{Wonb, WonbProvenance, WonbRouting, WonbSource, WonbType};

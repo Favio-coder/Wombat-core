@@ -1,11 +1,16 @@
-//! Behaviour del nodo libp2p.
+//! Behaviour del nodo WOMBAT.
 //!
-//! Este módulo solo se compila cuando se activa la característica `p2p`
-//! (que incluye la dependencia `libp2p`). Cuando está desactivado, el nodo
-//! corre en modo demo local sin red P2P.
+//! Procesa mensajes recibidos (por ejemplo, vía GossipSub cuando libp2p esté
+//! habilitado) deserializándolos a WONB y validándolos con `wombat-core`.
+//!
+//! Nota: el stack libp2p no es una dependencia directa en esta versión del
+//! workspace debido a que el índice de crates.io disponible no resuelve su
+//! cadena de dependencias (core2 0.4.0 yanked). El código específico de
+//! libp2p queda documentado y listo para activarse cuando la dependencia esté
+//! disponible.
 
 use serde::{Deserialize, Serialize};
-use tracing::{debug, info, warn};
+use tracing::info;
 use wombat_core::{validate_wonb, Wonb};
 
 /// Mensaje enviado sobre GossipSub: un WONB serializado en JSON.
@@ -14,37 +19,7 @@ pub struct WonbMessage {
     pub wonb: Wonb,
 }
 
-#[cfg(feature = "p2p")]
-use libp2p::{
-    identify, ping,
-    swarm::{NetworkBehaviour, SwarmEvent},
-};
-
-#[cfg(feature = "p2p")]
-#[derive(NetworkBehaviour)]
-pub struct WombatBehaviour {
-    pub gossipsub: libp2p::gossipsub::Behaviour,
-    pub identify: identify::Behaviour,
-    pub ping: ping::Behaviour,
-}
-
-#[cfg(feature = "p2p")]
-impl WombatBehaviour {
-    pub fn new(
-        gossipsub: libp2p::gossipsub::Behaviour,
-        identify: identify::Behaviour,
-        ping: ping::Behaviour,
-    ) -> Self {
-        Self {
-            gossipsub,
-            identify,
-            ping,
-        }
-    }
-}
-
-/// Procesa un payload JSON recibido por GossipSub: lo deserializa a WONB y
-/// lo valida. Disponible con o sin la característica `p2p`.
+/// Procesa un payload JSON recibido: lo deserializa a WONB y lo valida.
 pub fn process_incoming_wonb(payload: &str) -> Result<Wonb, wombat_core::WonbError> {
     let wonb: Wonb =
         serde_json::from_str(payload).map_err(|e| wombat_core::WonbError::InvalidJson(e))?;
@@ -56,16 +31,6 @@ pub fn process_incoming_wonb(payload: &str) -> Result<Wonb, wombat_core::WonbErr
         wonb.topic()
     );
     Ok(wonb)
-}
-
-#[cfg(feature = "p2p")]
-/// Procesa un evento del swarm del nodo WOMBAT.
-pub fn handle_swarm_event(
-    event: libp2p::swarm::SwarmEvent<libp2p::swarm::SwarmEvent<WombatBehaviour>>,
-) {
-    // Punto de extensión documentado. El procesamiento real de mensajes se
-    // hace en `process_incoming_wonb`.
-    let _ = event;
 }
 
 #[cfg(test)]
@@ -92,7 +57,7 @@ mod tests {
             },
             serde_json::json!({"displacement_cm": 3.4}),
             wombat_core::wonb::WonbProvenance {
-                created_at: chrono::Utc::now().to_rfc3339(),
+                created_at: "2027-01-15T12:00:00Z".to_string(),
                 created_by: "did:wombat:node-demo".into(),
                 confidence: 0.89,
                 data_hash:

@@ -21,7 +21,7 @@
     "note": "VALOR SIMULADO PARA DEMO. No confirma ni predice un deslizamiento por sí solo."
   },
   "provenance": {
-    "created_at": "2026-01-15T12:00:00Z",
+    "created_at": "2027-01-15T12:00:00Z",
     "created_by": "did:wombat:node-demo",
     "confidence": 0.89,
     "data_hash": "sha256:placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-",
