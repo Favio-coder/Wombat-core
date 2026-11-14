@@ -1,0 +1,13 @@
+{
+  "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_PROVISIONAL_V1/NISAR_L2_PR_GCOV_033_104_A_175_2005_DHDH_A_20261019T110900_20261019T110934_P05023_N_F_J_001/NISAR_L2_PR_GCOV_033_104_A_175_2005_DHDH_A_20261019T110900_20261019T110934_P05023_N_F_J_001.h5",
+  "checked_at": "2026-11-14T20:46:34.662858+00:00",
+  "size_bytes": 1488977920,
+  "accept_ranges": "bytes",
+  "http_status": 200,
+  "data_endpoint": true,
+  "max_mb": 500,
+  "full_download_allowed": false,
+  "preferred_access": "Earthdata-authenticated HTTPS/S3 range reads or external subset; pass local HDF5 subset to 02_subset.py",
+  "download_performed": false,
+  "catalog_size_bytes": 1488977920
+}
