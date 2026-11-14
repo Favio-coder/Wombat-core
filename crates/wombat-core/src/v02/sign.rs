@@ -19,18 +19,30 @@ pub fn issuer_string(key: &VerifyingKey) -> String {
     format!("ed25519:{}", hex::encode(key.as_bytes()))
 }
 
+/// `issued_at + ttl_seconds`, en el formato con `Z` de los fixtures y del
+/// esquema.
+///
+/// Está aquí, y no en quien exporta el bundle, para que haya una sola forma de
+/// escribir esa fecha: `2026-11-15T17:00:00Z` y `2026-11-15T17:00:00+00:00` son
+/// el mismo instante y distinto hash.
+pub fn valid_until_from(issued_at: &str, ttl_seconds: u64) -> Result<String, WonbError> {
+    let issued = parse_rfc3339(issued_at)?;
+    let until = issued
+        + chrono::Duration::try_seconds(ttl_seconds as i64)
+            .ok_or_else(|| WonbError::Schema(format!("TTL fuera de rango: {ttl_seconds}")))?;
+    Ok(until.format("%Y-%m-%dT%H:%M:%SZ").to_string())
+}
+
 impl BlockBody {
     /// `valid_until` que le corresponde al tipo, a partir de `issued_at`.
     ///
-    /// `None` para `change` y `context`, que no vencen.
+    /// `None` para `change` y `context`, que no vencen. Quien tenga el TTL en
+    /// su configuración debe usar [`valid_until_from`] con ese valor.
     pub fn expected_valid_until(&self) -> Result<Option<String>, WonbError> {
         let Some(ttl) = self.block_type.ttl_seconds() else {
             return Ok(None);
         };
-        let issued = parse_rfc3339(&self.issued_at)?;
-        let until = issued + chrono::Duration::seconds(ttl as i64);
-        // Formato explícito con `Z`: es el que usan los fixtures y el esquema.
-        Ok(Some(until.format("%Y-%m-%dT%H:%M:%SZ").to_string()))
+        valid_until_from(&self.issued_at, ttl).map(Some)
     }
 }
 

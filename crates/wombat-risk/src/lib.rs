@@ -17,6 +17,7 @@
 //! 3. **La configuración manda.** Ningún umbral, peso ni saturación está
 //!    escrito en el código: todos vienen de `risk-config.json`.
 //!
+pub mod blocks;
 pub mod config;
 pub mod error;
 pub mod evaluate;
@@ -25,6 +26,10 @@ pub mod explain;
 pub mod inputs;
 pub mod load;
 
+pub use blocks::{
+    build_action_bodies, build_action_payloads, build_risk_bodies, build_risk_payloads,
+    BlockContext,
+};
 pub use config::{RiskConfig, StatusThresholdsBp, TtlSeconds, WeightsBp};
 pub use error::RiskError;
 pub use evaluate::{evaluate, CellRisk};

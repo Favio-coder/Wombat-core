@@ -41,5 +41,5 @@ pub use payload::{
     ActionKind, ActionPayload, ChangePayload, ComponentsBp, ContextPayload, DataOrigin, Frequency,
     OperaStatus, OverlayHashes, Payload, RiskMetrics, RiskPayload, RiskStatus,
 };
-pub use sign::{generate_ephemeral_keypair, issuer_string};
+pub use sign::{generate_ephemeral_keypair, issuer_string, valid_until_from};
 pub use trusted::{TrustedIssuer, TrustedIssuers};
