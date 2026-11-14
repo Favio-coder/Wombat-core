@@ -6,7 +6,7 @@
 
 use crate::error::{WonbError, WonbError::*};
 use crate::wonb::Wonb;
-use ed25519_dalek::{Signer, SigningKey, VerifyingKey};
+use ed25519_dalek::{Signer, SigningKey, VerifyingKey, Verifier};
 use sha2::{Digest, Sha256};
 use std::fmt;
 
@@ -20,7 +20,7 @@ pub fn compute_content_hash(wonb: &Wonb) -> Result<String, WonbError> {
     let mut hasher = Sha256::new();
     hasher.update(canonical.as_bytes());
     let result = hasher.finalize();
-    Ok(format!("sha256:{hex(result)}"))
+    Ok(format!("sha256:{}", hex::encode(result)))
 }
 
 /// Verifica que el `data_hash` del WONB coincida con el hash calculado de su

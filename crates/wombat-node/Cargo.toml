@@ -7,7 +7,6 @@ edition = "2021"
 [dependencies]
 wombat-core = { path = "../wombat-core" }
 tokio = { workspace = true, features = ["full"] }
-libp2p = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
 thiserror = { workspace = true }
@@ -16,6 +15,13 @@ tracing = { workspace = true }
 tracing-subscriber = { workspace = true }
 clap = { workspace = true }
 hex = { workspace = true }
-core2 = { workspace = true }
+
+[features]
+# La característica `p2p` activa el stack libp2p (TCP, DNS, Noise, Yamux,
+# Identify, Ping, GossipSub). Desactivada por defecto porque el índice de
+# crates.io disponible no resuelve la cadena de dependencias de libp2p
+# (core2 0.4.0 yanked). Para activar P2P real, agregar `libp2p` como
+# dependencia y activar esta característica.
+default = []
 
 [dev-dependencies]

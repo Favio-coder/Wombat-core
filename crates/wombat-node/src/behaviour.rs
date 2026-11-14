@@ -1,15 +1,11 @@
 //! Behaviour del nodo libp2p.
 //!
-//! Combina GossipSub (publicación/suscripción de WONBs), Identify y Ping.
-//! Los mensajes recibidos se validan con `wombat-core` antes de ser
-//! procesados o re-publicados.
+//! Este módulo solo se compila cuando se activa la característica `p2p`
+//! (que incluye la dependencia `libp2p`). Cuando está desactivado, el nodo
+//! corre en modo demo local sin red P2P.
 
-use libp2p::{
-    identify, ping,
-    swarm::{NetworkBehaviour, SwarmEvent},
-};
 use serde::{Deserialize, Serialize};
-use tracing::{debug, error, info, warn};
+use tracing::{debug, info, warn};
 use wombat_core::{validate_wonb, Wonb};
 
 /// Mensaje enviado sobre GossipSub: un WONB serializado en JSON.
@@ -18,6 +14,13 @@ pub struct WonbMessage {
     pub wonb: Wonb,
 }
 
+#[cfg(feature = "p2p")]
+use libp2p::{
+    identify, ping,
+    swarm::{NetworkBehaviour, SwarmEvent},
+};
+
+#[cfg(feature = "p2p")]
 #[derive(NetworkBehaviour)]
 pub struct WombatBehaviour {
     pub gossipsub: libp2p::gossipsub::Behaviour,
@@ -25,19 +28,23 @@ pub struct WombatBehaviour {
     pub ping: ping::Behaviour,
 }
 
-/// Procesa un evento del swarm del nodo WOMBAT.
-///
-/// Los mensajes de GossipSub se deserializan a WONB y se validan antes de
-/// ser aceptados.
-pub fn handle_swarm_event(event: SwarmEvent<libp2p::swarm::SwarmEvent<WombatBehaviour>>) {
-    // SwarmEvent<WombatBehaviour> no es un tipo directamente usable; este
-    // helper se deja como punto de extensión documentado. El procesamiento
-    // real de mensajes se hace en `process_incoming_wonb`.
-    let _ = event;
+#[cfg(feature = "p2p")]
+impl WombatBehaviour {
+    pub fn new(
+        gossipsub: libp2p::gossipsub::Behaviour,
+        identify: identify::Behaviour,
+        ping: ping::Behaviour,
+    ) -> Self {
+        Self {
+            gossipsub,
+            identify,
+            ping,
+        }
+    }
 }
 
 /// Procesa un payload JSON recibido por GossipSub: lo deserializa a WONB y
-/// lo valida.
+/// lo valida. Disponible con o sin la característica `p2p`.
 pub fn process_incoming_wonb(payload: &str) -> Result<Wonb, wombat_core::WonbError> {
     let wonb: Wonb =
         serde_json::from_str(payload).map_err(|e| wombat_core::WonbError::InvalidJson(e))?;
@@ -49,6 +56,16 @@ pub fn process_incoming_wonb(payload: &str) -> Result<Wonb, wombat_core::WonbErr
         wonb.topic()
     );
     Ok(wonb)
+}
+
+#[cfg(feature = "p2p")]
+/// Procesa un evento del swarm del nodo WOMBAT.
+pub fn handle_swarm_event(
+    event: libp2p::swarm::SwarmEvent<libp2p::swarm::SwarmEvent<WombatBehaviour>>,
+) {
+    // Punto de extensión documentado. El procesamiento real de mensajes se
+    // hace en `process_incoming_wonb`.
+    let _ = event;
 }
 
 #[cfg(test)]

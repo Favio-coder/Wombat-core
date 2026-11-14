@@ -57,7 +57,7 @@ impl WonbValidator {
     /// prefijo `wombat/`.
     pub fn with_allowed_topics(mut self, topics: Vec<String>) -> Self {
         self.allowed_topics = Some(topics);
-        self.accepted_topics(topics.clone())
+        self
     }
 
     /// Valida un WONB completo. Devuelve una referencia al WONB si es válido.
@@ -166,13 +166,10 @@ impl WonbValidator {
         Ok(())
     }
 
-    fn validate_type(&self, wonb: &Wonb) -> Result<(), WonbError> {
-        match wonb.type_ {
-            WonbType::Anomaly | WonbType::Context | WonbType::Risk | WonbType::Tool => Ok(()),
-        }
-        // El enum ya restringe los valores, pero se mantiene la rama explícita
-        // para documentación y futuras extensiones.
-        let _ = wonb;
+    fn validate_type(&self, _wonb: &Wonb) -> Result<(), WonbError> {
+        // WonbType es un enum cerrado, por lo que cualquier valor es válido.
+        // Se mantiene la validación explícita por documento y futuras
+        // extensiones.
         Ok(())
     }
 

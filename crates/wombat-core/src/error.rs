@@ -50,8 +50,3 @@ pub enum WonbError {
     Internal(String),
 }
 
-impl From<WonbError> for anyhow::Error {
-    fn from(err: WonbError) -> anyhow::Error {
-        anyhow::anyhow!(err)
-    }
-}

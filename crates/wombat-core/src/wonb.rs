@@ -50,7 +50,7 @@ pub struct WonbSource {
 }
 
 /// Proveniencia del WONB: cuándo, por quién, confianza, hash y regla.
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct WonbProvenance {
     pub created_at: String,
     pub created_by: String,
@@ -68,7 +68,7 @@ pub struct WonbRouting {
 }
 
 /// Estructura completa de un WONB.
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct Wonb {
     pub spec_version: String,
     pub id: String,

@@ -5,14 +5,8 @@
 //!   wombat-node publish --file ... -> publica un WONB desde JSON
 //!   wombat-node validate --file ...-> valida un WONB sin publicarlo
 
-// Forzar la versión de `core2` (dependencia transitiva de libp2p) a 0.4.1,
-// ya que la 0.4.0 está yanked en crates.io.
-#[allow(unused_imports)]
-use core2 as _;
-
 use anyhow::Result;
 use clap::Parser;
-use std::path::PathBuf;
 use tracing::{error, info};
 use tracing_subscriber::{fmt, EnvFilter};
 
@@ -36,14 +30,25 @@ async fn run_cmd(config: NodeConfig) -> Result<()> {
         info!("Modo demo local: sin red P2P. Usa publish/validate para probar.");
         return Ok(());
     }
-    info!("Escuchando en {}", config.listen_addr);
-    info!("Topics suscritos: {:?}", config.topics);
-    // El stack libp2p completo se conecta aquí cuando la infra de red esté lista.
-    // Por ahora el nodo se mantiene en modo demo documentado.
-    Ok(())
+    #[cfg(not(feature = "p2p"))]
+    {
+        anyhow::bail!(
+            "El modo P2P real requiere la característica `p2p`. Ejecute: \
+             cargo run -p wombat-node --features p2p -- run --listen /ip4/0.0.0.0/tcp/9000 \
+             O use --demo para modo local sin red."
+        );
+    }
+    #[cfg(feature = "p2p")]
+    {
+        info!("Escuchando en {}", config.listen_addr);
+        info!("Topics suscritos: {:?}", config.topics);
+        // El stack libp2p completo se conecta aquí cuando la infra de red esté lista.
+        let _ = config;
+        Ok(())
+    }
 }
 
-async fn publish_cmd(file: PathBuf) -> Result<()> {
+async fn publish_cmd(file: std::path::PathBuf) -> Result<()> {
     let content = std::fs::read_to_string(&file)
         .map_err(|e| anyhow::anyhow!("no se pudo leer {}: {}", file.display(), e))?;
     let wonb: Wonb =
@@ -59,7 +64,7 @@ async fn publish_cmd(file: PathBuf) -> Result<()> {
     Ok(())
 }
 
-async fn validate_cmd(file: PathBuf) -> Result<()> {
+async fn validate_cmd(file: std::path::PathBuf) -> Result<()> {
     let content = std::fs::read_to_string(&file)
         .map_err(|e| anyhow::anyhow!("no se pudo leer {}: {}", file.display(), e))?;
     let wonb: Wonb =

@@ -11,7 +11,6 @@ edition = "2021"
 
 [workspace.dependencies]
 tokio = { version = "1", features = ["full"] }
-libp2p = { version = "0.47", features = ["tcp-tokio", "dns-tokio", "noise", "yamux", "identify", "ping", "gossipsub"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 uuid = { version = "1", features = ["v4"] }
@@ -25,7 +24,6 @@ tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 clap = { version = "4", features = ["derive"] }
 hex = "0.4"
-core2 = "0.4.1"
 
 [profile.release]
 opt-level = 2
