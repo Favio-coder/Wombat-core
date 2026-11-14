@@ -1,0 +1,148 @@
+# WOMBAT — Protocolo de intercambio de bloques de evidencia (WONB)
+
+WOMBAT (Wombat Observation and Monitoring Blockchain-style Transport) es un
+prototipo de protocolo P2P para intercambiar bloques JSON de evidencia llamados
+**WONB** (*Wombat Observation Notation Block*) entre nodos heterogéneos.
+
+El MVP usa **Rust + Tokio + libp2p** como nodo P2P, con **Python** para un futuro
+adaptador geoespacial, **TypeScript/React** para el futuro dashboard y agente de
+riesgo, y **Raspberry Pi** como futuro nodo edge.
+
+> ⚠️ Estado: núcleo, contratos compartidos, pruebas y estructura de integración.
+> No incluye dashboard completo, procesamiento SAR real, integración NISAR real ni
+> GPIO de Raspberry. Los valores NISAR de los fixtures son **simulados para la
+> demo**.
+
+## ¿Qué es un WONB?
+
+Un WONB es un bloque JSON de evidencia firmado que contiene:
+
+- `spec_version`: versión del esquema (`wombat/0.1`).
+- `id`: identificador único (`wonb:<tipo>:<uuid>`).
+- `type`: `anomaly` | `context` | `risk` | `tool`.
+- `schema`: esquema de dominio (ej. `geospatial.surface-displacement/1.0`).
+- `source`: proveedor, adaptador y referencia de origen.
+- `payload`: datos del bloque (objeto JSON arbitrario).
+- `provenance`: cuándo, por quién, confianza, hash SHA-256 y versión de regla.
+- `routing`: topic, TTL y prioridad.
+- `evidence_refs`: referencias a evidencia externa.
+- `signature`: firma Ed25519 (hex) sobre el hash canónico del contenido.
+
+## Arquitectura breve
+
+```
+crates/wombat-core   -> Modelo WONB, validación, hash SHA-256, firmas Ed25519
+crates/wombat-node   -> Nodo libp2p + GossipSub, CLI (run/publish/validate)
+contracts/schemas    -> Esquemas JSON de los 4 tipos de WONB
+contracts/fixtures   -> Ejemplos válidos e inválidos para pruebas y demo
+adapters/*           -> Futuro adaptador geoespacial Python y nodo edge Pi
+apps/*               -> Futuro dashboard y landing
+docs/*               -> Especificación WONB, arquitectura, guía de demo
+```
+
+P2P es transporte; A2A es coordinación semántica mediante WONBs. MCP o
+adaptadores conectarán fuentes y herramientas locales (no implementados todavía).
+
+## Requisitos
+
+- Rust toolchain estable (1.78+). Verificado con `rustc 1.98.1`.
+- `cargo` y `clang`/`gcc` (libp2p compila código nativo).
+- Opcional: Docker y Docker Compose para la demo local.
+
+## Comandos exactos
+
+Desde la raíz del workspace (`wombat/`):
+
+```bash
+# Formato
+cargo fmt --check
+
+# Lint (clippy, errores como advertencias)
+cargo clippy --workspace -- -D warnings
+
+# Pruebas automatizadas (criterio de aceptación #1)
+cargo test --workspace
+
+# Construir el nodo
+cargo build --workspace
+
+# Validar el fixture de anomalía (criterio de aceptación #3)
+cargo run -p wombat-node -- validate --file \
+  contracts/fixtures/anomaly-valid.json
+
+# Publicar el fixture de anomalía (modo demo, sin red)
+cargo run -p wombat-node -- publish --file \
+  contracts/fixtures/anomaly-valid.json
+```
+
+## Levantar dos nodos locales
+
+El nodo está en **modo demo local** por defecto: no abre red P2P hasta que la
+infra de libp2p esté lista. Para validar el flujo entre dos nodos sin red:
+
+1. Terminal 1 — nodo A en modo demo:
+   ```bash
+   cargo run -p wombat-node -- run --demo
+   ```
+
+2. Terminal 2 — nodo B, valida el fixture:
+   ```bash
+   cargo run -p wombat-node -- validate --file \
+     contracts/fixtures/anomaly-valid.json
+   ```
+
+3. Publicar el fixture desde cualquier terminal:
+   ```bash
+   cargo run -p wombat-node -- publish --file \
+     contracts/fixtures/anomaly-valid.json
+   ```
+
+Cuando la red P2P esté habilitada, cada nodo escuchará en
+`/ip4/0.0.0.0/tcp/<puerto>` y se conectarán intercambiando sus `Multiaddr`
+(libp2p identify). El comando para conectar peers es:
+
+```bash
+# Ejemplo ilustrativo (requiere libp2p completo habilitado):
+# wombat-node run --listen /ip4/0.0.0.0/tcp/9000
+# Luego, desde el otro nodo:
+# libp2p identify /ip4/<IP_A>/tcp/9000/p2p/<PEER_ID_A>
+```
+
+Consulta `docs/demo-runbook.md` para la guía detallada.
+
+## Contratos y revisión
+
+Los archivos bajo `contracts/schemas/` y `contracts/fixtures/` son **contratos
+compartidos**. No modificarlos sin revisión del equipo (ver tabla de
+responsables más abajo). Cualquier cambio de esquema debe ir acompañado de
+actualización de fixtures y pruebas.
+
+## Contribuir
+
+1. Crea una rama desde `main`.
+2. No modifiques `contracts/` sin revisión.
+3. Ejecuta `cargo fmt --check`, `cargo clippy --workspace -- -D warnings` y
+   `cargo test --workspace` antes de enviar el PR.
+4. Abre un PR y espera la revisión del responsable del módulo.
+
+## Tabla: módulo / responsable sugerido
+
+| Módulo                        | Responsable sugerido |
+|-------------------------------|----------------------|
+| Core Rust / P2P               | Richard              |
+| Adaptador geoespacial Python  | Gustavo              |
+| Nodo edge Raspberry Pi        | Jelibeth             |
+| Agente de riesgo / dashboard  | Mireya               |
+| Landing / pitch / UI          | Ximena               |
+| QA, integración, GitHub Actions, fixtures, modo demo | Jayo |
+
+## Avisos importantes
+
+- Una anomalía de deformación superficial **no confirma ni predice por sí sola**
+  un deslizamiento de tierra.
+- El MVP usa una **regla demostrativa**, no un modelo científico operacional.
+- No incluir claves privadas ni secretos en el repositorio.
+
+## Licencia
+
+MIT. Véase `LICENSE`.

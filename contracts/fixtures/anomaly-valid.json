@@ -1,0 +1,37 @@
+{
+  "spec_version": "wombat/0.1",
+  "id": "wonb:anomaly:demo-001",
+  "type": "anomaly",
+  "schema": "geospatial.surface-displacement/1.0",
+  "source": {
+    "provider": "demo-geospatial-adapter",
+    "adapter": "wombat-geospatial-python",
+    "source_ref": "simulated-nisar-observation"
+  },
+  "payload": {
+    "phenomenon": "surface-displacement",
+    "displacement_cm": 3.4,
+    "observation_window_days": 12,
+    "slope_deg": 34.2,
+    "location": {
+      "lat": -12.0464,
+      "lon": -76.9488,
+      "area": "costa-verde, lima"
+    },
+    "note": "VALOR SIMULADO PARA DEMO. No confirma ni predice un deslizamiento por sí solo."
+  },
+  "provenance": {
+    "created_at": "2026-01-15T12:00:00Z",
+    "created_by": "did:wombat:node-demo",
+    "confidence": 0.89,
+    "data_hash": "sha256:placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-",
+    "rule_version": "landslide-rule/0.1"
+  },
+  "routing": {
+    "topic": "wombat/lima/costa-verde/anomaly",
+    "ttl_seconds": 3600,
+    "priority": "high"
+  },
+  "evidence_refs": [],
+  "signature": ""
+}

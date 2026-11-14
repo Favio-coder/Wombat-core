@@ -1,0 +1,34 @@
+{
+  "spec_version": "wombat/0.1",
+  "id": "wonb:tool:demo-001",
+  "type": "tool",
+  "schema": "tool.alert/1.0",
+  "source": {
+    "provider": "demo-risk-adapter",
+    "adapter": "wombat-risk-agent",
+    "source_ref": "simulated-alert-action"
+  },
+  "payload": {
+    "action": "activate_alert",
+    "target": "community-costa-verde",
+    "channel": "sms-siren",
+    "severity": "high",
+    "note": "SIMULADO PARA DEMO"
+  },
+  "provenance": {
+    "created_at": "2026-01-15T12:15:00Z",
+    "created_by": "did:wombat:node-demo",
+    "confidence": 1.0,
+    "data_hash": "sha256:placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-",
+    "rule_version": "landslide-rule/0.1"
+  },
+  "routing": {
+    "topic": "wombat/lima/costa-verde/action",
+    "ttl_seconds": 300,
+    "priority": "high"
+  },
+  "evidence_refs": [
+    "wonb:risk:demo-001"
+  ],
+  "signature": ""
+}
