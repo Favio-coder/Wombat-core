@@ -37,10 +37,10 @@ jobs:
         run: cargo fmt --check
 
       - name: cargo clippy
-        run: cargo clippy --workspace -- -D warnings
+        run: cargo clippy --workspace --all-features -- -D warnings
 
       - name: cargo test --workspace
-        run: cargo test --workspace
+        run: cargo test --workspace --all-features
 
   fixtures:
     name: Fixture validation
