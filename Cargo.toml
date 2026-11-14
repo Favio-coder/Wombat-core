@@ -3,6 +3,7 @@ resolver = "2"
 members = [
     "crates/wombat-core",
     "crates/wombat-node",
+    "crates/wombat-risk",
 ]
 
 [workspace.package]

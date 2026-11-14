@@ -15,8 +15,6 @@
 //     }
 // }
 
-
-
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -66,6 +64,47 @@ pub fn change_component(cell: &CellInput, config: &RiskConfig) -> f64 {
     }
 
     (cell.changed_fraction / config.change_saturation).clamp(0.0, 1.0)
+}
+
+// Componente OPERA
+pub fn opera_component(cell: &CellInput) -> f64 {
+    cell.opera_overlap_ratio.unwrap_or(0.0).clamp(0.0, 1.0)
+}
+
+pub fn road_component(cell: &CellInput, cells: &[CellInput]) -> f64 {
+    let max_road = cells
+        .iter()
+        .map(|candidate| candidate.road_m_near_change)
+        .fold(0.0_f64, f64::max);
+
+    if max_road <= 0.0 {
+        return 0.0;
+    }
+
+    (cell.road_m_near_change / max_road).clamp(0.0, 1.0)
+}
+
+pub fn calculate_score(cell: &CellInput, cells: &[CellInput], config: &RiskConfig) -> Option<f64> {
+    if !passes_quality_gate(cell, config) {
+        return None;
+    }
+
+    let score = config.weight_change * change_component(cell, config)
+        + config.weight_opera * opera_component(cell)
+        + config.weight_road * road_component(cell, cells);
+
+    Some(score.clamp(0.0, 1.0))
+}
+
+// Validar Score
+pub fn classify_score(score: f64, config: &RiskConfig) -> RiskStatus {
+    if score >= config.review_high_threshold {
+        RiskStatus::ReviewHigh
+    } else if score >= config.review_medium_threshold {
+        RiskStatus::ReviewMedium
+    } else {
+        RiskStatus::ReviewLow
+    }
 }
 
 #[cfg(test)]
@@ -120,5 +159,87 @@ mod tests {
 
         let result = change_component(&high_change_cell, &config());
         assert!((result - 1.0).abs() < f64::EPSILON);
+    }
+
+    // Test módulo Opera
+    #[test]
+    fn uses_opera_overlap_when_available() {
+        let mut corroborated_cell = cell(0.80);
+        corroborated_cell.opera_overlap_ratio = Some(0.70);
+
+        let result = opera_component(&corroborated_cell);
+        assert!((result - 0.70).abs() < f64::EPSILON);
+    }
+
+    #[test]
+    fn uses_zero_when_opera_is_unavailable() {
+        let result = opera_component(&cell(0.80));
+        assert!((result - 0.0).abs() < f64::EPSILON);
+    }
+
+    #[test]
+    fn normalizes_road_exposure_against_the_highest_cell() {
+        let mut first = cell(0.80);
+        first.road_m_near_change = 100.0;
+
+        let mut second = cell(0.80);
+        second.cell_id = "piura-002".to_string();
+        second.road_m_near_change = 200.0;
+
+        let cells = vec![first.clone(), second.clone()];
+
+        assert!((road_component(&first, &cells) - 0.5).abs() < f64::EPSILON);
+        assert!((road_component(&second, &cells) - 1.0).abs() < f64::EPSILON);
+    }
+
+    #[test]
+    fn returns_zero_when_no_roads_are_available() {
+        let mut no_road_cell = cell(0.80);
+        no_road_cell.road_m_near_change = 0.0;
+
+        let cells = vec![no_road_cell.clone()];
+
+        assert!((road_component(&no_road_cell, &cells) - 0.0).abs() < f64::EPSILON);
+    }
+
+    #[test]
+    fn calculates_weighted_score_for_valid_cell() {
+        let mut first = cell(0.80);
+        first.opera_overlap_ratio = Some(0.70);
+        first.road_m_near_change = 100.0;
+
+        let mut second = cell(0.80);
+        second.cell_id = "piura-002".to_string();
+        second.road_m_near_change = 200.0;
+
+        let cells = vec![first.clone(), second];
+
+        let score = calculate_score(&first, &cells, &config());
+
+        let score = score.expect("La celda valida debe tener Score");
+        assert!((score - 0.56).abs() < 1e-9);
+    }
+
+    #[test]
+    fn does_not_score_cell_with_insufficient_quality() {
+        let low_quality_cell = cell(0.59);
+        let cells = vec![low_quality_cell.clone()];
+
+        assert_eq!(calculate_score(&low_quality_cell, &cells, &config()), None);
+    }
+
+    #[test]
+    fn classifies_high_priority_score() {
+        assert_eq!(classify_score(0.60, &config()), RiskStatus::ReviewHigh);
+    }
+
+    #[test]
+    fn classifies_medium_priority_score() {
+        assert_eq!(classify_score(0.35, &config()), RiskStatus::ReviewMedium);
+    }
+
+    #[test]
+    fn classifies_low_priority_score() {
+        assert_eq!(classify_score(0.34, &config()), RiskStatus::ReviewLow);
     }
 }
