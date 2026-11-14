@@ -60,7 +60,9 @@ pub fn sign_wonb(wonb: &mut Wonb, signing_key: &SigningKey) -> Result<(), WonbEr
 /// contrario.
 pub fn verify_wonb_signature(wonb: &Wonb, verifying_key: &VerifyingKey) -> Result<(), WonbError> {
     if wonb.signature.is_empty() {
-        return Err(InvalidSignature { id: wonb.id.clone() });
+        return Err(InvalidSignature {
+            id: wonb.id.clone(),
+        });
     }
     let hash = compute_content_hash(wonb)?;
     let hash_bytes = hash
@@ -76,14 +78,15 @@ pub fn verify_wonb_signature(wonb: &Wonb, verifying_key: &VerifyingKey) -> Resul
     );
     verifying_key
         .verify(&hash_decoded, &signature)
-        .map_err(|_| InvalidSignature { id: wonb.id.clone() })?;
+        .map_err(|_| InvalidSignature {
+            id: wonb.id.clone(),
+        })?;
     Ok(())
 }
 
 /// Genera un par de claves Ed25519 efímero (solo para tests y demo).
 ///
-/// Esta función requiere la característica `rand-core` de `ed25519-dalek`.
-#[cfg(feature = "rand-core")]
+/// Esta función requiere la característica `rand_core` de `ed25519-dalek`.
 pub fn generate_ephemeral_keypair() -> (SigningKey, VerifyingKey) {
     use ed25519_dalek::Signer as _;
     let mut csprng = rand::rngs::OsRng;
@@ -130,7 +133,8 @@ mod tests {
     #[test]
     fn verify_content_hash_mismatch_rejected() {
         let mut wonb = valid_wonb();
-        wonb.provenance.data_hash = "sha256:0000000000000000000000000000000000000000000000000000000000000000".into();
+        wonb.provenance.data_hash =
+            "sha256:0000000000000000000000000000000000000000000000000000000000000000".into();
         let err = verify_content_hash(&wonb).unwrap_err();
         matches!(err, HashMismatch { .. });
     }
@@ -173,10 +177,4 @@ mod tests {
         let err = verify_wonb_signature(&wonb, &verifying_key).unwrap_err();
         matches!(err, InvalidSignature { .. });
     }
-}
-
-/// Wrapper para formatear bytes como hex sin importar `hex` directamente en
-/// firmas (mantiene `hex` como dependencia declarada).
-fn hex(bytes: &[u8]) -> String {
-    hex::encode(bytes)
 }

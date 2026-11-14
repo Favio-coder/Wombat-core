@@ -109,31 +109,49 @@ impl WonbValidator {
             return Err(MissingField { field: "id".into() });
         }
         if wonb.schema.is_empty() {
-            return Err(MissingField { field: "schema".into() });
+            return Err(MissingField {
+                field: "schema".into(),
+            });
         }
         if wonb.source.provider.is_empty() {
-            return Err(MissingField { field: "source.provider".into() });
+            return Err(MissingField {
+                field: "source.provider".into(),
+            });
         }
         if wonb.source.adapter.is_empty() {
-            return Err(MissingField { field: "source.adapter".into() });
+            return Err(MissingField {
+                field: "source.adapter".into(),
+            });
         }
         if wonb.source.source_ref.is_empty() {
-            return Err(MissingField { field: "source.source_ref".into() });
+            return Err(MissingField {
+                field: "source.source_ref".into(),
+            });
         }
         if wonb.provenance.created_at.is_empty() {
-            return Err(MissingField { field: "provenance.created_at".into() });
+            return Err(MissingField {
+                field: "provenance.created_at".into(),
+            });
         }
         if wonb.provenance.created_by.is_empty() {
-            return Err(MissingField { field: "provenance.created_by".into() });
+            return Err(MissingField {
+                field: "provenance.created_by".into(),
+            });
         }
         if wonb.provenance.data_hash.is_empty() {
-            return Err(MissingField { field: "provenance.data_hash".into() });
+            return Err(MissingField {
+                field: "provenance.data_hash".into(),
+            });
         }
         if wonb.provenance.rule_version.is_empty() {
-            return Err(MissingField { field: "provenance.rule_version".into() });
+            return Err(MissingField {
+                field: "provenance.rule_version".into(),
+            });
         }
         if wonb.routing.topic.is_empty() {
-            return Err(MissingField { field: "routing.topic".into() });
+            return Err(MissingField {
+                field: "routing.topic".into(),
+            });
         }
         Ok(())
     }
@@ -185,9 +203,11 @@ impl WonbValidator {
     }
 
     fn validate_timestamp(&self, wonb: &Wonb) -> Result<(), WonbError> {
-        let ts = wonb.provenance.created_at.parse::<DateTime<Utc>>().map_err(|_| {
-            InvalidTimestamp(wonb.provenance.created_at.clone())
-        })?;
+        let ts = wonb
+            .provenance
+            .created_at
+            .parse::<DateTime<Utc>>()
+            .map_err(|_| InvalidTimestamp(wonb.provenance.created_at.clone()))?;
         // Confianza en [0, 1].
         if !(0.0..=1.0).contains(&wonb.provenance.confidence) {
             return Err(InvalidTimestamp(format!(
@@ -203,11 +223,12 @@ impl WonbValidator {
         if matches!(self.expiry_policy, ExpiryPolicy::AllowExpired) {
             return Ok(());
         }
-        let created_at = wonb.provenance.created_at.parse::<DateTime<Utc>>().map_err(|_| {
-            InvalidTimestamp(wonb.provenance.created_at.clone())
-        })?;
-        let expires_at = created_at
-            + chrono::Duration::seconds(wonb.routing.ttl_seconds as i64);
+        let created_at = wonb
+            .provenance
+            .created_at
+            .parse::<DateTime<Utc>>()
+            .map_err(|_| InvalidTimestamp(wonb.provenance.created_at.clone()))?;
+        let expires_at = created_at + chrono::Duration::seconds(wonb.routing.ttl_seconds as i64);
         let now = Utc::now();
         if now > expires_at {
             return Err(Expired {
@@ -328,7 +349,12 @@ mod tests {
 
     #[test]
     fn four_valid_types_accepted() {
-        for ty in [WonbType::Anomaly, WonbType::Context, WonbType::Risk, WonbType::Tool] {
+        for ty in [
+            WonbType::Anomaly,
+            WonbType::Context,
+            WonbType::Risk,
+            WonbType::Tool,
+        ] {
             let wonb = Wonb::new(
                 ty,
                 "test.schema/1.0",

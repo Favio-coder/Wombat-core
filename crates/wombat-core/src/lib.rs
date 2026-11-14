@@ -5,12 +5,12 @@
 //! cálculo de hash SHA-256 canónico, firmado/verificación con Ed25519 y
 //! detección de duplicados en memoria.
 
-pub mod error;
-pub mod wonb;
-pub mod validation;
 pub mod crypto;
+pub mod error;
+pub mod validation;
+pub mod wonb;
 
 // Re-export commonly used types.
-pub use wonb::{Wonb, WonbSource, WonbProvenance, WonbRouting, WonbType};
 pub use crypto::sign_wonb;
-pub use validation::{validate_wonb, WonbValidator, ExpiryPolicy};
+pub use validation::{validate_wonb, ExpiryPolicy, WonbValidator};
+pub use wonb::{Wonb, WonbProvenance, WonbRouting, WonbSource, WonbType};

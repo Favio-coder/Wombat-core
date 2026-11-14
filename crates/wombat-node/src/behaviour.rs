@@ -28,7 +28,7 @@ pub struct WombatBehaviour {
 /// Procesa un evento del swarm del nodo WOMBAT.
 ///
 /// Los mensajes de GossipSub se deserializan a WONB y se validan antes de
-//! ser aceptados.
+/// ser aceptados.
 pub fn handle_swarm_event(event: SwarmEvent<libp2p::swarm::SwarmEvent<WombatBehaviour>>) {
     // SwarmEvent<WombatBehaviour> no es un tipo directamente usable; este
     // helper se deja como punto de extensión documentado. El procesamiento
@@ -39,12 +39,14 @@ pub fn handle_swarm_event(event: SwarmEvent<libp2p::swarm::SwarmEvent<WombatBeha
 /// Procesa un payload JSON recibido por GossipSub: lo deserializa a WONB y
 /// lo valida.
 pub fn process_incoming_wonb(payload: &str) -> Result<Wonb, wombat_core::WonbError> {
-    let wonb: Wonb = serde_json::from_str(payload)
-        .map_err(|e| wombat_core::WonbError::InvalidJson(e))?;
+    let wonb: Wonb =
+        serde_json::from_str(payload).map_err(|e| wombat_core::WonbError::InvalidJson(e))?;
     validate_wonb(&wonb)?;
     info!(
         "WONB válido recibido: id={} tipo={} topic={}",
-        wonb.id, wonb.type_, wonb.topic()
+        wonb.id,
+        wonb.type_,
+        wonb.topic()
     );
     Ok(wonb)
 }
@@ -76,7 +78,8 @@ mod tests {
                 created_at: chrono::Utc::now().to_rfc3339(),
                 created_by: "did:wombat:node-demo".into(),
                 confidence: 0.89,
-                data_hash: "sha256:0000000000000000000000000000000000000000000000000000000000000000".into(),
+                data_hash:
+                    "sha256:0000000000000000000000000000000000000000000000000000000000000000".into(),
                 rule_version: "landslide-rule/0.1".into(),
             },
             wombat_core::wonb::WonbRouting {

@@ -5,14 +5,19 @@
 //!   wombat-node publish --file ... -> publica un WONB desde JSON
 //!   wombat-node validate --file ...-> valida un WONB sin publicarlo
 
+// Forzar la versión de `core2` (dependencia transitiva de libp2p) a 0.4.1,
+// ya que la 0.4.0 está yanked en crates.io.
+#[allow(unused_imports)]
+use core2 as _;
+
 use anyhow::Result;
 use clap::Parser;
 use std::path::PathBuf;
 use tracing::{error, info};
 use tracing_subscriber::{fmt, EnvFilter};
 
-use wombat_node::config::{Cli, Commands, NodeConfig};
 use wombat_core::{validate_wonb, Wonb};
+use wombat_node::config::{Cli, Commands, NodeConfig};
 
 mod behaviour;
 mod config;
@@ -41,12 +46,14 @@ async fn run_cmd(config: NodeConfig) -> Result<()> {
 async fn publish_cmd(file: PathBuf) -> Result<()> {
     let content = std::fs::read_to_string(&file)
         .map_err(|e| anyhow::anyhow!("no se pudo leer {}: {}", file.display(), e))?;
-    let wonb: Wonb = serde_json::from_str(&content)
-        .map_err(|e| anyhow::anyhow!("JSON inválido: {e}"))?;
+    let wonb: Wonb =
+        serde_json::from_str(&content).map_err(|e| anyhow::anyhow!("JSON inválido: {e}"))?;
     validate_wonb(&wonb).map_err(|e| anyhow::anyhow!("WONB inválido: {e}"))?;
     info!(
         "WONB válido listo para publicar: id={} tipo={} topic={}",
-        wonb.id, wonb.type_, wonb.topic()
+        wonb.id,
+        wonb.type_,
+        wonb.topic()
     );
     println!("{}", serde_json::to_string_pretty(&wonb)?);
     Ok(())
@@ -55,12 +62,14 @@ async fn publish_cmd(file: PathBuf) -> Result<()> {
 async fn validate_cmd(file: PathBuf) -> Result<()> {
     let content = std::fs::read_to_string(&file)
         .map_err(|e| anyhow::anyhow!("no se pudo leer {}: {}", file.display(), e))?;
-    let wonb: Wonb = serde_json::from_str(&content)
-        .map_err(|e| anyhow::anyhow!("JSON inválido: {e}"))?;
+    let wonb: Wonb =
+        serde_json::from_str(&content).map_err(|e| anyhow::anyhow!("JSON inválido: {e}"))?;
     validate_wonb(&wonb).map_err(|e| anyhow::anyhow!("WONB inválido: {e}"))?;
     info!(
         "WONB válido: id={} tipo={} topic={}",
-        wonb.id, wonb.type_, wonb.topic()
+        wonb.id,
+        wonb.type_,
+        wonb.topic()
     );
     println!("WONB válido: {}", wonb.id);
     Ok(())

@@ -157,7 +157,8 @@ mod tests {
             created_at: "2026-01-01T00:00:00Z".to_string(),
             created_by: "did:wombat:node-demo".to_string(),
             confidence: 0.89,
-            data_hash: "sha256:0000000000000000000000000000000000000000000000000000000000000000".to_string(),
+            data_hash: "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+                .to_string(),
             rule_version: "landslide-rule/0.1".to_string(),
         }
     }
