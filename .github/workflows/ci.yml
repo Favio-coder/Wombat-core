@@ -15,15 +15,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@4f366e621dc797ca1b35e7bd81a7f017cc10e7c0 # stable
         with:
           components: clippy, rustfmt
 
       - name: Cache cargo registry and target
-        uses: actions/cache@v4
+        uses: actions/cache@v4 # TODO: pin to SHA — currently uses floating tag v4
         with:
           path: |
             ~/.cargo/registry
@@ -48,13 +48,13 @@ jobs:
     needs: [quality]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@4f366e621dc797ca1b35e7bd81a7f017cc10e7c0 # stable
 
       - name: Cache cargo registry and target
-        uses: actions/cache@v4
+        uses: actions/cache@v4 # TODO: pin to SHA — currently uses floating tag v4
         with:
           path: |
             ~/.cargo/registry

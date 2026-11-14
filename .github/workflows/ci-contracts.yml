@@ -11,8 +11,8 @@ jobs:
     name: Bundle fixture — esquemas, sha256, firmas (Python)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/setup-python@v5 # TODO: pin to SHA — currently uses floating tag v5
         with: { python-version: '3.12' }
       - run: pip install jsonschema referencing cryptography
       - name: Verificar bundle fixture
@@ -26,9 +26,9 @@ jobs:
     name: Prueba cruzada — verificador Rust (JCS + Ed25519)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: dtolnay/rust-toolchain@stable
-      - uses: actions/cache@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: dtolnay/rust-toolchain@4f366e621dc797ca1b35e7bd81a7f017cc10e7c0 # stable
+      - uses: actions/cache@v4 # TODO: pin to SHA — currently uses floating tag v4
         with:
           path: |
             ~/.cargo/registry
@@ -40,8 +40,8 @@ jobs:
     name: Prueba cruzada — verificador JS (JCS + Ed25519)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/setup-node@v4 # TODO: pin to SHA — currently uses floating tag v4
         with: { node-version: '20' }
       - working-directory: contracts/v1/tools/verify-js
         run: npm ci && node verify.mjs ../../fixtures/bundle/piura-demo/v0
@@ -51,7 +51,7 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with: { fetch-depth: 0 }
       - name: Rechazar modificaciones o borrados en data/<aoi>/<vN>/
         run: |
