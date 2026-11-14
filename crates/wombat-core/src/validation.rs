@@ -13,7 +13,7 @@ use chrono::{DateTime, Utc};
 use std::collections::HashSet;
 
 use crate::error::{WonbError, WonbError::*};
-use crate::wonb::{Wonb, WonbType};
+use crate::wonb::Wonb;
 
 /// Política de expiración para validar si un WONB está vencido.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
@@ -253,6 +253,7 @@ mod tests {
     use super::*;
     use crate::wonb::tests::*;
     use crate::wonb::WonbPriority;
+    use crate::wonb::WonbType;
 
     #[test]
     fn valid_wonb_passes() {

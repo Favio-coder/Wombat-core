@@ -8,7 +8,7 @@
 use anyhow::Result;
 use clap::Parser;
 use tracing::{error, info};
-use tracing_subscriber::{fmt, EnvFilter};
+use tracing_subscriber::EnvFilter;
 
 use wombat_core::{validate_wonb, Wonb};
 

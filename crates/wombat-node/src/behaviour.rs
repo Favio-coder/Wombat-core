@@ -14,15 +14,16 @@ use tracing::info;
 use wombat_core::{validate_wonb, Wonb};
 
 /// Mensaje enviado sobre GossipSub: un WONB serializado en JSON.
+#[allow(dead_code)]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct WonbMessage {
     pub wonb: Wonb,
 }
 
 /// Procesa un payload JSON recibido: lo deserializa a WONB y lo valida.
+#[allow(dead_code)]
 pub fn process_incoming_wonb(payload: &str) -> Result<Wonb, wombat_core::WonbError> {
-    let wonb: Wonb =
-        serde_json::from_str(payload).map_err(|e| wombat_core::WonbError::InvalidJson(e))?;
+    let wonb: Wonb = serde_json::from_str(payload).map_err(wombat_core::WonbError::InvalidJson)?;
     validate_wonb(&wonb)?;
     info!(
         "WONB válido recibido: id={} tipo={} topic={}",

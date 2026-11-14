@@ -15,6 +15,7 @@ pub const DEFAULT_TOPICS: &[&str] = &[
 ];
 
 /// Prefijo obligatorio de todos los topics WOMBAT.
+#[allow(dead_code)]
 pub const TOPIC_PREFIX: &str = "wombat/";
 
 /// Subcomandos soportados por la CLI del nodo.
@@ -56,6 +57,7 @@ pub struct Cli {
 /// Configuración cargada del nodo.
 #[derive(Debug, Clone)]
 pub struct NodeConfig {
+    #[allow(dead_code)]
     pub listen_addr: String,
     pub demo: bool,
     pub topics: Vec<String>,

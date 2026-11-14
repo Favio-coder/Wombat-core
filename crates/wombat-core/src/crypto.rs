@@ -92,7 +92,6 @@ pub fn verify_wonb_signature(wonb: &Wonb, verifying_key: &VerifyingKey) -> Resul
 ///
 /// Esta función requiere la característica `rand_core` de `ed25519-dalek`.
 pub fn generate_ephemeral_keypair() -> (SigningKey, VerifyingKey) {
-    use ed25519_dalek::Signer as _;
     let mut csprng = rand::rngs::OsRng;
     let signing_key = SigningKey::generate(&mut csprng);
     let verifying_key = signing_key.verifying_key();

@@ -37,8 +37,8 @@ impl std::fmt::Display for WonbType {
 #[serde(rename_all = "lowercase")]
 pub enum WonbPriority {
     Low,
-    Medium,
     #[default]
+    Medium,
     High,
 }
 
@@ -140,12 +140,6 @@ impl Wonb {
     /// Serializa el WONB a JSON legible (pretty print).
     pub fn to_pretty_json(&self) -> serde_json::Result<String> {
         serde_json::to_string_pretty(self)
-    }
-}
-
-impl Default for WonbPriority {
-    fn default() -> Self {
-        WonbPriority::Medium
     }
 }
 
