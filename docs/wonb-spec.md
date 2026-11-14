@@ -1,3 +1,5 @@
+> **ESPECIFICACIÓN WONB 0.1 — LEGADO.** El contrato vigente es 0.2: ver [contracts/v1/README.md](../contracts/v1/README.md).
+
 # Especificación WONB (Wombat Observation Notation Block)
 
 ## Formato
