@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wombat/contracts/v1/risk-config",
+  "title": "WOMBAT risk-config",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "delta_db_threshold",
+    "quality_min_valid_fraction",
+    "change_saturation",
+    "opera_max_gap_days",
+    "corroboration_overlap_threshold",
+    "road_buffer_meters",
+    "weights",
+    "status_thresholds",
+    "top_n_actions",
+    "ttl_seconds"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^risk-config/[0-9]+\\.[0-9]+$"
+    },
+    "delta_db_threshold": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "quality_min_valid_fraction": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "change_saturation": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 1
+    },
+    "opera_max_gap_days": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "corroboration_overlap_threshold": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "road_buffer_meters": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "weights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "change",
+        "opera",
+        "road"
+      ],
+      "properties": {
+        "change": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "opera": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "road": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "status_thresholds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "review_high",
+        "review_medium"
+      ],
+      "properties": {
+        "review_high": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "review_medium": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "top_n_actions": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "ttl_seconds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "risk",
+        "action"
+      ],
+      "properties": {
+        "risk": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "action": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    }
+  }
+}

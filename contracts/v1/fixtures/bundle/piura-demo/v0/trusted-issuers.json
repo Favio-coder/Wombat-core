@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "issuers": [
+    {
+      "issuer": "ed25519:92b8169774b5f100de3f37b5ec63b9a10100ae6d1983c4bbdc9b9e7ca6f014be",
+      "name": "wombat-fixture-demo (clave privada descartada)",
+      "roles": [
+        "change",
+        "context",
+        "risk",
+        "action"
+      ]
+    }
+  ]
+}

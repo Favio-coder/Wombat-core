@@ -1,0 +1,28 @@
+{
+  "wonb_version": "0.2",
+  "id": "sha256:f5e7bd0f6e3c316fb8c97f15af3bb03cc515a9282ecfd3f1c8be18e7f3cc2fb2",
+  "type": "context",
+  "topic": "wombat/pe/piura/piura-demo/context",
+  "issued_at": "2026-11-14T17:00:00Z",
+  "valid_until": null,
+  "issuer": "ed25519:92b8169774b5f100de3f37b5ec63b9a10100ae6d1983c4bbdc9b9e7ca6f014be",
+  "parents": [],
+  "payload": {
+    "aoi_id": "piura-demo",
+    "roads_total_m": 16242,
+    "road_buffer_m": 250,
+    "osm_retrieved_at": "2026-11-14T15:00:00Z",
+    "roads_geojson_sha256": "5c8e7345000a9b7b35c08714f15b7e7731ee26ce3f08cebd8f5ded1be0d735d0"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "product": "OpenStreetMap",
+        "retrieved_at": "2026-11-14"
+      }
+    ],
+    "method": "risk-config/0.1",
+    "code_commit": "fixture"
+  },
+  "signature": "4cfdd185bef93b42ffb83ea553f71383b82d88d4226a506fd0bfe94f835c46e4dd94f96a73c764129bc2804bec965848d9bf000676e94cd69c05886ff1353a0c"
+}

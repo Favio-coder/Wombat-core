@@ -1,0 +1,13 @@
+{
+  "version": "risk-config/0.1",
+  "delta_db_threshold": 3.0,
+  "quality_min_valid_fraction": 0.60,
+  "change_saturation": 0.25,
+  "opera_max_gap_days": 6,
+  "corroboration_overlap_threshold": 0.20,
+  "road_buffer_meters": 250,
+  "weights": { "change": 0.45, "opera": 0.35, "road": 0.20 },
+  "status_thresholds": { "review_high": 0.60, "review_medium": 0.35 },
+  "top_n_actions": 3,
+  "ttl_seconds": { "risk": 86400, "action": 3600 }
+}

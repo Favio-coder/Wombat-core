@@ -1,0 +1,61 @@
+{
+  "wonb_version": "0.2",
+  "id": "sha256:165728b7e1399d45723c6aa4a8ea4091502c9b037f028664cf51c1e0d8429fb5",
+  "type": "risk",
+  "topic": "wombat/pe/piura/piura-demo/risk",
+  "issued_at": "2026-11-14T17:00:00Z",
+  "valid_until": "2026-11-15T17:00:00Z",
+  "issuer": "ed25519:92b8169774b5f100de3f37b5ec63b9a10100ae6d1983c4bbdc9b9e7ca6f014be",
+  "parents": [
+    "sha256:02da13aa3d9cfb4c94ed1512d9728ddb3ed7a945e98c9a3bbd98c9cb791de683",
+    "sha256:f5e7bd0f6e3c316fb8c97f15af3bb03cc515a9282ecfd3f1c8be18e7f3cc2fb2"
+  ],
+  "payload": {
+    "cell_id": "piura-demo-r02c03",
+    "status": "review_low",
+    "rank": 8,
+    "score_bp": 2214,
+    "components_bp": {
+      "change": 3200,
+      "opera": 0,
+      "road": 3871
+    },
+    "metrics": {
+      "valid_bp": 9300,
+      "decrease_bp": 600,
+      "increase_bp": 200,
+      "changed_bp": 800,
+      "p90_abs_delta_cdb": 380,
+      "opera_status": "unavailable",
+      "opera_overlap_bp": null,
+      "road_m_near_change": 1200,
+      "road_m_total": 3500
+    },
+    "explanation": [
+      "6% of valid pixels decreased ≥3 dB; 2% increased ≥3 dB.",
+      "No OPERA DSWx-S1 (Sentinel-1) observation within 6 days; no independent contrast available.",
+      "1.2 km of road lie within 250 m of changed pixels."
+    ]
+  },
+  "provenance": {
+    "sources": [
+      {
+        "product": "NISAR_L2_GCOV",
+        "granule": "SIMULATED-T1/T2",
+        "maturity": "PROVISIONAL"
+      },
+      {
+        "product": "OPERA_L3_DSWx-S1",
+        "derived_from": "Sentinel-1",
+        "granule": "SIMULATED-OPERA"
+      },
+      {
+        "product": "OpenStreetMap",
+        "retrieved_at": "2026-11-14"
+      }
+    ],
+    "method": "risk-config/0.1",
+    "code_commit": "fixture"
+  },
+  "signature": "306e90f058a004660b7dd9eca3826da6a455be38708d0ea8771aba5eb350f717d6de53edb9bf3a4da3f695ecc68d38f6433eff58ab37c505dd65e5abfa0f3104"
+}

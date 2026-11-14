@@ -1,0 +1,173 @@
+{
+  "note": "Referencia de wombat-risk sobre fixtures/cells.geojson + config/risk-config.json. Regla de redondeo: floor(x*10000+0.5). Desempate: score_bp desc, change_bp desc, cell_id asc.",
+  "ranking": [
+    {
+      "rank": 1,
+      "cell_id": "piura-demo-r02c01",
+      "status": "review_high",
+      "score_bp": 7636,
+      "components_bp": {
+        "change": 10000,
+        "opera": 3800,
+        "road": 9032
+      }
+    },
+    {
+      "rank": 2,
+      "cell_id": "piura-demo-r01c01",
+      "status": "review_high",
+      "score_bp": 6593,
+      "components_bp": {
+        "change": 8800,
+        "opera": 3100,
+        "road": 7742
+      }
+    },
+    {
+      "rank": 3,
+      "cell_id": "piura-demo-r02c02",
+      "status": "review_high",
+      "score_bp": 6365,
+      "components_bp": {
+        "change": 7600,
+        "opera": 2700,
+        "road": 10000
+      }
+    },
+    {
+      "rank": 4,
+      "cell_id": "piura-demo-r01c02",
+      "status": "review_medium",
+      "score_bp": 5236,
+      "components_bp": {
+        "change": 7200,
+        "opera": 2200,
+        "road": 6129
+      }
+    },
+    {
+      "rank": 5,
+      "cell_id": "piura-demo-r01c00",
+      "status": "review_medium",
+      "score_bp": 4148,
+      "components_bp": {
+        "change": 5200,
+        "opera": 2400,
+        "road": 4839
+      }
+    },
+    {
+      "rank": 6,
+      "cell_id": "piura-demo-r03c02",
+      "status": "review_medium",
+      "score_bp": 3801,
+      "components_bp": {
+        "change": 5600,
+        "opera": 2000,
+        "road": 2903
+      }
+    },
+    {
+      "rank": 7,
+      "cell_id": "piura-demo-r02c00",
+      "status": "review_low",
+      "score_bp": 2672,
+      "components_bp": {
+        "change": 4000,
+        "opera": 1200,
+        "road": 2258
+      }
+    },
+    {
+      "rank": 8,
+      "cell_id": "piura-demo-r02c03",
+      "status": "review_low",
+      "score_bp": 2214,
+      "components_bp": {
+        "change": 3200,
+        "opera": 0,
+        "road": 3871
+      }
+    },
+    {
+      "rank": 9,
+      "cell_id": "piura-demo-r00c01",
+      "status": "review_low",
+      "score_bp": 2056,
+      "components_bp": {
+        "change": 2800,
+        "opera": 800,
+        "road": 2581
+      }
+    },
+    {
+      "rank": 10,
+      "cell_id": "piura-demo-r03c01",
+      "status": "review_low",
+      "score_bp": 1538,
+      "components_bp": {
+        "change": 2000,
+        "opera": 900,
+        "road": 1613
+      }
+    },
+    {
+      "rank": 11,
+      "cell_id": "piura-demo-r00c02",
+      "status": "review_low",
+      "score_bp": 1220,
+      "components_bp": {
+        "change": 2400,
+        "opera": 400,
+        "road": 0
+      }
+    },
+    {
+      "rank": 12,
+      "cell_id": "piura-demo-r00c00",
+      "status": "review_low",
+      "score_bp": 909,
+      "components_bp": {
+        "change": 1200,
+        "opera": 500,
+        "road": 968
+      }
+    },
+    {
+      "rank": 13,
+      "cell_id": "piura-demo-r03c03",
+      "status": "review_low",
+      "score_bp": 645,
+      "components_bp": {
+        "change": 1200,
+        "opera": 300,
+        "road": 0
+      }
+    },
+    {
+      "rank": 14,
+      "cell_id": "piura-demo-r00c03",
+      "status": "review_low",
+      "score_bp": 360,
+      "components_bp": {
+        "change": 800,
+        "opera": 0,
+        "road": 0
+      }
+    },
+    {
+      "rank": 15,
+      "cell_id": "piura-demo-r03c00",
+      "status": "review_low",
+      "score_bp": 315,
+      "components_bp": {
+        "change": 400,
+        "opera": 200,
+        "road": 323
+      }
+    }
+  ],
+  "insufficient_quality": [
+    "piura-demo-r01c03"
+  ]
+}
