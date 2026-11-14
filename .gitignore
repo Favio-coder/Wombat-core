@@ -1,6 +1,7 @@
 /target
 **/*.rs.bak
 .env
+.env.*
 *.env.local
 .DS_Store
 node_modules
