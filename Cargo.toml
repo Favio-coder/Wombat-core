@@ -2,8 +2,9 @@
 resolver = "2"
 members = [
     "crates/wombat-core",
-    "crates/wombat-node",
     "crates/wombat-risk",
+    "crates/wombat-cli",
+    "crates/wombat-node",
 ]
 
 [workspace.package]
@@ -26,6 +27,7 @@ tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 clap = { version = "4", features = ["derive"] }
 hex = "0.4"
+tempfile = "3"
 
 [profile.release]
 opt-level = 2
