@@ -7,7 +7,7 @@
 //!
 //! Tres propiedades que definen el diseño:
 //!
-//! 1. **Pura y determinista.** La evaluación no mira el reloj, no sortea, no
+//! 1. **Pura y determinista.** [`evaluate`] no mira el reloj, no sortea, no
 //!    abre la red ni lee archivos. [`load`] es lo único que toca el disco. Dos
 //!    ejecuciones con los mismos bytes dan la misma salida byte a byte, para que
 //!    cualquiera pueda recalcular el ranking de un bundle publicado meses atrás.
@@ -19,11 +19,14 @@
 //!
 pub mod config;
 pub mod error;
+pub mod evaluate;
 pub mod exact;
+pub mod explain;
 pub mod inputs;
 pub mod load;
 
 pub use config::{RiskConfig, StatusThresholdsBp, TtlSeconds, WeightsBp};
 pub use error::RiskError;
+pub use evaluate::{evaluate, CellRisk};
 pub use exact::Exact;
 pub use inputs::{CellInput, Inputs};
