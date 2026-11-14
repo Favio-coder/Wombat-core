@@ -24,11 +24,11 @@
     "payload": {},
     "provenance": {
       "type": "object",
-      "required": ["created_at", "created_by", "confidence", "data_hash", "rule_version"],
+      "required": ["created_at", "created_by", "confidence_bp", "data_hash", "rule_version"],
       "properties": {
         "created_at": { "type": "string", "format": "date-time" },
         "created_by": { "type": "string" },
-        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "confidence_bp": { "type": "integer", "minimum": 0, "maximum": 10000 },
         "data_hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
         "rule_version": { "type": "string" }
       }

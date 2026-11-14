@@ -12,7 +12,7 @@
   "provenance": {
     "created_at": "",
     "created_by": "",
-    "confidence": 0.5,
+    "confidence_bp": 5000,
     "data_hash": "",
     "rule_version": ""
   },

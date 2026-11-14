@@ -23,7 +23,7 @@
   "provenance": {
     "created_at": "2027-01-15T12:00:00Z",
     "created_by": "did:wombat:node-demo",
-    "confidence": 0.89,
+    "confidence_bp": 8900,
     "data_hash": "sha256:placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-placeholder-",
     "rule_version": "landslide-rule/0.1"
   },

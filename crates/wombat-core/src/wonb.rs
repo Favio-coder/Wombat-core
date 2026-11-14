@@ -51,11 +51,15 @@ pub struct WonbSource {
 }
 
 /// Proveniencia del WONB: cuándo, por quién, confianza, hash y regla.
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+///
+/// `confidence_bp` está en puntos básicos (0–10000, donde 10000 = 100.00%).
+/// Esto sigue la convención R16 del proyecto: sin `f64` en contenido firmado.
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct WonbProvenance {
     pub created_at: String,
     pub created_by: String,
-    pub confidence: f64,
+    /// Confianza del emisor en el bloque, en puntos básicos (0–10000).
+    pub confidence_bp: u16,
     pub data_hash: String,
     pub rule_version: String,
 }
@@ -69,7 +73,7 @@ pub struct WonbRouting {
 }
 
 /// Estructura completa de un WONB.
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct Wonb {
     pub spec_version: String,
     pub id: String,
@@ -131,10 +135,15 @@ impl Wonb {
         self.routing.ttl_seconds
     }
 
-    /// Serializa el WONB a JSON canónico (orden de claves determinista,
-    /// sin espacios innecesarios) para cálculo de hash.
+    /// Serializa el WONB a JSON canónico JCS (RFC 8785: claves ordenadas,
+    /// sin espacios innecesarios) para cálculo de hash y firma.
+    ///
+    /// Usa `serde_jcs` en lugar de `serde_json::to_string`, igual que WONB 0.2,
+    /// para garantizar bytes deterministas entre Rust, Python y JavaScript.
     pub fn to_canonical_json(&self) -> serde_json::Result<String> {
-        serde_json::to_string(self)
+        let bytes = serde_jcs::to_vec(self)?;
+        String::from_utf8(bytes)
+            .map_err(|e| serde::ser::Error::custom(format!("JCS produjo UTF-8 inválido: {e}")))
     }
 
     /// Serializa el WONB a JSON legible (pretty print).
@@ -151,7 +160,7 @@ pub(crate) mod tests {
         WonbProvenance {
             created_at: chrono::Utc::now().to_rfc3339(),
             created_by: "did:wombat:node-demo".to_string(),
-            confidence: 0.89,
+            confidence_bp: 8900,
             data_hash: "sha256:0000000000000000000000000000000000000000000000000000000000000000"
                 .to_string(),
             rule_version: "landslide-rule/0.1".to_string(),

@@ -60,7 +60,7 @@ mod tests {
             wombat_core::wonb::WonbProvenance {
                 created_at: "2027-01-15T12:00:00Z".to_string(),
                 created_by: "did:wombat:node-demo".into(),
-                confidence: 0.89,
+                confidence_bp: 8900,
                 data_hash:
                     "sha256:0000000000000000000000000000000000000000000000000000000000000000".into(),
                 rule_version: "landslide-rule/0.1".into(),

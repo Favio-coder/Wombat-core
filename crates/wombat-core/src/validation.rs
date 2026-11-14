@@ -200,14 +200,14 @@ impl WonbValidator {
             .created_at
             .parse::<DateTime<Utc>>()
             .map_err(|_| InvalidTimestamp(wonb.provenance.created_at.clone()))?;
-        // Confianza en [0, 1].
-        if !(0.0..=1.0).contains(&wonb.provenance.confidence) {
+        let _ = ts;
+        // Confianza en puntos básicos [0, 10000].
+        if wonb.provenance.confidence_bp > 10000 {
             return Err(InvalidTimestamp(format!(
-                "confidence fuera de rango [0,1]: {}",
-                wonb.provenance.confidence
+                "confidence_bp fuera de rango [0,10000]: {}",
+                wonb.provenance.confidence_bp
             )));
         }
-        let _ = ts;
         Ok(())
     }
 
@@ -354,7 +354,7 @@ mod tests {
     #[test]
     fn confidence_out_of_range_rejected() {
         let mut wonb = valid_wonb();
-        wonb.provenance.confidence = 1.5;
+        wonb.provenance.confidence_bp = 10001;
         let mut v = WonbValidator::new();
         let err = v.validate(&wonb).unwrap_err();
         matches!(err, InvalidTimestamp { .. });
