@@ -1,0 +1,296 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wombat/contracts/v1/manifest",
+  "title": "WOMBAT manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "aoi_id",
+    "aoi_name",
+    "data_origin",
+    "crs_compute",
+    "bbox_wgs84",
+    "nisar",
+    "opera",
+    "osm",
+    "pipeline"
+  ],
+  "properties": {
+    "aoi_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "aoi_name": {
+      "type": "string"
+    },
+    "data_origin": {
+      "enum": [
+        "nisar_real",
+        "simulated"
+      ],
+      "description": "R1: 'simulated' obliga al dashboard a mostrar el rótulo SIMULATED DATA"
+    },
+    "crs_compute": {
+      "const": "EPSG:32717"
+    },
+    "bbox_wgs84": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "nisar": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "product",
+        "maturity",
+        "frame",
+        "orbit_direction",
+        "mode",
+        "frequency",
+        "polarization",
+        "pixel_spacing_m",
+        "t1",
+        "t2",
+        "comparable",
+        "comparable_checks"
+      ],
+      "properties": {
+        "product": {
+          "const": "NISAR_L2_GCOV"
+        },
+        "maturity": {
+          "enum": [
+            "BETA",
+            "PROVISIONAL",
+            "VALIDATED"
+          ]
+        },
+        "frame": {
+          "type": "string"
+        },
+        "orbit_direction": {
+          "enum": [
+            "ascending",
+            "descending"
+          ]
+        },
+        "mode": {
+          "type": "string"
+        },
+        "frequency": {
+          "enum": [
+            "A",
+            "B"
+          ]
+        },
+        "polarization": {
+          "type": "string"
+        },
+        "pixel_spacing_m": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "t1": {
+          "$ref": "#/$defs/scene"
+        },
+        "t2": {
+          "$ref": "#/$defs/scene"
+        },
+        "comparable": {
+          "type": "boolean"
+        },
+        "comparable_checks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "same_frame",
+            "same_orbit_direction",
+            "same_mode",
+            "same_frequency",
+            "same_polarization",
+            "same_maturity"
+          ],
+          "properties": {
+            "same_frame": {
+              "type": "boolean"
+            },
+            "same_orbit_direction": {
+              "type": "boolean"
+            },
+            "same_mode": {
+              "type": "boolean"
+            },
+            "same_frequency": {
+              "type": "boolean"
+            },
+            "same_polarization": {
+              "type": "boolean"
+            },
+            "same_maturity": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "opera": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "product",
+        "derived_from",
+        "status",
+        "t1",
+        "t2"
+      ],
+      "properties": {
+        "product": {
+          "const": "OPERA_L3_DSWx-S1"
+        },
+        "derived_from": {
+          "const": "Sentinel-1"
+        },
+        "status": {
+          "enum": [
+            "available",
+            "unavailable"
+          ]
+        },
+        "t1": {
+          "$ref": "#/$defs/opera_side"
+        },
+        "t2": {
+          "$ref": "#/$defs/opera_side"
+        }
+      }
+    },
+    "osm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "query",
+        "retrieved_at",
+        "attribution"
+      ],
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "attribution": {
+          "const": "© OpenStreetMap contributors"
+        }
+      }
+    },
+    "pipeline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "commit",
+        "risk_config_version"
+      ],
+      "properties": {
+        "commit": {
+          "type": "string"
+        },
+        "risk_config_version": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "nisar": {
+            "properties": {
+              "comparable": {
+                "const": true
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "nisar": {
+            "properties": {
+              "comparable_checks": {
+                "properties": {
+                  "same_frame": {
+                    "const": true
+                  },
+                  "same_orbit_direction": {
+                    "const": true
+                  },
+                  "same_mode": {
+                    "const": true
+                  },
+                  "same_frequency": {
+                    "const": true
+                  },
+                  "same_polarization": {
+                    "const": true
+                  },
+                  "same_maturity": {
+                    "const": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "granule",
+        "datetime"
+      ],
+      "properties": {
+        "granule": {
+          "type": "string"
+        },
+        "datetime": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "opera_side": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "granules",
+        "gap_days"
+      ],
+      "properties": {
+        "granules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "gap_days": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

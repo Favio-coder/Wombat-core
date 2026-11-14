@@ -1,0 +1,52 @@
+name: Publicar bundles de datos (GitHub Pages)
+
+# Publica data/<aoi>/<vN>/ + el bundle fixture piura-demo/v0 en
+#   https://<owner>.github.io/<repo>/data/<aoi>/latest.json  y  .../<vN>/
+# Requiere: Settings → Pages → Source: "GitHub Actions".
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths: [ 'data/**', 'contracts/v1/fixtures/bundle/**' ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install jsonschema referencing cryptography
+      - name: Ensamblar sitio y verificar cada bundle
+        run: |
+          set -e
+          mkdir -p _site/data
+          [ -d data ] && cp -r data/. _site/data/ || true
+          mkdir -p _site/data/piura-demo
+          cp -r contracts/v1/fixtures/bundle/piura-demo/v0 _site/data/piura-demo/v0
+          for d in _site/data/*/v*/; do python3 contracts/v1/tools/verify_bundle.py "$d"; done
+          python3 - <<'PY'
+          import json, pathlib
+          for aoi in pathlib.Path("_site/data").iterdir():
+              vs = sorted((int(p.name[1:]) for p in aoi.glob("v*") if p.is_dir()))
+              if vs:
+                  (aoi / "latest.json").write_text(json.dumps({"bundle_version": f"v{vs[-1]}", "path": f"v{vs[-1]}/"}) + "\n")
+                  print(aoi.name, "->", f"v{vs[-1]}")
+          PY
+          touch _site/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: _site }
+      - id: deployment
+        uses: actions/deploy-pages@v4

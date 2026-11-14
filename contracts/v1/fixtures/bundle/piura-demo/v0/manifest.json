@@ -1,0 +1,65 @@
+{
+  "aoi_id": "piura-demo",
+  "aoi_name": "SIMULATED — fixture de desarrollo (no es un AOI real)",
+  "data_origin": "simulated",
+  "crs_compute": "EPSG:32717",
+  "bbox_wgs84": [
+    -80.72,
+    -5.23618,
+    -80.68382,
+    -5.2
+  ],
+  "nisar": {
+    "product": "NISAR_L2_GCOV",
+    "maturity": "PROVISIONAL",
+    "frame": "SIMULATED",
+    "orbit_direction": "ascending",
+    "mode": "SIMULATED",
+    "frequency": "A",
+    "polarization": "HHHH",
+    "pixel_spacing_m": 20,
+    "t1": {
+      "granule": "SIMULATED-T1",
+      "datetime": "2026-10-14T23:00:00Z"
+    },
+    "t2": {
+      "granule": "SIMULATED-T2",
+      "datetime": "2026-10-26T23:00:00Z"
+    },
+    "comparable": true,
+    "comparable_checks": {
+      "same_frame": true,
+      "same_orbit_direction": true,
+      "same_mode": true,
+      "same_frequency": true,
+      "same_polarization": true,
+      "same_maturity": true
+    }
+  },
+  "opera": {
+    "product": "OPERA_L3_DSWx-S1",
+    "derived_from": "Sentinel-1",
+    "status": "available",
+    "t1": {
+      "granules": [
+        "SIMULATED-OPERA-T1"
+      ],
+      "gap_days": 2
+    },
+    "t2": {
+      "granules": [
+        "SIMULATED-OPERA-T2"
+      ],
+      "gap_days": 4
+    }
+  },
+  "osm": {
+    "query": "highway=*",
+    "retrieved_at": "2026-11-14T15:00:00Z",
+    "attribution": "© OpenStreetMap contributors"
+  },
+  "pipeline": {
+    "commit": "fixture",
+    "risk_config_version": "risk-config/0.1"
+  }
+}

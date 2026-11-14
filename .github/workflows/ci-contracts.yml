@@ -1,0 +1,59 @@
+name: CI contratos v1
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  bundle-python:
+    name: Bundle fixture — esquemas, sha256, firmas (Python)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install jsonschema referencing cryptography
+      - name: Verificar bundle fixture
+        run: python3 contracts/v1/tools/verify_bundle.py contracts/v1/fixtures/bundle/piura-demo/v0
+      - name: Verificar cada bundle versionado en data/ (si existe)
+        run: |
+          shopt -s nullglob
+          for d in data/*/v*/; do python3 contracts/v1/tools/verify_bundle.py "$d"; done
+
+  bundle-rust:
+    name: Prueba cruzada — verificador Rust (JCS + Ed25519)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            contracts/v1/tools/verify-rs/target
+          key: ${{ runner.os }}-verifyrs-${{ hashFiles('contracts/v1/tools/verify-rs/Cargo.toml') }}
+      - run: cargo run --release --manifest-path contracts/v1/tools/verify-rs/Cargo.toml -- contracts/v1/fixtures/bundle/piura-demo/v0
+
+  bundle-js:
+    name: Prueba cruzada — verificador JS (JCS + Ed25519)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - working-directory: contracts/v1/tools/verify-js
+        run: npm ci && node verify.mjs ../../fixtures/bundle/piura-demo/v0
+
+  immutable-bundles:
+    name: R28 — los bundles publicados son inmutables
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - name: Rechazar modificaciones o borrados en data/<aoi>/<vN>/
+        run: |
+          changed=$(git diff --name-status "origin/${{ github.base_ref }}...HEAD" -- data/ | grep -E '^(M|D|R)' || true)
+          if [ -n "$changed" ]; then echo "R28: no se modifican bundles ya publicados. Publica una versión nueva."; echo "$changed"; exit 1; fi

@@ -1,0 +1,130 @@
+{
+  "contract_version": "1.0.0",
+  "bundle_version": "v0",
+  "aoi_id": "piura-demo",
+  "data_origin": "simulated",
+  "generated_at": "2026-11-14T17:00:00Z",
+  "core_commit": "fixture",
+  "files": [
+    {
+      "path": "cells.geojson",
+      "sha256": "9a80e0008999d436f4b5db894e5da0b0f4206707fa2b295a9550685f6bc2acb9"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "6a2de979cb47745a80890ec82f7f9d0f7ab8bf049d697feba92e7daef8c3210c"
+    },
+    {
+      "path": "overlays/bounds.json",
+      "sha256": "b9c69d81df798403d98b3ef07499637aa680874c4b7b03dd25d8b3b488752d38"
+    },
+    {
+      "path": "overlays/delta.png",
+      "sha256": "29ed09cef2e7a68b7095c0cb139da01ef4e24de8875db483d819150ebcde356c"
+    },
+    {
+      "path": "overlays/t1.png",
+      "sha256": "227a47e0c0fc9a15a096686ec73df8358f4ced856e99f6fbf272a6b6015ab15d"
+    },
+    {
+      "path": "overlays/t2.png",
+      "sha256": "db6c659cdc1f6884b34936ce8883edd03de5e7dc95604fb795a1af904f7d5105"
+    },
+    {
+      "path": "risk-config.json",
+      "sha256": "b24855410d54826e0c38ba0f1555cb8f1e934c9df6363033aa8170b5f1e3472a"
+    },
+    {
+      "path": "roads.geojson",
+      "sha256": "5c8e7345000a9b7b35c08714f15b7e7731ee26ce3f08cebd8f5ded1be0d735d0"
+    },
+    {
+      "path": "trusted-issuers.json",
+      "sha256": "fb6a30fd2db0161daceb2559cbc3ccabf12588188bc2b325197a00a1e5bfa280"
+    },
+    {
+      "path": "wonb/action/1.json",
+      "sha256": "e10baa9ae4f02df3c1d7da26b705278be4b7111ac34ddc1f7c86370c6fdec74f"
+    },
+    {
+      "path": "wonb/action/2.json",
+      "sha256": "d2b3ffdc3b663c1b22077de69d194dbfcb7ed4d2c314792276ef14c00013da89"
+    },
+    {
+      "path": "wonb/action/3.json",
+      "sha256": "6466cc32e4d7d01c69de5bde1ff51b3a80a369c7aaf0bcdcc9a1f55e8c384837"
+    },
+    {
+      "path": "wonb/change.json",
+      "sha256": "963668bb8db43db474d0d15825d3a59ccbf6df343905f9c736db2a1cce0b0ef1"
+    },
+    {
+      "path": "wonb/context.json",
+      "sha256": "23fcfb4d7e7d55456b4b3365c7c68c31e0f807564e1b56360685df06f6caccf7"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r00c00.json",
+      "sha256": "627c2913d1770a0853ebed2a2c56a21d18f6fe3cf1c5e73e5d32b11444fcc25e"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r00c01.json",
+      "sha256": "dc1a8f97de14d705475dda3e2a55353f9a8b1f957c1164366b88709c736204a4"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r00c02.json",
+      "sha256": "ca1320bf50daf5d92ae63990622b52f5de705b79c57bdf87cce94b415856d2b3"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r00c03.json",
+      "sha256": "c4089384c0972ee2f21fdade4364aa36009fb7604b0fc14948a118d2945ea2e8"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r01c00.json",
+      "sha256": "e59e17cfa19a7d80143ff0596a06b7dd29763a7968cffd8ea234ef81873f6e5e"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r01c01.json",
+      "sha256": "ffc6f9c59db71cfa9aa6612c83ded6ba1ccc83dc3e8ef3c1964ea5a773b57a42"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r01c02.json",
+      "sha256": "888ac0b2a32a1c957393a7d923eeb2139c14579b469bd64f583b7fece3f32655"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r01c03.json",
+      "sha256": "91fd8eee79fe4569c5c5fd0d3e61bbe1b774a79ae399892858538cefa23e9aa7"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r02c00.json",
+      "sha256": "d034e80313397bcd826af2ef49b036252deec99dca62fbdbd0716436fb21faf6"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r02c01.json",
+      "sha256": "78ae59a57c0170c0108b337bea343edd3e63c3e0d2460ce4c5d4c0a190954cfb"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r02c02.json",
+      "sha256": "85595c548553830e2b39679a0daecafddad75704898fca9d1ad4f4a1f005c76b"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r02c03.json",
+      "sha256": "39f6b977e09e1ccb3e3d2cb468387dbc918313f379f5a070ca0a32a3a54f659f"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r03c00.json",
+      "sha256": "3d663d49aa463493bee59e05cac5ec6b044f759781e7233fa1591c00ef58bf6f"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r03c01.json",
+      "sha256": "e9906984331a671a75a9a36d8c3ce9d477d38178af0b35f5454e92305dbfe481"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r03c02.json",
+      "sha256": "00a9ccf9270e149c7d6ea4e9a45ab164a2d4d4812605f82ba07451f8ae5119c4"
+    },
+    {
+      "path": "wonb/risk/piura-demo-r03c03.json",
+      "sha256": "9cf116a3e1f5ff14452c0d6621225377061abe7b0d3e69344462a7796128a606"
+    }
+  ]
+}
