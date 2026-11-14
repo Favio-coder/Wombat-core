@@ -142,7 +142,7 @@ fn score<'a>(
 ) -> Result<Scored<'a>, RiskError> {
     let change_c = cell
         .changed_fraction
-        .div(cfg.change_saturation)?
+        .checked_div(cfg.change_saturation)?
         .min(Exact::ONE);
 
     let opera_c = match (cell.opera_status, cell.opera_overlap_ratio) {
@@ -162,9 +162,9 @@ fn score<'a>(
 
     let weight = |bp: u32| Exact::new(i128::from(bp), 10_000);
     let weighted = weight(cfg.weights_bp.change)?
-        .mul(change_c)?
-        .add(weight(cfg.weights_bp.opera)?.mul(opera_c)?)?
-        .add(weight(cfg.weights_bp.road)?.mul(road_c)?)?;
+        .checked_mul(change_c)?
+        .checked_add(weight(cfg.weights_bp.opera)?.checked_mul(opera_c)?)?
+        .checked_add(weight(cfg.weights_bp.road)?.checked_mul(road_c)?)?;
 
     Ok(Scored {
         cell,
@@ -199,7 +199,7 @@ fn metrics(cell: &CellInput) -> Result<RiskMetrics, RiskError> {
         // dB → centi-dB: bp(db/100), la misma conversión del fixture.
         p90_abs_delta_cdb: cell
             .p90_abs_delta_db
-            .map(|db| db.div(Exact::int(100))?.to_bp_u32())
+            .map(|db| db.checked_div(Exact::int(100))?.to_bp_u32())
             .transpose()?,
         opera_status: cell.opera_status,
         opera_overlap_bp: cell.opera_overlap_ratio.map(Exact::to_bp_u32).transpose()?,

@@ -65,7 +65,7 @@ impl RiskConfig {
 
     /// Umbral de cambio en centi-dB, para el payload del bloque `change`.
     pub fn delta_db_threshold_cdb(&self) -> Result<u32, RiskError> {
-        let scaled = self.delta_db_threshold.mul(Exact::int(100))?;
+        let scaled = self.delta_db_threshold.checked_mul(Exact::int(100))?;
         let text = scaled.round_half_even_str(0)?;
         text.parse::<u32>()
             .map_err(|e| RiskError::Config(format!("delta_db_threshold en cdB: {e}")))

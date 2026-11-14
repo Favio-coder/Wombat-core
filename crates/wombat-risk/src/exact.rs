@@ -91,18 +91,18 @@ impl Exact {
     }
 
     /// Suma exacta.
-    pub fn add(self, other: Exact) -> Result<Self, RiskError> {
+    pub fn checked_add(self, other: Exact) -> Result<Self, RiskError> {
         let num = mul(self.num, other.den)?.checked_add(mul(other.num, self.den)?);
         Exact::new(num.ok_or_else(overflow)?, mul(self.den, other.den)?)
     }
 
     /// Producto exacto.
-    pub fn mul(self, other: Exact) -> Result<Self, RiskError> {
+    pub fn checked_mul(self, other: Exact) -> Result<Self, RiskError> {
         Exact::new(mul(self.num, other.num)?, mul(self.den, other.den)?)
     }
 
     /// División exacta. Dividir por cero es un error, no un infinito.
-    pub fn div(self, other: Exact) -> Result<Self, RiskError> {
+    pub fn checked_div(self, other: Exact) -> Result<Self, RiskError> {
         if other.num == 0 {
             return Err(RiskError::Arithmetic("división por cero".into()));
         }
@@ -295,7 +295,7 @@ mod tests {
 
     #[test]
     fn division_by_zero_is_an_error_not_an_infinity() {
-        let err = Exact::ONE.div(Exact::ZERO).unwrap_err();
+        let err = Exact::ONE.checked_div(Exact::ZERO).unwrap_err();
         assert!(matches!(err, RiskError::Arithmetic(_)), "{err}");
     }
 

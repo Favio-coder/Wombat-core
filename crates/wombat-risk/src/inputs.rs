@@ -169,15 +169,12 @@ pub(crate) mod tests {
     }
 
     pub(crate) fn props(cell_id: &str, valid: &str, dec: &str, inc: &str) -> String {
-        let changed = format!(
-            "{}",
-            Exact::from_decimal_str(dec)
-                .unwrap()
-                .add(Exact::from_decimal_str(inc).unwrap())
-                .unwrap()
-                .trimmed_decimal()
-                .unwrap()
-        );
+        let changed = Exact::from_decimal_str(dec)
+            .unwrap()
+            .checked_add(Exact::from_decimal_str(inc).unwrap())
+            .unwrap()
+            .trimmed_decimal()
+            .unwrap();
         format!(
             r#"{{"cell_id":"{cell_id}","valid_fraction":{valid},"decrease_fraction":{dec},
                  "increase_fraction":{inc},"changed_fraction":{changed},"p90_abs_delta_db":3.3,
