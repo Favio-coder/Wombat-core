@@ -1120,7 +1120,6 @@ dependencies = [
 name = "wombat-core"
 version = "0.1.0"
 dependencies = [
- "anyhow",
  "chrono",
  "ed25519-dalek",
  "hex",
@@ -1130,7 +1129,6 @@ dependencies = [
  "serde_json",
  "sha2",
  "thiserror",
- "tracing",
  "uuid",
 ]
 
@@ -1147,6 +1145,17 @@ dependencies = [
  "tokio",
  "tracing",
  "tracing-subscriber",
+ "wombat-core",
+]
+
+[[package]]
+name = "wombat-risk"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_jcs",
+ "serde_json",
+ "thiserror",
  "wombat-core",
 ]
 

@@ -1,0 +1,12 @@
+[package]
+name = "wombat-risk"
+description = "WOMBAT risk scoring: el único lugar donde se calcula el ranking de celdas (R15)"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+wombat-core = { path = "../wombat-core" }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+serde_jcs = { workspace = true }
+thiserror = { workspace = true }
