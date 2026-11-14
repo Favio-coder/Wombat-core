@@ -10,7 +10,7 @@
 
 use ed25519_dalek::{Signature, Signer, SigningKey, Verifier, VerifyingKey};
 
-use super::envelope::{Block, BlockBody, BlockType, WONB_VERSION};
+use super::envelope::{Block, BlockBody, WONB_VERSION};
 use super::error::WonbError;
 use super::trusted::TrustedIssuers;
 
@@ -180,7 +180,7 @@ pub fn generate_ephemeral_keypair() -> (SigningKey, VerifyingKey) {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::v02::envelope::tests::context_json;
+    use crate::v02::envelope::{tests::context_json, BlockType};
     use crate::v02::trusted::{TrustedIssuer, TrustedIssuers};
     use serde_json::Value;
 
