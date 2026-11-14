@@ -50,6 +50,17 @@ pub struct Nisar {
     pub t1: Acquisition,
     pub t2: Acquisition,
     pub comparable: bool,
+    pub comparable_checks: ComparableChecks,
+}
+
+#[derive(Debug, Clone, Deserialize)]
+pub struct ComparableChecks {
+    pub same_frame: bool,
+    pub same_orbit_direction: bool,
+    pub same_mode: bool,
+    pub same_frequency: bool,
+    pub same_polarization: bool,
+    pub same_maturity: bool,
 }
 
 #[derive(Debug, Clone, Deserialize)]
@@ -90,13 +101,17 @@ impl Manifest {
         })
     }
 
-    /// R1: un par no comparable solo se publica declarándolo simulado.
-    ///
-    /// La regla existe porque la primera pantalla del dashboard promete dato
-    /// NISAR real. Publicar un par que no es comparable como si fuera real
-    /// convierte esa promesa en una mentira firmada.
+    /// R1: solo se procesa un par NISAR científicamente comparable.
     pub fn check_comparable(&self) -> Result<(), CliError> {
-        if !self.nisar.comparable && self.data_origin != DataOrigin::Simulated {
+        let checks = &self.nisar.comparable_checks;
+        if !self.nisar.comparable
+            || !checks.same_frame
+            || !checks.same_orbit_direction
+            || !checks.same_mode
+            || !checks.same_frequency
+            || !checks.same_polarization
+            || !checks.same_maturity
+        {
             return Err(CliError::NotComparable {
                 data_origin: match self.data_origin {
                     DataOrigin::NisarReal => "nisar_real".to_string(),
@@ -296,7 +311,7 @@ mod tests {
     }
 
     #[test]
-    fn a_non_comparable_pair_declared_real_is_refused() {
+    fn a_non_comparable_real_pair_is_refused() {
         let raw = std::fs::read_to_string(fixture_bundle().join("manifest.json")).unwrap();
         let altered = raw
             .replace("\"comparable\": true", "\"comparable\": false")
@@ -311,11 +326,23 @@ mod tests {
     }
 
     #[test]
-    fn a_non_comparable_pair_declared_simulated_is_allowed() {
+    fn a_non_comparable_simulated_pair_is_refused() {
         let raw = std::fs::read_to_string(fixture_bundle().join("manifest.json")).unwrap();
         let altered = raw.replace("\"comparable\": true", "\"comparable\": false");
         let manifest: Manifest = serde_json::from_str(&altered).unwrap();
-        manifest.check_comparable().unwrap();
+
+        let err = manifest.check_comparable().unwrap_err();
+        assert!(matches!(err, CliError::NotComparable { .. }), "{err}");
+    }
+
+    #[test]
+    fn a_pair_with_mixed_maturity_is_refused_even_when_declared_comparable() {
+        let raw = std::fs::read_to_string(fixture_bundle().join("manifest.json")).unwrap();
+        let altered = raw.replace("\"same_maturity\": true", "\"same_maturity\": false");
+        let manifest: Manifest = serde_json::from_str(&altered).unwrap();
+
+        let err = manifest.check_comparable().unwrap_err();
+        assert!(matches!(err, CliError::NotComparable { .. }), "{err}");
     }
 
     #[test]

@@ -70,7 +70,7 @@ Se niega a construir si:
 | Motivo | Regla |
 |---|---|
 | La clave pública no está en `trusted-issuers.json` con los cuatro roles | — |
-| `manifest.nisar.comparable` es `false` y `data_origin` no es `simulated` | R1 |
+| `manifest.nisar.comparable` es `false` o algún `comparable_checks` es `false` | R1: solo se procesan escenas comparables |
 | `--out` ya contiene un `index.json` | R28 |
 | `--version` no cumple `^v[0-9]+$` | contrato |
 | El `aoi_id` del manifest no coincide con `--aoi` | — |

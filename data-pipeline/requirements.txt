@@ -1,0 +1,9 @@
+numpy==2.5.4
+pyproj==3.8.0
+shapely==2.2.0
+rasterio==1.5.2
+h5py==3.16.0
+asf_search==10.3.0
+Pillow==12.3.0
+jsonschema==4.26.0
+pytest==9.2.0
