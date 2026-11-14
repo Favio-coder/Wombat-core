@@ -1,0 +1,27 @@
+[package]
+name = "wombat-node"
+description = "Nodo P2P WOMBAT: libp2p + GossipSub, CLI y validación de WONBs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wombat-core = { path = "../wombat-core" }
+tokio = { workspace = true, features = ["full"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+clap = { workspace = true }
+hex = { workspace = true }
+
+[features]
+# La característica `p2p` activa el stack libp2p (TCP, DNS, Noise, Yamux,
+# Identify, Ping, GossipSub). Desactivada por defecto porque el índice de
+# crates.io disponible no resuelve la cadena de dependencias de libp2p
+# (core2 0.4.0 yanked). Para activar P2P real, agregar `libp2p` como
+# dependencia y activar esta característica.
+default = []
+
+[dev-dependencies]

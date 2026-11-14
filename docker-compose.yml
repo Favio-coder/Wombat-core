@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  wombat-node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wombat-node-demo
+    command: ["run", "--demo"]
+    ports:
+      - "9000:9000"
+    environment:
+      - RUST_LOG=info
+    volumes:
+      - ./contracts:/app/contracts:ro
+    # Nota: este compose levanta el nodo en MODO DEMO (sin red P2P real).
+    # Para P2P entre contenedores/máquinas se requiere configurar
+    # Multiaddrs y red Docker adicional. Ver docs/demo-runbook.md.
