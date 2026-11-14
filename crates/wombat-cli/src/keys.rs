@@ -66,14 +66,68 @@ fn restrict_permissions(path: &Path) -> Result<(), CliError> {
     })
 }
 
-/// DECISIÓN: en Windows el CLI **no** toca los permisos y lo dice.
-///
-/// El equivalente real de 0600 en NTFS es reescribir la ACL del archivo, que
-/// desde Rust puro significa llamar a la API de Windows. Poner el atributo
-/// de solo lectura no restringe a nadie: lo único que hace es sugerir que la
-/// clave está protegida cuando no lo está. Preferimos el aviso a la ilusión.
-#[cfg(not(unix))]
+#[cfg(windows)]
+fn restrict_permissions(path: &Path) -> Result<(), CliError> {
+    restrict_key_file_windows(path)
+}
+
+/// Only compiled on non-unix, non-windows (e.g. wasm, unsupported targets).
+#[cfg(not(any(unix, windows)))]
 fn restrict_permissions(_path: &Path) -> Result<(), CliError> {
+    Ok(())
+}
+
+/// Strips inherited ACEs and grants full control to the current user only.
+///
+/// Uses `icacls` (ships with every Windows since Vista) rather than the
+/// win32 security API — no extra crates, still correct.
+///
+/// # Errors
+/// Returns `CliError::Write` if `USERNAME` env var is unset, if `icacls` is
+/// not found or exits non-zero. In all error paths the key file is deleted
+/// before returning so no accessible private key is left behind.
+#[cfg(windows)]
+fn restrict_key_file_windows(path: &std::path::Path) -> Result<(), CliError> {
+    let path_str = path.display().to_string();
+
+    let make_err = |reason: String| CliError::Write {
+        path: path_str.clone(),
+        source: std::io::Error::other(reason),
+    };
+
+    // Helper: delete the key file, then propagate the original error.
+    let delete_and_fail = |err: CliError| -> CliError {
+        let _ = std::fs::remove_file(path);
+        err
+    };
+
+    let username = std::env::var("USERNAME").map_err(|_| {
+        delete_and_fail(make_err(
+            "USERNAME env var not set; cannot restrict key-file ACL".to_string(),
+        ))
+    })?;
+
+    // icacls <path> /inheritance:r /grant:r <user>:F
+    // /inheritance:r  — remove all inherited ACEs
+    // /grant:r        — replace (not add) an explicit grant
+    // <user>:F        — full control
+    let output = std::process::Command::new("icacls")
+        .arg(path)
+        .arg("/inheritance:r")
+        .arg("/grant:r")
+        .arg(format!("{username}:F"))
+        .output()
+        .map_err(|e| delete_and_fail(make_err(format!("could not run icacls: {e}"))))?;
+
+    if !output.status.success() {
+        let stderr = String::from_utf8_lossy(&output.stderr);
+        let stdout = String::from_utf8_lossy(&output.stdout);
+        return Err(delete_and_fail(make_err(format!(
+            "icacls failed (exit {:?}): {stdout}{stderr}",
+            output.status.code()
+        ))));
+    }
+
     Ok(())
 }
 
@@ -82,8 +136,7 @@ pub fn permissions_note() -> &'static str {
     if cfg!(unix) {
         "permisos 0600 (solo tu usuario)"
     } else {
-        "ATENCIÓN: en Windows este archivo hereda los permisos de su carpeta. \
-         Guardalo fuera de carpetas sincronizadas (OneDrive, Dropbox) y fuera de cualquier repo"
+        "permisos de archivo restringidos (icacls: solo tu usuario)"
     }
 }
 
@@ -151,5 +204,45 @@ mod tests {
             CliError::BadKeyFile { reason, .. } => assert!(reason.contains("32 bytes"), "{reason}"),
             other => panic!("se esperaba BadKeyFile, llegó {other}"),
         }
+    }
+
+    #[cfg(windows)]
+    #[test]
+    fn windows_key_file_is_restricted_to_current_user() {
+        // Generate a key into a temp file.
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("win-test.key");
+        generate_to_file(&path).unwrap();
+
+        // Run icacls to inspect the resulting ACL.
+        let output = std::process::Command::new("icacls")
+            .arg(&path)
+            .output()
+            .expect("icacls must be available on Windows");
+
+        assert!(output.status.success(), "icacls inspection failed");
+
+        let acl_text = String::from_utf8_lossy(&output.stdout);
+
+        // The ACL output must NOT contain "Everyone", "BUILTIN\\Users",
+        // or "Authenticated Users" — only the current user (or SYSTEM/Administrators
+        // which are acceptable on a dev machine but not wider groups).
+        for forbidden in &[
+            "Everyone",
+            "BUILTIN\\\\Users",
+            "NT AUTHORITY\\\\Authenticated",
+        ] {
+            assert!(
+                !acl_text.contains(forbidden),
+                "Key file ACL should not contain {forbidden}:\n{acl_text}"
+            );
+        }
+
+        // The USERNAME must appear in the ACL.
+        let username = std::env::var("USERNAME").expect("USERNAME must be set on Windows");
+        assert!(
+            acl_text.contains(&username),
+            "Expected USERNAME '{username}' in ACL:\n{acl_text}"
+        );
     }
 }
