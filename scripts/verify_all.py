@@ -250,12 +250,11 @@ def check_python_verifier(report: Report, bundles: list[Path]) -> None:
         return
 
     for bundle in bundles:
-        # `-X utf8` y no PYTHONIOENCODING: `-I` ignora las variables de entorno,
-        # así que la única forma de darle UTF-8 a la salida del hijo es por flag.
-        # Sin esto el verificador muere al imprimir su `✗` en Windows.
-        code, output, seconds = timed(
-            [sys.executable, "-I", "-X", "utf8", str(script), str(bundle)]
-        )
+        # Sin `-X utf8`: el verificador ya fuerza UTF-8 en su propia salida, así
+        # que no depende de cómo lo invoque quien lo llama. No lo repongas acá;
+        # si vuelve el UnicodeEncodeError, el arreglo va en verify_bundle.py y la
+        # prueba que lo cubre es scripts/test_verify_bundle_utf8.py.
+        code, output, seconds = timed([sys.executable, "-I", str(script), str(bundle)])
         step = f"verify_bundle.py  {rel(bundle)}"
         if code == 0:
             report.add(OK, step, seconds, blocks_of(output))
