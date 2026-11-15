@@ -41,6 +41,7 @@ Para leer escenas desde Earthdata, cada persona corre una vez en su terminal
 | Cambio con signo | `03_change.py --in <carpeta> [--exclude exclude.tif]` | `delta_db.tif`, `valid.tif`, `changed.tif`, `change_summary.json` |
 | Máscara de exclusión (R13) | `make_exclude.py --base <par sin evento> --out …/exclude.tif` | agua permanente y zonas que cambian solas |
 | Contraste OPERA | `validate_opera.py --in <carpeta> --grid … --opera-t1 … --opera-t2 … --out …/opera_cells.json` | coincidencia por celda y global |
+| Exposición vial | `05_roads.py --in <carpeta> --inputs <carpeta con grid.geojson y roads.geojson>` | `road_cells.json`: vía recortada a cada celda, y la parte a `road_buffer_meters` de los píxeles con cambio |
 | Celdas y PNG | `06_cells.py --in <carpeta> --inputs <carpeta con grid.geojson>` | `cells.geojson`, `overlays/` |
 
 Todos se corren con `python data-pipeline/validacion/<script>` desde la raíz del repo.
