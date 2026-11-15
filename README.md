@@ -1,205 +1,258 @@
 # WOMBAT — El Niño Evidence Mesh
 
-WOMBAT convierte cambios observados por **NISAR GCOV** en evidencia firmada: contrasta la señal con **OPERA DSWx-S1**, calcula exposición vial por celdas de **1 km × 1 km** y prioriza qué zona verificar primero. Cada resultado se expresa como bloques WONB verificables con Ed25519. El usuario objetivo es el analista del **Gobierno Regional de Piura (GORE Piura)**: esto sirve para **preparación, no para emitir alertas**.
+**Dónde mirar primero, con evidencia que se puede comprobar.**
 
-> **Los datos de los fixtures son SIMULADOS.** El bundle `piura-demo/v0` no representa observaciones NISAR reales ni una evaluación científica operacional. Un cambio observado no confirma ni predice una inundación.
+WOMBAT toma el cambio que observa el radar **NISAR** entre dos fechas, lo contrasta
+con una fuente independiente —**OPERA DSWx-S1**, derivada de Sentinel-1—, mide
+cuántos metros de camino hay cerca de ese cambio y ordena celdas de 1 km × 1 km
+por prioridad de verificación. Cada resultado sale como un bloque firmado con
+Ed25519 que cualquiera puede verificar sin confiar en nosotros.
 
-## Estado del proyecto
+El usuario objetivo es el analista de riesgo del **Gobierno Regional de Piura**.
+Esto sirve para **preparación**: decidir a qué celda mandar una brigada primero.
+No emite alertas y no afirma que haya ocurrido una inundación.
 
-| IMPLEMENTADO | LEGADO | PLANIFICADO |
+| | |
+|---|---|
+| **Dashboard** | https://alexsander1207.github.io/wombat-dashboard/ · *(espejo en Vercel: pendiente)* |
+| **Datos en vivo** | https://favio-coder.github.io/Wombat-core/data/tailandia-01/latest.json |
+| **Bundle firmado** | [`data/tailandia-01/v1/`](data/tailandia-01/) — 605 bloques |
+
+---
+
+## El resultado: 600 celdas sobre una inundación real
+
+El método está validado sobre un par NISAR real de la llanura central de
+Tailandia, al oeste de Ayutthaya: **18 sep 2026 → 30 sep 2026**.
+
+No es un producto para Piura. Es la prueba de que la cadena completa funciona
+sobre dato real, porque para el AOI de Piura **no existe todavía un par de
+escenas que encierre el evento sin mezclar madureces** (ver *Límites*).
+
+| | celdas | fuente |
 |---|---|---|
-| `contracts/v1/`: contrato 1.0.0, bundle y los tres verificadores (Rust, Python, JS). | `wombat-node` implementa WONB **0.1**, un contrato distinto del vigente. | Pipeline geoespacial completo en `data-pipeline/`; hoy no hay insumos NISAR reales. |
-| WONB 0.2 en `wombat-core` (`wonb-core` en el plan): JCS, hash por contenido, firma y verificación. | Su payload firmado lleva `confidence` como `f64`, lo que **viola R16**. | `wombat-gateway` REST/WS y modo `live`. |
-| `wombat-cli`: `keygen`, `build` y `verify`. **R14: solo Rust firma.** | El transporte TCP + GossipSub del nodo legado requiere compilar con `--features p2p`; el nodo es distinto del contrato v1 vigente. | Dashboard en el repositorio aparte `wombat-dashboard` (**R26**); modo `static` obligatorio (**R17**), `remote`/`live` opcionales. |
-| `wombat-risk`: ranking determinista con prueba de ranking dorado. | `publish` valida e imprime el WONB; sin esa feature **no transmite**. | Edge Raspberry/ESP32 como P2; no hay hardware ni conexión implementados. |
-| Fixture firmado y **simulado** `contracts/v1/fixtures/bundle/piura-demo/v0`. | Los esquemas y fixtures 0.1 siguen en CI mientras exista compatibilidad. |  |
+| Total | 600 | `data/tailandia-01/v1/wonb/risk/*.json` |
+| Prioridad alta | 248 | `score_bp ≥ 6000` |
+| Prioridad media | 151 | `3500 ≤ score_bp < 6000` |
+| Prioridad baja | 104 | `score_bp < 3500` |
+| Sin calidad suficiente | 97 | `valid_fraction < 0.60` → `rank`, `score_bp` y `components_bp` en `null` |
+| Puntuadas (entran al ranking) | 503 | |
 
-WONB 0.1 y 0.2 son contratos distintos. El nodo actual continúa usando 0.1; el contrato v1 y el ranking usan 0.2. Consulta [la documentación del contrato v1](contracts/v1/README.md) y [la especificación legada 0.1](docs/wonb-spec.md).
+### Por qué 248 en alta no es un problema, y qué discrimina de verdad
 
-## Repositorios y componentes
+Que 248 de 503 celdas caigan en prioridad alta no es un defecto del umbral: **el
+AOI es la llanura que se inundó.** Casi todo el recuadro cambió. Un semáforo con
+la mitad del mapa en rojo no le sirve a nadie, y por eso el producto **no es el
+color: es el orden.**
 
-- **Core:** este repositorio `wombat-core`, con contratos, Rust y el directorio `data-pipeline/` reservado al pipeline.
-- **Dashboard:** repositorio separado `wombat-dashboard`; no vive en este core.
-- **Pipeline:** `data-pipeline/` dentro de este repositorio.
-- **Edge:** `edge/` cuando exista; el prototipo Raspberry anterior no forma parte del árbol actual.
-- **Landing/pitch:** no hay una aplicación landing implementada en este repositorio.
+```
+score_bp:  máximo 8599  ·  mediana 5938  ·  mínimo 0
+celdas con score_bp >= 8000:  26  (de 503)
+```
 
-## El flujo que se demuestra
+Ahí está la discriminación: 248 pasan el umbral, pero solo **26** llegan a 8000.
+A una brigada se le entregan las primeras diez, no las 248.
 
-Clave → bundle firmado → verificación cruzada. El detalle paso a paso está en el
-[runbook](docs/demo-runbook.md).
+### Top 10 — las diez primeras celdas a verificar
+
+| # | celda | `score_bp` | cambio | OPERA | vía a ≤250 m del cambio |
+|---|---|---|---|---|---|
+| 1 | `r19c12` | 8599 | 50.0 % | corroborada (82 %) | 6 663 m |
+| 2 | `r18c14` | 8563 | 56.7 % | corroborada (89 %) | 5 053 m |
+| 3 | `r18c12` | 8487 | 26.7 % | corroborada (68 %) | 8 787 m |
+| 4 | `r16c05` | 8283 | 71.9 % | corroborada (88 %) | 3 755 m |
+| 5 | `r16c13` | 8214 | 32.6 % | corroborada (80 %) | 4 913 m |
+| 6 | `r16c07` | 8204 | 27.6 % | corroborada (82 %) | 4 472 m |
+| 7 | `r04c06` | 8200 | 39.7 % | corroborada (85 %) | 3 965 m |
+| 8 | `r19c15` | 8191 | 69.8 % | corroborada (99 %) | 1 149 m |
+| 9 | `r09c07` | 8166 | 39.5 % | corroborada (86 %) | 3 537 m |
+| 10 | `r18c10` | 8157 | 59.0 % | corroborada (90 %) | 2 737 m |
+
+Cifras de `data/tailandia-01/v1/wonb/risk/tailandia-01-<celda>.json`.
+
+**Las diez están corroboradas por OPERA.** Ninguna baja del 26 % de cambio. Eso
+no estaba garantizado: las celdas con *más* camino cerca del cambio son otras
+—`r10c19`, `r12c18`, `r10c18`— y las tres están **sin corroborar**. El peso de
+OPERA las deja fuera del top 10 a propósito: más asfalto no vale más que una
+segunda fuente que confirme.
+
+Los tres bloques `action` del bundle dicen `field_verification_first`. Ninguna
+celda afirma que hubo una inundación; dicen cuánto bajó la retrodispersión, si
+OPERA ve agua nueva en la misma zona, y cuánto camino hay cerca.
+
+---
+
+## El método, en números
+
+El ranking vive **solo** en `wombat-risk` (R15) y es determinista: la misma
+entrada da los mismos bytes, con prueba de ranking dorado.
+
+| | valor | fuente |
+|---|---|---|
+| Peso del cambio | 0.45 | [`config/risk-config.json`](config/risk-config.json) |
+| Peso de OPERA | 0.35 | idem |
+| Peso de la vía | 0.20 | idem |
+| Umbral prioridad alta | 0.60 → `score_bp ≥ 6000` | `status_thresholds.review_high` |
+| Umbral prioridad media | 0.35 → `score_bp ≥ 3500` | `status_thresholds.review_medium` |
+| Calidad mínima | `valid_fraction ≥ 0.60` | `quality_min_valid_fraction` |
+| Saturación del cambio | 0.25 | `change_saturation` |
+| Umbral de cambio | 3.0 dB | `delta_db_threshold` |
+| Radio de exposición vial | 250 m | `road_buffer_meters` |
+| Corroboración OPERA | solape ≥ 0.20 | `corroboration_overlap_threshold` |
+
+Nada de flotantes en lo que se firma (**R16**): el payload lleva puntos básicos,
+metros enteros y centidecibelios.
+
+### Las cuatro fuentes
+
+| fuente | qué aporta | de quién |
+|---|---|---|
+| **NISAR L2 GCOV** | retrodispersión en dos fechas; su caída marca el cambio | NASA / ISRO |
+| **OPERA L3 DSWx-S1** | agua superficial nueva, **derivada de Sentinel-1, no de NISAR** — por eso es fuente independiente | NASA JPL |
+| **OpenStreetMap** | red vial, vía Overpass | © OpenStreetMap contributors |
+| **ASF** | catálogo para encontrar pares comparables | Alaska Satellite Facility |
+
+---
+
+## Integridad: no hace falta confiar en nosotros
 
 ```bash
-# Las cuatro verificaciones y las tres puertas de calidad, en una tabla.
-python scripts/verify_all.py
-
-# 1. Clave Ed25519 fuera del repositorio (R19: el comando rechaza un destino versionado).
-cargo run -p wombat-cli -- keygen --out ~/.wombat-keys/demo.key --name wombat-core-demo
-
-# 2. Bundle firmado e inmutable por versión (R28). Falla antes de escribir si
-#    las escenas no son comparables (R6/R7).
-cargo run -p wombat-cli -- build --in data-pipeline/out/piura-01   --aoi piura-01 --version v1 --key ~/.wombat-keys/demo.key --out data/piura-01/v1
-
-# 3. Verificar: sha256, id por contenido, firma, emisor, TTL y cadena.
-#    --trusted es la lista de emisores; el defecto es config/trusted-issuers.json
-#    y nunca la que viene dentro del bundle. El fixture lo firmó una clave de
-#    desarrollo que a propósito no está en la confianza de producción.
-cargo run -p wombat-cli -- verify contracts/v1/fixtures/bundle/piura-demo/v0   --trusted contracts/v1/fixtures/bundle/piura-demo/v0/trusted-issuers.json
+python scripts/verify_all.py          # las cuatro verificaciones y las tres puertas
 ```
 
-Las tres implementaciones del verificador —Rust, `contracts/v1/tools/verify_bundle.py`
-y `contracts/v1/tools/verify-js/verify.mjs`— leen el mismo bundle y deben
-coincidir. Sobre el fixture dan **21 bloques, 0 con error**.
+Salida real sobre `data/tailandia-01/v1`:
 
-No comprueban lo mismo, y conviene no venderlo así: solo `wombat verify` mide la
-confianza contra una lista externa al bundle, y solo Rust y Python comprueban la
-integridad de los archivos contra `index.json`. JS y `verify-rs` comprueban `id`
-y firma contra la clave que el propio bloque declara. El
-[runbook](docs/demo-runbook.md#las-tres-no-comprueban-lo-mismo) tiene la tabla.
+```
+  ✔  wombat verify      605 bloques
+  ✔  verify_bundle.py   605 bloques
+  ✔  verify.mjs         605 bloques
+  ✔  bytes              614 archivos
+  14 pasos: 14 ✔, 0 ✘, 0 ⊘
+```
 
-El nodo legado 0.1 (`validate`, `publish`, `--features p2p`) no participa del
-flujo de bundle v1; está documentado en el
-[runbook](docs/demo-runbook.md#wonb-01-y-el-nodo-p2p--legado). Su transporte
-P2P real usa TCP y GossipSub, pero no cambia el contrato del nodo a WONB v1.
+**Las tres no comprueban lo mismo**, y conviene saberlo antes de apoyarse en una:
 
-## Arquitectura objetivo
+| verificador | integridad | firma | lista de confianza | TTL y cadena |
+|---|---|---|---|---|
+| `wombat verify` (Rust) | sí, contra `index.json` | sí | **externa**, `--trusted` | sí |
+| `verify_bundle.py` | sí + esquemas JSON | sí | la que viene **dentro** del bundle | sí |
+| `verify.mjs` (JS) | no | sí | ninguna: la clave que el bloque declara | no |
 
-El flujo planificado es **NISAR GCOV → cambio observado → contraste OPERA → exposición vial por celda → ranking Rust → bloques WONB firmados → bundle → dashboard**. El contrato de datos es la interfaz entre `wombat-core` y `wombat-dashboard`; el navegador no habla libp2p.
+Solo el verificador Rust mide las firmas contra una lista que el bundle no
+controla. Un bundle que trae su propia lista de emisores **se autoavala**.
 
-Los modos del dashboard descritos por el plan son:
+Los bytes que sirve GitHub Pages coinciden con el `sha256` del `index.json`
+firmado — comprobado sobre `wonb/change.json`, `wonb/context.json`,
+`wonb/risk/tailandia-01-r19c12.json` y `cells.geojson`.
 
-- **static:** bundle fijado dentro del build del dashboard; no depende de un backend.
-- **remote:** bundle publicado en GitHub Pages, cargado desde el repositorio core.
-- **live:** gateway REST/WS para estado y bloques recientes.
+---
 
-El dashboard y el gateway que consumirían esos modos aún están planificados. El flujo existente de CI valida el fixture del contrato; eso no significa que haya una aplicación dashboard disponible.
-
-### Transporte P2P: TCP + GossipSub
-
-El nodo P2P usa libp2p sobre TCP con GossipSub. Para probar dos nodos en
-loopback, inicia el publicador A; anota el PeerId y la multiaddr que imprime.
-El proceso esperará a que un peer remoto se suscriba al topic antes de publicar:
+## Reproducirlo
 
 ```bash
-cargo run -p wombat-node --features p2p -- run \
-  --listen /ip4/127.0.0.1/tcp/9000 \
-  --topic wombat/pe/piura/piura-demo/change \
-  --trusted-issuers contracts/v1/fixtures/bundle/piura-demo/v0/trusted-issuers.json \
-  --identity-key ~/.wombat/transport-a.key \
-  --publish contracts/v1/fixtures/bundle/piura-demo/v0/wonb/change.json \
-  --timeout-secs 60
+# 1. Clave Ed25519 fuera del repositorio (R19: rechaza un destino versionado)
+cargo run -p wombat-cli -- keygen --out ~/.wombat/signing.key --name mi-clave
+
+# 2. Exposición vial por celda  (necesita changed.tif, que sale de 03_change.py)
+python data-pipeline/validacion/05_roads.py --in <par> --inputs data-pipeline/inputs/<aoi>
+
+# 3. Celdas, overlays y la parte Python del bundle
+python data-pipeline/validacion/06_cells.py --in <par> --inputs data-pipeline/inputs/<aoi> \
+       --bundle <staging>
+
+# 4. Firmar (R14: solo Rust firma) y verificar
+cargo run -p wombat-cli -- build --in <staging> --aoi <aoi> --version v1 \
+       --key ~/.wombat/signing.key --out data/<aoi>/v1
+cargo run -p wombat-cli -- verify data/<aoi>/v1 --trusted config/trusted-issuers.json
 ```
 
-En una segunda terminal inicia B. Reemplaza `<PEER_ID_A>` por el PeerId impreso
-por A:
+Paso a paso en el [runbook](docs/demo-runbook.md). El pipeline completo
+(`00_grid` → `06_cells`) está en [`data-pipeline/validacion/`](data-pipeline/validacion/README.md).
 
-```bash
-cargo run -p wombat-node --features p2p -- run \
-  --listen /ip4/127.0.0.1/tcp/9001 \
-  --peer /ip4/127.0.0.1/tcp/9000/p2p/<PEER_ID_A> \
-  --topic wombat/pe/piura/piura-demo/change \
-  --trusted-issuers contracts/v1/fixtures/bundle/piura-demo/v0/trusted-issuers.json \
-  --identity-key ~/.wombat/transport-b.key \
-  --timeout-secs 60
+---
+
+## Límites — lo que este proyecto todavía no puede decir
+
+**1. PROVISIONAL es priorización, no medición validada.** El par NISAR usado está
+marcado `PROVISIONAL` en su manifest: no pasó la validación de calidad de la
+misión y sus valores absolutos pueden cambiar. Lo que sostenemos es el **orden
+relativo** de las celdas, no la magnitud en decibelios.
+
+**2. No hay par de evento para Piura.** El catálogo de ASF sobre el AOI de Piura
+(`-80.80 -5.35 -80.55 -5.10`), consultado hasta el 30 nov 2026, devuelve escenas
+el 7 oct y el 19 oct (PROVISIONAL) y el 31 oct (VALIDATED), en ambos tracks.
+**Ningún par encierra el evento sin mezclar madureces**, y mezclarlas está
+prohibido (R6/R7). Lo que sí existe es un par de **control** 7 oct → 19 oct, con
+0,00 % de cambio medio: el resultado correcto para dos escenas previas al evento.
+
+**3. `roads_total_m` del bloque `context` está sobreestimado.** Rust mide esa
+longitud con constantes planas en grados, calibradas para la latitud de Piura:
+
+```rust
+// crates/wombat-cli/src/inputs.rs:232
+const M_PER_DEG_LON: f64 = 110_400.0;
+const M_PER_DEG_LAT: f64 = 110_570.0;
 ```
 
-`--identity-key <PATH>` crea una clave Ed25519 de transporte libp2p si no existe
-y la guarda con permisos `0600`; al volver a usarla conserva el PeerId. Si se
-omite, el nodo advierte que usa una identidad efímera que cambia al reiniciar.
-Esta identidad de transporte no es una clave de firma WONB. Mantén el archivo
-privado fuera del repositorio y no lo compartas.
+Medido sobre la misma geometría del bundle, reproyectada a EPSG:32647
+(`geopandas.read_file(...).to_crs("EPSG:32647").length.sum()`):
 
-La demo se considera exitosa cuando B registra recepción del mismo ID WONB,
-topic y peer de origen. GossipSub no almacena mensajes históricos ni ofrece ACK
-de aplicación: el resultado solo puede verificarse mientras B está conectado y
-antes del timeout. Ambos nodos validan el contrato WONB 0.2, la firma, el emisor
-confiable, TTL y topic; A publica únicamente después del evento de suscripción
-remota correspondiente.
-
-### Conectarse a un relay
-
-Para conectar un nodo a un relay público, usa la multiaddr TCP del relay,
-incluyendo su PeerId, como argumento `--peer`. Sustituye el ejemplo por los
-datos publicados por el operador del relay:
-
-```bash
-./wombat-node run \
-  --listen /ip4/0.0.0.0/tcp/0 \
-  --peer /ip4/<RELAY_PUBLIC_IP>/tcp/9000/p2p/<RELAY_PEER_ID> \
-  --topic wombat/pe/piura/piura-demo/change \
-  --trusted-issuers ./trusted-issuers.json \
-  --identity-key ./wombat-transport.key
+```
+longitud real en UTM 47N:   2 058 441 m
+firmado por Rust:           2 082 247 m
+diferencia:                   +23 806 m  =  +1.16 %
 ```
 
-La multiaddr y el topic deben coincidir con la configuración del relay. Para
-exponer un relay propio se requiere permitir conexiones entrantes TCP en el
-puerto 9000; no se necesita abrir SSH para el tráfico P2P.
+Afecta solo al total del AOI en el bloque `context`. **No afecta al ranking**: la
+exposición vial por celda se mide en el CRS de la grilla, en metros reales.
 
-Para validar el fixture de anomalía localmente:
+**4. Un cambio observado no confirma ni predice una inundación.** La información
+sobre el evento de Tailandia proviene de **resúmenes de prensa sin verificar**, y
+por eso este repositorio no publica ninguna cifra de impacto.
 
-```bash
-cargo run -p wombat-node -- publish --file \
-  contracts/fixtures/anomaly-valid.json
-```
+---
 
-Este comando es una validación local y **no publica en la red**.
-Consulta `docs/demo-runbook.md` para la guía detallada.
+## Fase 2 — el dashboard no depende de nada de esto (R17)
 
-### Binario precompilado Linux x86_64
+Existe código de malla P2P (`wombat-node`, TCP + GossipSub), un gateway HTTP de
+solo lectura (`wombat-gateway`), terraform para un relay (`infra/relay/`) y
+paquetes para Raspberry Pi ARM64 en los
+[releases](https://github.com/Favio-coder/Wombat-core/releases), marcados
+pre-release.
 
-Las GitHub Releases incluyen `wombat-node-linux-x86_64.tar.gz` para Linux
-x86_64. Los usuarios finales no necesitan clonar el repositorio ni instalar
-Rust o Cargo:
+**Nada de eso está en el camino de la demo.** El dashboard lee archivos estáticos
+firmados y funciona sin backend (**R17**); el navegador nunca habla libp2p (**R18**).
+`wombat-node` implementa WONB **0.1**, un contrato distinto del vigente, cuyo
+payload lleva `confidence` como `f64` y por tanto **viola R16**: está marcado
+legado a propósito, y migrarlo es trabajo de fase 2. Detalles en
+[arquitectura](docs/architecture.md) y en la
+[especificación 0.1](docs/wonb-spec.md).
 
-```sh
-tar -xzf wombat-node-linux-x86_64.tar.gz
-cd wombat-node-linux-x86_64
-sha256sum -c SHA256SUMS
-cp relay.env.example relay.env
-```
+---
 
-Revisa y edita `relay.env` con el relay multiaddr, topic y trusted issuers de tu
-red. Comprueba los checksums con `sha256sum -c SHA256SUMS`, revisa el
-`README.md` incluido y ejecuta `./wombat-node run` con esos valores y
-`--identity-key` para conservar el PeerId entre reinicios. El paquete contiene
-el binario, `trusted-issuers.json` público de ejemplo y archivos de ejemplo;
-no contiene el código fuente ni claves privadas.
+## Equipo
 
-## Contratos y revisión
+| módulo | responsable |
+|---|---|
+| Core Rust / P2P | Richard |
+| Adaptador geoespacial Python | Gustavo |
+| Nodo edge Raspberry Pi | Jelibeth |
+| Agente de riesgo / dashboard | Mireya |
+| Landing / pitch / UI | Ximena |
+| QA, integración, Actions, fixtures, modo demo | Jayo |
 
-Los archivos bajo `contracts/schemas/` y `contracts/fixtures/` son **contratos
-compartidos**. No modificarlos sin revisión del equipo (ver tabla de
-responsables más abajo). Cualquier cambio de esquema debe ir acompañado de
-actualización de fixtures y pruebas.
+Dos repositorios (**R26**): este core, y `wombat-dashboard` aparte.
 
 ## Contribuir
 
-1. Crea una rama desde `main`.
-2. No modifiques `contracts/` sin revisión.
-3. Ejecuta `cargo fmt --check`, `cargo clippy --workspace -- -D warnings` y
-   `cargo test --workspace` antes de enviar el PR.
-4. Abre un PR y espera la revisión del responsable del módulo.
+1. Rama desde `main`. No modificar `contracts/`, `config/` ni bundles publicados
+   sin revisión y bump de versión (**R20**, **R27**, **R28**).
+2. `cargo fmt --check`, `cargo clippy --workspace -- -D warnings`,
+   `cargo test --workspace`, `python -m pytest data-pipeline/validacion -q`.
+3. `python scripts/verify_all.py` antes del PR.
+4. Claves privadas nunca dentro del repositorio (**R19**).
 
-## Tabla: módulo / responsable sugerido
-
-| Módulo                        | Responsable sugerido |
-|-------------------------------|----------------------|
-| Core Rust / P2P               | Richard              |
-| Adaptador geoespacial Python  | Gustavo              |
-| Nodo edge Raspberry Pi        | Jelibeth             |
-| Agente de riesgo / dashboard  | Mireya               |
-| Landing / pitch / UI          | Ximena               |
-| QA, integración, GitHub Actions, fixtures, modo demo | Jayo |
-
-## Avisos importantes
-
-- Una anomalía de deformación superficial **no confirma ni predice por sí sola**
-  un deslizamiento de tierra.
-- El MVP usa una **regla demostrativa**, no un modelo científico operacional.
-- No incluir claves privadas ni secretos en el repositorio.
-
-Más detalles: [arquitectura](docs/architecture.md),
-[runbook](docs/demo-runbook.md) y [contrato WONB 0.2](contracts/v1/README.md).
+Contrato vigente: [`contracts/v1/README.md`](contracts/v1/README.md).
 
 ## Licencia
 
