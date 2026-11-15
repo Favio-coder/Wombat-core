@@ -1,0 +1,56 @@
+{
+  "aoi_id": "sechura-01",
+  "aoi_name": "Desierto de Sechura, sur (recuadro provisional)",
+  "data_origin": "nisar_real",
+  "crs_compute": "EPSG:32717",
+  "bbox_wgs84": [
+    -80.981928,
+    -6.28763,
+    -80.719737,
+    -6.01617
+  ],
+  "nisar": {
+    "product": "NISAR_L2_GCOV",
+    "maturity": "PROVISIONAL",
+    "frame": "174",
+    "orbit_direction": "ascending",
+    "mode": "2005",
+    "frequency": "A",
+    "polarization": "HHHH",
+    "pixel_spacing_m": 20,
+    "t1": {
+      "granule": "NISAR_L2_PR_GCOV_032_104_A_174_2005_DHDH_A_20261007T110840_20261007T110901_P05023_N_P_J_001",
+      "datetime": "2026-10-07T11:08:40Z"
+    },
+    "t2": {
+      "granule": "NISAR_L2_PR_GCOV_033_104_A_174_2005_DHDH_A_20261019T110840_20261019T110901_P05023_N_P_J_001",
+      "datetime": "2026-10-19T11:08:40Z"
+    },
+    "comparable": true,
+    "comparable_checks": {
+      "same_frame": true,
+      "same_orbit_direction": true,
+      "same_mode": true,
+      "same_frequency": true,
+      "same_polarization": true,
+      "same_maturity": true
+    }
+  },
+  "opera": {
+    "product": "OPERA_L3_DSWx-S1",
+    "derived_from": "Sentinel-1",
+    "status": "unavailable",
+    "t1": {
+      "granules": [],
+      "gap_days": null
+    },
+    "t2": {
+      "granules": [],
+      "gap_days": null
+    }
+  },
+  "pipeline": {
+    "commit": "1b55f9b",
+    "risk_config_version": "risk-config/0.1"
+  }
+}

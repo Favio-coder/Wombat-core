@@ -1,0 +1,255 @@
+{
+ "aoi": "Tumbes-Zarumilla",
+ "bbox_wgs84": [
+  -80.31,
+  -3.7,
+  -80.17,
+  -3.455
+ ],
+ "bounds_utm": [
+  576622.6032949105,
+  9590990.04151517,
+  592194.6959507698,
+  9618086.233112602
+ ],
+ "transform": [
+  30.0,
+  0.0,
+  576622.6032949105,
+  0.0,
+  -30.0,
+  9618086.233112602
+ ],
+ "passes": [
+  {
+   "date": "2026-10-09",
+   "utc": "2343",
+   "sat": "S1C",
+   "tiles": 2,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0222,
+   "inundated_veg_fraction": 0.0182,
+   "water_fraction": 0.0403
+  },
+  {
+   "date": "2026-10-10",
+   "utc": "2335",
+   "sat": "S1D",
+   "tiles": 2,
+   "valid_fraction": 0.0,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0,
+   "water_fraction": 0.0
+  },
+  {
+   "date": "2026-10-12",
+   "utc": "1100",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0173,
+   "inundated_veg_fraction": 0.018,
+   "water_fraction": 0.0353
+  },
+  {
+   "date": "2026-10-12",
+   "utc": "1101",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 0.3333,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0009,
+   "water_fraction": 0.0009
+  },
+  {
+   "date": "2026-10-16",
+   "utc": "2335",
+   "sat": "S1C",
+   "tiles": 2,
+   "valid_fraction": 0.0,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0,
+   "water_fraction": 0.0
+  },
+  {
+   "date": "2026-10-18",
+   "utc": "1100",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0155,
+   "inundated_veg_fraction": 0.0217,
+   "water_fraction": 0.0371
+  },
+  {
+   "date": "2026-10-18",
+   "utc": "1101",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 0.3333,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0011,
+   "water_fraction": 0.0011
+  },
+  {
+   "date": "2026-10-21",
+   "utc": "2343",
+   "sat": "S1C",
+   "tiles": 2,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0159,
+   "inundated_veg_fraction": 0.0199,
+   "water_fraction": 0.0358
+  },
+  {
+   "date": "2026-10-22",
+   "utc": "2335",
+   "sat": "S1D",
+   "tiles": 2,
+   "valid_fraction": 0.0,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0,
+   "water_fraction": 0.0
+  },
+  {
+   "date": "2026-10-24",
+   "utc": "1100",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.019,
+   "inundated_veg_fraction": 0.0161,
+   "water_fraction": 0.035
+  },
+  {
+   "date": "2026-10-24",
+   "utc": "1101",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 0.3333,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0009,
+   "water_fraction": 0.0009
+  },
+  {
+   "date": "2026-10-28",
+   "utc": "2335",
+   "sat": "S1C",
+   "tiles": 2,
+   "valid_fraction": 0.0,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0,
+   "water_fraction": 0.0
+  },
+  {
+   "date": "2026-10-30",
+   "utc": "1100",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.022,
+   "inundated_veg_fraction": 0.0153,
+   "water_fraction": 0.0373
+  },
+  {
+   "date": "2026-10-30",
+   "utc": "1101",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 0.3333,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0007,
+   "water_fraction": 0.0007
+  },
+  {
+   "date": "2026-11-02",
+   "utc": "2343",
+   "sat": "S1C",
+   "tiles": 2,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.023,
+   "inundated_veg_fraction": 0.0126,
+   "water_fraction": 0.0355
+  },
+  {
+   "date": "2026-11-03",
+   "utc": "2335",
+   "sat": "S1D",
+   "tiles": 2,
+   "valid_fraction": 0.0,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0,
+   "water_fraction": 0.0
+  },
+  {
+   "date": "2026-11-05",
+   "utc": "1100",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0255,
+   "inundated_veg_fraction": 0.0095,
+   "water_fraction": 0.035
+  },
+  {
+   "date": "2026-11-05",
+   "utc": "1101",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 0.3333,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0009,
+   "water_fraction": 0.0009
+  },
+  {
+   "date": "2026-11-08",
+   "utc": "2343",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 0.3333,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0012,
+   "water_fraction": 0.0012
+  },
+  {
+   "date": "2026-11-08",
+   "utc": "2344",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0217,
+   "inundated_veg_fraction": 0.0165,
+   "water_fraction": 0.0382
+  },
+  {
+   "date": "2026-11-09",
+   "utc": "2335",
+   "sat": "S1C",
+   "tiles": 2,
+   "valid_fraction": 0.0,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0,
+   "water_fraction": 0.0
+  },
+  {
+   "date": "2026-11-11",
+   "utc": "1100",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0203,
+   "inundated_veg_fraction": 0.017,
+   "water_fraction": 0.0373
+  },
+  {
+   "date": "2026-11-11",
+   "utc": "1101",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 0.3333,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0011,
+   "water_fraction": 0.0011
+  }
+ ]
+}

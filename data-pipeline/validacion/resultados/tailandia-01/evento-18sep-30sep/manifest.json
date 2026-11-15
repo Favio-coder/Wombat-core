@@ -56,7 +56,12 @@
     }
   },
   "pipeline": {
-    "commit": "ce7ae33",
+    "commit": "1b55f9b",
     "risk_config_version": "risk-config/0.1"
+  },
+  "osm": {
+    "query": "[out:json][timeout:180];way[\"highway\"](14.295998,100.297995,14.523299,100.521989);out geom; filtrado a clases de red vial (sin service, footway, path, steps, construction)",
+    "retrieved_at": "2026-11-15T04:59:09Z",
+    "attribution": "© OpenStreetMap contributors"
   }
 }

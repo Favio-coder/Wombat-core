@@ -76,6 +76,17 @@ La evidencia de Tailandia está en `resultados/tailandia-01/`: documento, imáge
 tablas por celda y fichas de cada par (3,4 MB, sin rásteres). No es un bundle. Las salidas de
 trabajo siguen en `data-pipeline/out/validacion/`, que no entra al repositorio.
 
+`resultados/peru-fuentes-nasa/` reúne lo explorado en Perú con otras fuentes de la NASA (agua
+OPERA DSWx-S1, lluvia NASA POWER, humedad SMAP) y deja Sechura preparado para NISAR. Conclusión:
+en Tumbes y Piura no hay agua extensa que mapear; NISAR registra ahí el suelo mojado (0,5 a 1 dB).
+
+`06_cells.py` mide las vías por celda si en la carpeta de insumos hay `roads.geojson` (WGS84) y
+`osm-metadata.json`, como los de `data-pipeline/inputs/<aoi>/`. Necesita `changed.tif` del mismo
+par. `WOMBAT_CONTRACTS_DIR` permite validar contra otro `contracts/v1` sin cambiar de rama.
+
+`make_exclude.py --water-raster` toma el agua permanente de otra fuente (p. ej. OPERA de antes
+del evento) en lugar del umbral de brillo, que en desiertos marca arena seca como agua.
+
 ## Límites
 
 - **Dos cambios de método respecto al §6 del plan**, sin aprobar aún: el promediado a 100 m y la

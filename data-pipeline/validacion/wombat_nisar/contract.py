@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
@@ -10,6 +11,13 @@ from referencing.jsonschema import DRAFT202012
 
 
 def contracts_dir() -> Path:
+    """contracts/v1 del repo, o el que indique WOMBAT_CONTRACTS_DIR (para validar contra otra
+    version del contrato sin cambiar de rama)."""
+    override = os.environ.get("WOMBAT_CONTRACTS_DIR")
+    if override:
+        if not (Path(override) / "VERSION").exists():
+            raise FileNotFoundError(f"WOMBAT_CONTRACTS_DIR no apunta a un contracts/v1: {override}")
+        return Path(override)
     for parent in Path(__file__).resolve().parents:
         if (parent / "contracts" / "v1" / "VERSION").exists():
             return parent / "contracts" / "v1"

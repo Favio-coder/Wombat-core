@@ -18,7 +18,7 @@ from pathlib import Path
 import numpy as np
 from rasterio.warp import Resampling, reproject
 
-from wombat_nisar import aggregate, assemble, contract, overlays, raster_io
+from wombat_nisar import aggregate, assemble, contract, overlays, raster_io, roads
 from wombat_nisar.grid import Grid
 
 REPO = Path(__file__).resolve().parents[2]
@@ -71,13 +71,25 @@ def main(argv=None) -> int:
 
     metrics = aggregate.nisar_metrics(delta, transform, grid, config["delta_db_threshold"])
     inputs = assemble.Inputs(inputs_dir, grid)
+    if inputs.roads is None and inputs.roads_path is not None:
+        # Hay roads.geojson pero no road_cells.json: se calcula la exposicion vial aqui (§6.7)
+        if not (d / "changed.tif").exists():
+            print("ERROR: falta changed.tif (sale de 03_change.py) para medir vias cerca del cambio.")
+            return 2
+        changed, c_transform, _ = raster_io.read(d / "changed.tif")
+        inputs.roads = roads.road_cells(roads.load_roads(inputs.roads_path, grid.crs), changed,
+                                        c_transform, config["road_buffer_meters"], grid)
+        near = sum(c["road_m_near_change"] for c in inputs.roads.values())
+        total = sum(c["road_m_total"] for c in inputs.roads.values())
+        print(f"Vias: {total / 1000:.0f} km en la grilla; {near / 1000:.0f} km a menos de "
+              f"{config['road_buffer_meters']} m del cambio")
     cells, warnings = assemble.build_cells(grid, metrics, inputs)
     simulated = manifest.get("data_origin") == "simulated"
     stretch = overlays.write_overlays(d / "overlays", t1[0], t2[0], delta_map, t1[1], t1[2],
                                       simulated=simulated)
     manifest = assemble.final_manifest(manifest, inputs, args.osm_retrieved_at)
-    if manifest["pipeline"].get("commit") in (None, "", "unknown"):
-        manifest["pipeline"]["commit"] = _commit()
+    if not simulated and _commit() != "unknown":
+        manifest["pipeline"]["commit"] = _commit()   # 06 arma el manifest final: registra el HEAD actual
 
     assemble.dump_json(d / "cells.geojson", cells)
     assemble.dump_json(d / "manifest.json", manifest)
