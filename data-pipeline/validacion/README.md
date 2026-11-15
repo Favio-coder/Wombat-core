@@ -70,8 +70,11 @@ Todos se corren con `python data-pipeline/validacion/<script>` desde la raíz de
 | Piura, exploratorio | 19 oct → 31 oct | mezclada | 2,3 % | 2 de 517 |
 
 Tailandia contra OPERA (par 18 → 30 sep, OPERA a 1 día de cada escena): 239 de 305 celdas con más
-de 25 % de cambio quedan corroboradas. Detalle en los `.md` de `data-pipeline/out/validacion/`
-(esa carpeta no entra al repositorio).
+de 25 % de cambio quedan corroboradas.
+
+La evidencia de Tailandia está en `resultados/tailandia-01/`: documento, imágenes reducidas,
+tablas por celda y fichas de cada par (3,4 MB, sin rásteres). No es un bundle. Las salidas de
+trabajo siguen en `data-pipeline/out/validacion/`, que no entra al repositorio.
 
 ## Límites
 
