@@ -1,130 +1,132 @@
-# Demo Runbook — WOMBAT
+# Runbook — WOMBAT
 
-## Objetivo
+Lo que este repositorio demuestra hoy es una cadena de evidencia: **generar una
+clave → construir un bundle firmado → verificarlo con tres implementaciones
+independientes**. Ese es el flujo de la demo y el orden de este documento.
 
-Levantar el nodo WOMBAT en modo demo local o demostrar el transporte P2P
-WONB 0.2 con dos nodos TCP sobre loopback y GossipSub.
+> **El bundle `piura-demo/v0` es SIMULADO.** Sus granules se llaman
+> `SIMULATED-T1` y `SIMULATED-T2`; no son observaciones NISAR reales ni una
+> evaluación científica operacional. Un cambio observado no confirma ni predice
+> una inundación: esto sirve para **preparación**, no para emitir alertas.
 
 ## Requisitos
 
-- Rust toolchain estable.
-- Carpeta de trabajo: `wombat/`.
-- Para P2P: Rust 1.88 o posterior; libp2p se activa opcionalmente con
-  `--features p2p`.
+- Rust estable y Cargo.
+- Python 3.12 con `jsonschema` y `referencing` (para `verify_bundle.py`).
+- Node 20 y `npm ci` en `contracts/v1/tools/verify-js/` (para `verify.mjs`).
+- Todos los comandos se ejecutan desde la raíz de `wombat-core`.
 
-## Comandos
+## 1. La puerta de calidad
 
-### 1. Ejecutar pruebas
+Un solo comando corre los cuatro verificadores y las tres puertas, y resume todo
+en una tabla:
 
 ```bash
-cargo test --workspace
-cargo test --workspace --all-features
+python scripts/verify_all.py
 ```
 
-### 2. Verificar formato y lint
+Sale con 0 solo si no hubo ningún `✘`. Un `⊘` significa saltado —por ejemplo, el
+verificador JS sin `node_modules`— y **nunca** cuenta como éxito. Las puertas por
+separado, si se quieren mirar de a una:
 
 ```bash
 cargo fmt --check
-cargo clippy --workspace -- -D warnings
-cargo clippy --workspace --all-features -- -D warnings
+cargo clippy --workspace --all-targets -- -D warnings
+cargo test --workspace
 ```
 
-### 3. Validar el fixture de anomalía (criterio de aceptación)
+## 2. Generar la clave de firma
+
+**R14: solo Rust firma.** Python produce evidencia sin firmar; la canonicalización
+JCS, el `id` por contenido y la firma Ed25519 viven en `wombat-core`.
 
 ```bash
-cargo run -p wombat-node -- validate --file \
-  contracts/fixtures/anomaly-valid.json
+cargo run -p wombat-cli -- keygen --out ~/.wombat-keys/demo.key --name wombat-core-demo
 ```
 
-Salida esperada: `WONB válido: wonb:anomaly:demo-001`.
+El comando **rechaza** cualquier destino que caiga dentro de un repositorio git
+(R19: una clave privada jamás entra al árbol versionado). Imprime la clave
+pública y la línea lista para pegar en `config/trusted-issuers.json`; la privada
+queda solo en ese archivo, fuera del repo.
 
-### 4. Publicar el fixture de anomalía (modo demo)
+## 3. Construir un bundle firmado
 
 ```bash
-cargo run -p wombat-node -- publish --file \
-  contracts/fixtures/anomaly-valid.json
+cargo run -p wombat-cli -- build \
+  --in data-pipeline/out/piura-01 \
+  --aoi piura-01 --version v1 \
+  --key ~/.wombat-keys/demo.key \
+  --out data/piura-01/v1
 ```
 
-### 5. Rechazar un fixture vencido
+El destino es `data/<aoi_id>/<bundle_version>/`, que es la ruta que fija **R28**:
+una versión publicada es inmutable, se publica una nueva y nunca se sobrescribe
+la anterior. `build` falla **antes** de escribir nada si el par de escenas no es
+comparable —`manifest.nisar.comparable` o cualquiera de los seis
+`comparable_checks` en `false`— porque **R6/R7** prohíben puntuar escenas que no
+comparten frame, dirección de órbita, modo, frecuencia, polarización y madurez.
+
+Mientras `data-pipeline/` no entregue insumos reales, el único bundle construible
+es el fixture simulado que ya está en el árbol.
+
+## 4. Verificar con las tres implementaciones
+
+Las tres leen el mismo bundle y deben coincidir en el número de bloques y en los
+errores. Que coincidan es el punto: una sola implementación no demuestra nada.
 
 ```bash
-cargo run -p wombat-node -- validate --file \
-  contracts/fixtures/expired-invalid.json
+# Rust
+cargo run -p wombat-cli -- verify contracts/v1/fixtures/bundle/piura-demo/v0
+
+# Python
+python contracts/v1/tools/verify_bundle.py contracts/v1/fixtures/bundle/piura-demo/v0
+
+# JavaScript
+cd contracts/v1/tools/verify-js && npm ci && cd -
+node contracts/v1/tools/verify-js/verify.mjs contracts/v1/fixtures/bundle/piura-demo/v0
 ```
 
-Salida esperada: error (WONB expirado rechazado).
+Salida esperada en las tres: **21 bloques, 0 con error.**
 
-### 6. Rechazar un fixture malformado
+Cada verificador comprueba el `sha256` de cada archivo listado en `index.json`,
+el `id` por contenido, la firma Ed25519, que el emisor esté en la lista de
+confianza, el TTL y la cadena de bloques. El TTL se mide contra
+`index.generated_at` salvo que se pase `--as-of`, porque un bundle estático es
+una foto histórica y no caduca por el paso del tiempo.
+
+## 5. Publicar
+
+`.github/workflows/publish-data.yml` ensambla `data/**` más el fixture, corre
+`verify_bundle.py` sobre **cada** bundle y escribe `latest.json` apuntando a la
+versión vigente. Requiere *Settings → Pages → Source: "GitHub Actions"*.
+
+## WONB 0.1 y el nodo P2P — LEGADO
+
+`wombat-node` implementa **WONB 0.1**, un contrato distinto del vigente. Su
+payload firmado lleva `confidence` como `f64`, lo que **viola R16** (el payload
+firmado no lleva floats, para que Rust y JavaScript no serialicen distinto). No
+forma parte del contrato `contracts/v1/` ni del bundle, y **no se demuestra**.
+
+El transporte libp2p existe detrás de una feature opcional
+(`--features p2p`: TCP, Noise, Yamux, GossipSub) y sin esa feature el binario
+falla con `modo P2P no disponible`. Nada de esto participa de la cadena de
+evidencia de arriba. Los comandos legados quedan documentados para quien
+mantenga 0.1:
 
 ```bash
-cargo run -p wombat-node -- validate --file \
-  contracts/fixtures/malformed-invalid.json
+cargo run -p wombat-node -- validate --file contracts/fixtures/anomaly-valid.json
+cargo run -p wombat-node -- publish  --file contracts/fixtures/anomaly-valid.json
 ```
 
-Salida esperada: error (campos obligatorios faltantes).
+`publish` valida e imprime el JSON; sin `--features p2p` **no lo transmite**.
+La especificación 0.1 está en [docs/wonb-spec.md](wonb-spec.md), marcada como
+legada. El contrato vigente es [contracts/v1/README.md](../contracts/v1/README.md).
 
-## Dos terminales (modo demo, sin red)
+## Lo que todavía no existe — PLANIFICADO
 
-Terminal 1 — nodo A:
-
-```bash
-cargo run -p wombat-node -- run --demo
-```
-
-Terminal 2 — nodo B, validar y publicar:
-
-```bash
-cargo run -p wombat-node -- validate --file \
-  contracts/fixtures/anomaly-valid.json
-cargo run -p wombat-node -- publish --file \
-  contracts/fixtures/anomaly-valid.json
-```
-
-`run --demo` no inicializa identidad libp2p ni abre sockets.
-
-## Dos nodos P2P locales reales
-
-La demo usa TCP en `127.0.0.1`, dial explícito y GossipSub; no depende de mDNS,
-DNS, WiFi del evento ni servicios externos. Ambos procesos deben cargar la
-misma lista de emisores confiables. El publicador valida el bloque antes de
-emitirlo; el receptor valida JSON, firma, emisor, TTL, cadena y coincidencia
-exacta del topic antes de aceptarlo.
-
-Terminal 1 — A (publicador). Anota el PeerId y la multiaddr que imprime:
-
-```bash
-cargo run -p wombat-node --features p2p -- run \
-  --listen /ip4/127.0.0.1/tcp/9000 \
-  --topic wombat/pe/piura/piura-demo/change \
-  --trusted-issuers contracts/v1/fixtures/bundle/piura-demo/v0/trusted-issuers.json \
-  --publish contracts/v1/fixtures/bundle/piura-demo/v0/wonb/change.json \
-  --timeout-secs 60
-```
-
-Terminal 2 — B (receptor). Sustituye `<PEER_ID_A>` por el PeerId de A:
-
-```bash
-cargo run -p wombat-node --features p2p -- run \
-  --listen /ip4/127.0.0.1/tcp/9001 \
-  --peer /ip4/127.0.0.1/tcp/9000/p2p/<PEER_ID_A> \
-  --topic wombat/pe/piura/piura-demo/change \
-  --trusted-issuers contracts/v1/fixtures/bundle/piura-demo/v0/trusted-issuers.json \
-  --timeout-secs 60
-```
-
-Éxito: A registra la suscripción remota y la publicación; B registra el mismo
-`wonb_id`, topic y peer de origen. GossipSub no mantiene historial ni provee un
-ACK de aplicación, por lo que la recepción debe observarse en vivo antes del
-timeout. A espera el evento de suscripción al topic y no usa sleeps arbitrarios.
-
-El comando `publish --file` es solo validación/imprimir local; no transmite en
-red, porque un proceso separado no comparte el Swarm de `run`.
-
-## Alcance del contenedor Docker
-
-`docker-compose.yml` levanta el nodo en modo demo. No incluye red P2P real.
-
-## Avisos
-
-- Fixtures NISAR simulados.
-- Regla demostrativa, no modelo científico operacional.
+| Pieza | Estado |
+|---|---|
+| Insumos NISAR reales en `data-pipeline/out/` | No hay ninguno; todo granule del árbol es `SIMULATED-*`. |
+| Dashboard (`wombat-dashboard`, repo aparte, **R26**) | No vive en este repositorio. Modo `static` obligatorio (**R17**); `remote` y `live` opcionales. |
+| `wombat-gateway` REST/WS y modo `live` | No implementado. El navegador habla con el gateway, nunca con libp2p (**R18**). |
+| Edge Raspberry/ESP32 | P2. No hay hardware ni conexión implementados. |
