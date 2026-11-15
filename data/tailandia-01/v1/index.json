@@ -1,0 +1,2466 @@
+{
+  "contract_version": "1.1.0",
+  "bundle_version": "v1",
+  "aoi_id": "tailandia-01",
+  "data_origin": "nisar_real",
+  "generated_at": "2026-11-15T15:17:54Z",
+  "core_commit": "84e55830483a155b65ed3b67927d4c0dd93c4a6e",
+  "files": [
+    {
+      "path": "cells.geojson",
+      "sha256": "d34934282399bfdc82bd52c61ab8ab69f66cfab6e227871fe49131586e1b1f19"
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "13a8822379ef8758dc07c135b06c8910b79151d75ba13ab2e93760658e296c7f"
+    },
+    {
+      "path": "overlays/bounds.json",
+      "sha256": "092cce4bf41a172fc662bef81277600b1377bacf125fe5ed6f71fda86ba54562"
+    },
+    {
+      "path": "overlays/delta.png",
+      "sha256": "2b59eb602471989f22c8653bcce1f74cbaf1f5cdea38e39e4695419ca5649e6c"
+    },
+    {
+      "path": "overlays/t1.png",
+      "sha256": "c67a0a180aee33f854bbb69544274b0e52bca79f68058e17a7b27cccc05d11c7"
+    },
+    {
+      "path": "overlays/t2.png",
+      "sha256": "67cda739bb999067eb4a437f094d5cd025be038cdde41675b50b487369e7bc54"
+    },
+    {
+      "path": "risk-config.json",
+      "sha256": "7cd3b00d125d24fb51bfbf33d8b3c84f4ebc0f0afc8acc9c52da63893990e966"
+    },
+    {
+      "path": "roads.geojson",
+      "sha256": "47d3ed44704879faeceecbe3b22d0ff257d227751d8e088c4bdfdf7be57e3706"
+    },
+    {
+      "path": "trusted-issuers.json",
+      "sha256": "b2ca95cc53642abc20fd351dd1c7abc0efe8c43c414b048ad79d52cb534490ae"
+    },
+    {
+      "path": "wonb/action/1.json",
+      "sha256": "5b629d564b44704f9457d7b64f7157aa06e27a60b5a958705fd6c48f1d4de811"
+    },
+    {
+      "path": "wonb/action/2.json",
+      "sha256": "aedef0415f398bd5578d04ca263c17f0c8f8854d01f614d43049e04443b330c7"
+    },
+    {
+      "path": "wonb/action/3.json",
+      "sha256": "cf9477b2db2d5ede95ecac2759863de2cd34ef7a04a3bea4266e34f0830bb6cc"
+    },
+    {
+      "path": "wonb/change.json",
+      "sha256": "4452d146adbf4af66002160bae8e962183723724deb68807dea567a6b1cb8bc4"
+    },
+    {
+      "path": "wonb/context.json",
+      "sha256": "612648d7923f4ff3f1026fd095a43d2dcc1d757ac948138f28c6e600fac072df"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c00.json",
+      "sha256": "ffc227a25531ce1c2e5ed2f4395d72d85944edcb4de3f32750a733187ec335d1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c01.json",
+      "sha256": "bc604b834abf2eb71964036107eb94d6fb4bf99423a7188cef7a5ff1dc72b553"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c02.json",
+      "sha256": "5d030eaa2aa3709b1efbb74b9e4254ffd6d9d19ad881650168f18cc0555a423c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c03.json",
+      "sha256": "e6af08e3990e616190779ef4907706084965c4b7012a60bbeb67213d311d8204"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c04.json",
+      "sha256": "64cc0d14bacc199eeab7a4454d7e8de0da7044a8c56bf6b4657dd56b5a2e1416"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c05.json",
+      "sha256": "a5589ac9a65fe007d6569f3734e14fc46e1934ce5f49b77afa011a021a2d5c66"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c06.json",
+      "sha256": "4ef296c7908ecaf18d6d4ce6cef0a6f2db5e7c6ced59f7b14860edb41509e781"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c07.json",
+      "sha256": "ac9aca40a895c58a3006917b514961b4a71df1d935242e00a3415e2d8515912a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c08.json",
+      "sha256": "f857a9cb851b47cf72e24eb62597528e81d0af57bd795727bd444468ed0fa99a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c09.json",
+      "sha256": "b1e0dcc39fde6dce53015df18fc77e9f08763787d2f73be55c61639013f5da2a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c10.json",
+      "sha256": "fbfe45b4d6c0b26e9a0a5986c5df0ccbb95431d188947328217fb62cc70fa4cb"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c11.json",
+      "sha256": "e97bb1592bf69650da399f524fadcfbbe5fb19a74f2b327a6fdb14227083d7be"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c12.json",
+      "sha256": "d263369cb0087f863347f89b1a0398873dcd4815f0d95615f49f65c3138cb922"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c13.json",
+      "sha256": "a4a78f47b27b729fd526cb0878d542a5ae2a4a39ca42949f0131521da1309846"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c14.json",
+      "sha256": "84fc081a791c5c7e6d6e4940366456d29280b8977e906dcc1d29fc57a67ac49a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c15.json",
+      "sha256": "90b7f2961fba1994a1af2955629558117c38f2ac3e5835a1b63d6a0383191ecd"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c16.json",
+      "sha256": "985d5c66113a9e79b0b05ea7f6845f0a2f62eb8fbf687db64d463f4611ff1584"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c17.json",
+      "sha256": "4c518d36502960f86f5e8c2cfdafb2f34393672362da0dddbaf5aefbd14d2b54"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c18.json",
+      "sha256": "e48d5acabe2d794dec8466da2fbf9217ff505ff2acd347427ddcf0c79587eaa2"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c19.json",
+      "sha256": "ddfd4a083a834e8d1b20c8b26d6c87bd4432968d8c17155ff1f99f676f57b903"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c20.json",
+      "sha256": "d4c1179d603bfc7bb62edfa05348db791d7ae494297b072d599ef8811273cc14"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c21.json",
+      "sha256": "3939747352519dbf918d3752b76c2827592762f51fa26874568f09968a496bee"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c22.json",
+      "sha256": "2ab205685a939b7a8bcf384280c5ae0b74ee10b231a8d10d294f82a0dcbd5c47"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r00c23.json",
+      "sha256": "65da2e4b606781ea43ed5a911473bb94374732c56d8487499e683d2edff4e8d3"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c00.json",
+      "sha256": "c81bcf8b18651b98eefd56e4f1a6b7a98766335f49b527007f25bb886a526bcc"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c01.json",
+      "sha256": "246293af3ce6ace93b767f48913a3f887d80c7a39609b72c48a65843c1e3923f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c02.json",
+      "sha256": "33ddea26fe0807e531d780c418c34994b601a6ccb3f4512f673aef17b7ec9599"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c03.json",
+      "sha256": "8d97785c36fde8daf6442bb1c54fe7d6d54928d4ac92675fecb43429c24b4fba"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c04.json",
+      "sha256": "39f04cfec39e53d5c3fe34180b4c3c9164b147d6e7272c78baa9033ed8b56431"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c05.json",
+      "sha256": "f470a3da771d9f4370a7b4ac0d347c841b85764b892cd80815248812529e4a39"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c06.json",
+      "sha256": "88fb38c74ff0b77e051066be362126fc7b8b8d476093dfcaf9d840f940effcca"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c07.json",
+      "sha256": "c9639f6c007c7400f542039e9af41ec356bad2da1b51138b844e0dd0c1dd0f7e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c08.json",
+      "sha256": "d1a2b9b9798181e90961f2dcaa80f754c692f26cc2d7d33d4cfc2f96f36c2664"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c09.json",
+      "sha256": "64cc3108074ae522e79690bf21fe9185478d10a03da6d97b9e1147d64682373c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c10.json",
+      "sha256": "866c049bb6288238845fff362d647d84eaf3a803a6ce816e68fd12a7bca391d4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c11.json",
+      "sha256": "a9d68ef08e7df328626d610d7fddaca7427b598ab2295eeba1f00f9e5d2d1400"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c12.json",
+      "sha256": "c1a50478d27f3ec56b1b79934c6f18a2e595cab2f7fbe4103e1a34b19d14a3e5"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c13.json",
+      "sha256": "f9b430f432ec57c36aa4f0c50cb7e89fba0aec140c6937da0e1bacd5c3d7b714"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c14.json",
+      "sha256": "a5517113b93977ab326bc0374848c37ea577b7258c65f6e321117c21246df9af"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c15.json",
+      "sha256": "a11d47624d0c46716a4cba115678722fb83785f1ed15a05405590b649e17c661"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c16.json",
+      "sha256": "5f6200485976e3ee488f8d43bb73860abe64eec0b4a83c433ef784b6daed70a5"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c17.json",
+      "sha256": "3cf29a8d0bbaddfa618a3b9ada461cc8dd0a3c8276c163486d65a102474ad48f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c18.json",
+      "sha256": "b0652fecd91ed3cf5ab08bdd2d0dcb788f7361b515f6192ae521ea1f564f708f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c19.json",
+      "sha256": "b4ef0c0fed7ae1fb21bff588b115932fe0335639e2389ec1cc1d94440b16e990"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c20.json",
+      "sha256": "160b8d5c94f2184d823c49793cfbe9a1ffcc904dc89974f210bf1bb9fbf01e08"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c21.json",
+      "sha256": "77a29ac4fa02dfb4ec37be64d08af641302988eea114a14915c784e4bb7ada51"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c22.json",
+      "sha256": "d1cd5c8a30e5d71d02f66fcb19bd222b21a117de3637a3301eb1ed49483ecd3c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r01c23.json",
+      "sha256": "81aad825b7549b62f5d424897208414be61edebfd1d23b7ac5dfbaae872afce4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c00.json",
+      "sha256": "5dbf0c0de8b8897f61648da8f59574f72d9dcae9e4999f3709dbd81b1aa1d210"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c01.json",
+      "sha256": "8578b65cb9c391528d9f9a9ba8e802e9ceb4822e15c824f7f8bc1d5a24c9246c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c02.json",
+      "sha256": "81e59c39b49375a923e8a4864bbd26c375aafffced1da63a214ae2b40004b0e7"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c03.json",
+      "sha256": "c42e845359d3247fc30ec72c5a7a4917d6945ea59bff8785e6cba997cd8e757e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c04.json",
+      "sha256": "dbd0c8d28a5020bc1fa2f50214055ad5bc22b882e50241979c283159d4bd4b26"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c05.json",
+      "sha256": "0d08514b024e1a82226b1e7967f04ffe518c9d1659115ca5f4f9d527df3cd450"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c06.json",
+      "sha256": "0d5c99b27dc827a223ebb3e3d8b74fc1c60539cc2518ae97ace500b97cf24b77"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c07.json",
+      "sha256": "2aa77b19931d6fb5cb4ca06d58bb15759f133d09526d588e2a31a5e75ba39785"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c08.json",
+      "sha256": "78e59782bc7ab8bfa59ab0dd4c6d79234e5b483463aafc495d6f74a050f7581f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c09.json",
+      "sha256": "09865b1f6c1abed0729c245610947fb948c2dc7e6d69414b1d4ea8a18ce71b48"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c10.json",
+      "sha256": "858551309cdd95a33d7953997c74ffa3df07ce0f1bbad396eb44514ee8f2f721"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c11.json",
+      "sha256": "8a4e51f503164a7bb656fd0b3121ee33110b31aaa54c19cf53a552e81a8032b9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c12.json",
+      "sha256": "7b49a3cee73d0808eb8f2e9147bf3e0e0e61530257c1218612d6082eaa7d3bf5"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c13.json",
+      "sha256": "95bb6570493fab9ff1a0b62ef3df58478d36158f71d6822c5c279a9f0d3d8241"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c14.json",
+      "sha256": "82255cabddcf50745c353e31444aeac80a27a4b7ccdae83d751ff29a02c2946b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c15.json",
+      "sha256": "e125f7bac2cd7200e457554a88dded9898213f445c6cbaf79ad976666fea21bd"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c16.json",
+      "sha256": "344b0922dfb47d9d06d093ffe5d55a97e9e031a93a2364a3489c0296db032189"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c17.json",
+      "sha256": "a520f625cbb67ca2ea926f51740a0be2bf5489fecf4ba3a48a3ebb04e9c77a38"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c18.json",
+      "sha256": "86cd1062acb191a1638fd0e6818d0db54b3e38a0dd1e7b948e20d8916b149a9f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c19.json",
+      "sha256": "f7c714d256405ed0a7fda320ec39b6e1c129eaa3d21565ae39e71b962b7a60ac"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c20.json",
+      "sha256": "81b222d62e729cc2376ebccca2341ea08f23d3b50cacbede18bc4b6f1e6aa7ba"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c21.json",
+      "sha256": "6b896a65ce30811c705200c4043050cfcfd108c1f0c675df0e1cba3b9de7489f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c22.json",
+      "sha256": "f185952ab00c6970c839b1cb86038e4950f38ad563e394609b7bf7c86834e6c4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r02c23.json",
+      "sha256": "8f53dc5ca78fbbda3d6af3d683d38cfb407235498beec52a6a4886041495052f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c00.json",
+      "sha256": "4c5ab8b05c0d529bfaaa3e77703512f8a1cfcdcc16c0e3cceb556513c88a11c4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c01.json",
+      "sha256": "ca9df118fed896b14dd77f63e0a65b0f65f82fa339f7daceca332ce0d54507b6"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c02.json",
+      "sha256": "224eaf7ef38e60b786c6b6d5d1f4fd0e60e5be7c6502989b5ba66a93187ce7c1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c03.json",
+      "sha256": "e5018df34fab2e5f8953dedda4ba2ab355c3358742091321ca189e7cf27727e7"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c04.json",
+      "sha256": "03a1e8fe91e326bacc27814b305508bc08c4fc52e52e5418306f7fdef30bd8df"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c05.json",
+      "sha256": "591ad7e098f16bbad4db923fef3f8f48f4baa7685baecd6cf90470d59b1f34f1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c06.json",
+      "sha256": "640362cd827cdaa33da6ac20e59daa1f40ee53ecb50781027359c0b90a709d2f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c07.json",
+      "sha256": "7fcfa6e9f8bcfdefec54cc9a575756b1df71842f5124628a1cda3e615c3a1092"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c08.json",
+      "sha256": "71de6a8151d7ffa7fb87cf1be367ed6e8b2a66236a7c53f4ec1da4048b3b83f3"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c09.json",
+      "sha256": "ba2dddd9dd96e0457c63e17c5d78e3f5bf88890551e373868c63d4d16f45f25a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c10.json",
+      "sha256": "d79bc0dd1eb65bc0f780a1eeb34e91f98a7ba0f9650ded87205d30f4ba46d507"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c11.json",
+      "sha256": "28d82750cce7a657112a77ec72652608e14e9cb8eab5c3e66c5cae102645cbf9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c12.json",
+      "sha256": "a84b73ea91e780d4383c06bd46b9b053f80cab6201f18b77259d85666f0f5a66"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c13.json",
+      "sha256": "246b3982109f79806062e3b526f5b4a8657a790487f21a04a83efb791971c562"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c14.json",
+      "sha256": "f5d762df21df5b5743bdab652667dac29bcf2035212b8a17874f666f0e31b3ef"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c15.json",
+      "sha256": "25bddc7ff695dec01cc50f7e59956d6a9f76ddf758230a8dc2753e87c473aafa"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c16.json",
+      "sha256": "b5425407f5b872d1076231636bd2f44219a4edca028d7951918c95dc10d8499f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c17.json",
+      "sha256": "e4830148807b984b936db6d4c27e7f4bf3f3ce0fd968de3a3ecb6a78839dc54b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c18.json",
+      "sha256": "6402c0a3d19c336e7aaa68d980a849b59f292400a007e826c8f0489cac0e848c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c19.json",
+      "sha256": "db2bc70d3d26ccb8c4f0ab8a1efb9851d8e04cb4731dcee41a264454da4591a4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c20.json",
+      "sha256": "d977bf20df9b6a0aa517a1558dcbfc0a06cb523c40d8ea8b0ad6cb0c0c2bf4c0"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c21.json",
+      "sha256": "fbe58bfe8dfaffbd37ff498e4b6d286b2ef87d240d409a77fb154b0e025c41e4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c22.json",
+      "sha256": "67b4b53ec4937c53b09d73daf24a330a0a47aa5fadb0ddecf10061315d9a5bdf"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r03c23.json",
+      "sha256": "48c9fd3ef01f36aaa62a59d0f236cf678a47c78d9b786daac0be2d40c1048b3a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c00.json",
+      "sha256": "55b9552647eac732657796fcb27b86fc201433d11d391fd1d2c17f76232c2599"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c01.json",
+      "sha256": "4a3cf2571fc6b66caef922eed4177881b4b6235b27fb38436b52789ac8e6f704"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c02.json",
+      "sha256": "435ec49162efde5ac65ab903372724e9a7c74e6212e845a6a42fb1bead74e115"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c03.json",
+      "sha256": "a07200cf91c5d3c765823131f3f399696f5dbf9162bb59d6eae67ae3e242e380"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c04.json",
+      "sha256": "24d60eb382178f58bfa259fa7c2dcc3281a29107e7c54a0747f261aaaade8594"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c05.json",
+      "sha256": "58136ddca1b249835cb0a45acbad17a65b557bcf2583798eec3598fd6de84e12"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c06.json",
+      "sha256": "fd4bc93a27797014c7cad59cd1fc832f1b76de5277d7adbc3950b27e0b955da4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c07.json",
+      "sha256": "8e5057227c89600ed3723dff8ca69f41716820e41f97f087cbee118a2cde2191"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c08.json",
+      "sha256": "d4013c9216e3d5cbf64274d559260e7d599675f5f5d76c469b0e7a0d89fc02d8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c09.json",
+      "sha256": "bf891b5efc7ca7e5936185ed49876bc535b36a4e296eff2bcc38c29fffdf7419"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c10.json",
+      "sha256": "5c898932f2cf68cd76df73b2dc938701defde42238713cb29f6c8ac81a71666c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c11.json",
+      "sha256": "33f1be5e9949497041268c99833b38a04d069ec7d5c1bf0bbf90b6d8cf60e676"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c12.json",
+      "sha256": "642fb66ca4da23a670cd75f7b668fc7fbb54c5b5bb870b34a4dd7f97d826e9e5"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c13.json",
+      "sha256": "c785d081087b502b786274122c8ceec8239b0a240f047641a2bf1419c20d07b7"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c14.json",
+      "sha256": "fe306189a3a0f1b5f4a3b841140b83ca3a156fe8c1624df84559c6448a26eaae"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c15.json",
+      "sha256": "560fbd0b964c7fbb8d886eaedbec332e46703928d6826f0f9e4ba3e3884af2b1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c16.json",
+      "sha256": "9dc0e51aeea1d5277b07d4fd7f89e55f317d66baeba2d5cab2d2f9ca350d1fee"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c17.json",
+      "sha256": "7e4190dd9ca3ba25542bb41ad7ddeec6518202c8bf90ed6c113fe4e431d3ecd2"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c18.json",
+      "sha256": "2c7c27c0ecb778592722d619320648042b7ab9dce9f98a66f1a857c53163d546"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c19.json",
+      "sha256": "2e47866e064a1336450ed752170d1f60e5687c549b97b4f32e054a9d4a8170b3"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c20.json",
+      "sha256": "27e4f635395c370a27b25dc508d4c57ca6403c6da183f2335c8edb1864f0b7f1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c21.json",
+      "sha256": "a96463416fec8578b2fa53033d4b08ae58f3ecb5ba12dddc66d70ab8bf7d1e9b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c22.json",
+      "sha256": "68ce5dedd268f9246d250c304a4ff307e8fbd1a64126dd443035cc865229c3a7"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r04c23.json",
+      "sha256": "e1e6c25f1e7f9c5e6876b35b84c862de60818de60447bb2d1b9d362fa3dce9ac"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c00.json",
+      "sha256": "74f9e7974ae7f5236888579ce7bd5bf4690277dec56ec25f20a577a440b28f91"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c01.json",
+      "sha256": "5d601392e8efcbc6273f754779e48e7f98929d134f0e2d70a8158f50f3cc12ff"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c02.json",
+      "sha256": "c2ff3796762cd0fcffb7bfe2cbd9e3a9147b4daa1d95a7c136edc6119cefe4db"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c03.json",
+      "sha256": "90e97426b948853b94cd90175c6d86b6aad1bbc64d238ff9183b39b35e60ba25"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c04.json",
+      "sha256": "f06ba2658a349365a72433eb83b3a24ceb123eefcd1a1dbc01950e545ac5234d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c05.json",
+      "sha256": "7e013efc075dc4f178e667ca78f85cd99ef03b910d4c71a035d3a2749c8f9b7f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c06.json",
+      "sha256": "47e9c2c28af238a6136a49e8dfd06cdeb761a56450093932b25fe61b5da96b0f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c07.json",
+      "sha256": "b93dec1dcb78800b26389c4447cb7d09e2a5a062e3b46519adb0efe4dd3c75d2"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c08.json",
+      "sha256": "7cffc5493068011d2acce4f681d6a29fa9e6b55aad540d359c1e022582dc75c3"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c09.json",
+      "sha256": "8c825930e875f75daf15d7b75d8d62ad8d730dfe26f06553d53b3bfcbce5c82c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c10.json",
+      "sha256": "c0c5eda8a6201cc43b958cafdf911bf1d202cb0b29c600156d34a5a6134c6508"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c11.json",
+      "sha256": "013d3e63df38c8db2b1417fdd0a846253b16f160642563ff39a383c349c9b013"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c12.json",
+      "sha256": "16feaaf922998fa878cb6d1fac069e3b46c3da8ea29b7574b15a3d11538c534c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c13.json",
+      "sha256": "424075c41ff8674249cf512eb70bed6d628c4cfb9926a9d604200e89befb1cf6"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c14.json",
+      "sha256": "09a3b7febe6ff9a70e6f49e3ac20e8e94ecade18f52ed68cd8f96ea56608588a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c15.json",
+      "sha256": "21fb3323a373365bae9488765b440d0e538b31a4fc6c9bc12992a087e7d3acd3"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c16.json",
+      "sha256": "4df75d275b34d6db6b724c76e2375c7582f35270a4b7957c7cf570ac228cf449"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c17.json",
+      "sha256": "51b8d2919ce8a811721106d52d6e40c0ba9b760b86b79913d9546ad042ab5a3f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c18.json",
+      "sha256": "ef50e34837e58d4acb97c705184023281099ffc7115c425873b31a0e3928f722"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c19.json",
+      "sha256": "927a92e798f5f0ea3b2777720fb6db956a73b32088eefbae69a8b9d4a40b6002"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c20.json",
+      "sha256": "8412b8c05a8629500b86c520e428151bef14c3f967733a9b65219d9a65a94f36"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c21.json",
+      "sha256": "050e29590ef5c302b995f11d9f94a76db2cc53fb4cd911718f5d6f6fd30759cf"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c22.json",
+      "sha256": "92cbd85e036217e26d39f9567e62c96152067fd278089a14efb873a864afbd62"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r05c23.json",
+      "sha256": "2b646ea2fb826ba25a28c336038e3eed18439ae7619aeb4e061f25b900a11000"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c00.json",
+      "sha256": "5054f6acf22627f91f9a8edd155b7993f5118d94bc259208280e57a5d85a9db9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c01.json",
+      "sha256": "b7ddfeef443aa2f9db6a0fa2d2fa0ad4d0763c9dc275ab77d4985f9aeb8aa672"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c02.json",
+      "sha256": "dba64897d2809575e941d80f4a39fbf18ff78b218217619d921e8d4d1070fa13"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c03.json",
+      "sha256": "4663d0b8a12671226067a9084ad843a66e688870ff3c6ad79575f863ed8ae128"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c04.json",
+      "sha256": "2d367836f03c189c8e96f4f568bfda5dbabf42396676f9808de8058926374e88"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c05.json",
+      "sha256": "ccc31f93ad17f63ca4d5cd436e476dad2b565059bf65ee2f8066178700107eb9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c06.json",
+      "sha256": "43e335f89e724169bb6ccc2a80645ae237120da29e5cf00293d9217bd6992a21"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c07.json",
+      "sha256": "958a416df63891c3030f6d3fb231a4796eaaef24aa7f3f1dcc9eb90460976fec"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c08.json",
+      "sha256": "48431d9e3afb58682e901f176dd391fdfb1d3670450b06e4d5ef30fe1fdc8e07"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c09.json",
+      "sha256": "946324fbb11870a96699f219b55346f1da7f31fe34f7a82cde2736a14ebf5cc1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c10.json",
+      "sha256": "8382c853f1f794eb23711a2761d36b0564a94d4995aa974f208515baee66df0d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c11.json",
+      "sha256": "ebfa49a42da6daf9c04db30ac53f8de4403fc4e8b19e4dfa5743e1d7a51e7fdb"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c12.json",
+      "sha256": "5dbdca160ff5b2ddf7130b719289f4b62f0c67a72e11c2a2b153cb3277ebb31c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c13.json",
+      "sha256": "78ccda21733f8771540451f1be263710e50f663f6180de3dc6494179175c7ec7"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c14.json",
+      "sha256": "a034a0cbe050d524009d2c4e894cc35b005a0e946116c1fb202539a1870b50ce"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c15.json",
+      "sha256": "f3c9ea5ad1335f735f3a09aaac73c2dde6ce03cdca7da3161a9660cf2de1cc77"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c16.json",
+      "sha256": "560623ad12d818b009fb45ac6233ee5f47de23cd13b4cac7e103f852a0e38b21"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c17.json",
+      "sha256": "30f23bc1a041c4272d322c8969ac23ebaa531b7936161a2241ea31f5aa19013d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c18.json",
+      "sha256": "5ed7cd2d16eeaafbf4e4a16e771dddfff769cb0eeac0374c06c630d59dd415cb"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c19.json",
+      "sha256": "24523975214fd3d01ad9c4a0482d2a01362137544261b530ebff4148008cc5a1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c20.json",
+      "sha256": "5c0d32d61882b52c2f09425a0c320ba140f88f67439000f95339289e2e204353"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c21.json",
+      "sha256": "b537fdf50fd4f178d32ae9dc89cfbf8fe9612f7e43126f42afce6fa0251f085c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c22.json",
+      "sha256": "5c67d9d247ceec2a9d4c7b684c4d57898712ab0bbb53d4bf7f8784c473e138b9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r06c23.json",
+      "sha256": "e0ec35b57ef191df5e3625c5dde18c0064c104dc3e0eb6c9f313ba3bbd5e2263"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c00.json",
+      "sha256": "5abb29ff6a6ba09eb4e617e21389e490fc30efa33b50af898e44575a8fc87b6a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c01.json",
+      "sha256": "4957c7acd3d004507760e61e88be0dfb7176cc9eb2f6572564746cdf78520a4d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c02.json",
+      "sha256": "b13a55d0209f9739e4a7847c40d3bb2a702d5192d7d3c48bb4473a37577d5ca0"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c03.json",
+      "sha256": "107ade1bb6d964d4167a38f061bd74c776a700cd63fc95bfdd4689d677892713"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c04.json",
+      "sha256": "91a1955e91db7012fa2ea393e1929ccbb8591eab32dfeb7bc1f85c3529c11f3e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c05.json",
+      "sha256": "a0bc6191e946c399fe7b3423c6c40d1e5f5589647b8e384858e1df7526f2cf55"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c06.json",
+      "sha256": "c9e8d961a4d054c2968b69baf142864dcc38af0764e28d87cd4b17b84caf1621"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c07.json",
+      "sha256": "f9dfde843b0b1a4250d9c74b71dc04cfb5690c4b822ee144508c60dee133931c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c08.json",
+      "sha256": "fffab20820a1493e8b0560e2c4755c2761dd0ebaab20345966f7d359f1ae9a7c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c09.json",
+      "sha256": "05e96d5e8a5e93ab156103fffb3fd1ed3886aea50a7099e32ff1aeae5dff6ecf"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c10.json",
+      "sha256": "dfe7869360f6a25f61d037744ff803c17848a3da2b6e1a81771336d9c3701ec9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c11.json",
+      "sha256": "a3032a0db3d85d213a708453e0566579c42d851087d8b08873f5beb784e13fe8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c12.json",
+      "sha256": "6feaf61696dbbfaa65c7b52ea55feea8d1789471882e8980b5d119fbec3b4993"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c13.json",
+      "sha256": "d29d7eae11445a79e945da80f62dadd45a69541956e9aad0f673ce72b25be711"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c14.json",
+      "sha256": "395e52ab4e81eca1efe9183b8fb935bdf29d8bfc29413e95cc3688f4d8f0445e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c15.json",
+      "sha256": "27d54ba6091e4d7f81d3ba2d0d11f1e747f3d6f2632edf58b9c6ff4090f4380d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c16.json",
+      "sha256": "20b25b278233b1ebbfc3c92b2c5fac11a0df6b502a1053d69ce85b9f7489a53f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c17.json",
+      "sha256": "fa00ff106b980062c2baadddaccfca902c6cd7c83aa2dd551201a92b07d4d675"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c18.json",
+      "sha256": "a6d3d870b1e57136eac52f1be7b4578ebe95c634ae13ec0197fa332642becef5"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c19.json",
+      "sha256": "f1d143feec4fe75c73f9d59e5e9a17b70c7b11f779946e45eeb07cf6651ac3bf"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c20.json",
+      "sha256": "85d460fa7d8ab2261a77255ed3d157622e647c824f0b9ac17584c1d3d2231ba1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c21.json",
+      "sha256": "9881c2e83d0c71a871d2279e1f5c47ca1fb11320ee6554c78ca9af787e6ed385"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c22.json",
+      "sha256": "5aa564c26bc485832180601b15c563b23cd00255347183f2542efda3c7366835"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r07c23.json",
+      "sha256": "6976a57386e801ee21f21bf97d51fe15e2e308564b2b17b6f3f628f1fd43a0dd"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c00.json",
+      "sha256": "b0d856d0c210ac4e471a14e998eb7e786978f734596ba65156d83c5ab48bba07"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c01.json",
+      "sha256": "55a292256aaafa5d02499f527d2004feb38527a4aa2470193d834a8a3a29114a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c02.json",
+      "sha256": "1f9107f679254f73f1e4150829927442370de307f213017a11f3d084a583576c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c03.json",
+      "sha256": "ce89443e793bf76345fcf0155843d8ab34efcd29a3afbcbaa0c9d6f36790708a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c04.json",
+      "sha256": "c2e9f5d6f2a72d7855b8114bb145fbc7d05d95ae67e01483b5bef8539648f076"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c05.json",
+      "sha256": "c914b7f84230e3ec777a90ba127b44027510895fc9d0b5b1053788cbcd0f8ad7"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c06.json",
+      "sha256": "fd36ab25076ba3c026eff57a86e93c053ffca9cd7a4e978ab5fed3701b37af73"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c07.json",
+      "sha256": "da7d01f60b4940c079a4985db64d6dbc0b35e877e703d745de9ebfddb932cf8c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c08.json",
+      "sha256": "aeaa355cf654d501b5af6d8c8322b1612518c5726ea93fc047f23a55f3137e54"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c09.json",
+      "sha256": "9a3a7052fce966627e82a1fc0dd25e04fad780540de46c5c3367c1ed932c07ff"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c10.json",
+      "sha256": "3dd51e0ab3f0cf2ca13efac2cc33dc3957f2971711d8882005aba8a8c728154a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c11.json",
+      "sha256": "f91500a7c94cdfcc1d415774e16559fc861da384b538ce8ba9d88e0d36a6f50c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c12.json",
+      "sha256": "a3568674d1d03ef4c0f11d80fab99ae522f5deae4a109d8608c03f2d271f1c87"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c13.json",
+      "sha256": "c4748187147491120b4721d9619089c87dcefd79f6dda6de7a8de9c2f480544f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c14.json",
+      "sha256": "c787abaa3d9faf38e2e8bfdd2e127f0e93269ca42fc4e398d01154ee20450fa4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c15.json",
+      "sha256": "ed247f361323d31ba7c85e405bdbd9e96edd83dd98ad104b96d249918cec860c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c16.json",
+      "sha256": "b7c0d9f7fea719d6bf52aaef739d87e2ebdb0957a762df722cc44bf76ca65442"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c17.json",
+      "sha256": "78c6c740e9bda6a5b1b9c77d993623d51efbc5595ed808cf2dd13af99a692c7c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c18.json",
+      "sha256": "5990981768c30b9afb0f8b8ad8f33b3234891e43837dd80db2657137dfbee848"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c19.json",
+      "sha256": "0ca66abd505cbc4d094c1dc60eb734dacf15773e1be4a4cd0eb557f50c7910be"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c20.json",
+      "sha256": "88eceae73a76d1143c9df3db47b10df1dcdc10f9b639af84b88873a3071b1378"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c21.json",
+      "sha256": "2fa4d5fe5fe10f9652e90a8dd8ac53d85b3e31a0bd6c5d8f026a25075d7162e8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c22.json",
+      "sha256": "f557b241fe174ff1ab02dcfda58ec24c868024f9f7d13d7471ed0a0dd1dd8d15"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r08c23.json",
+      "sha256": "4aa2944b067f8a174e766cbc426619bf7d809c88097d775355403447ced0de55"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c00.json",
+      "sha256": "96ad769ed45dcb42e9e152110d4b7f83e79c25ea0dc1f4fbec6fdb2de30bbd86"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c01.json",
+      "sha256": "ae1b708a660b756d7be3ddfe0e349c0bc4ae50170148d52c881b160b9998b2f4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c02.json",
+      "sha256": "311584eb883116428c525e34e73ff1a6492588056b233b8665eb9a2b3e13eb50"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c03.json",
+      "sha256": "a01b89ae86d26ed500e4603c00cf9f180d069c931fad23e01b00b84d53199536"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c04.json",
+      "sha256": "41a5b18fa55a84db4bdcd7af2ffeb5a19c418ddd712ac389c2752f6ff3043bba"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c05.json",
+      "sha256": "37175884b1098a59db786ee0f7dc98e4177ba8cf9a539707c5b676df191839e3"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c06.json",
+      "sha256": "048d45e9191744caa7bb0413dbd642dc1a09cbda4478acd8bb32522061e08c45"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c07.json",
+      "sha256": "e01606845e45a2db2e3c98182df711b8f8eb4e83957ccebbd4ac56cad1790283"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c08.json",
+      "sha256": "5292f82861b20da650e081e3b25314477f6d6b8154caade9564855fbb13dd458"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c09.json",
+      "sha256": "976102ecfa24b38daeaf4088a0d09bf8f726e35cc32bc6c26e2d5db160984967"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c10.json",
+      "sha256": "c8557fb0e2ff8f736c967cc4dcb722a205e32709b4420f02d5098bf3440ec9d4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c11.json",
+      "sha256": "4b0c2541e33cdd71293d6eecb81907b00e890fef39f4cff2ab3d758875f98cf2"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c12.json",
+      "sha256": "974d285316982839d07f1c9f82094b2f1534c267b5503b91428fddcd53b2dc1b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c13.json",
+      "sha256": "54a429e0f9596409bb3ff290c7494c8538f173cc118cef65a01e6bdde83a933c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c14.json",
+      "sha256": "5ae9a668f455242f127fc9ea6cc46fe502b930e0bfb8b37941f56bf0457f1579"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c15.json",
+      "sha256": "983c3a17debfb9678ee001758a6d4bfb0cf8d9440e1752dbf3bb79454690df47"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c16.json",
+      "sha256": "388c7d0544e49f2214c048a723f2eb9dd22938b62ee7c5b2cf21fee23d638882"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c17.json",
+      "sha256": "ab7f814e00856e25041539dac7fbe14624a4386cf6ef1456f88ba516936c3792"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c18.json",
+      "sha256": "d675615e93b63bad847698d66925880a59ef3ddb56e41387962ee9343a3d9fcf"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c19.json",
+      "sha256": "53d241dace363112738917476cfd9819cb18e41759df27927b91497534147108"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c20.json",
+      "sha256": "4efaf7f035c4841c7f411cc08881317c0b3aadc702afdc6ff2e32879918d0b35"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c21.json",
+      "sha256": "9f3ad17302fbba2421c562b3abd917cbed51de4cd089d1acdd7cdeac16f99a18"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c22.json",
+      "sha256": "21f9e94983053b158ec26c223ef0ae1d9b04c65df30e3380778e9903100e3ce0"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r09c23.json",
+      "sha256": "8f288970916637ee85b8ce56a95b06a5f39534973a0cd04814a4698f808c89c3"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c00.json",
+      "sha256": "2d962d5298638219204836c42d29a06c6d103a0b97dd043557542c559db94315"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c01.json",
+      "sha256": "70d5d3ba805add29cbf9ce36b5718b2e0b493b9e752601001a3ca4fbdecdb36f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c02.json",
+      "sha256": "0eb709b39dc8defea701280d1456c24b693e0033295b0bdce08272eb9a2cafda"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c03.json",
+      "sha256": "9dd2a90c792c4057f9dd27413ceb5d45144fba223b0afe7f8ef66e503c3c6b5a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c04.json",
+      "sha256": "5e9cd75b3b69adb0afbdd284f6c452675397e0c947e5c632aff28e2339885413"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c05.json",
+      "sha256": "1f92d072d64a42aca79cb7d353720637073c5b69b3112d6c4680cfd49f733558"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c06.json",
+      "sha256": "d3e70b6115df96778c59c4dafd15deb73f816f9ad27a84da4fcf0be8fbf46cf7"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c07.json",
+      "sha256": "ed8456852bdf1d1fa16c146881ad5598d034a96c19c13b8c63d03e253463df83"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c08.json",
+      "sha256": "62a732896c650af8cde9c2d2537e19f46615465b9b192c39692bc6a4e6b88c32"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c09.json",
+      "sha256": "aa68b4184c2c766cd992fe10731696f6601b156f791303fa8c37ef1f4f9960d5"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c10.json",
+      "sha256": "f7ebfe43ba513d64eeee48871d946c42c6ce013c2743438e49300bbb9624f460"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c11.json",
+      "sha256": "d73e79629d70eab489b46175805bf5c371df37736a56080f103a7b5366d26a6f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c12.json",
+      "sha256": "cf95b56ef2724c9f74429af85159f5da70eb3aac7a600b91856fc388401265fd"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c13.json",
+      "sha256": "ceaac5a82ef47f688d95c3f59148e19686475d3e5fc40b72dfb888849d3b91b8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c14.json",
+      "sha256": "129ea95af82d1fea5a43b9a688c768f1194fdc860a304b84dbbd0ac7a0ac8457"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c15.json",
+      "sha256": "938aa46cfbae7d8831a5cb91825e4ea1a43b8e91e1bf92b90feab37118d2b00c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c16.json",
+      "sha256": "08a8ec88337597f0c241c62019f4054979b00a6cd72b7617baf6f1b1c3435675"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c17.json",
+      "sha256": "8a8def68c248a571a8a648e4e46fe8902795c66e5cdcb7baf9cb529c14f2238a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c18.json",
+      "sha256": "0c943759f38129a05195ffbc879e51691fe6d33f4966b2fb47d7bc34f8460162"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c19.json",
+      "sha256": "c86e91a7dec4d3869cebb4d430ee9ee1195f26bf7aeaf21477beda621f28b747"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c20.json",
+      "sha256": "5c27f0bb7f862f3f9cade9294ac28f57205d126aa87214991350503b59ace2ce"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c21.json",
+      "sha256": "915c2ee2e53e9de540c24858d528cb90e9478e2e16b48789a64be1c810e4de54"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c22.json",
+      "sha256": "1875488765074630486f216a1b0d2e89e307a629528b61f985fe672d99f69882"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r10c23.json",
+      "sha256": "4dc3c983328b486880a4a108c94b4df1536a70a6dd3445c536207fbf772c8d22"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c00.json",
+      "sha256": "dd0af57b030ed43c2ad78d4c59387d6ed8883a8e4462865de1af0a51d5e647ac"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c01.json",
+      "sha256": "e5d5daf895d52c0a423ae2dd9a488f09996e901ae3af7c1aad594c1d7df2612e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c02.json",
+      "sha256": "b6875e95c1d2bbfed21b30653c13b6b2233d78d69bd7e7959fdf89c877203f20"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c03.json",
+      "sha256": "3880f9fc493bd824fb6f07111edc703fd23cf351ac2053d144985a862f3bd198"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c04.json",
+      "sha256": "f2060d5e0e6a56000707336ad67409a81693932eaa7f8c63d447af957e3b7c42"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c05.json",
+      "sha256": "848f23a5d02dfa570f9c491cf8de41e8aa301569b15190da75d80682df830a40"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c06.json",
+      "sha256": "b950db47f13170efb712665edb96e2e66abf576c255f86bfaeffd5ca8d683b09"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c07.json",
+      "sha256": "10ea6134bbb1b2d81c7cd7989e97eeac3d8a2ed98929b3e04dec460883e6253f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c08.json",
+      "sha256": "497abce37180a919bf9f9786069c86d8fffd8eacf9a794720a15b5e1ab4f6c67"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c09.json",
+      "sha256": "eb309ea5f4163936ea6a5034a9babb4c089554b0df1bd5c57c89d01986ecb704"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c10.json",
+      "sha256": "5013b2c3992d30a746978ac9980649e0d192076ff32770b87dbc2131d5124461"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c11.json",
+      "sha256": "069ecbc39d273e663dd9c0e8e7b38ec10e08b3818e4c045316d52089c343109d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c12.json",
+      "sha256": "48cda5c4178c8f4b1a2110e45ad6d93e9d841955483efa4323cc937f3c5866df"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c13.json",
+      "sha256": "a1e99fbade14e627f1b9d9ade85f1bdd9a5621068956ccc1f83986aa8e9b5f56"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c14.json",
+      "sha256": "1365b5ab137ffccec63f012d23f5e46dfa1c2cf849ede0ba77c34c23985172d3"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c15.json",
+      "sha256": "e7bec92497388dbf4899aafef59382c8515f2ce9b7a31a4f9850cf334711fbf1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c16.json",
+      "sha256": "f8962f57f1f099fcf5fe597362847bf675949134cc1d50f87bbcaa78da6ae94e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c17.json",
+      "sha256": "934addcc806eb6860dcb4b5fafdec27d8e056ed0018a54a05aef7b69ef09bcaf"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c18.json",
+      "sha256": "b81769545df5e306423cc7e6970ef6f5b8ba3f46a0bdfecb7624415386af77eb"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c19.json",
+      "sha256": "ab4e4bf24fd062808c4775a7e8b7d353b3d895d687222b3a1d0d2b02cdb05ca8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c20.json",
+      "sha256": "2b55f43ee61a525b0764daebc48207cf792a2c011faf48b1a0f04c5312e0f9f8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c21.json",
+      "sha256": "f71dd27157f30e006762157c3fbfb010d3fb31757ccd3a852f0694f290d2cf61"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c22.json",
+      "sha256": "e630c66da70fa829aba805d3435a5f8dd69255327fb7ca2e2ff35aa3ce1a31c2"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r11c23.json",
+      "sha256": "e56be3cada82b1be9d6e5fb0417f05034d9c4e5652a5e96368f5eb889c21ff1c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c00.json",
+      "sha256": "3229270c1b234bd2c77e50eaf4015d3eb26f6811885677b9df9c278713d4b7e7"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c01.json",
+      "sha256": "c4ec400b58bcbf57fc0bc249495a85a78c137d952982cd805e9753af4bd7090e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c02.json",
+      "sha256": "d7493ddc901957b5b2e371b35c13f987810d311b8f01a7916745db57190ba046"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c03.json",
+      "sha256": "fdfe96cca365fbb6c9be1756ccc3e1e19c34e67608341a02f662bd9df4aea80c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c04.json",
+      "sha256": "385835964025792c76518cdffb086108b689b3424cd5771b140195a134f1f4e1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c05.json",
+      "sha256": "51587160a38d3fa8a9b7b5d130d895237448418aed81b112e837bba16f41c4c0"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c06.json",
+      "sha256": "7d7618af72f907ba39fca2a7d7228cf8fbcb0fbbe3ae5cfffea5533be787eb01"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c07.json",
+      "sha256": "94c265af1ca15b7db0afaacf835875945b244613939dda7e4a0dd5f183bfac21"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c08.json",
+      "sha256": "ddc135e155afec53235c585ef75ff343e4024391d67dd5df158e31e6edb14aa2"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c09.json",
+      "sha256": "40cb6064572e51295635b55b2b63ac1fd86dcc9032772a1f74d94ad8cea70f6b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c10.json",
+      "sha256": "4c328254ba1bbd1d77e15fb77d71b9d3597aefe00a0e57deb82597c05931226b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c11.json",
+      "sha256": "89c04014300566776db777a234a7e0356fe0dde07d00b8cd714a5ab940ec759b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c12.json",
+      "sha256": "011823269e4ce866bce1506b424183372ee9b031e42707e7ee19eb1019b2e60d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c13.json",
+      "sha256": "a07970066f119d6a512db2e6a59c46feb4c89e9929b4ecfba3c7534ebb9afe7d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c14.json",
+      "sha256": "92ce71420b91c31539c5ded094ce2c06d4c261bf64b438c0d28a5048acebaa9b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c15.json",
+      "sha256": "86bd56355fd549b8badf6c3e87a8e4dd01eabfe65fa3418e9f79fa82de7dc4c4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c16.json",
+      "sha256": "4d9668d78fbf3c097dce33cb6908c844082526d3008b02ff4ba88215013dee58"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c17.json",
+      "sha256": "43871ac78aec3a17b0d7334db86b71bef5f2ac5f75cc0ba6c002c2ec199e350b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c18.json",
+      "sha256": "7e9a865e75374b8b699eb4af891af987577f79cc2091e7cba954bd8ee55dfaa9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c19.json",
+      "sha256": "cfd469eaf6535edb949ed07e8cb23eea8c46d19e3c5c7a620b921ffbde8d4b8d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c20.json",
+      "sha256": "4c8832adb289a4861250cf291a13a1b0cc7f1255c1f9a0970c85379f924451bb"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c21.json",
+      "sha256": "482dbf1a224919c3008c9a1abf5d176d5bda3a790b736825710ecfceacf6086f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c22.json",
+      "sha256": "47c4a68e1c23a174412bc2d802866852e08a334c861476391101be70892ee683"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r12c23.json",
+      "sha256": "5b91be811be6f2b77f2150f771a486ce07888c1947c24a171016035c0312ea41"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c00.json",
+      "sha256": "be0bfa852bcd1cd7c4d060f8a5b005c7fe4dc64e957d03edaf15572ae0764026"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c01.json",
+      "sha256": "300de94129f2cd54e25b2cf2b7ca330b3632520e8bc218a965c1322e0722488d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c02.json",
+      "sha256": "3baf50d3cc38311cdf8eb7c24bac762686802088a6e9302638c55d366376b134"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c03.json",
+      "sha256": "d83d76dcdf887deea34d2364c716b8a0faf8411adb3af0e57afa7d61b2b23252"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c04.json",
+      "sha256": "dffb5e47d0660c0f42eb964c6e7ce984b838f499ebdcdbc354df8f59dc2a364b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c05.json",
+      "sha256": "259a43c6da3a193ac6377cd708c50d00085e01bb53ab80cca0b866ae036c5c37"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c06.json",
+      "sha256": "dd4bdab7e26a40d0ef713ccaf7046736e72e23b6cf668f6dc1a47539815268a8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c07.json",
+      "sha256": "539156c66959857128d54902b5e9f42b9804ad1e85b12b78e06fcbf86b0faf81"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c08.json",
+      "sha256": "8947b7e2b49c5829e2f3f7668341b802576ab6f69279477c38f93285229f4d6f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c09.json",
+      "sha256": "f57229ed4da4d4fb3aa75d81522452062c9fa78110832ae32676a65f7c601449"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c10.json",
+      "sha256": "d8abad8ce4d878d0401cd9f81fe8ddecd9893087ed0139ed7be0e1c5d59b7530"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c11.json",
+      "sha256": "9cd5ae45f0e83c0cd0c794833a0ec4aa644343521dfec0d614c401c41978ade3"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c12.json",
+      "sha256": "f3c9df6d0d437ffdcdee987dfb9955f1812260176bb385b7fd23979e4db03ba4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c13.json",
+      "sha256": "af24253124db9cc3711c7f46cb36aad75cbbf4f67fb97a44693cab278c39a33d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c14.json",
+      "sha256": "d2ca77b4d25920e8f661a25c6a015b504d931e9154ee2c7bc2ad7f2586aaf13d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c15.json",
+      "sha256": "57e93ee044a6edfe95d241ffc08e4094b9cfdda3a5e90ede504bd505261b93a4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c16.json",
+      "sha256": "2c0ece6aaca593744f90eddecaddf8e1071f70e6b6909271946a874eb7830610"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c17.json",
+      "sha256": "4baadc8a9df518f14b72ad0faea3b8df40adad606ddebad556caa3ffb2c2d5bb"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c18.json",
+      "sha256": "c47c9bd26745f3307563b7bac8d66f590201dfb9b13bcfce53b9165b943ffa85"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c19.json",
+      "sha256": "bf3c51b50139e398a9a11a3b522ace708b5eb3c4e2c77d66bc503d671f309dfd"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c20.json",
+      "sha256": "b1fc69495c49ccce2dd478d25f88c28f821a81e0bf0cd1517cf009397b39af2e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c21.json",
+      "sha256": "a74a6b78eed50857bbf62411036ac13238b210ddfd105b9423064ba08f194499"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c22.json",
+      "sha256": "166b6e5217fa2160ef6fd8a619b6409f37d4e96a9c16fa8893c095ae810a08a0"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r13c23.json",
+      "sha256": "4d5ebf15efaca74df346c2f7f164af9c0a8b1f42c699ad3a7211f3f03728b2c1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c00.json",
+      "sha256": "89bc538f8ee6dc11f44f983a7981ae0542ae391d66b05c0b1f2d54b9e13eda2f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c01.json",
+      "sha256": "cae3675851e15cc33f3d8653fb49f075da94cd3d58880c00235adc31e2207dbb"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c02.json",
+      "sha256": "18420dbb228463b95e04d4223d745ae9416ef5b79adcd2326ab16c288e5ceeca"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c03.json",
+      "sha256": "ad01bffaeb44157a907052c340e74002c762ac5121f6dfc1007adc1cb89b3316"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c04.json",
+      "sha256": "02cd4a85ad9fd266910781a866f9050b86a63aaafcd302acd4427b3b34401556"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c05.json",
+      "sha256": "67561c3990152faf114d45a2478ac5884fb3606e2ce4de4043268af773ff39f4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c06.json",
+      "sha256": "f984bb845edf9e62b4bc409ff981635dd1d7d035daa4339ca1f0a08db8775514"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c07.json",
+      "sha256": "ee0d12e5c36ecd3d7bf4e354a329c43a3f8fd48ab54abbc188cf9b6f0cff22cf"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c08.json",
+      "sha256": "bbbb05fd852dd0904047ccf85ba4bd00429f42087a21249be56d261582335619"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c09.json",
+      "sha256": "645da6065c206fd42747153cf91654ccdea04ae9e31628b942938b5875e816a4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c10.json",
+      "sha256": "8015e1ddf535ace4b8294599d3b22abf1c28bb0ba025a5aeb6e4c33546e47d07"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c11.json",
+      "sha256": "770cb70ed08beaaa365a1870e036ded5f8b9609da0154a9ddfdf522eedde4780"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c12.json",
+      "sha256": "4a180f7bc9bba51822967f1fe246e573413154926455d434f06ee01ae7438ac0"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c13.json",
+      "sha256": "47df6e18f5338912cb34bbd9da815bd463557c5d3e0796c4d9120d0d3079a2cd"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c14.json",
+      "sha256": "0885b0c0214b2a75e5678392170265f1a24be138c68ae4245295a0226f922908"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c15.json",
+      "sha256": "776ae9c90e9ebcfdd1016ea8cbb393a9f6774bfa286d27eb5d2015abd28d1126"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c16.json",
+      "sha256": "68ab9963105690b5bb26a5532cab0a72084b55562bed26e913c700f885d79702"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c17.json",
+      "sha256": "94b0d5104afbedc958482f09d48b869e102d4c4ab50d03519fa99fd53daa8c0a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c18.json",
+      "sha256": "a32a9bdfb152e32dfdba8e3d1ff63dd98a242dbf39758a70f9ed119db8edb9ff"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c19.json",
+      "sha256": "a59bf4c5bb4b4a43b5d78110ec479944b81685e6745980e6d67ac0229f4cc0b5"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c20.json",
+      "sha256": "8f71d137471e89d7ece3b24672d109c7618bdf8b0cb1dc47bcea17485749e645"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c21.json",
+      "sha256": "255637c50662c84190fd4db8ca72ca28754f3c6f922180ffaf8d851b8103eed7"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c22.json",
+      "sha256": "cd8db0f252758755be9d10f03f84fa67e66dcef43073ec8a192f7dd37daddf54"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r14c23.json",
+      "sha256": "c57321a243ef9877eebcdfbdaf056215ef5c4d21039a1ab30a67589919c97a00"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c00.json",
+      "sha256": "880a3bf15989020e588db560ce6b44891edf44bd9581b05c43271a248db586b7"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c01.json",
+      "sha256": "529cf38bb2fab872980b369925e91fc156a1e3ba947c394605dd970a712e6d9f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c02.json",
+      "sha256": "ab45e9bae3f389dd6c1c64eb7ef59cdafb683d2dd2e24c57c485e963ef6e55df"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c03.json",
+      "sha256": "51507c6fac3904e427c07486cdbd4089093f1ea985fde91e5fdc7d4d0ce07f8f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c04.json",
+      "sha256": "fb52cd10e5de44906184dd53f60d9c880e904719f4a7b5052ae354b5e414a247"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c05.json",
+      "sha256": "951d8893b986f63052e22a48a4ea34cbb3cc4a8dbc41546035431fbf8b2caba4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c06.json",
+      "sha256": "80d6809f6ec0b733d7ee6e38862e93c4263dc9029d2b696ee8270339f232c9d6"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c07.json",
+      "sha256": "5f1f0eeabdc6e7a4f91b440e1ca2f0c75b3bfa308fd64ada175434180e0bd34c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c08.json",
+      "sha256": "65c2cdf9bdc811e05f8d45c27ba7f5c32d3e57052c8698fed030079d1c03efef"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c09.json",
+      "sha256": "2acec60ab86a06e7655742707f63dcb26d438f06c39f1c9f6ad2b0f6c7d7943d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c10.json",
+      "sha256": "b1da9321a1958a0b375abf16bcfbdba3cbbf7dd692f20055d16eb4d6afbf7c88"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c11.json",
+      "sha256": "9247bf4bcc5d39f22b8fcc405142a866d18f18358f848eb23ce7944916cad9e8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c12.json",
+      "sha256": "10efbc223cd0b2330364f5a86c9b66d687cb6c23a2712e3a8720c515d51e2470"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c13.json",
+      "sha256": "f3a60fd8170923baf0c9f4366d7e201ba0cb375dfcde784a5748d9e5077ecf92"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c14.json",
+      "sha256": "4cb53892e779ead21ed2e11de7ab4513624fd14bc7bff2cd4463c40b9f08d812"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c15.json",
+      "sha256": "cb71ea0e08fe66f539b61d6f00dfc0990b54663cf873c21855351af9cdbcf5f4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c16.json",
+      "sha256": "f042d2bf0be61ee9c89ce414f4490801c91679676d3078200c5819a6c197623b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c17.json",
+      "sha256": "effdc6b487a2fd99dd062f548eb670888ddafa137ba5e88a8832cc0ec90dec79"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c18.json",
+      "sha256": "3e53abd328d2c22a2d4effcb14a4dcca672d040254a2414433ea72ae2f8166bc"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c19.json",
+      "sha256": "2c6466dac5afa22a4dc381e9d32796a23fca9a31266a912fd3ddcc6bacdc1238"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c20.json",
+      "sha256": "ee04d3faccd0c148c01101760fa04cd64a57549ea452ac27d2e0c7d1f08d665a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c21.json",
+      "sha256": "f79dc3f79aff37b91c2f8ca7a14a798afbf7ff48c8b57f1d7f64423f8c5a1103"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c22.json",
+      "sha256": "6f6f9a12d868659cb2a26b68ad49b53b913b427f51aebcda4ed7525d2a350c62"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r15c23.json",
+      "sha256": "a35bd2c5ad44a4edadd340436e90bde50d29d4403a80a7d98c236580330b6cd6"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c00.json",
+      "sha256": "9e7bd6f3617b775fa8d6374346b862776b8ec86e37125828a4780889f84c7444"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c01.json",
+      "sha256": "b5d4edaf426283bbeeae326c87845c9d12b9c92ba3498f4127f8d23d4f77615b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c02.json",
+      "sha256": "6f3b035d92641f6905c1930dbab24fe5a7ccdeac254a6b85b69816384f7c2982"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c03.json",
+      "sha256": "5a267d026d9b17b111350217b8283cb47a6815edcdfe0f9657e0f52addcaacb1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c04.json",
+      "sha256": "1147a5ccd839d625c9c8bbe212229ef2a1726735d105cdf2637446ca8ef84ac4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c05.json",
+      "sha256": "81c491a2e54b9e401889457e60cf2c18ab33a76d9e407e7f3473100041b56fb8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c06.json",
+      "sha256": "be2c3164734e0b30b4f10a4d380a642a4103ef7d681173ceb4c62425ddda5462"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c07.json",
+      "sha256": "0d0dd15d8a519a500331cb01e107dd990cd7640788d23692d05a93b2357909df"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c08.json",
+      "sha256": "39c2120f673210691e642c8f897fdca0bc10b78c12e5dc45bdf13f2db299f683"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c09.json",
+      "sha256": "6fb6773e024089756112992166d5e5a2150d3357160593fcd4690b3c4057c0ed"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c10.json",
+      "sha256": "9fcfec9c8d79932daea5258cc6b094410d995ea6921c65ec00efc6de864c88fd"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c11.json",
+      "sha256": "cbde67e63b2c8f2a4ef8121a749e6beb141953405f1c0e029681498aae71a5f9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c12.json",
+      "sha256": "c6971c1334aee1f5733137561a51f2f9c4ca01b63548ef62d9b35fb40c7bfe8d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c13.json",
+      "sha256": "4d2530cece18c391509421da2dcbf057822a274172552a3ede3b57dcfa97487f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c14.json",
+      "sha256": "89c13b8d4b4bc8ff18f6468c6eef5dd40fcafb9df3223015dcc71782d17dafbb"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c15.json",
+      "sha256": "f336e1fc3db3d7e57e4de98bf1932012bcc244d12ce956fc7a5c75b9e93eb61d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c16.json",
+      "sha256": "9e915fc9a5b90d6783dc19bffe4034de3420bc1e22820efaf243188081eb889a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c17.json",
+      "sha256": "0274c437acdc92d2f366fadf591263615ab3ff1bf76fe46ac0eab48c6ae72384"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c18.json",
+      "sha256": "b6020de5f9228ac96856ee454ad136a44fac5d641eeb6d0f9dae592c160be7a6"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c19.json",
+      "sha256": "27bfc76ba8fff1bcb4dcd621ff519fd6275e4dae870a5a3fc69999428dc26717"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c20.json",
+      "sha256": "a3accfd0072782f77aa0103f0381d218e9bf9f17d1384a7831c60fed462761c8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c21.json",
+      "sha256": "d3be18a48ef3ffcb4c7cada65a9568f5efd690796488914b0956e31641e9465c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c22.json",
+      "sha256": "71a940d62bf1c6c4bb230d53ef067bc216bcc99ff28d77b153676e7a8c27dd7e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r16c23.json",
+      "sha256": "b0829fcced711bb7eb043fbb2355926bc82b599bafa03afbe6629ee33632969a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c00.json",
+      "sha256": "7b12e888dd8d7c1b9b08c97c76f0457bd2ced279cd597c9cc635d53dd7b78a8d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c01.json",
+      "sha256": "3f50ac57f55d5322315eeb7eeb257124c0d29feb7856cd31a1518a4fb36e9c33"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c02.json",
+      "sha256": "f182a49875b413c206fd0662bc5f30ae9f14781117b4e326072fe66fe4c9fb1b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c03.json",
+      "sha256": "b5cc921be3d10946e46e4481a6749b9f765f8446c3660350eff8d9c9ff686e05"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c04.json",
+      "sha256": "fda7b5498ebf105418eec849e1a91fcc1fb7908779f256e902bcf3b1404f35ae"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c05.json",
+      "sha256": "cfbf8a802440c18f2fc7473d77b538c2c18988092d7a7da92a77ce828aac313e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c06.json",
+      "sha256": "04c4ebce14e3ecd854f265a70f985704e0aaca4f9bc3e239a5a21f6ee3997f8c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c07.json",
+      "sha256": "a6b97be035410df80dda2d53dcbfe4410e2a79932d3c8414afd6aac5cea02b80"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c08.json",
+      "sha256": "9f47d8b782e06455e1d0e5120b41efaf7528c500a45d2c36dee2a8050f01244a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c09.json",
+      "sha256": "b522c63cd99164b674e8a820344ec9dae9a5e1889fa28fe887e691534d08b87e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c10.json",
+      "sha256": "be4a80d2aab22c034644885060379eadf76e5bcc648040af079ec4061e46922f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c11.json",
+      "sha256": "6129b77f9aa070ec7349f49e0157cd300f9d65fa4a73c31d66d7af2ba7dd570d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c12.json",
+      "sha256": "ca427063b81e4bcdf67efc431bc37d89510b39eb13ed2ddcd68a9b97ed767a2c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c13.json",
+      "sha256": "cfea73abef08a078150df4f49f125cfbac23796cdd8c5af3e5442869362110d7"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c14.json",
+      "sha256": "a50bd978cf473e18b787c5a4267659793414a0d2047d09c8105f59300c92b448"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c15.json",
+      "sha256": "b613493f194a015050e4509375b29a2e2f46be741f5f8e84acb62604294ee593"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c16.json",
+      "sha256": "5025f621ecc8eafa4acbd43f20219900a2399ce7734c53443de240d7f864a381"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c17.json",
+      "sha256": "fff4f8fef911ef6e69c0ca3b8b053a5014fe04917ffbe50ee919701e81d83fbd"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c18.json",
+      "sha256": "4a7abd7d2d843c80c7a3eff8cf1d16affc0207ff94040062ceea216dbc600fe6"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c19.json",
+      "sha256": "73d9dfdbd7e2175fe208de07d05eb7e3e26494f44ff11c9d6e7898c6cf46190b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c20.json",
+      "sha256": "80ec495e961f52519ca689532f7e2cc043cefd25a94996ddebea55725437cf63"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c21.json",
+      "sha256": "d6812187065e3f25c9fa3462ddf13f2b36a385494287f0650dbe323c4f36a271"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c22.json",
+      "sha256": "faceb8922ee509b0b77071a04a46f6c6fdaa905b4dac7829475d4bd397077275"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r17c23.json",
+      "sha256": "9a7e5fcc9baa17c74627e38431ba83900691870ab82f6b24fe67e4747afb628a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c00.json",
+      "sha256": "85f8b52ae82c0f0a4259a6f68af839edda87f77463f62b4052cafcfa48094ae7"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c01.json",
+      "sha256": "3edd627251faf69b95b321e454540690b0d135e80ed4872b43c3052c6d71ae4c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c02.json",
+      "sha256": "c1ddd5f09b1a6159fff63f940b48c3fcfc211c26fcfd2d364e4d8afa8d93eb22"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c03.json",
+      "sha256": "25bcb7abf61c77b11f0b15ff922e0dee193c359c0f59b01ba9960fdfc4bd138f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c04.json",
+      "sha256": "42a0775f0350c7253afdac50b722eb6b5fa5f761c21117c5589b2a4947226d96"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c05.json",
+      "sha256": "a7ece51590650aa75d3d518063cab395420d201bb506f4139c19cf0561b40586"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c06.json",
+      "sha256": "4fe61e7317bc47a39881fd5ac8057f085cb8d43d020ed025108369878719db83"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c07.json",
+      "sha256": "6d82133f3e201d7ba0bb65e32faf61616c399e278d695775f83128afb9103d3f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c08.json",
+      "sha256": "e606b99123e4f14390461d1e1bb7cd98f1a474c659a63538448eb56d5b24ebc8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c09.json",
+      "sha256": "79a3674f4383391bb92022592d3f86ca5f3754a79bb8687192f9ace033713c2b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c10.json",
+      "sha256": "f3533f6eec33985525a582d9be3311ec036e16fe146786d1f6813d16dcbee984"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c11.json",
+      "sha256": "2f521605cf313c0107e42f0a146f9afd20f7b70548c931bc873b923881a52610"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c12.json",
+      "sha256": "61a3174acb453154592075d7c0943dd01d3dd8deb7269a5be0ad6d480b869add"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c13.json",
+      "sha256": "8f25a641df28872e5730b22eb001ae68fd730de74ac3c9db847ccb63746768f6"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c14.json",
+      "sha256": "062e388388373b2079ea904a7837acf69cc41f25f388827cedc802f8ed40a8d8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c15.json",
+      "sha256": "c61fe1472fa5ac73baa9de00e540fb25f464b9dcf5f4f9ebb39c263e444b2666"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c16.json",
+      "sha256": "1447d3b643276ccb59ea106dabfe007b3ddd1af88c640789c085e5134d023a3e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c17.json",
+      "sha256": "e7b8c1a7ad39d26049473a0d4f387b90d1d55556aed9b6607b790f33ad368e23"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c18.json",
+      "sha256": "df3ac400a992d98626e6f743b772d8512a94675b2c120d38234c002313d4faff"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c19.json",
+      "sha256": "5be4dab9909ba3e499a5db04aaa950f58851d4d92a53a8827a546775116bcdee"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c20.json",
+      "sha256": "b006005e09b2a70ea7b8acf7f88279b433db3a39e1a62cae30cdf08b10c36421"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c21.json",
+      "sha256": "2592962f9530e02b2b20789d6fa92b396c69f8a4d5d527f20cbdb28efbbf09fe"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c22.json",
+      "sha256": "81a1f3de678aa6b1e92ac175a9c1229af3d3c185148ceffc3b236710506946c1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r18c23.json",
+      "sha256": "943f03468f4f0f64d4c7042db00cf8425f5a8329f3072faa20625ca9cc82e2f8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c00.json",
+      "sha256": "c131b093a0e8a771a514ea0923fd37b208569f713a4e1d4845c660976a0004c8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c01.json",
+      "sha256": "42b2c5f69352474549d28b4541b25150fc0e0455eb04a721352c95a2b6ddb25f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c02.json",
+      "sha256": "d449fbf2ab9e260d225af26d7b5f6302447dc4722662806e37330ba4d6e0c7f9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c03.json",
+      "sha256": "4364028eb69cc5c4a30c551387a59d195b667f78b7fc370c3e04a6ef1d207d59"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c04.json",
+      "sha256": "533b37101bc61692bff61705b9f70a29181ecf3817d9c7515b0f2799ac3aca1c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c05.json",
+      "sha256": "92958b01cbc34f3356dc9ea8e867061c8814e4937250da971c58a2d344eb6c53"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c06.json",
+      "sha256": "92ccc5d7c54e3bdb981910f20d3f1584f60f7915e4947ddbe510b0b620bb7dc0"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c07.json",
+      "sha256": "0ce49d11fb626ec3568373620dd7e138943d733044913200d0611f0bee6c6699"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c08.json",
+      "sha256": "bfb5782e46e8953d4c2628c5468070b5e144b69ff8bac37e2393979c0bd202cf"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c09.json",
+      "sha256": "e1a5274618e9575b361905c789d74332e3493f991d2c3fdaa0e8be2e231f5c8b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c10.json",
+      "sha256": "4c5d39038f23d27338588cb9f8c0859966efa1bbaaefde3aaaa36eebf2eb8066"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c11.json",
+      "sha256": "330b0794bc86d65848c3e00428c01cfb845b86be5ab8b8d8b624ec10649d0c8d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c12.json",
+      "sha256": "0e46e341de83198127ceabae9ea7f57345b78fd2bc77fd21ece7fc3d3d806090"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c13.json",
+      "sha256": "59a2b3d605b86abbf82a0409569a0c31328357fb0848460adb966d58086a13f2"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c14.json",
+      "sha256": "6f7d3986bd58288f1c9ed998fa5685130a2ce14ce6cb2a0b84326c5717ae28ba"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c15.json",
+      "sha256": "b8ec39414af0fceeee509ef3e487a013bc4d3641757057af2673af65c0c6727e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c16.json",
+      "sha256": "0c733260c27a976d0e3644113fe7037bd23fd842cdbd313aea0cb57b7d4975d4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c17.json",
+      "sha256": "1a26dc9f0b964d5ab4f5d2f2f15a44267f2f449cb023053f264b7347b5da7c08"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c18.json",
+      "sha256": "4d022f9bb3a0d36b27c96e948ee34d1707147bb9266a0907919ee2a77ad8367d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c19.json",
+      "sha256": "b7c63d1bc432a378c9323c2897265b85a2a3fdfe1399153c5ca785e0501402bd"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c20.json",
+      "sha256": "12018d83079330be91bda847eb025c5e4f554c17d762333359c050269b772e93"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c21.json",
+      "sha256": "9fb511a4f528aea16d57b987fc9fe934e5aba42177b25d2f20e46dda10a7c62f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c22.json",
+      "sha256": "85714507dc57629acc8f25ca8a2909f7c7b7476dc220bc1fd7d21b9b8cbcdc28"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r19c23.json",
+      "sha256": "d53ad05da4919e1c7259311591b5504eb849c4c6fc916fb2a880f834cdc5b088"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c00.json",
+      "sha256": "e51decce79ed72ab5a6fd82b1fa9c13634d716fccd4451d459af644b75779fb5"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c01.json",
+      "sha256": "4b78681500da5393ef2b8fc6f2c7480c90a59f900d9f38f9e5103d7ddfc92c19"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c02.json",
+      "sha256": "091f2d2603217e8ed4a427e23b2e2efd08ad3ea66e84a742dc563b8cfb47bcb7"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c03.json",
+      "sha256": "3b641a24236afe224dcf8f9883b72d8c04cae4497472c3e1ac8801acf28a1a3e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c04.json",
+      "sha256": "c82282564f7190ea2fcdedaaca7e98e02c5455a084d06587bb879c8163509125"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c05.json",
+      "sha256": "04d66eb6f6b9faa956c4f2086d5ebd92d8e29e804405eda15fc0222612fab2af"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c06.json",
+      "sha256": "8867baf6441994f292fbd73803fdf2381600ef4627aad5617442ca07b3eb5b0e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c07.json",
+      "sha256": "6fcb06c6cba92fbadd2be324925f0d1178fa1e46665fda191198f9fcfb529e69"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c08.json",
+      "sha256": "f40857d35c086b059b5cc6bb34cc8569057f38e57f7d7b87fb682a03ccfcfb04"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c09.json",
+      "sha256": "33fa86a6b4370ed4f4c8e47586459cd3bd6861b7084fbbeeb36659e363644f86"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c10.json",
+      "sha256": "0f9a77f4f63a80e3ab563346dd7bbb44eddad36f38864386da17be7c5b404ea3"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c11.json",
+      "sha256": "fe1d169544b3acd6d7e472c3820569c9559d4115c073408fe35137d6db90d1c6"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c12.json",
+      "sha256": "33003393a6737a66bf5f134f1aac695a7ed23ac20ae1e3b8a4b1b470f96e168c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c13.json",
+      "sha256": "949f88774a19e4885bffb5d4ef172a1de9d130e734bb063ac8148250cfb7dbd8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c14.json",
+      "sha256": "9e24c03d025d5c19e7b7bf7c5cacaa6383c657fcd61b5b0e742defd077d93e96"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c15.json",
+      "sha256": "0cf10822ad6a62430d0e5dcce6a68ab3436771fb5fd0245600041e48c8ac5334"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c16.json",
+      "sha256": "8d72af2481718ffc5915bf0105eeb1b97c87731fdb83af2265cc0597dbeb8b5d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c17.json",
+      "sha256": "d57be4f1fae8e9cb02c1df8b6f4b08f62f563e362577660e5423f38fb1466713"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c18.json",
+      "sha256": "87025f47dde13443133f513c39e40187bf3b50fc537c0b4d1b8078dada996cdf"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c19.json",
+      "sha256": "db208fc62fe26af3e11509fab1013a93eb69145af744edc99d84b9ff78006d1a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c20.json",
+      "sha256": "cd7dd2acaf2a328eedc97554023bab3d953ecfaa6bddb56ebffc39f14d9b7065"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c21.json",
+      "sha256": "81abfb9422b5a42f88ed3c368f46ca4e10df105c7f6cabab053e912bcbb1a0e1"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c22.json",
+      "sha256": "69604beb0ed26fea9318065dd16c8d4c7515431972b4cac3bfa299994bef806c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r20c23.json",
+      "sha256": "277c9d6e6733c1f244bdc47ca8c1cb7859e051944a93842134916436a111b2d3"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c00.json",
+      "sha256": "6f83e385cd3fff53faea2ff0d2f625c943334587c5fe14515bc1e92a41374bde"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c01.json",
+      "sha256": "d40c81ba8da5f017c09b3aab9414dfaf93db23b075bc017d8e2a624d717e4ca9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c02.json",
+      "sha256": "6166425b940079b3cbd71d35ff5c6b686384c1215320d199ab77460cd5429086"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c03.json",
+      "sha256": "a4bf4fdd45afe50f5ac99667a57e0fffde97b2fc1b224ef242f0df3ef16f228f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c04.json",
+      "sha256": "c940926bf9828cbef21aef812e405cb6a31b626d2d05dfd3cd459d32aa339e1a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c05.json",
+      "sha256": "e974e6ece63d80ddc6c10beaca38f5f4fd43dea88e5d99da635c111886ba1fbc"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c06.json",
+      "sha256": "80cb757ce525d7da6f1f160f38a6cb83d36b5be1fa1c6717959f2d4b2b9e3aa3"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c07.json",
+      "sha256": "886e0a5219ffa79fb9946607f61e9933b258a8eb97a43249dd21c0453005e632"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c08.json",
+      "sha256": "a28bfc43750f7181d1bbdcd8e8faa0be682fc92d273528bd6f23eeea6035c973"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c09.json",
+      "sha256": "d328cda737a28081fdcb6faaab0ef54d24a3a40ed987b8e48a1f9425ec25b436"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c10.json",
+      "sha256": "438387ab03201f7e694c7cb458c0aff6f0be539b520265decab9bbe816ea9f9b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c11.json",
+      "sha256": "def1d4e3e72556f92d28582bce6a2582cde2f0276a335463e462d92c14cd7507"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c12.json",
+      "sha256": "d3f018ec26d139718e28e898df8fdff71accf3666385a13db0bc8d025d8a70a8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c13.json",
+      "sha256": "efa923d0034c67a3eae7191316090f23948b6f88f56f18f355d8e4ff75ef2be5"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c14.json",
+      "sha256": "c176a81a5904e888e992e5054f6d76d3fc79260e84a7d022a8ff1d7cf7f0a0a9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c15.json",
+      "sha256": "490c562dfbab963aff093dc952f343645e37cb84372cd2322d56ddd85aa4c3ba"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c16.json",
+      "sha256": "809e90d7f77e9f67a8d18f106a0f68cbe2d5f89e9f5cdb0d2ee01a3f2c92df2e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c17.json",
+      "sha256": "6d31bac9ef6023efb8afa6075954c9e2726150357ddb90960beb7e8c0aaff69a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c18.json",
+      "sha256": "404b7b6b2d98e43cc111c5f25a74b2f827e201342e879576fb4d362acc305ae6"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c19.json",
+      "sha256": "425bcfdc9c8f16f9bbecca48f194d6050656b2da4468064d793c2c531058b979"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c20.json",
+      "sha256": "a4031f914ba1f180f91a7c7bdb8d6be040adfdcbe5412e7bdb159b9a37741955"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c21.json",
+      "sha256": "77a41965799d5c051f964eb3ff0e3afddbfd0ec766d18c38eba2fdf47976b613"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c22.json",
+      "sha256": "58dc1e73c13df6fa76c5a28d1dd43dce2afe89259d4c405a27d813e18cfdcb79"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r21c23.json",
+      "sha256": "29f912d6a5db248ae18bf8a169a8cd1e82e44e28b8159ed3e464b20be808707e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c00.json",
+      "sha256": "5f5a817f85645ad175c348efa01f1cc246517916efb31137a928bd22cab98b44"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c01.json",
+      "sha256": "23702e93b63b5a640758059aae5e3dfb822b675b350446e6af3c60021b9ba8a8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c02.json",
+      "sha256": "bade395065dbaee3e5dff662b9b3c14b0cde8958307bcd46588008d15ba6e14c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c03.json",
+      "sha256": "f6667c0ce511c1e708d07b8f4837296e12205a4bc827f6a21e923540f9db962a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c04.json",
+      "sha256": "06605b27b5a670ec2a37ef5ee8f267c7568849b6de5c82f99fdcf721b633f887"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c05.json",
+      "sha256": "2a1d97669fee5cb2012fc4ed5fd5a565f3db66fefc1330f4fe449e58d5c38f98"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c06.json",
+      "sha256": "3d5fd79eebe9ead39ec3497f75705577b18440ceb11732ca5a09f5485ee15b2c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c07.json",
+      "sha256": "ddb4fd02fe21b5a40a2fd57fcd103db9eb4b0cc98fc0f2e109bafdd6ed6ca971"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c08.json",
+      "sha256": "bd6bed4a9cc3612f77194d15e826c49382f4498ee9e1d429bc719e044cc268f4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c09.json",
+      "sha256": "4af810c9fde0f6f0ae19970f54065defb7473ddce0b2f12d69449972ffee1172"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c10.json",
+      "sha256": "722d357178b6e01da4e3717a8b8b700eefa2d65b7b16345fe59c7cf6f3a2044e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c11.json",
+      "sha256": "d55a96dba68994c30ce4250cff507747b7e0eb812fea88215940d85a188ad276"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c12.json",
+      "sha256": "7ce0ad7a0e851e0ec21607b7d9899fb19b08a99a756a54debdbc5c5ffaa9663b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c13.json",
+      "sha256": "f9e8fb8532fa5286b728ce8afa6e0c97db5cfef549ce56afaedd6b670bf8504b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c14.json",
+      "sha256": "61113e89607855786593b779f64c8b7f487b4d240063e4497a9c8c9df2a3b06e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c15.json",
+      "sha256": "e3861b01750bccc70d4218725b0232f7b05dcc387785b36e21507de0efddd787"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c16.json",
+      "sha256": "cb6c9e5f16151deedc44727d8972416650e65c2f3f6a782212edb4297ad2374d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c17.json",
+      "sha256": "6415d0a0ef1c5d21921dc63d8471541ca1418f6bc1b2c27b875198447357f22f"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c18.json",
+      "sha256": "020353b0e8d730c2690a1436f78db83050e852959f29efdbcb0af2430b01157e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c19.json",
+      "sha256": "ec0d4e4bb560bfcfb42012e7a3f8580c0cb06fdf9999af7c952dd5f6fac5ba06"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c20.json",
+      "sha256": "485881a9cca9360e2511db59487606f410975b6fa4c5d01224bd6286063affcc"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c21.json",
+      "sha256": "f5b169efdd8056263045a43c8da1947a4879f0557407fe122acfb6825c101ffa"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c22.json",
+      "sha256": "7e6554e6ac295030fcb67ff32b9adca6187fae4eba4964dc5b37643dbaa59949"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r22c23.json",
+      "sha256": "a0c79c911e76ec164a0aed225beccf4c53f849367596ebd748f57c3cc0f9f172"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c00.json",
+      "sha256": "62543086162fb00afb1791cd2a1d790efbb55d513ad2dbc3d2ff279fbd3d6ac9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c01.json",
+      "sha256": "1f976d32c140ac8f1c6dc1da966e8ad480a0faf547e12257daa819105e19f37b"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c02.json",
+      "sha256": "914d4d265613d2a02ccf2c589b5412ddc2dd1f85952653763999234e9bdbbbd2"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c03.json",
+      "sha256": "5f61699e1909a86a60e8b1dede0655cfcd5fb0fff44b0c6807221904f13e605a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c04.json",
+      "sha256": "5200a1b6fa60828f8e936b771d54784b3e051a524ed22177b9dfd07f6fecfa28"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c05.json",
+      "sha256": "aeb0fd900ae8636b1354b462497a326c445f5080ea59b893727164523bf04f28"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c06.json",
+      "sha256": "8f297223fbd4dd9e2ad8369956e399156db472126b54208d25fb27a4af13d3be"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c07.json",
+      "sha256": "f87150dfed95f1892e7a51c860e0adf408b92894e9b9e1a0824f0031378d5192"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c08.json",
+      "sha256": "d61603b74db0f7a39dc9608225c83e4e9e28d4d2615983980540693b7b719320"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c09.json",
+      "sha256": "5db9f51cafe51b983c7c165c0d22c93d1e1a0d339450a3b7638e6c9fab314a0c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c10.json",
+      "sha256": "c2be3f4931059552185a7db2feac2620e6e144bb9e7b318a11a6fa90d5bfdda6"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c11.json",
+      "sha256": "f14134fb7d5f61b242699d67de14102487166a509e9e70077ea71015ad2bbea9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c12.json",
+      "sha256": "37fe72e930c4758d5c2883f20e9514b36ebb23b04d982c122332fdd938b6e14d"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c13.json",
+      "sha256": "ca21a0e5ed3a6534bdce2cd1212837416a4c0d10d4e781cc31bddcba4b3eb82a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c14.json",
+      "sha256": "23672f46e921c4a2d35cd253ee3ac697f138f262a68b6190b85317906d9741e2"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c15.json",
+      "sha256": "b3499d672034936277fdd47b4c5f9b932fe19f37d05d12e5ff2f728c898fcb62"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c16.json",
+      "sha256": "25bfdfe7dc0ab8d4d09b28f68a33c42c2d17d0828dada9ee24f66cab0bdb8e9e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c17.json",
+      "sha256": "47b9e854570c169d629112a2ef4beaff27acc292c8038fa26e7c62667a5d79c8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c18.json",
+      "sha256": "b75a2381b18709eda3db08f1d0246dbced761512c242150ee643bfbcc719ad2c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c19.json",
+      "sha256": "e0c86dfa9171b57ef1a0d0e2cf63b720b970db3fb25f16bda67f416d7229d44c"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c20.json",
+      "sha256": "3222fbc636186ebb4100e8e5e00e3c1254cd11633a3487e09104f10c03d08276"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c21.json",
+      "sha256": "cf434069fa3d945758c5181ef625c6d8c41e1f0b62755e6414fa611ac52b7fdb"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c22.json",
+      "sha256": "3be3b656df75afbd33e5b2fd58a9ece1bbf8c9e645c68ec17ba3ad12b5d08779"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r23c23.json",
+      "sha256": "6ecc00547762a3ec6dc688403c17b91a2539995c34576da8da079bd0d0d0e5c5"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c00.json",
+      "sha256": "06d89a32eb13d3a0db57ac12d318f6da272d46b990736e014722f9da01dd4355"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c01.json",
+      "sha256": "9b6b261bc74e1ebec5ae08f355ddb2eed01ee7eb4a514e0f516dfb3c1491f7d2"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c02.json",
+      "sha256": "4b880156f65798b76c319c1ffdf75574f8adc78e33a752b012fdf40e608e2f73"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c03.json",
+      "sha256": "6c05c8b6bd9031ea685addc8d7b50b4ba495671bf88c22cd303b8a3a0e7c6770"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c04.json",
+      "sha256": "2ae9d508e6bf373d81dcde64c1bf1682125cbfff298249f7826536026a1bf2be"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c05.json",
+      "sha256": "1a78df21e1f3431187837537bea023d2230f34e82bc7f63efcc7ec096a4400fb"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c06.json",
+      "sha256": "a097fbc202a0714c098249fd3cb275dc23bb0bbaf1c0cd7aec05a4239f480fc8"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c07.json",
+      "sha256": "2bf871912c25c4f833d36c452eec6c4e616b401718fbba0eaa49d5eb988a0278"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c08.json",
+      "sha256": "0aadc36e5558c186e02d12a072a5294cc1692c834c99c826b3d18cae498bb330"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c09.json",
+      "sha256": "c51c66240c9e2e8df896cdbe6a465310e4fb278d39a162eccdebc5289438249a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c10.json",
+      "sha256": "21dd7f281aa67195eb23126841a187b77e1a179b0ce1b265efff82eb1fcaf5ed"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c11.json",
+      "sha256": "5167fd1aba42cc45f7e0a32b31c69668be3457225769954d321d1358a796437a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c12.json",
+      "sha256": "3a6812d7bbc330b782fda835089a9f37cd029972a77fb773d94c93f549195663"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c13.json",
+      "sha256": "deea1a2bff516f39cba6cc546273d8aa3a3909fca11341c730e3af1ba8c590a4"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c14.json",
+      "sha256": "6b20da05396df94d4dbc25c698d02bafb29abf345147d77d0a1a88ef2a19c311"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c15.json",
+      "sha256": "8f6211511b05ac018cf5ea71880e78989c34b92fa317314ac9b9d05a68f91c44"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c16.json",
+      "sha256": "a7b967053e1c501033fd22ee1982ab30fec52e2bd591b3b6f775f7c343b1e788"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c17.json",
+      "sha256": "2371676b3670a49d79bf47dd5fbd21d2ec7246e1096dcc1636ec4866edafda55"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c18.json",
+      "sha256": "603856804c1e13db09f7e7d975c7782112716b5ffdb63d2ad1f84cf814b64418"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c19.json",
+      "sha256": "f5bb28ef25f888073d7107491616cc702832bd9c4a5369fc0505c4d81e57d85a"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c20.json",
+      "sha256": "48b103442151339dab0c30664d05a0b7fe49d5c6a595cf10954fe12aefd67cb9"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c21.json",
+      "sha256": "31030eb071f34fca5d8fd9750a3ead48e756d852c6aec6eebffc0536e6b03e42"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c22.json",
+      "sha256": "1e063020ef7b62d72de1119d48106441af4d73e91564a6492b1a87d84cf1d11e"
+    },
+    {
+      "path": "wonb/risk/tailandia-01-r24c23.json",
+      "sha256": "2943941d48fc6f969a3fb6548d41443837dbae642cda1f8c8b5f5fae6a6d780f"
+    }
+  ]
+}

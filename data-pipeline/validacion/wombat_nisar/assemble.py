@@ -24,6 +24,10 @@ from .manifest import OPERA_UNAVAILABLE
 
 OSM_ATTRIBUTION = "© OpenStreetMap contributors"
 
+#: Tolerancia de simplificacion del roads.geojson del bundle, en METROS. Se aplica en el
+#: CRS de calculo del AOI y no en grados: ver write_bundle.
+SIMPLIFY_M = 5
+
 
 def _load(path: Path):
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
@@ -157,7 +161,14 @@ def write_bundle(bundle_dir: str | Path, *, manifest: dict, cells: dict, overlay
     roads = gpd.read_file(roads_path)                      # se simplifica y pasa a EPSG:4326
     keep = [c for c in ("highway", "name") if c in roads.columns]
     roads = roads[keep + ["geometry"]].copy()
-    roads["geometry"] = roads.geometry.simplify(5)
+    # Se proyecta ANTES de simplificar. La tolerancia va en las unidades del CRS, y el
+    # roads.geojson de OSM viene en grados: una tolerancia de 5 son 5 grados y dejan cada
+    # via reducida al segmento entre sus extremos (medido: 1051 vertices a 40, -6% de
+    # longitud en 20 vias de tailandia-01). Rust saca roads_total_m y roads_geojson_sha256
+    # del bloque context leyendo este archivo, asi que esa geometria entraria al payload
+    # firmado. Con la grilla sintetica no se notaba: su roads.geojson ya declara UTM.
+    roads = roads.to_crs(manifest["crs_compute"])
+    roads["geometry"] = roads.geometry.simplify(SIMPLIFY_M)
     roads = roads.to_crs("EPSG:4326")
     if manifest.get("data_origin") == "simulated":
         roads["simulated"] = True

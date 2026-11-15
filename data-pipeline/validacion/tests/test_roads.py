@@ -151,6 +151,40 @@ def test_no_change_near_the_roads_is_said_not_assumed(paper):
     assert sum(c["road_m_total"] for c in cells.values()) == 1000      # las vias siguen ahi
 
 
+def test_bundle_roads_are_simplified_in_meters_not_degrees(tmp_path):
+    """Un roads.geojson en grados tiene que llegar al bundle con su geometria.
+
+    La tolerancia de simplify va en las unidades del CRS. Con los insumos en grados,
+    simplificar antes de proyectar dejaba cada via en el segmento entre sus extremos, y
+    Rust lee roads_total_m y roads_geojson_sha256 del bloque context de ese archivo.
+    """
+    # Una via en zigzag en EPSG:32647, escrita en grados como las de OSM.
+    to_wgs84 = Transformer.from_crs("EPSG:32647", "EPSG:4326", always_xy=True)
+    utm = [(600000 + 100 * i, 1600000 + (60 if i % 2 else 0)) for i in range(21)]
+    coords = [list(to_wgs84.transform(x, y)) for x, y in utm]
+    roads_path = tmp_path / "roads.geojson"
+    roads_path.write_text(json.dumps({"type": "FeatureCollection", "features": [
+        {"type": "Feature", "properties": {"highway": "primary"},
+         "geometry": {"type": "LineString", "coordinates": coords}}]}), encoding="utf-8")
+
+    overlays = tmp_path / "overlays"
+    overlays.mkdir()
+    for name in ("t1.png", "t2.png", "delta.png"):
+        (overlays / name).write_bytes(b"")
+    (overlays / "bounds.json").write_text("{}", encoding="utf-8")
+
+    manifest = {"aoi_id": "zig-01", "crs_compute": "EPSG:32647", "data_origin": "nisar_real"}
+    assemble.write_bundle(tmp_path / "bundle", manifest=manifest,
+                          cells={"type": "FeatureCollection", "features": []},
+                          overlays_dir=overlays, roads_path=roads_path, config_path=CONFIG)
+
+    out = json.loads((tmp_path / "bundle" / "roads.geojson").read_text(encoding="utf-8"))
+    kept = out["features"][0]["geometry"]["coordinates"]
+    # El zigzag se desvia 60 m de la recta: con 5 m de tolerancia no se puede tirar ningun
+    # vertice. Con los 5 grados de antes quedaban 2.
+    assert len(kept) == len(coords), f"{len(kept)} vertices de {len(coords)}"
+
+
 def test_rounding_is_half_up_not_bankers():
     assert [roads05._meters(v) for v in (0.5, 1.5, 2.5, 0.4999, 1000.5)] == [1, 2, 3, 0, 1001]
 

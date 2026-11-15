@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "issuers": [
+    { "issuer": "ed25519:277cfe8e61989939675d9ac3412bc37f1316d0ad4cca235b1e3124a521aed8fc", "name": "wombat-prod-2026-11", "roles": ["change", "context", "risk", "action"] }
+  ]
+}
