@@ -1,0 +1,12 @@
+{
+  "query": "[out:json][timeout:180];way[\"highway\"](-5.35,-80.8,-5.1,-80.55);out geom; filtrado a clases de red vial (sin service, footway, path, steps, construction)",
+  "retrieved_at": "2026-11-15T04:59:09Z",
+  "attribution": "© OpenStreetMap contributors",
+  "source": "Overpass API (overpass-api.de)",
+  "bbox_wgs84": [
+    -80.8,
+    -5.35,
+    -80.55,
+    -5.1
+  ]
+}
