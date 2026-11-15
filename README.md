@@ -41,12 +41,21 @@ cargo run -p wombat-cli -- keygen --out ~/.wombat-keys/demo.key --name wombat-co
 cargo run -p wombat-cli -- build --in data-pipeline/out/piura-01   --aoi piura-01 --version v1 --key ~/.wombat-keys/demo.key --out data/piura-01/v1
 
 # 3. Verificar: sha256, id por contenido, firma, emisor, TTL y cadena.
-cargo run -p wombat-cli -- verify contracts/v1/fixtures/bundle/piura-demo/v0
+#    --trusted es la lista de emisores; el defecto es config/trusted-issuers.json
+#    y nunca la que viene dentro del bundle. El fixture lo firmó una clave de
+#    desarrollo que a propósito no está en la confianza de producción.
+cargo run -p wombat-cli -- verify contracts/v1/fixtures/bundle/piura-demo/v0   --trusted contracts/v1/fixtures/bundle/piura-demo/v0/trusted-issuers.json
 ```
 
 Las tres implementaciones del verificador —Rust, `contracts/v1/tools/verify_bundle.py`
 y `contracts/v1/tools/verify-js/verify.mjs`— leen el mismo bundle y deben
 coincidir. Sobre el fixture dan **21 bloques, 0 con error**.
+
+No comprueban lo mismo, y conviene no venderlo así: solo `wombat verify` mide la
+confianza contra una lista externa al bundle, y solo Rust y Python comprueban la
+integridad de los archivos contra `index.json`. JS y `verify-rs` comprueban `id`
+y firma contra la clave que el propio bloque declara. El
+[runbook](docs/demo-runbook.md#las-tres-no-comprueban-lo-mismo) tiene la tabla.
 
 El nodo legado 0.1 (`validate`, `publish`, `--features p2p`) no participa de este
 flujo; está documentado en el [runbook](docs/demo-runbook.md#wonb-01-y-el-nodo-p2p--legado).

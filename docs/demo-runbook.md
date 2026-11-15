@@ -75,8 +75,11 @@ Las tres leen el mismo bundle y deben coincidir en el número de bloques y en lo
 errores. Que coincidan es el punto: una sola implementación no demuestra nada.
 
 ```bash
-# Rust
-cargo run -p wombat-cli -- verify contracts/v1/fixtures/bundle/piura-demo/v0
+# Rust. --trusted apunta a la lista de emisores; el defecto es
+# config/trusted-issuers.json. El fixture está firmado por una clave de
+# desarrollo que a propósito NO está en la confianza de producción, así que
+# aquí se nombra su propia lista a mano.
+cargo run -p wombat-cli -- verify contracts/v1/fixtures/bundle/piura-demo/v0   --trusted contracts/v1/fixtures/bundle/piura-demo/v0/trusted-issuers.json
 
 # Python
 python contracts/v1/tools/verify_bundle.py contracts/v1/fixtures/bundle/piura-demo/v0
@@ -88,11 +91,32 @@ node contracts/v1/tools/verify-js/verify.mjs contracts/v1/fixtures/bundle/piura-
 
 Salida esperada en las tres: **21 bloques, 0 con error.**
 
-Cada verificador comprueba el `sha256` de cada archivo listado en `index.json`,
-el `id` por contenido, la firma Ed25519, que el emisor esté en la lista de
-confianza, el TTL y la cadena de bloques. El TTL se mide contra
-`index.generated_at` salvo que se pase `--as-of`, porque un bundle estático es
-una foto histórica y no caduca por el paso del tiempo.
+Sobre un bundle publicado en `data/`, `wombat verify` se corre sin `--trusted`:
+el defecto es `config/trusted-issuers.json`, y es ahí donde se decide en quién
+se confía.
+
+### Las tres no comprueban lo mismo
+
+Que coincidan en los 21 bloques es valioso —si discreparan, el bug estaría en la
+canonicalización o en el contrato—, pero **no son tres verificaciones
+equivalentes** y el pitch no debería decir que lo son:
+
+| Verificador | Integridad de archivos | `id` + firma | Lista de confianza | TTL y cadena |
+|---|---|---|---|---|
+| `wombat verify` (Rust) | `sha256` de cada archivo contra `index.json`, más los hashes que repite el bloque Change firmado | sí | **externa**, `--trusted`, defecto `config/trusted-issuers.json` | sí |
+| `contracts/v1/tools/verify_bundle.py` | `sha256` contra `index.json`, más los JSON Schema | sí | la que viene **dentro del bundle** | sí |
+| `contracts/v1/tools/verify-js/verify.mjs` | no la mira | sí | **ninguna** | no |
+| `contracts/v1/tools/verify-rs` (el de CI) | no la mira | sí | **ninguna** | no |
+
+Lo que esto significa en concreto: JS y `verify-rs` comprueban que cada bloque
+esté firmado por la clave que **el propio bloque declara** en su campo `issuer`.
+Es una prueba de que el bloque no fue alterado desde que se firmó, y nada más:
+un bloque firmado por una clave desconocida también pasa. La pregunta "¿confío
+en quien firmó esto?" solo la responde `wombat verify`, y solo contra una lista
+que tenía antes de ver el bundle.
+
+El TTL se mide contra `index.generated_at` salvo que se pase `--as-of`, porque un
+bundle estático es una foto histórica y no caduca por el paso del tiempo.
 
 ## 5. Publicar
 
