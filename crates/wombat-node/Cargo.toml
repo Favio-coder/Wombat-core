@@ -24,3 +24,4 @@ default = []
 p2p = ["dep:chrono", "dep:futures-util", "dep:libp2p"]
 
 [dev-dependencies]
+tempfile = { workspace = true }

@@ -155,6 +155,24 @@ cargo run -p wombat-node -- publish --file \
 Este comando es una validación local y **no publica en la red**.
 Consulta `docs/demo-runbook.md` para la guía detallada.
 
+## Binario precompilado Linux x86_64
+
+Las GitHub Releases incluyen `wombat-node-linux-x86_64.tar.gz`; no necesitas
+clonar el repositorio ni instalar Rust o Cargo:
+
+```sh
+tar -xzf wombat-node-linux-x86_64.tar.gz
+cd wombat-node-linux-x86_64
+sha256sum -c SHA256SUMS
+cp relay.env.example relay.env
+```
+
+Revisa y edita `relay.env` con el relay multiaddr, topic y trusted issuers de tu
+red. Después consulta el `README.md` del paquete y ejecuta `./wombat-node run`
+con esos valores y `--identity-key` para conservar el PeerId entre reinicios.
+La identidad de transporte libp2p es una clave privada local, no una clave para
+firmar WONBs; mantenla fuera del repositorio.
+
 ## Contratos y revisión
 
 Los archivos bajo `contracts/schemas/` y `contracts/fixtures/` son **contratos

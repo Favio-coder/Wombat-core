@@ -3,6 +3,7 @@
 .env
 .env.*
 *.env.local
+relay.env
 .DS_Store
 node_modules
 

@@ -90,6 +90,7 @@ async fn main() -> Result<()> {
             topics,
             publish,
             trusted_issuers,
+            identity_key,
             timeout_secs,
         } => {
             let config = NodeConfig {
@@ -99,6 +100,7 @@ async fn main() -> Result<()> {
                 topics,
                 publish,
                 trusted_issuers,
+                identity_key,
                 timeout_secs,
             };
             run_cmd(config).await

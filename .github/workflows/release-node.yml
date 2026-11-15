@@ -1,0 +1,65 @@
+name: Release WOMBAT node Linux x86_64
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: Existing v* tag to build and publish
+        required: true
+        type: string
+
+jobs:
+  release:
+    name: Build and publish Linux x86_64 node
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    env:
+      RELEASE_TAG: ${{ inputs.tag_name || github.ref_name }}
+    steps:
+      - name: Check out release source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag_name || github.ref }}
+
+      - name: Validate release tag
+        run: |
+          if [[ "$RELEASE_TAG" != v* ]]; then
+            echo "Release tag must start with v: $RELEASE_TAG" >&2
+            exit 1
+          fi
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build WOMBAT node
+        run: cargo build --release --locked -p wombat-node --features p2p
+
+      - name: Package Linux x86_64 distribution
+        run: |
+          package_dir="$RUNNER_TEMP/wombat-node-linux-x86_64"
+          mkdir -p "$package_dir"
+          install -m 0755 target/release/wombat-node "$package_dir/wombat-node"
+          install -m 0644 config/trusted-issuers.json "$package_dir/trusted-issuers.json"
+          install -m 0644 crates/wombat-node/release/relay.env.example "$package_dir/relay.env.example"
+          install -m 0644 crates/wombat-node/release/README.md "$package_dir/README.md"
+          (
+            cd "$package_dir"
+            sha256sum wombat-node trusted-issuers.json relay.env.example README.md > SHA256SUMS
+          )
+          tar -czf "$GITHUB_WORKSPACE/wombat-node-linux-x86_64.tar.gz" \
+            -C "$RUNNER_TEMP" \
+            wombat-node-linux-x86_64
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.tag_name || github.ref_name }}
+          name: WOMBAT node ${{ inputs.tag_name || github.ref_name }}
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          overwrite_files: true
+          files: wombat-node-linux-x86_64.tar.gz

@@ -48,6 +48,10 @@ pub enum Commands {
         #[arg(long, conflicts_with = "demo")]
         trusted_issuers: Option<PathBuf>,
 
+        /// Archivo privado de identidad libp2p para conservar el PeerId del nodo.
+        #[arg(long, conflicts_with = "demo")]
+        identity_key: Option<PathBuf>,
+
         /// Timeout de arranque, conexión y espera de suscripción (segundos).
         #[arg(long, default_value_t = 30, value_parser = clap::value_parser!(u64).range(1..))]
         timeout_secs: u64,
@@ -85,6 +89,7 @@ pub struct NodeConfig {
     pub topics: Vec<String>,
     pub publish: Option<PathBuf>,
     pub trusted_issuers: Option<PathBuf>,
+    pub identity_key: Option<PathBuf>,
     pub timeout_secs: u64,
 }
 
@@ -97,6 +102,7 @@ impl Default for NodeConfig {
             topics: Vec::new(),
             publish: None,
             trusted_issuers: None,
+            identity_key: None,
             timeout_secs: 30,
         }
     }

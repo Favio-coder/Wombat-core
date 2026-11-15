@@ -1,10 +1,17 @@
-use std::{collections::HashSet, path::Path, time::Duration};
+use std::{
+    collections::HashSet,
+    fs::{self, OpenOptions},
+    io::Write,
+    path::Path,
+    time::Duration,
+};
 
 use anyhow::{bail, Context, Result};
 use chrono::{SecondsFormat, Utc};
 use futures_util::StreamExt;
 use libp2p::{
     gossipsub::{self, IdentTopic, MessageAcceptance, TopicHash},
+    identity,
     multiaddr::Protocol,
     noise,
     swarm::SwarmEvent,
@@ -30,6 +37,15 @@ pub async fn run(config: NodeConfig) -> Result<()> {
         .as_deref()
         .context("--trusted-issuers es obligatorio para el modo P2P")?;
     let trusted = load_trusted_issuers(trusted_path)?;
+    let identity = match config.identity_key.as_deref() {
+        Some(path) => Some(load_or_create_identity(path)?),
+        None => {
+            warn!(
+                "No se especificó --identity-key; se usará una identidad efímera y el PeerId cambiará al reiniciar"
+            );
+            None
+        }
+    };
 
     let mut publication = config
         .publish
@@ -50,7 +66,7 @@ pub async fn run(config: NodeConfig) -> Result<()> {
         bail!("indica al menos un --topic o un --publish con un WONB válido");
     }
 
-    let mut swarm = new_swarm()?;
+    let mut swarm = new_swarm(identity)?;
     let local_peer_id = *swarm.local_peer_id();
     let listen_addr: Multiaddr = config
         .listen_addr
@@ -161,13 +177,17 @@ pub async fn run(config: NodeConfig) -> Result<()> {
     }
 }
 
-fn new_swarm() -> Result<NodeSwarm> {
+fn new_swarm(identity: Option<identity::Keypair>) -> Result<NodeSwarm> {
     let gossipsub_config = gossipsub::ConfigBuilder::default()
         .validate_messages()
         .build()
         .map_err(|error| anyhow::anyhow!("configuración GossipSub inválida: {error}"))?;
 
-    let swarm = SwarmBuilder::with_new_identity()
+    let builder = identity.map_or_else(
+        SwarmBuilder::with_new_identity,
+        SwarmBuilder::with_existing_identity,
+    );
+    let swarm = builder
         .with_tokio()
         .with_tcp(
             tcp::Config::default(),
@@ -188,6 +208,53 @@ fn new_swarm() -> Result<NodeSwarm> {
         )?
         .build();
     Ok(swarm)
+}
+
+fn load_or_create_identity(path: &Path) -> Result<identity::Keypair> {
+    match fs::read(path) {
+        Ok(bytes) => identity::Keypair::from_protobuf_encoding(&bytes)
+            .with_context(|| format!("identidad libp2p inválida: {}", path.display())),
+        Err(error) if error.kind() == std::io::ErrorKind::NotFound => {
+            let keypair = identity::Keypair::generate_ed25519();
+            let encoded = keypair
+                .to_protobuf_encoding()
+                .context("no se pudo serializar la identidad libp2p")?;
+            let mut options = OpenOptions::new();
+            options.write(true).create_new(true);
+            #[cfg(unix)]
+            {
+                use std::os::unix::fs::OpenOptionsExt;
+                options.mode(0o600);
+            }
+
+            match options.open(path) {
+                Ok(mut file) => {
+                    file.write_all(&encoded).with_context(|| {
+                        format!("no se pudo guardar identidad libp2p: {}", path.display())
+                    })?;
+                    file.sync_all().with_context(|| {
+                        format!(
+                            "no se pudo sincronizar identidad libp2p: {}",
+                            path.display()
+                        )
+                    })?;
+                    Ok(keypair)
+                }
+                Err(error) if error.kind() == std::io::ErrorKind::AlreadyExists => {
+                    let bytes = fs::read(path).with_context(|| {
+                        format!("no se pudo leer identidad libp2p: {}", path.display())
+                    })?;
+                    identity::Keypair::from_protobuf_encoding(&bytes)
+                        .with_context(|| format!("identidad libp2p inválida: {}", path.display()))
+                }
+                Err(error) => Err(error).with_context(|| {
+                    format!("no se pudo crear identidad libp2p: {}", path.display())
+                }),
+            }
+        }
+        Err(error) => Err(error)
+            .with_context(|| format!("no se pudo leer identidad libp2p: {}", path.display())),
+    }
 }
 
 fn parse_peer_address(raw: &str) -> Result<(Multiaddr, PeerId)> {
@@ -366,6 +433,27 @@ mod tests {
     }
 
     #[test]
+    fn identity_key_preserves_peer_id_between_starts() {
+        let directory = tempfile::tempdir().unwrap();
+        let identity_path = directory.path().join("transport.key");
+
+        let first_start = load_or_create_identity(&identity_path).unwrap();
+        let second_start = load_or_create_identity(&identity_path).unwrap();
+
+        assert_eq!(
+            first_start.public().to_peer_id(),
+            second_start.public().to_peer_id()
+        );
+        #[cfg(unix)]
+        {
+            use std::os::unix::fs::PermissionsExt;
+
+            let mode = fs::metadata(identity_path).unwrap().permissions().mode() & 0o777;
+            assert_eq!(mode, 0o600);
+        }
+    }
+
+    #[test]
     fn valid_signed_fixture_is_accepted() {
         let (json, trusted) = fixture_block_and_trusted();
         let block =
@@ -415,8 +503,8 @@ mod tests {
         let block = validate_block(&payload, None, &trusted).unwrap();
         let topic = IdentTopic::new(block.body.topic.clone());
 
-        let mut swarm_a = new_swarm().unwrap();
-        let mut swarm_b = new_swarm().unwrap();
+        let mut swarm_a = new_swarm(None).unwrap();
+        let mut swarm_b = new_swarm(None).unwrap();
         let peer_a = *swarm_a.local_peer_id();
         swarm_a
             .listen_on("/ip4/127.0.0.1/tcp/0".parse().unwrap())
