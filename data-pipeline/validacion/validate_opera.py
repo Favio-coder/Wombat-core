@@ -36,6 +36,7 @@ from wombat_nisar.grid import Grid
 REPO = Path(__file__).resolve().parents[2]
 WATER = (1, 3)          # agua abierta, vegetacion inundada
 VALID = (0, 1, 3)       # 250, 251 y 255 no cuentan
+MIN_OPERA_COVERAGE = 0.5   # celda con menos de la mitad cubierta por OPERA valido: unavailable
 _SENSING = re.compile(r"_(\d{8})T\d{6}Z_")
 
 
@@ -113,10 +114,14 @@ def main(argv=None) -> int:
     n_changed = _count(idx, changed_30, grid.n)
     n_both = _count(idx, changed_30 & water_new, grid.n)
     ratio = np.divide(n_both, n_changed, out=np.zeros(grid.n), where=n_changed > 0)
+    # Cobertura OPERA por celda: sin dato, HAND y layover/sombra no dicen nada sobre el agua.
+    n_all = _count(idx, np.ones(w1.shape, dtype=bool), grid.n)
+    coverage = np.divide(_count(idx, both_valid, grid.n), n_all, out=np.zeros(grid.n), where=n_all > 0)
+    no_opera = coverage < MIN_OPERA_COVERAGE
     threshold = config["corroboration_overlap_threshold"]
     cells = {}
     for k in range(grid.n):
-        if too_far:
+        if too_far or no_opera[k]:
             cells[grid.cell_id(k)] = {"opera_status": "unavailable", "opera_overlap_ratio": None}
         else:
             r = round(float(ratio[k]), 4)
@@ -137,6 +142,8 @@ def main(argv=None) -> int:
         "of_nisar_unchanged_is_opera_new_water": round(
             float((nisar_valid & ~changed_30 & water_new).sum())
             / max(int((nisar_valid & ~changed_30).sum()), 1), 4),
+        "opera_valid_fraction": round(float(both_valid.mean()), 4),
+        "cells_without_opera": int(no_opera.sum()),
     }
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -145,8 +152,10 @@ def main(argv=None) -> int:
         "t1": sides["t1"], "t2": sides["t2"], "stats": stats,
         "within_max_gap": not too_far, "cells": cells}, indent=1), encoding="utf-8")
 
-    with_change = n_changed > 0
+    with_change = (n_changed > 0) & ~no_opera
     corroborated = int(((ratio >= threshold) & with_change).sum())
+    print(f"Cobertura OPERA valida en ambas fechas: {stats['opera_valid_fraction']:.1%} del recuadro; "
+          f"celdas sin OPERA (< {MIN_OPERA_COVERAGE:.0%} cubierto): {stats['cells_without_opera']} de {grid.n}")
     print(f"Cambio NISAR: {stats['nisar_changed_fraction']:.1%} del area | "
           f"agua nueva OPERA: {stats['opera_new_water_fraction']:.1%}")
     print(f"Del area con cambio NISAR, OPERA ve agua nueva en "

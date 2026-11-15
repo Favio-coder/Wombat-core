@@ -1,0 +1,2677 @@
+{
+ "method": "vias recortadas a cada celda en el CRS de la grilla; near_change = interseccion con los pixeles changed==1 dilatados road_buffer_meters",
+ "road_buffer_meters": 250,
+ "crs_compute": "EPSG:32717",
+ "roads": "roads.geojson",
+ "changed": "changed.tif",
+ "cells": {
+  "jequetepeque-01-r00c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 697
+  },
+  "jequetepeque-01-r00c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r00c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r00c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r00c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r00c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r00c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r00c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r00c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 1093
+  },
+  "jequetepeque-01-r00c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r00c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r00c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r00c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r00c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 1687
+  },
+  "jequetepeque-01-r00c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 2534
+  },
+  "jequetepeque-01-r00c15": {
+   "road_m_near_change": 1594,
+   "road_m_total": 7044
+  },
+  "jequetepeque-01-r00c16": {
+   "road_m_near_change": 1905,
+   "road_m_total": 4279
+  },
+  "jequetepeque-01-r00c17": {
+   "road_m_near_change": 889,
+   "road_m_total": 1418
+  },
+  "jequetepeque-01-r00c18": {
+   "road_m_near_change": 566,
+   "road_m_total": 2479
+  },
+  "jequetepeque-01-r00c19": {
+   "road_m_near_change": 771,
+   "road_m_total": 779
+  },
+  "jequetepeque-01-r00c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r00c21": {
+   "road_m_near_change": 51,
+   "road_m_total": 2677
+  },
+  "jequetepeque-01-r00c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 2044
+  },
+  "jequetepeque-01-r00c23": {
+   "road_m_near_change": 1856,
+   "road_m_total": 2350
+  },
+  "jequetepeque-01-r00c24": {
+   "road_m_near_change": 476,
+   "road_m_total": 4021
+  },
+  "jequetepeque-01-r00c25": {
+   "road_m_near_change": 2322,
+   "road_m_total": 4620
+  },
+  "jequetepeque-01-r00c26": {
+   "road_m_near_change": 966,
+   "road_m_total": 2277
+  },
+  "jequetepeque-01-r00c27": {
+   "road_m_near_change": 999,
+   "road_m_total": 1393
+  },
+  "jequetepeque-01-r00c28": {
+   "road_m_near_change": 0,
+   "road_m_total": 1293
+  },
+  "jequetepeque-01-r01c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 487
+  },
+  "jequetepeque-01-r01c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 1257
+  },
+  "jequetepeque-01-r01c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r01c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r01c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r01c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r01c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 649
+  },
+  "jequetepeque-01-r01c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r01c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 724
+  },
+  "jequetepeque-01-r01c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 805
+  },
+  "jequetepeque-01-r01c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 1044
+  },
+  "jequetepeque-01-r01c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 106
+  },
+  "jequetepeque-01-r01c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r01c13": {
+   "road_m_near_change": 1023,
+   "road_m_total": 3420
+  },
+  "jequetepeque-01-r01c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 2884
+  },
+  "jequetepeque-01-r01c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 3649
+  },
+  "jequetepeque-01-r01c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 4285
+  },
+  "jequetepeque-01-r01c17": {
+   "road_m_near_change": 455,
+   "road_m_total": 2693
+  },
+  "jequetepeque-01-r01c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 2069
+  },
+  "jequetepeque-01-r01c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 408
+  },
+  "jequetepeque-01-r01c20": {
+   "road_m_near_change": 303,
+   "road_m_total": 1775
+  },
+  "jequetepeque-01-r01c21": {
+   "road_m_near_change": 2109,
+   "road_m_total": 3746
+  },
+  "jequetepeque-01-r01c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 235
+  },
+  "jequetepeque-01-r01c23": {
+   "road_m_near_change": 805,
+   "road_m_total": 2762
+  },
+  "jequetepeque-01-r01c24": {
+   "road_m_near_change": 458,
+   "road_m_total": 666
+  },
+  "jequetepeque-01-r01c25": {
+   "road_m_near_change": 4567,
+   "road_m_total": 8262
+  },
+  "jequetepeque-01-r01c26": {
+   "road_m_near_change": 49,
+   "road_m_total": 676
+  },
+  "jequetepeque-01-r01c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r01c28": {
+   "road_m_near_change": 0,
+   "road_m_total": 2381
+  },
+  "jequetepeque-01-r02c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r02c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 59
+  },
+  "jequetepeque-01-r02c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 1047
+  },
+  "jequetepeque-01-r02c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 1012
+  },
+  "jequetepeque-01-r02c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 1005
+  },
+  "jequetepeque-01-r02c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 1040
+  },
+  "jequetepeque-01-r02c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 722
+  },
+  "jequetepeque-01-r02c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 1024
+  },
+  "jequetepeque-01-r02c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 1027
+  },
+  "jequetepeque-01-r02c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 709
+  },
+  "jequetepeque-01-r02c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r02c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 937
+  },
+  "jequetepeque-01-r02c12": {
+   "road_m_near_change": 367,
+   "road_m_total": 2192
+  },
+  "jequetepeque-01-r02c13": {
+   "road_m_near_change": 1131,
+   "road_m_total": 3459
+  },
+  "jequetepeque-01-r02c14": {
+   "road_m_near_change": 25,
+   "road_m_total": 4932
+  },
+  "jequetepeque-01-r02c15": {
+   "road_m_near_change": 2609,
+   "road_m_total": 6401
+  },
+  "jequetepeque-01-r02c16": {
+   "road_m_near_change": 2130,
+   "road_m_total": 5117
+  },
+  "jequetepeque-01-r02c17": {
+   "road_m_near_change": 1318,
+   "road_m_total": 4814
+  },
+  "jequetepeque-01-r02c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 4431
+  },
+  "jequetepeque-01-r02c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 601
+  },
+  "jequetepeque-01-r02c20": {
+   "road_m_near_change": 170,
+   "road_m_total": 538
+  },
+  "jequetepeque-01-r02c21": {
+   "road_m_near_change": 1876,
+   "road_m_total": 3242
+  },
+  "jequetepeque-01-r02c22": {
+   "road_m_near_change": 689,
+   "road_m_total": 689
+  },
+  "jequetepeque-01-r02c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 398
+  },
+  "jequetepeque-01-r02c24": {
+   "road_m_near_change": 1718,
+   "road_m_total": 13398
+  },
+  "jequetepeque-01-r02c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 13780
+  },
+  "jequetepeque-01-r02c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 1325
+  },
+  "jequetepeque-01-r02c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 9345
+  },
+  "jequetepeque-01-r02c28": {
+   "road_m_near_change": 557,
+   "road_m_total": 1579
+  },
+  "jequetepeque-01-r03c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r03c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r03c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r03c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r03c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r03c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r03c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r03c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r03c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r03c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r03c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r03c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r03c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 4
+  },
+  "jequetepeque-01-r03c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 1889
+  },
+  "jequetepeque-01-r03c14": {
+   "road_m_near_change": 2534,
+   "road_m_total": 3886
+  },
+  "jequetepeque-01-r03c15": {
+   "road_m_near_change": 3005,
+   "road_m_total": 3686
+  },
+  "jequetepeque-01-r03c16": {
+   "road_m_near_change": 1450,
+   "road_m_total": 2585
+  },
+  "jequetepeque-01-r03c17": {
+   "road_m_near_change": 1154,
+   "road_m_total": 3791
+  },
+  "jequetepeque-01-r03c18": {
+   "road_m_near_change": 314,
+   "road_m_total": 4555
+  },
+  "jequetepeque-01-r03c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 3390
+  },
+  "jequetepeque-01-r03c20": {
+   "road_m_near_change": 204,
+   "road_m_total": 4296
+  },
+  "jequetepeque-01-r03c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 2493
+  },
+  "jequetepeque-01-r03c22": {
+   "road_m_near_change": 3480,
+   "road_m_total": 4209
+  },
+  "jequetepeque-01-r03c23": {
+   "road_m_near_change": 897,
+   "road_m_total": 3201
+  },
+  "jequetepeque-01-r03c24": {
+   "road_m_near_change": 4805,
+   "road_m_total": 6897
+  },
+  "jequetepeque-01-r03c25": {
+   "road_m_near_change": 4511,
+   "road_m_total": 23121
+  },
+  "jequetepeque-01-r03c26": {
+   "road_m_near_change": 2474,
+   "road_m_total": 17344
+  },
+  "jequetepeque-01-r03c27": {
+   "road_m_near_change": 3905,
+   "road_m_total": 11261
+  },
+  "jequetepeque-01-r03c28": {
+   "road_m_near_change": 88,
+   "road_m_total": 103
+  },
+  "jequetepeque-01-r04c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r04c14": {
+   "road_m_near_change": 49,
+   "road_m_total": 49
+  },
+  "jequetepeque-01-r04c15": {
+   "road_m_near_change": 1092,
+   "road_m_total": 1852
+  },
+  "jequetepeque-01-r04c16": {
+   "road_m_near_change": 2133,
+   "road_m_total": 2547
+  },
+  "jequetepeque-01-r04c17": {
+   "road_m_near_change": 676,
+   "road_m_total": 2152
+  },
+  "jequetepeque-01-r04c18": {
+   "road_m_near_change": 1197,
+   "road_m_total": 2646
+  },
+  "jequetepeque-01-r04c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 4070
+  },
+  "jequetepeque-01-r04c20": {
+   "road_m_near_change": 2860,
+   "road_m_total": 18174
+  },
+  "jequetepeque-01-r04c21": {
+   "road_m_near_change": 4239,
+   "road_m_total": 20516
+  },
+  "jequetepeque-01-r04c22": {
+   "road_m_near_change": 185,
+   "road_m_total": 6769
+  },
+  "jequetepeque-01-r04c23": {
+   "road_m_near_change": 56,
+   "road_m_total": 3063
+  },
+  "jequetepeque-01-r04c24": {
+   "road_m_near_change": 1685,
+   "road_m_total": 1685
+  },
+  "jequetepeque-01-r04c25": {
+   "road_m_near_change": 2578,
+   "road_m_total": 2709
+  },
+  "jequetepeque-01-r04c26": {
+   "road_m_near_change": 3066,
+   "road_m_total": 4225
+  },
+  "jequetepeque-01-r04c27": {
+   "road_m_near_change": 1830,
+   "road_m_total": 5420
+  },
+  "jequetepeque-01-r04c28": {
+   "road_m_near_change": 336,
+   "road_m_total": 7017
+  },
+  "jequetepeque-01-r05c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c16": {
+   "road_m_near_change": 678,
+   "road_m_total": 703
+  },
+  "jequetepeque-01-r05c17": {
+   "road_m_near_change": 2131,
+   "road_m_total": 5463
+  },
+  "jequetepeque-01-r05c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 713
+  },
+  "jequetepeque-01-r05c19": {
+   "road_m_near_change": 330,
+   "road_m_total": 10077
+  },
+  "jequetepeque-01-r05c20": {
+   "road_m_near_change": 6083,
+   "road_m_total": 17657
+  },
+  "jequetepeque-01-r05c21": {
+   "road_m_near_change": 1886,
+   "road_m_total": 15943
+  },
+  "jequetepeque-01-r05c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 3426
+  },
+  "jequetepeque-01-r05c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 3202
+  },
+  "jequetepeque-01-r05c24": {
+   "road_m_near_change": 860,
+   "road_m_total": 1651
+  },
+  "jequetepeque-01-r05c25": {
+   "road_m_near_change": 681,
+   "road_m_total": 681
+  },
+  "jequetepeque-01-r05c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r05c27": {
+   "road_m_near_change": 2895,
+   "road_m_total": 3393
+  },
+  "jequetepeque-01-r05c28": {
+   "road_m_near_change": 102,
+   "road_m_total": 3425
+  },
+  "jequetepeque-01-r06c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r06c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 5307
+  },
+  "jequetepeque-01-r06c18": {
+   "road_m_near_change": 2091,
+   "road_m_total": 6672
+  },
+  "jequetepeque-01-r06c19": {
+   "road_m_near_change": 944,
+   "road_m_total": 2082
+  },
+  "jequetepeque-01-r06c20": {
+   "road_m_near_change": 1896,
+   "road_m_total": 2706
+  },
+  "jequetepeque-01-r06c21": {
+   "road_m_near_change": 1412,
+   "road_m_total": 2962
+  },
+  "jequetepeque-01-r06c22": {
+   "road_m_near_change": 887,
+   "road_m_total": 2741
+  },
+  "jequetepeque-01-r06c23": {
+   "road_m_near_change": 125,
+   "road_m_total": 2166
+  },
+  "jequetepeque-01-r06c24": {
+   "road_m_near_change": 270,
+   "road_m_total": 2366
+  },
+  "jequetepeque-01-r06c25": {
+   "road_m_near_change": 1834,
+   "road_m_total": 2341
+  },
+  "jequetepeque-01-r06c26": {
+   "road_m_near_change": 485,
+   "road_m_total": 501
+  },
+  "jequetepeque-01-r06c27": {
+   "road_m_near_change": 2272,
+   "road_m_total": 3155
+  },
+  "jequetepeque-01-r06c28": {
+   "road_m_near_change": 531,
+   "road_m_total": 1939
+  },
+  "jequetepeque-01-r07c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 10
+  },
+  "jequetepeque-01-r07c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 1191
+  },
+  "jequetepeque-01-r07c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 628
+  },
+  "jequetepeque-01-r07c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 3163
+  },
+  "jequetepeque-01-r07c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 4215
+  },
+  "jequetepeque-01-r07c20": {
+   "road_m_near_change": 1666,
+   "road_m_total": 1666
+  },
+  "jequetepeque-01-r07c21": {
+   "road_m_near_change": 1362,
+   "road_m_total": 1362
+  },
+  "jequetepeque-01-r07c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r07c23": {
+   "road_m_near_change": 597,
+   "road_m_total": 2130
+  },
+  "jequetepeque-01-r07c24": {
+   "road_m_near_change": 696,
+   "road_m_total": 1169
+  },
+  "jequetepeque-01-r07c25": {
+   "road_m_near_change": 790,
+   "road_m_total": 790
+  },
+  "jequetepeque-01-r07c26": {
+   "road_m_near_change": 683,
+   "road_m_total": 859
+  },
+  "jequetepeque-01-r07c27": {
+   "road_m_near_change": 1174,
+   "road_m_total": 3047
+  },
+  "jequetepeque-01-r07c28": {
+   "road_m_near_change": 462,
+   "road_m_total": 1760
+  },
+  "jequetepeque-01-r08c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 1389
+  },
+  "jequetepeque-01-r08c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 49
+  },
+  "jequetepeque-01-r08c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 161
+  },
+  "jequetepeque-01-r08c20": {
+   "road_m_near_change": 1440,
+   "road_m_total": 4071
+  },
+  "jequetepeque-01-r08c21": {
+   "road_m_near_change": 388,
+   "road_m_total": 721
+  },
+  "jequetepeque-01-r08c22": {
+   "road_m_near_change": 512,
+   "road_m_total": 5591
+  },
+  "jequetepeque-01-r08c23": {
+   "road_m_near_change": 706,
+   "road_m_total": 2293
+  },
+  "jequetepeque-01-r08c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r08c25": {
+   "road_m_near_change": 1044,
+   "road_m_total": 1279
+  },
+  "jequetepeque-01-r08c26": {
+   "road_m_near_change": 974,
+   "road_m_total": 1061
+  },
+  "jequetepeque-01-r08c27": {
+   "road_m_near_change": 749,
+   "road_m_total": 749
+  },
+  "jequetepeque-01-r08c28": {
+   "road_m_near_change": 2127,
+   "road_m_total": 2441
+  },
+  "jequetepeque-01-r09c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 631
+  },
+  "jequetepeque-01-r09c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 1089
+  },
+  "jequetepeque-01-r09c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c13": {
+   "road_m_near_change": 39,
+   "road_m_total": 39
+  },
+  "jequetepeque-01-r09c14": {
+   "road_m_near_change": 293,
+   "road_m_total": 1381
+  },
+  "jequetepeque-01-r09c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 70
+  },
+  "jequetepeque-01-r09c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 1381
+  },
+  "jequetepeque-01-r09c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 90
+  },
+  "jequetepeque-01-r09c20": {
+   "road_m_near_change": 1080,
+   "road_m_total": 2790
+  },
+  "jequetepeque-01-r09c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 1645
+  },
+  "jequetepeque-01-r09c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 784
+  },
+  "jequetepeque-01-r09c23": {
+   "road_m_near_change": 2127,
+   "road_m_total": 2692
+  },
+  "jequetepeque-01-r09c24": {
+   "road_m_near_change": 779,
+   "road_m_total": 6054
+  },
+  "jequetepeque-01-r09c25": {
+   "road_m_near_change": 1156,
+   "road_m_total": 1817
+  },
+  "jequetepeque-01-r09c26": {
+   "road_m_near_change": 1609,
+   "road_m_total": 2400
+  },
+  "jequetepeque-01-r09c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r09c28": {
+   "road_m_near_change": 2593,
+   "road_m_total": 2593
+  },
+  "jequetepeque-01-r10c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r10c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r10c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r10c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r10c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r10c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r10c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r10c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 155
+  },
+  "jequetepeque-01-r10c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 1095
+  },
+  "jequetepeque-01-r10c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 1014
+  },
+  "jequetepeque-01-r10c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r10c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 333
+  },
+  "jequetepeque-01-r10c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 1139
+  },
+  "jequetepeque-01-r10c13": {
+   "road_m_near_change": 929,
+   "road_m_total": 1847
+  },
+  "jequetepeque-01-r10c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r10c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r10c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r10c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r10c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 457
+  },
+  "jequetepeque-01-r10c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 6292
+  },
+  "jequetepeque-01-r10c20": {
+   "road_m_near_change": 1039,
+   "road_m_total": 1408
+  },
+  "jequetepeque-01-r10c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 2162
+  },
+  "jequetepeque-01-r10c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 1654
+  },
+  "jequetepeque-01-r10c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 771
+  },
+  "jequetepeque-01-r10c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 1880
+  },
+  "jequetepeque-01-r10c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 312
+  },
+  "jequetepeque-01-r10c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 56
+  },
+  "jequetepeque-01-r10c27": {
+   "road_m_near_change": 586,
+   "road_m_total": 2798
+  },
+  "jequetepeque-01-r10c28": {
+   "road_m_near_change": 770,
+   "road_m_total": 1221
+  },
+  "jequetepeque-01-r11c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r11c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r11c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r11c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r11c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r11c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r11c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r11c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r11c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r11c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 141
+  },
+  "jequetepeque-01-r11c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 1866
+  },
+  "jequetepeque-01-r11c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 894
+  },
+  "jequetepeque-01-r11c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 43
+  },
+  "jequetepeque-01-r11c13": {
+   "road_m_near_change": 130,
+   "road_m_total": 1009
+  },
+  "jequetepeque-01-r11c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 161
+  },
+  "jequetepeque-01-r11c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r11c16": {
+   "road_m_near_change": 417,
+   "road_m_total": 417
+  },
+  "jequetepeque-01-r11c17": {
+   "road_m_near_change": 231,
+   "road_m_total": 561
+  },
+  "jequetepeque-01-r11c18": {
+   "road_m_near_change": 179,
+   "road_m_total": 4482
+  },
+  "jequetepeque-01-r11c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 19692
+  },
+  "jequetepeque-01-r11c20": {
+   "road_m_near_change": 4644,
+   "road_m_total": 12978
+  },
+  "jequetepeque-01-r11c21": {
+   "road_m_near_change": 1820,
+   "road_m_total": 4493
+  },
+  "jequetepeque-01-r11c22": {
+   "road_m_near_change": 388,
+   "road_m_total": 4530
+  },
+  "jequetepeque-01-r11c23": {
+   "road_m_near_change": 947,
+   "road_m_total": 6169
+  },
+  "jequetepeque-01-r11c24": {
+   "road_m_near_change": 350,
+   "road_m_total": 1702
+  },
+  "jequetepeque-01-r11c25": {
+   "road_m_near_change": 1273,
+   "road_m_total": 4779
+  },
+  "jequetepeque-01-r11c26": {
+   "road_m_near_change": 3500,
+   "road_m_total": 13793
+  },
+  "jequetepeque-01-r11c27": {
+   "road_m_near_change": 3205,
+   "road_m_total": 10147
+  },
+  "jequetepeque-01-r11c28": {
+   "road_m_near_change": 2014,
+   "road_m_total": 3722
+  },
+  "jequetepeque-01-r12c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r12c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r12c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r12c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r12c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r12c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r12c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r12c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r12c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 20
+  },
+  "jequetepeque-01-r12c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 1630
+  },
+  "jequetepeque-01-r12c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 1605
+  },
+  "jequetepeque-01-r12c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 866
+  },
+  "jequetepeque-01-r12c12": {
+   "road_m_near_change": 1636,
+   "road_m_total": 3276
+  },
+  "jequetepeque-01-r12c13": {
+   "road_m_near_change": 2026,
+   "road_m_total": 3581
+  },
+  "jequetepeque-01-r12c14": {
+   "road_m_near_change": 891,
+   "road_m_total": 4151
+  },
+  "jequetepeque-01-r12c15": {
+   "road_m_near_change": 527,
+   "road_m_total": 3468
+  },
+  "jequetepeque-01-r12c16": {
+   "road_m_near_change": 45,
+   "road_m_total": 5263
+  },
+  "jequetepeque-01-r12c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 4784
+  },
+  "jequetepeque-01-r12c18": {
+   "road_m_near_change": 569,
+   "road_m_total": 5492
+  },
+  "jequetepeque-01-r12c19": {
+   "road_m_near_change": 3495,
+   "road_m_total": 10233
+  },
+  "jequetepeque-01-r12c20": {
+   "road_m_near_change": 739,
+   "road_m_total": 12689
+  },
+  "jequetepeque-01-r12c21": {
+   "road_m_near_change": 4944,
+   "road_m_total": 5892
+  },
+  "jequetepeque-01-r12c22": {
+   "road_m_near_change": 4942,
+   "road_m_total": 6880
+  },
+  "jequetepeque-01-r12c23": {
+   "road_m_near_change": 4899,
+   "road_m_total": 6032
+  },
+  "jequetepeque-01-r12c24": {
+   "road_m_near_change": 3415,
+   "road_m_total": 4400
+  },
+  "jequetepeque-01-r12c25": {
+   "road_m_near_change": 6597,
+   "road_m_total": 7293
+  },
+  "jequetepeque-01-r12c26": {
+   "road_m_near_change": 6410,
+   "road_m_total": 6410
+  },
+  "jequetepeque-01-r12c27": {
+   "road_m_near_change": 3767,
+   "road_m_total": 4626
+  },
+  "jequetepeque-01-r12c28": {
+   "road_m_near_change": 5004,
+   "road_m_total": 5034
+  },
+  "jequetepeque-01-r13c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r13c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r13c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r13c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r13c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r13c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r13c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r13c07": {
+   "road_m_near_change": 68,
+   "road_m_total": 1007
+  },
+  "jequetepeque-01-r13c08": {
+   "road_m_near_change": 2456,
+   "road_m_total": 4253
+  },
+  "jequetepeque-01-r13c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 2973
+  },
+  "jequetepeque-01-r13c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 3194
+  },
+  "jequetepeque-01-r13c11": {
+   "road_m_near_change": 163,
+   "road_m_total": 3469
+  },
+  "jequetepeque-01-r13c12": {
+   "road_m_near_change": 797,
+   "road_m_total": 3427
+  },
+  "jequetepeque-01-r13c13": {
+   "road_m_near_change": 624,
+   "road_m_total": 3824
+  },
+  "jequetepeque-01-r13c14": {
+   "road_m_near_change": 1743,
+   "road_m_total": 3316
+  },
+  "jequetepeque-01-r13c15": {
+   "road_m_near_change": 309,
+   "road_m_total": 2482
+  },
+  "jequetepeque-01-r13c16": {
+   "road_m_near_change": 947,
+   "road_m_total": 1938
+  },
+  "jequetepeque-01-r13c17": {
+   "road_m_near_change": 449,
+   "road_m_total": 3965
+  },
+  "jequetepeque-01-r13c18": {
+   "road_m_near_change": 1421,
+   "road_m_total": 2638
+  },
+  "jequetepeque-01-r13c19": {
+   "road_m_near_change": 1873,
+   "road_m_total": 2993
+  },
+  "jequetepeque-01-r13c20": {
+   "road_m_near_change": 429,
+   "road_m_total": 4992
+  },
+  "jequetepeque-01-r13c21": {
+   "road_m_near_change": 2032,
+   "road_m_total": 3317
+  },
+  "jequetepeque-01-r13c22": {
+   "road_m_near_change": 1436,
+   "road_m_total": 3081
+  },
+  "jequetepeque-01-r13c23": {
+   "road_m_near_change": 1463,
+   "road_m_total": 1786
+  },
+  "jequetepeque-01-r13c24": {
+   "road_m_near_change": 949,
+   "road_m_total": 4191
+  },
+  "jequetepeque-01-r13c25": {
+   "road_m_near_change": 19,
+   "road_m_total": 4000
+  },
+  "jequetepeque-01-r13c26": {
+   "road_m_near_change": 771,
+   "road_m_total": 4396
+  },
+  "jequetepeque-01-r13c27": {
+   "road_m_near_change": 270,
+   "road_m_total": 4752
+  },
+  "jequetepeque-01-r13c28": {
+   "road_m_near_change": 339,
+   "road_m_total": 4631
+  },
+  "jequetepeque-01-r14c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r14c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r14c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r14c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r14c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r14c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r14c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r14c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 1410
+  },
+  "jequetepeque-01-r14c08": {
+   "road_m_near_change": 572,
+   "road_m_total": 2360
+  },
+  "jequetepeque-01-r14c09": {
+   "road_m_near_change": 257,
+   "road_m_total": 1319
+  },
+  "jequetepeque-01-r14c10": {
+   "road_m_near_change": 646,
+   "road_m_total": 4000
+  },
+  "jequetepeque-01-r14c11": {
+   "road_m_near_change": 1396,
+   "road_m_total": 2787
+  },
+  "jequetepeque-01-r14c12": {
+   "road_m_near_change": 908,
+   "road_m_total": 2318
+  },
+  "jequetepeque-01-r14c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r14c14": {
+   "road_m_near_change": 524,
+   "road_m_total": 2464
+  },
+  "jequetepeque-01-r14c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 2535
+  },
+  "jequetepeque-01-r14c16": {
+   "road_m_near_change": 758,
+   "road_m_total": 2749
+  },
+  "jequetepeque-01-r14c17": {
+   "road_m_near_change": 1102,
+   "road_m_total": 3062
+  },
+  "jequetepeque-01-r14c18": {
+   "road_m_near_change": 425,
+   "road_m_total": 7270
+  },
+  "jequetepeque-01-r14c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 10886
+  },
+  "jequetepeque-01-r14c20": {
+   "road_m_near_change": 136,
+   "road_m_total": 505
+  },
+  "jequetepeque-01-r14c21": {
+   "road_m_near_change": 566,
+   "road_m_total": 1638
+  },
+  "jequetepeque-01-r14c22": {
+   "road_m_near_change": 557,
+   "road_m_total": 557
+  },
+  "jequetepeque-01-r14c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 935
+  },
+  "jequetepeque-01-r14c24": {
+   "road_m_near_change": 820,
+   "road_m_total": 2677
+  },
+  "jequetepeque-01-r14c25": {
+   "road_m_near_change": 3228,
+   "road_m_total": 4933
+  },
+  "jequetepeque-01-r14c26": {
+   "road_m_near_change": 1316,
+   "road_m_total": 2545
+  },
+  "jequetepeque-01-r14c27": {
+   "road_m_near_change": 1109,
+   "road_m_total": 2160
+  },
+  "jequetepeque-01-r14c28": {
+   "road_m_near_change": 0,
+   "road_m_total": 3394
+  },
+  "jequetepeque-01-r15c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r15c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r15c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r15c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r15c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r15c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r15c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r15c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 1449
+  },
+  "jequetepeque-01-r15c08": {
+   "road_m_near_change": 360,
+   "road_m_total": 3290
+  },
+  "jequetepeque-01-r15c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 2648
+  },
+  "jequetepeque-01-r15c10": {
+   "road_m_near_change": 1670,
+   "road_m_total": 8824
+  },
+  "jequetepeque-01-r15c11": {
+   "road_m_near_change": 156,
+   "road_m_total": 1969
+  },
+  "jequetepeque-01-r15c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 2631
+  },
+  "jequetepeque-01-r15c13": {
+   "road_m_near_change": 569,
+   "road_m_total": 1685
+  },
+  "jequetepeque-01-r15c14": {
+   "road_m_near_change": 385,
+   "road_m_total": 3267
+  },
+  "jequetepeque-01-r15c15": {
+   "road_m_near_change": 979,
+   "road_m_total": 7470
+  },
+  "jequetepeque-01-r15c16": {
+   "road_m_near_change": 3088,
+   "road_m_total": 8049
+  },
+  "jequetepeque-01-r15c17": {
+   "road_m_near_change": 3007,
+   "road_m_total": 7375
+  },
+  "jequetepeque-01-r15c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 4232
+  },
+  "jequetepeque-01-r15c19": {
+   "road_m_near_change": 98,
+   "road_m_total": 1115
+  },
+  "jequetepeque-01-r15c20": {
+   "road_m_near_change": 1228,
+   "road_m_total": 2439
+  },
+  "jequetepeque-01-r15c21": {
+   "road_m_near_change": 644,
+   "road_m_total": 4198
+  },
+  "jequetepeque-01-r15c22": {
+   "road_m_near_change": 40,
+   "road_m_total": 2953
+  },
+  "jequetepeque-01-r15c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 2139
+  },
+  "jequetepeque-01-r15c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 486
+  },
+  "jequetepeque-01-r15c25": {
+   "road_m_near_change": 782,
+   "road_m_total": 1310
+  },
+  "jequetepeque-01-r15c26": {
+   "road_m_near_change": 715,
+   "road_m_total": 935
+  },
+  "jequetepeque-01-r15c27": {
+   "road_m_near_change": 548,
+   "road_m_total": 1635
+  },
+  "jequetepeque-01-r15c28": {
+   "road_m_near_change": 513,
+   "road_m_total": 2822
+  },
+  "jequetepeque-01-r16c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r16c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r16c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r16c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r16c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r16c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r16c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r16c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 546
+  },
+  "jequetepeque-01-r16c08": {
+   "road_m_near_change": 697,
+   "road_m_total": 3701
+  },
+  "jequetepeque-01-r16c09": {
+   "road_m_near_change": 383,
+   "road_m_total": 4895
+  },
+  "jequetepeque-01-r16c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 5619
+  },
+  "jequetepeque-01-r16c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 333
+  },
+  "jequetepeque-01-r16c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 1096
+  },
+  "jequetepeque-01-r16c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 1800
+  },
+  "jequetepeque-01-r16c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 2847
+  },
+  "jequetepeque-01-r16c15": {
+   "road_m_near_change": 3977,
+   "road_m_total": 8672
+  },
+  "jequetepeque-01-r16c16": {
+   "road_m_near_change": 5556,
+   "road_m_total": 7363
+  },
+  "jequetepeque-01-r16c17": {
+   "road_m_near_change": 639,
+   "road_m_total": 2662
+  },
+  "jequetepeque-01-r16c18": {
+   "road_m_near_change": 810,
+   "road_m_total": 2384
+  },
+  "jequetepeque-01-r16c19": {
+   "road_m_near_change": 108,
+   "road_m_total": 1333
+  },
+  "jequetepeque-01-r16c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 352
+  },
+  "jequetepeque-01-r16c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 7869
+  },
+  "jequetepeque-01-r16c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 13526
+  },
+  "jequetepeque-01-r16c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 7166
+  },
+  "jequetepeque-01-r16c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 1826
+  },
+  "jequetepeque-01-r16c25": {
+   "road_m_near_change": 771,
+   "road_m_total": 1300
+  },
+  "jequetepeque-01-r16c26": {
+   "road_m_near_change": 1086,
+   "road_m_total": 1305
+  },
+  "jequetepeque-01-r16c27": {
+   "road_m_near_change": 58,
+   "road_m_total": 669
+  },
+  "jequetepeque-01-r16c28": {
+   "road_m_near_change": 993,
+   "road_m_total": 1725
+  },
+  "jequetepeque-01-r17c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r17c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r17c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r17c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r17c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r17c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r17c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r17c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r17c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 487
+  },
+  "jequetepeque-01-r17c09": {
+   "road_m_near_change": 1337,
+   "road_m_total": 1964
+  },
+  "jequetepeque-01-r17c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 184
+  },
+  "jequetepeque-01-r17c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 512
+  },
+  "jequetepeque-01-r17c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 400
+  },
+  "jequetepeque-01-r17c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 1921
+  },
+  "jequetepeque-01-r17c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 1853
+  },
+  "jequetepeque-01-r17c15": {
+   "road_m_near_change": 121,
+   "road_m_total": 3811
+  },
+  "jequetepeque-01-r17c16": {
+   "road_m_near_change": 539,
+   "road_m_total": 3375
+  },
+  "jequetepeque-01-r17c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 1627
+  },
+  "jequetepeque-01-r17c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 1372
+  },
+  "jequetepeque-01-r17c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 1097
+  },
+  "jequetepeque-01-r17c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 370
+  },
+  "jequetepeque-01-r17c21": {
+   "road_m_near_change": 560,
+   "road_m_total": 1037
+  },
+  "jequetepeque-01-r17c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r17c23": {
+   "road_m_near_change": 16,
+   "road_m_total": 1901
+  },
+  "jequetepeque-01-r17c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 1150
+  },
+  "jequetepeque-01-r17c25": {
+   "road_m_near_change": 170,
+   "road_m_total": 1584
+  },
+  "jequetepeque-01-r17c26": {
+   "road_m_near_change": 680,
+   "road_m_total": 2876
+  },
+  "jequetepeque-01-r17c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 1086
+  },
+  "jequetepeque-01-r17c28": {
+   "road_m_near_change": 704,
+   "road_m_total": 1559
+  },
+  "jequetepeque-01-r18c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r18c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r18c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r18c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r18c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r18c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r18c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r18c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r18c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 511
+  },
+  "jequetepeque-01-r18c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 15595
+  },
+  "jequetepeque-01-r18c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r18c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r18c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r18c13": {
+   "road_m_near_change": 227,
+   "road_m_total": 434
+  },
+  "jequetepeque-01-r18c14": {
+   "road_m_near_change": 582,
+   "road_m_total": 1459
+  },
+  "jequetepeque-01-r18c15": {
+   "road_m_near_change": 19,
+   "road_m_total": 19
+  },
+  "jequetepeque-01-r18c16": {
+   "road_m_near_change": 567,
+   "road_m_total": 2611
+  },
+  "jequetepeque-01-r18c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 853
+  },
+  "jequetepeque-01-r18c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r18c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r18c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 2315
+  },
+  "jequetepeque-01-r18c21": {
+   "road_m_near_change": 1156,
+   "road_m_total": 3985
+  },
+  "jequetepeque-01-r18c22": {
+   "road_m_near_change": 207,
+   "road_m_total": 3199
+  },
+  "jequetepeque-01-r18c23": {
+   "road_m_near_change": 129,
+   "road_m_total": 2596
+  },
+  "jequetepeque-01-r18c24": {
+   "road_m_near_change": 864,
+   "road_m_total": 3327
+  },
+  "jequetepeque-01-r18c25": {
+   "road_m_near_change": 1833,
+   "road_m_total": 2556
+  },
+  "jequetepeque-01-r18c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 1470
+  },
+  "jequetepeque-01-r18c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 1224
+  },
+  "jequetepeque-01-r18c28": {
+   "road_m_near_change": 46,
+   "road_m_total": 2856
+  },
+  "jequetepeque-01-r19c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 1314
+  },
+  "jequetepeque-01-r19c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 195
+  },
+  "jequetepeque-01-r19c13": {
+   "road_m_near_change": 321,
+   "road_m_total": 1083
+  },
+  "jequetepeque-01-r19c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 1325
+  },
+  "jequetepeque-01-r19c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c19": {
+   "road_m_near_change": 298,
+   "road_m_total": 5933
+  },
+  "jequetepeque-01-r19c20": {
+   "road_m_near_change": 283,
+   "road_m_total": 3745
+  },
+  "jequetepeque-01-r19c21": {
+   "road_m_near_change": 69,
+   "road_m_total": 1458
+  },
+  "jequetepeque-01-r19c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r19c23": {
+   "road_m_near_change": 1361,
+   "road_m_total": 1419
+  },
+  "jequetepeque-01-r19c24": {
+   "road_m_near_change": 3278,
+   "road_m_total": 6213
+  },
+  "jequetepeque-01-r19c25": {
+   "road_m_near_change": 17,
+   "road_m_total": 17
+  },
+  "jequetepeque-01-r19c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 208
+  },
+  "jequetepeque-01-r19c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 1259
+  },
+  "jequetepeque-01-r19c28": {
+   "road_m_near_change": 0,
+   "road_m_total": 1376
+  },
+  "jequetepeque-01-r20c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r20c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r20c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r20c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r20c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r20c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r20c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r20c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r20c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r20c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 1018
+  },
+  "jequetepeque-01-r20c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 10757
+  },
+  "jequetepeque-01-r20c11": {
+   "road_m_near_change": 145,
+   "road_m_total": 7549
+  },
+  "jequetepeque-01-r20c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 1916
+  },
+  "jequetepeque-01-r20c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 1275
+  },
+  "jequetepeque-01-r20c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 45
+  },
+  "jequetepeque-01-r20c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 290
+  },
+  "jequetepeque-01-r20c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 1961
+  },
+  "jequetepeque-01-r20c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 2175
+  },
+  "jequetepeque-01-r20c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 6759
+  },
+  "jequetepeque-01-r20c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 826
+  },
+  "jequetepeque-01-r20c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 138
+  },
+  "jequetepeque-01-r20c21": {
+   "road_m_near_change": 380,
+   "road_m_total": 972
+  },
+  "jequetepeque-01-r20c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r20c23": {
+   "road_m_near_change": 158,
+   "road_m_total": 534
+  },
+  "jequetepeque-01-r20c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 2150
+  },
+  "jequetepeque-01-r20c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r20c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r20c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r20c28": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 2119
+  },
+  "jequetepeque-01-r21c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 20264
+  },
+  "jequetepeque-01-r21c11": {
+   "road_m_near_change": 2505,
+   "road_m_total": 6033
+  },
+  "jequetepeque-01-r21c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 1069
+  },
+  "jequetepeque-01-r21c15": {
+   "road_m_near_change": 150,
+   "road_m_total": 1556
+  },
+  "jequetepeque-01-r21c16": {
+   "road_m_near_change": 382,
+   "road_m_total": 2551
+  },
+  "jequetepeque-01-r21c17": {
+   "road_m_near_change": 979,
+   "road_m_total": 1636
+  },
+  "jequetepeque-01-r21c18": {
+   "road_m_near_change": 25,
+   "road_m_total": 2417
+  },
+  "jequetepeque-01-r21c19": {
+   "road_m_near_change": 478,
+   "road_m_total": 906
+  },
+  "jequetepeque-01-r21c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 1072
+  },
+  "jequetepeque-01-r21c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r21c28": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 23
+  },
+  "jequetepeque-01-r22c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 15773
+  },
+  "jequetepeque-01-r22c10": {
+   "road_m_near_change": 1364,
+   "road_m_total": 22624
+  },
+  "jequetepeque-01-r22c11": {
+   "road_m_near_change": 1484,
+   "road_m_total": 3490
+  },
+  "jequetepeque-01-r22c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 410
+  },
+  "jequetepeque-01-r22c14": {
+   "road_m_near_change": 103,
+   "road_m_total": 1407
+  },
+  "jequetepeque-01-r22c15": {
+   "road_m_near_change": 162,
+   "road_m_total": 652
+  },
+  "jequetepeque-01-r22c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c17": {
+   "road_m_near_change": 52,
+   "road_m_total": 2198
+  },
+  "jequetepeque-01-r22c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 1914
+  },
+  "jequetepeque-01-r22c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 1837
+  },
+  "jequetepeque-01-r22c20": {
+   "road_m_near_change": 788,
+   "road_m_total": 1924
+  },
+  "jequetepeque-01-r22c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "jequetepeque-01-r22c28": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  }
+ }
+}

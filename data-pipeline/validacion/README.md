@@ -88,13 +88,22 @@ par. `WOMBAT_CONTRACTS_DIR` permite validar contra otro `contracts/v1` sin cambi
 `make_exclude.py --water-raster` toma el agua permanente de otra fuente (p. ej. OPERA de antes
 del evento) en lugar del umbral de brillo, que en desiertos marca arena seca como agua.
 
+`validate_opera.py` deja en `unavailable` las celdas donde OPERA cubre menos de la mitad con dato
+válido en las dos fechas (sin dato, HAND o layover/sombra). Una pasada de Sentinel-1 puede aparecer
+en la búsqueda y no cubrir el recuadro: hay que revisar la línea "Cobertura OPERA válida".
+
+`resultados/peru-fuentes-nasa/ciudades/` tiene Huaraz, Tumbes, Piura y Jequetepeque con el mismo
+contenido que el par completo de Tailandia: cambio NISAR, OPERA y vías por celda, y `manifest.json`
+y `cells.geojson` que cumplen el contrato v1.1.0. Las vías de esos AOI están en
+`data-pipeline/inputs/<aoi>/`.
+
 ## Límites
 
 - **Dos cambios de método respecto al §6 del plan**, sin aprobar aún: el promediado a 100 m y la
   máscara de exclusión. Si se adoptan, hay que declararlos en la pantalla Método (R3, R13); hoy
   el contrato no tiene un campo para llevar esos parámetros en el bundle.
-- **Fuera de EPSG:32717 no hay bundle**: el contrato v1 fija esa zona. Tailandia (EPSG:32647) es
-  solo validación.
+- **Otras zonas UTM**: el contrato v1.1.0 admite cualquiera (Tailandia en EPSG:32647, Huaraz en
+  EPSG:32718). Lo de `resultados/` sigue siendo evidencia sin firmar; el bundle lo arma y firma Rust.
 - **`--exploratory`** (02, 03, 06) procesa un par no comparable solo para análisis: el manifest
   queda con `comparable: false` y nunca se arma bundle.
 - `02_subset.py` leyó escenas reales de frecuencia A, 10 y 20 m, en cuatro zonas. No se probó

@@ -1,0 +1,65 @@
+{
+  "aoi_id": "huaraz-01",
+  "aoi_name": "Huaraz, Ancash (sierra)",
+  "data_origin": "nisar_real",
+  "crs_compute": "EPSG:32718",
+  "bbox_wgs84": [
+    -77.605667,
+    -9.607574,
+    -77.468056,
+    -9.462005
+  ],
+  "nisar": {
+    "product": "NISAR_L2_GCOV",
+    "maturity": "PROVISIONAL",
+    "frame": "093",
+    "orbit_direction": "descending",
+    "mode": "4005",
+    "frequency": "A",
+    "polarization": "HHHH",
+    "pixel_spacing_m": 10,
+    "t1": {
+      "granule": "NISAR_L2_PR_GCOV_032_083_D_093_4005_DHDH_A_20261005T232445_20261005T232520_P05023_N_F_J_001",
+      "datetime": "2026-10-05T23:24:45Z"
+    },
+    "t2": {
+      "granule": "NISAR_L2_PR_GCOV_033_083_D_093_4005_DHDH_A_20261017T232445_20261017T232520_P05023_N_F_J_001",
+      "datetime": "2026-10-17T23:24:45Z"
+    },
+    "comparable": true,
+    "comparable_checks": {
+      "same_frame": true,
+      "same_orbit_direction": true,
+      "same_mode": true,
+      "same_frequency": true,
+      "same_polarization": true,
+      "same_maturity": true
+    }
+  },
+  "opera": {
+    "product": "OPERA_L3_DSWx-S1",
+    "derived_from": "Sentinel-1",
+    "status": "available",
+    "t1": {
+      "granules": [
+        "OPERA_L3_DSWx-S1_T18LTQ_20261004T233340Z_20261005T050730Z_S1C_30_v1.0"
+      ],
+      "gap_days": 1
+    },
+    "t2": {
+      "granules": [
+        "OPERA_L3_DSWx-S1_T18LTQ_20261016T233339Z_20261017T035612Z_S1C_30_v1.0"
+      ],
+      "gap_days": 1
+    }
+  },
+  "pipeline": {
+    "commit": "b9782df",
+    "risk_config_version": "risk-config/0.1"
+  },
+  "osm": {
+    "query": "[out:json][timeout:180];way[\"highway\"](-9.61,-77.61,-9.46,-77.46);out geom; filtrado a clases de red vial (sin service, footway, path, steps, construction)",
+    "retrieved_at": "2026-11-15T05:53:02Z",
+    "attribution": "© OpenStreetMap contributors"
+  }
+}

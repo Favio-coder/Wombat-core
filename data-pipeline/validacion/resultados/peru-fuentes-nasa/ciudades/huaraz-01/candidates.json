@@ -1,0 +1,99 @@
+{
+  "query": {
+    "dataset": "NISAR",
+    "processingLevel": "GCOV",
+    "dataMaturity": "ALL",
+    "bbox_wgs84": [
+      -77.6,
+      -9.62,
+      -77.45,
+      -9.45
+    ],
+    "start": "2026-10-01",
+    "end": "2026-11-20",
+    "event": "2026-11-02"
+  },
+  "retrieved_at": "2026-11-15T05:06:26Z",
+  "candidates": [
+    {
+      "granule": "NISAR_L2_PR_GCOV_032_083_D_093_4005_DHDH_A_20261005T232445_20261005T232520_P05023_N_F_J_001",
+      "datetime": "2026-10-05T23:24:45Z",
+      "cycle": "032",
+      "track": "083",
+      "frame": "093",
+      "orbit_direction": "descending",
+      "mode": "4005",
+      "pol_code": "DHDH",
+      "maturity": "PROVISIONAL",
+      "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_PROVISIONAL_V1/NISAR_L2_PR_GCOV_032_083_D_093_4005_DHDH_A_20261005T232445_20261005T232520_P05023_N_F_J_001/NISAR_L2_PR_GCOV_032_083_D_093_4005_DHDH_A_20261005T232445_20261005T232520_P05023_N_F_J_001.h5",
+      "covers_bbox": 1.0
+    },
+    {
+      "granule": "NISAR_L2_PR_GCOV_033_003_A_173_4005_DHDH_A_20261012T105932_20261012T110008_P05023_N_F_J_001",
+      "datetime": "2026-10-12T10:59:32Z",
+      "cycle": "033",
+      "track": "003",
+      "frame": "173",
+      "orbit_direction": "ascending",
+      "mode": "4005",
+      "pol_code": "DHDH",
+      "maturity": "PROVISIONAL",
+      "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_PROVISIONAL_V1/NISAR_L2_PR_GCOV_033_003_A_173_4005_DHDH_A_20261012T105932_20261012T110008_P05023_N_F_J_001/NISAR_L2_PR_GCOV_033_003_A_173_4005_DHDH_A_20261012T105932_20261012T110008_P05023_N_F_J_001.h5",
+      "covers_bbox": 1.0
+    },
+    {
+      "granule": "NISAR_L2_PR_GCOV_033_083_D_093_4005_DHDH_A_20261017T232445_20261017T232520_P05023_N_F_J_001",
+      "datetime": "2026-10-17T23:24:45Z",
+      "cycle": "033",
+      "track": "083",
+      "frame": "093",
+      "orbit_direction": "descending",
+      "mode": "4005",
+      "pol_code": "DHDH",
+      "maturity": "PROVISIONAL",
+      "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_PROVISIONAL_V1/NISAR_L2_PR_GCOV_033_083_D_093_4005_DHDH_A_20261017T232445_20261017T232520_P05023_N_F_J_001/NISAR_L2_PR_GCOV_033_083_D_093_4005_DHDH_A_20261017T232445_20261017T232520_P05023_N_F_J_001.h5",
+      "covers_bbox": 1.0
+    },
+    {
+      "granule": "NISAR_L2_PR_GCOV_034_003_A_173_4005_DHDH_A_20261024T105932_20261024T110008_P05036_N_F_J_001",
+      "datetime": "2026-10-24T10:59:32Z",
+      "cycle": "034",
+      "track": "003",
+      "frame": "173",
+      "orbit_direction": "ascending",
+      "mode": "4005",
+      "pol_code": "DHDH",
+      "maturity": "VALIDATED",
+      "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_V1/NISAR_L2_PR_GCOV_034_003_A_173_4005_DHDH_A_20261024T105932_20261024T110008_P05036_N_F_J_001/NISAR_L2_PR_GCOV_034_003_A_173_4005_DHDH_A_20261024T105932_20261024T110008_P05036_N_F_J_001.h5",
+      "covers_bbox": 1.0
+    },
+    {
+      "granule": "NISAR_L2_PR_GCOV_034_083_D_093_4005_DHDH_A_20261029T232446_20261029T232520_P05036_N_F_J_001",
+      "datetime": "2026-10-29T23:24:46Z",
+      "cycle": "034",
+      "track": "083",
+      "frame": "093",
+      "orbit_direction": "descending",
+      "mode": "4005",
+      "pol_code": "DHDH",
+      "maturity": "VALIDATED",
+      "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_V1/NISAR_L2_PR_GCOV_034_083_D_093_4005_DHDH_A_20261029T232446_20261029T232520_P05036_N_F_J_001/NISAR_L2_PR_GCOV_034_083_D_093_4005_DHDH_A_20261029T232446_20261029T232520_P05036_N_F_J_001.h5",
+      "covers_bbox": 1.0
+    }
+  ],
+  "pairs": [],
+  "consecutive_pairs": [
+    {
+      "track": "083",
+      "frame": "093",
+      "mode": "4005",
+      "pol_code": "DHDH",
+      "maturity": "PROVISIONAL",
+      "t1": "NISAR_L2_PR_GCOV_032_083_D_093_4005_DHDH_A_20261005T232445_20261005T232520_P05023_N_F_J_001",
+      "t1_datetime": "2026-10-05T23:24:45Z",
+      "t2": "NISAR_L2_PR_GCOV_033_083_D_093_4005_DHDH_A_20261017T232445_20261017T232520_P05023_N_F_J_001",
+      "t2_datetime": "2026-10-17T23:24:45Z"
+    }
+  ],
+  "skipped": []
+}

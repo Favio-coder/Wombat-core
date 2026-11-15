@@ -1,0 +1,189 @@
+{
+ "Ancash - Huarmey (control de la pista 083)": {
+  "bbox": [
+   -78.22,
+   -10.12,
+   -78.08,
+   -9.99
+  ],
+  "track": "083",
+  "frame": "094",
+  "mode": "4005",
+  "scenes": [
+   {
+    "date": "2026-08-18",
+    "utc": "23:25",
+    "maturity": "PROVISIONAL",
+    "granule": "NISAR_L2_PR_GCOV_028_083_D_094_4005_DHDH_A_20260818T232519_20260818T232525_P05023_N_P_J_001",
+    "epsg": 32718,
+    "pixel_m": 10.0,
+    "coverage": 1.0,
+    "valid_fraction": 1.0,
+    "mean_db": -11.18,
+    "median_db": -15.96,
+    "p10_db": -20.73,
+    "p90_db": -9.01,
+    "looks_median": 4.1
+   },
+   {
+    "date": "2026-08-30",
+    "utc": "23:25",
+    "maturity": "PROVISIONAL",
+    "granule": "NISAR_L2_PR_GCOV_029_083_D_094_4005_DHDH_A_20260830T232519_20260830T232524_P05023_N_P_J_001",
+    "epsg": 32718,
+    "pixel_m": 10.0,
+    "coverage": 1.0,
+    "valid_fraction": 1.0,
+    "mean_db": -11.29,
+    "median_db": -16.27,
+    "p10_db": -20.94,
+    "p90_db": -8.93,
+    "looks_median": 4.1
+   },
+   {
+    "date": "2026-09-11",
+    "utc": "23:25",
+    "maturity": "PROVISIONAL",
+    "granule": "NISAR_L2_PR_GCOV_030_083_D_094_4005_DHDH_A_20260911T232519_20260911T232524_P05023_N_P_J_001",
+    "epsg": 32718,
+    "pixel_m": 10.0,
+    "coverage": 1.0,
+    "valid_fraction": 1.0,
+    "mean_db": -11.2,
+    "median_db": -16.22,
+    "p10_db": -20.85,
+    "p90_db": -8.85,
+    "looks_median": 4.1
+   },
+   {
+    "date": "2026-09-23",
+    "utc": "23:25",
+    "maturity": "PROVISIONAL",
+    "granule": "NISAR_L2_PR_GCOV_031_083_D_094_4005_DHDH_A_20260923T232519_20260923T232524_P05023_N_P_J_001",
+    "epsg": 32718,
+    "pixel_m": 10.0,
+    "coverage": 1.0,
+    "valid_fraction": 1.0,
+    "mean_db": -11.4,
+    "median_db": -16.4,
+    "p10_db": -21.02,
+    "p90_db": -9.02,
+    "looks_median": 4.1
+   },
+   {
+    "date": "2026-10-05",
+    "utc": "23:25",
+    "maturity": "PROVISIONAL",
+    "granule": "NISAR_L2_PR_GCOV_032_083_D_094_4005_DHDH_A_20261005T232519_20261005T232525_P05023_N_P_J_001",
+    "epsg": 32718,
+    "pixel_m": 10.0,
+    "coverage": 1.0,
+    "valid_fraction": 1.0,
+    "mean_db": -11.45,
+    "median_db": -16.38,
+    "p10_db": -21.06,
+    "p90_db": -9.04,
+    "looks_median": 4.1
+   },
+   {
+    "date": "2026-10-17",
+    "utc": "23:25",
+    "maturity": "PROVISIONAL",
+    "granule": "NISAR_L2_PR_GCOV_033_083_D_094_4005_DHDH_A_20261017T232519_20261017T232525_P05023_N_P_J_001",
+    "epsg": 32718,
+    "pixel_m": 10.0,
+    "coverage": 1.0,
+    "valid_fraction": 1.0,
+    "mean_db": -11.25,
+    "median_db": -16.28,
+    "p10_db": -20.97,
+    "p90_db": -8.92,
+    "looks_median": 4.1
+   },
+   {
+    "date": "2026-10-29",
+    "utc": "23:25",
+    "maturity": "VALIDATED",
+    "granule": "NISAR_L2_PR_GCOV_034_083_D_094_4005_DHDH_A_20261029T232519_20261029T232525_P05036_N_P_J_001",
+    "epsg": 32718,
+    "pixel_m": 10.0,
+    "coverage": 1.0,
+    "valid_fraction": 1.0,
+    "mean_db": -11.71,
+    "median_db": -16.8,
+    "p10_db": -21.47,
+    "p90_db": -9.38,
+    "looks_median": 4.1
+   }
+  ],
+  "changes": [
+   {
+    "t1": "2026-08-18",
+    "t2": "2026-08-30",
+    "same_maturity": true,
+    "maturity": "PROV->PROV",
+    "median_db": -0.13,
+    "std_db": 0.78,
+    "decrease_fraction": 0.0045,
+    "increase_fraction": 0.0018,
+    "blocks": 27200
+   },
+   {
+    "t1": "2026-08-30",
+    "t2": "2026-09-11",
+    "same_maturity": true,
+    "maturity": "PROV->PROV",
+    "median_db": 0.05,
+    "std_db": 0.61,
+    "decrease_fraction": 0.0008,
+    "increase_fraction": 0.0015,
+    "blocks": 27200
+   },
+   {
+    "t1": "2026-09-11",
+    "t2": "2026-09-23",
+    "same_maturity": true,
+    "maturity": "PROV->PROV",
+    "median_db": -0.15,
+    "std_db": 0.58,
+    "decrease_fraction": 0.0011,
+    "increase_fraction": 0.001,
+    "blocks": 27200
+   },
+   {
+    "t1": "2026-09-23",
+    "t2": "2026-10-05",
+    "same_maturity": true,
+    "maturity": "PROV->PROV",
+    "median_db": -0.02,
+    "std_db": 0.6,
+    "decrease_fraction": 0.0013,
+    "increase_fraction": 0.0008,
+    "blocks": 27200
+   },
+   {
+    "t1": "2026-10-05",
+    "t2": "2026-10-17",
+    "same_maturity": true,
+    "maturity": "PROV->PROV",
+    "median_db": 0.14,
+    "std_db": 0.69,
+    "decrease_fraction": 0.0011,
+    "increase_fraction": 0.0021,
+    "blocks": 27200
+   },
+   {
+    "t1": "2026-10-17",
+    "t2": "2026-10-29",
+    "same_maturity": false,
+    "maturity": "PROV->VALI",
+    "median_db": -0.49,
+    "std_db": 0.67,
+    "decrease_fraction": 0.0024,
+    "increase_fraction": 0.001,
+    "blocks": 27200
+   }
+  ],
+  "done": true
+ }
+}

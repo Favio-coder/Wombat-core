@@ -1,0 +1,2003 @@
+{
+ "product": "OPERA_L3_DSWx-S1",
+ "derived_from": "Sentinel-1",
+ "t1": {
+  "granules": [
+   "OPERA_L3_DSWx-S1_T17MNR_20261006T110105Z_20261008T191502Z_S1C_30_v1.0",
+   "OPERA_L3_DSWx-S1_T17MNS_20261006T110034Z_20261008T192550Z_S1C_30_v1.0"
+  ],
+  "gap_days": 1
+ },
+ "t2": {
+  "granules": [
+   "OPERA_L3_DSWx-S1_T17MNR_20261018T110104Z_20261018T165837Z_S1C_30_v1.0",
+   "OPERA_L3_DSWx-S1_T17MNS_20261018T110034Z_20261018T155727Z_S1C_30_v1.0"
+  ],
+  "gap_days": 1
+ },
+ "stats": {
+  "nisar_changed_fraction": 0.0038,
+  "opera_new_water_fraction": 0.0066,
+  "of_nisar_changed_is_opera_new_water": 0.0182,
+  "of_nisar_changed_is_opera_water_at_t2": 0.0696,
+  "of_opera_new_water_is_nisar_changed": 0.0104,
+  "of_nisar_unchanged_is_opera_new_water": 0.0066,
+  "opera_valid_fraction": 1.0,
+  "cells_without_opera": 0
+ },
+ "within_max_gap": true,
+ "cells": {
+  "tumbes-01-r00c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0417
+  },
+  "tumbes-01-r00c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r00c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r01c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r01c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r01c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r01c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r01c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r01c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r01c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r01c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r01c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r01c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r01c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r01c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r01c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.04
+  },
+  "tumbes-01-r01c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2381
+  },
+  "tumbes-01-r01c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1754
+  },
+  "tumbes-01-r01c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1333
+  },
+  "tumbes-01-r01c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1667
+  },
+  "tumbes-01-r02c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0465
+  },
+  "tumbes-01-r02c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r02c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0476
+  },
+  "tumbes-01-r03c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0417
+  },
+  "tumbes-01-r03c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r03c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0495
+  },
+  "tumbes-01-r04c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.025
+  },
+  "tumbes-01-r04c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r04c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r05c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r06c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0333
+  },
+  "tumbes-01-r07c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r07c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r08c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r09c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r10c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r11c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r12c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r13c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r14c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r15c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r16c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r17c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r18c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r19c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r20c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r21c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r22c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r23c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r24c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r25c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r26c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r27c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tumbes-01-r28c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  }
+ }
+}

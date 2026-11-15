@@ -1,0 +1,969 @@
+{
+ "method": "vias recortadas a cada celda en el CRS de la grilla; near_change = interseccion con los pixeles changed==1 dilatados road_buffer_meters",
+ "road_buffer_meters": 250,
+ "crs_compute": "EPSG:32718",
+ "roads": "roads.geojson",
+ "changed": "changed.tif",
+ "cells": {
+  "huaraz-01-r00c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r00c01": {
+   "road_m_near_change": 1578,
+   "road_m_total": 1578
+  },
+  "huaraz-01-r00c02": {
+   "road_m_near_change": 3767,
+   "road_m_total": 3910
+  },
+  "huaraz-01-r00c03": {
+   "road_m_near_change": 2800,
+   "road_m_total": 2800
+  },
+  "huaraz-01-r00c04": {
+   "road_m_near_change": 1987,
+   "road_m_total": 1987
+  },
+  "huaraz-01-r00c05": {
+   "road_m_near_change": 45,
+   "road_m_total": 45
+  },
+  "huaraz-01-r00c06": {
+   "road_m_near_change": 1658,
+   "road_m_total": 1658
+  },
+  "huaraz-01-r00c07": {
+   "road_m_near_change": 2437,
+   "road_m_total": 2437
+  },
+  "huaraz-01-r00c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r00c09": {
+   "road_m_near_change": 241,
+   "road_m_total": 241
+  },
+  "huaraz-01-r00c10": {
+   "road_m_near_change": 934,
+   "road_m_total": 934
+  },
+  "huaraz-01-r00c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r00c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r00c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r00c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r01c00": {
+   "road_m_near_change": 1148,
+   "road_m_total": 1148
+  },
+  "huaraz-01-r01c01": {
+   "road_m_near_change": 2333,
+   "road_m_total": 2333
+  },
+  "huaraz-01-r01c02": {
+   "road_m_near_change": 3752,
+   "road_m_total": 3752
+  },
+  "huaraz-01-r01c03": {
+   "road_m_near_change": 987,
+   "road_m_total": 987
+  },
+  "huaraz-01-r01c04": {
+   "road_m_near_change": 458,
+   "road_m_total": 458
+  },
+  "huaraz-01-r01c05": {
+   "road_m_near_change": 3436,
+   "road_m_total": 3436
+  },
+  "huaraz-01-r01c06": {
+   "road_m_near_change": 3920,
+   "road_m_total": 3943
+  },
+  "huaraz-01-r01c07": {
+   "road_m_near_change": 3469,
+   "road_m_total": 3469
+  },
+  "huaraz-01-r01c08": {
+   "road_m_near_change": 824,
+   "road_m_total": 824
+  },
+  "huaraz-01-r01c09": {
+   "road_m_near_change": 1402,
+   "road_m_total": 1402
+  },
+  "huaraz-01-r01c10": {
+   "road_m_near_change": 1482,
+   "road_m_total": 1482
+  },
+  "huaraz-01-r01c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r01c12": {
+   "road_m_near_change": 345,
+   "road_m_total": 345
+  },
+  "huaraz-01-r01c13": {
+   "road_m_near_change": 528,
+   "road_m_total": 528
+  },
+  "huaraz-01-r01c14": {
+   "road_m_near_change": 207,
+   "road_m_total": 207
+  },
+  "huaraz-01-r02c00": {
+   "road_m_near_change": 963,
+   "road_m_total": 963
+  },
+  "huaraz-01-r02c01": {
+   "road_m_near_change": 3037,
+   "road_m_total": 3037
+  },
+  "huaraz-01-r02c02": {
+   "road_m_near_change": 3166,
+   "road_m_total": 3166
+  },
+  "huaraz-01-r02c03": {
+   "road_m_near_change": 1888,
+   "road_m_total": 1888
+  },
+  "huaraz-01-r02c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r02c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r02c06": {
+   "road_m_near_change": 1975,
+   "road_m_total": 1975
+  },
+  "huaraz-01-r02c07": {
+   "road_m_near_change": 4754,
+   "road_m_total": 4754
+  },
+  "huaraz-01-r02c08": {
+   "road_m_near_change": 440,
+   "road_m_total": 440
+  },
+  "huaraz-01-r02c09": {
+   "road_m_near_change": 1966,
+   "road_m_total": 1966
+  },
+  "huaraz-01-r02c10": {
+   "road_m_near_change": 3259,
+   "road_m_total": 3259
+  },
+  "huaraz-01-r02c11": {
+   "road_m_near_change": 2996,
+   "road_m_total": 2996
+  },
+  "huaraz-01-r02c12": {
+   "road_m_near_change": 1951,
+   "road_m_total": 1951
+  },
+  "huaraz-01-r02c13": {
+   "road_m_near_change": 1991,
+   "road_m_total": 1991
+  },
+  "huaraz-01-r02c14": {
+   "road_m_near_change": 1454,
+   "road_m_total": 1454
+  },
+  "huaraz-01-r03c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r03c01": {
+   "road_m_near_change": 388,
+   "road_m_total": 388
+  },
+  "huaraz-01-r03c02": {
+   "road_m_near_change": 4501,
+   "road_m_total": 4501
+  },
+  "huaraz-01-r03c03": {
+   "road_m_near_change": 3724,
+   "road_m_total": 3724
+  },
+  "huaraz-01-r03c04": {
+   "road_m_near_change": 3000,
+   "road_m_total": 3000
+  },
+  "huaraz-01-r03c05": {
+   "road_m_near_change": 3035,
+   "road_m_total": 3035
+  },
+  "huaraz-01-r03c06": {
+   "road_m_near_change": 851,
+   "road_m_total": 1176
+  },
+  "huaraz-01-r03c07": {
+   "road_m_near_change": 6632,
+   "road_m_total": 9427
+  },
+  "huaraz-01-r03c08": {
+   "road_m_near_change": 3689,
+   "road_m_total": 3696
+  },
+  "huaraz-01-r03c09": {
+   "road_m_near_change": 3262,
+   "road_m_total": 3282
+  },
+  "huaraz-01-r03c10": {
+   "road_m_near_change": 2363,
+   "road_m_total": 2363
+  },
+  "huaraz-01-r03c11": {
+   "road_m_near_change": 1957,
+   "road_m_total": 1957
+  },
+  "huaraz-01-r03c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r03c13": {
+   "road_m_near_change": 2342,
+   "road_m_total": 2342
+  },
+  "huaraz-01-r03c14": {
+   "road_m_near_change": 1415,
+   "road_m_total": 1415
+  },
+  "huaraz-01-r04c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r04c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r04c02": {
+   "road_m_near_change": 2537,
+   "road_m_total": 2537
+  },
+  "huaraz-01-r04c03": {
+   "road_m_near_change": 1834,
+   "road_m_total": 1834
+  },
+  "huaraz-01-r04c04": {
+   "road_m_near_change": 2484,
+   "road_m_total": 2484
+  },
+  "huaraz-01-r04c05": {
+   "road_m_near_change": 771,
+   "road_m_total": 771
+  },
+  "huaraz-01-r04c06": {
+   "road_m_near_change": 1521,
+   "road_m_total": 1521
+  },
+  "huaraz-01-r04c07": {
+   "road_m_near_change": 9810,
+   "road_m_total": 9987
+  },
+  "huaraz-01-r04c08": {
+   "road_m_near_change": 7521,
+   "road_m_total": 7521
+  },
+  "huaraz-01-r04c09": {
+   "road_m_near_change": 7220,
+   "road_m_total": 7220
+  },
+  "huaraz-01-r04c10": {
+   "road_m_near_change": 5938,
+   "road_m_total": 5938
+  },
+  "huaraz-01-r04c11": {
+   "road_m_near_change": 3001,
+   "road_m_total": 3001
+  },
+  "huaraz-01-r04c12": {
+   "road_m_near_change": 2184,
+   "road_m_total": 2184
+  },
+  "huaraz-01-r04c13": {
+   "road_m_near_change": 622,
+   "road_m_total": 622
+  },
+  "huaraz-01-r04c14": {
+   "road_m_near_change": 1655,
+   "road_m_total": 1655
+  },
+  "huaraz-01-r05c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r05c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r05c02": {
+   "road_m_near_change": 2671,
+   "road_m_total": 2671
+  },
+  "huaraz-01-r05c03": {
+   "road_m_near_change": 652,
+   "road_m_total": 652
+  },
+  "huaraz-01-r05c04": {
+   "road_m_near_change": 2269,
+   "road_m_total": 2269
+  },
+  "huaraz-01-r05c05": {
+   "road_m_near_change": 5361,
+   "road_m_total": 5361
+  },
+  "huaraz-01-r05c06": {
+   "road_m_near_change": 3788,
+   "road_m_total": 3788
+  },
+  "huaraz-01-r05c07": {
+   "road_m_near_change": 7970,
+   "road_m_total": 8991
+  },
+  "huaraz-01-r05c08": {
+   "road_m_near_change": 14937,
+   "road_m_total": 16711
+  },
+  "huaraz-01-r05c09": {
+   "road_m_near_change": 11351,
+   "road_m_total": 11351
+  },
+  "huaraz-01-r05c10": {
+   "road_m_near_change": 7749,
+   "road_m_total": 7749
+  },
+  "huaraz-01-r05c11": {
+   "road_m_near_change": 4204,
+   "road_m_total": 4204
+  },
+  "huaraz-01-r05c12": {
+   "road_m_near_change": 2623,
+   "road_m_total": 2623
+  },
+  "huaraz-01-r05c13": {
+   "road_m_near_change": 1975,
+   "road_m_total": 1975
+  },
+  "huaraz-01-r05c14": {
+   "road_m_near_change": 6398,
+   "road_m_total": 6457
+  },
+  "huaraz-01-r06c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r06c01": {
+   "road_m_near_change": 2188,
+   "road_m_total": 2188
+  },
+  "huaraz-01-r06c02": {
+   "road_m_near_change": 1194,
+   "road_m_total": 1194
+  },
+  "huaraz-01-r06c03": {
+   "road_m_near_change": 915,
+   "road_m_total": 915
+  },
+  "huaraz-01-r06c04": {
+   "road_m_near_change": 432,
+   "road_m_total": 432
+  },
+  "huaraz-01-r06c05": {
+   "road_m_near_change": 4237,
+   "road_m_total": 4237
+  },
+  "huaraz-01-r06c06": {
+   "road_m_near_change": 6106,
+   "road_m_total": 6113
+  },
+  "huaraz-01-r06c07": {
+   "road_m_near_change": 8562,
+   "road_m_total": 11505
+  },
+  "huaraz-01-r06c08": {
+   "road_m_near_change": 14568,
+   "road_m_total": 22618
+  },
+  "huaraz-01-r06c09": {
+   "road_m_near_change": 10921,
+   "road_m_total": 13761
+  },
+  "huaraz-01-r06c10": {
+   "road_m_near_change": 4950,
+   "road_m_total": 4950
+  },
+  "huaraz-01-r06c11": {
+   "road_m_near_change": 4053,
+   "road_m_total": 4053
+  },
+  "huaraz-01-r06c12": {
+   "road_m_near_change": 4059,
+   "road_m_total": 4059
+  },
+  "huaraz-01-r06c13": {
+   "road_m_near_change": 3355,
+   "road_m_total": 3355
+  },
+  "huaraz-01-r06c14": {
+   "road_m_near_change": 844,
+   "road_m_total": 855
+  },
+  "huaraz-01-r07c00": {
+   "road_m_near_change": 2263,
+   "road_m_total": 2263
+  },
+  "huaraz-01-r07c01": {
+   "road_m_near_change": 472,
+   "road_m_total": 472
+  },
+  "huaraz-01-r07c02": {
+   "road_m_near_change": 2003,
+   "road_m_total": 2003
+  },
+  "huaraz-01-r07c03": {
+   "road_m_near_change": 855,
+   "road_m_total": 855
+  },
+  "huaraz-01-r07c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r07c05": {
+   "road_m_near_change": 2901,
+   "road_m_total": 2901
+  },
+  "huaraz-01-r07c06": {
+   "road_m_near_change": 3700,
+   "road_m_total": 3700
+  },
+  "huaraz-01-r07c07": {
+   "road_m_near_change": 7548,
+   "road_m_total": 9097
+  },
+  "huaraz-01-r07c08": {
+   "road_m_near_change": 11011,
+   "road_m_total": 25360
+  },
+  "huaraz-01-r07c09": {
+   "road_m_near_change": 10107,
+   "road_m_total": 17024
+  },
+  "huaraz-01-r07c10": {
+   "road_m_near_change": 4491,
+   "road_m_total": 4491
+  },
+  "huaraz-01-r07c11": {
+   "road_m_near_change": 2466,
+   "road_m_total": 2466
+  },
+  "huaraz-01-r07c12": {
+   "road_m_near_change": 276,
+   "road_m_total": 276
+  },
+  "huaraz-01-r07c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r07c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r08c00": {
+   "road_m_near_change": 1186,
+   "road_m_total": 1186
+  },
+  "huaraz-01-r08c01": {
+   "road_m_near_change": 282,
+   "road_m_total": 282
+  },
+  "huaraz-01-r08c02": {
+   "road_m_near_change": 4954,
+   "road_m_total": 4954
+  },
+  "huaraz-01-r08c03": {
+   "road_m_near_change": 1687,
+   "road_m_total": 1687
+  },
+  "huaraz-01-r08c04": {
+   "road_m_near_change": 1646,
+   "road_m_total": 1646
+  },
+  "huaraz-01-r08c05": {
+   "road_m_near_change": 4830,
+   "road_m_total": 4830
+  },
+  "huaraz-01-r08c06": {
+   "road_m_near_change": 3319,
+   "road_m_total": 3319
+  },
+  "huaraz-01-r08c07": {
+   "road_m_near_change": 4781,
+   "road_m_total": 4781
+  },
+  "huaraz-01-r08c08": {
+   "road_m_near_change": 20017,
+   "road_m_total": 24088
+  },
+  "huaraz-01-r08c09": {
+   "road_m_near_change": 10894,
+   "road_m_total": 14523
+  },
+  "huaraz-01-r08c10": {
+   "road_m_near_change": 2537,
+   "road_m_total": 2537
+  },
+  "huaraz-01-r08c11": {
+   "road_m_near_change": 135,
+   "road_m_total": 135
+  },
+  "huaraz-01-r08c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r08c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r08c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r09c00": {
+   "road_m_near_change": 2386,
+   "road_m_total": 2386
+  },
+  "huaraz-01-r09c01": {
+   "road_m_near_change": 1520,
+   "road_m_total": 1520
+  },
+  "huaraz-01-r09c02": {
+   "road_m_near_change": 3021,
+   "road_m_total": 3021
+  },
+  "huaraz-01-r09c03": {
+   "road_m_near_change": 2597,
+   "road_m_total": 2597
+  },
+  "huaraz-01-r09c04": {
+   "road_m_near_change": 1346,
+   "road_m_total": 1346
+  },
+  "huaraz-01-r09c05": {
+   "road_m_near_change": 1573,
+   "road_m_total": 1573
+  },
+  "huaraz-01-r09c06": {
+   "road_m_near_change": 1427,
+   "road_m_total": 1427
+  },
+  "huaraz-01-r09c07": {
+   "road_m_near_change": 4886,
+   "road_m_total": 4886
+  },
+  "huaraz-01-r09c08": {
+   "road_m_near_change": 1468,
+   "road_m_total": 1468
+  },
+  "huaraz-01-r09c09": {
+   "road_m_near_change": 1109,
+   "road_m_total": 1109
+  },
+  "huaraz-01-r09c10": {
+   "road_m_near_change": 2375,
+   "road_m_total": 2375
+  },
+  "huaraz-01-r09c11": {
+   "road_m_near_change": 1936,
+   "road_m_total": 1936
+  },
+  "huaraz-01-r09c12": {
+   "road_m_near_change": 628,
+   "road_m_total": 628
+  },
+  "huaraz-01-r09c13": {
+   "road_m_near_change": 1301,
+   "road_m_total": 1301
+  },
+  "huaraz-01-r09c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r10c00": {
+   "road_m_near_change": 3410,
+   "road_m_total": 3410
+  },
+  "huaraz-01-r10c01": {
+   "road_m_near_change": 2095,
+   "road_m_total": 2095
+  },
+  "huaraz-01-r10c02": {
+   "road_m_near_change": 1418,
+   "road_m_total": 1418
+  },
+  "huaraz-01-r10c03": {
+   "road_m_near_change": 1433,
+   "road_m_total": 1433
+  },
+  "huaraz-01-r10c04": {
+   "road_m_near_change": 3273,
+   "road_m_total": 3273
+  },
+  "huaraz-01-r10c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r10c06": {
+   "road_m_near_change": 1265,
+   "road_m_total": 1265
+  },
+  "huaraz-01-r10c07": {
+   "road_m_near_change": 3286,
+   "road_m_total": 3286
+  },
+  "huaraz-01-r10c08": {
+   "road_m_near_change": 1241,
+   "road_m_total": 1241
+  },
+  "huaraz-01-r10c09": {
+   "road_m_near_change": 1893,
+   "road_m_total": 1893
+  },
+  "huaraz-01-r10c10": {
+   "road_m_near_change": 1687,
+   "road_m_total": 1687
+  },
+  "huaraz-01-r10c11": {
+   "road_m_near_change": 446,
+   "road_m_total": 446
+  },
+  "huaraz-01-r10c12": {
+   "road_m_near_change": 732,
+   "road_m_total": 732
+  },
+  "huaraz-01-r10c13": {
+   "road_m_near_change": 1987,
+   "road_m_total": 1989
+  },
+  "huaraz-01-r10c14": {
+   "road_m_near_change": 693,
+   "road_m_total": 693
+  },
+  "huaraz-01-r11c00": {
+   "road_m_near_change": 707,
+   "road_m_total": 707
+  },
+  "huaraz-01-r11c01": {
+   "road_m_near_change": 4519,
+   "road_m_total": 4519
+  },
+  "huaraz-01-r11c02": {
+   "road_m_near_change": 4488,
+   "road_m_total": 4488
+  },
+  "huaraz-01-r11c03": {
+   "road_m_near_change": 205,
+   "road_m_total": 205
+  },
+  "huaraz-01-r11c04": {
+   "road_m_near_change": 1138,
+   "road_m_total": 1138
+  },
+  "huaraz-01-r11c05": {
+   "road_m_near_change": 879,
+   "road_m_total": 879
+  },
+  "huaraz-01-r11c06": {
+   "road_m_near_change": 548,
+   "road_m_total": 548
+  },
+  "huaraz-01-r11c07": {
+   "road_m_near_change": 2774,
+   "road_m_total": 2774
+  },
+  "huaraz-01-r11c08": {
+   "road_m_near_change": 750,
+   "road_m_total": 750
+  },
+  "huaraz-01-r11c09": {
+   "road_m_near_change": 956,
+   "road_m_total": 956
+  },
+  "huaraz-01-r11c10": {
+   "road_m_near_change": 600,
+   "road_m_total": 600
+  },
+  "huaraz-01-r11c11": {
+   "road_m_near_change": 4856,
+   "road_m_total": 4856
+  },
+  "huaraz-01-r11c12": {
+   "road_m_near_change": 3371,
+   "road_m_total": 3371
+  },
+  "huaraz-01-r11c13": {
+   "road_m_near_change": 1049,
+   "road_m_total": 1049
+  },
+  "huaraz-01-r11c14": {
+   "road_m_near_change": 1408,
+   "road_m_total": 1408
+  },
+  "huaraz-01-r12c00": {
+   "road_m_near_change": 1477,
+   "road_m_total": 1477
+  },
+  "huaraz-01-r12c01": {
+   "road_m_near_change": 1828,
+   "road_m_total": 1828
+  },
+  "huaraz-01-r12c02": {
+   "road_m_near_change": 1201,
+   "road_m_total": 1201
+  },
+  "huaraz-01-r12c03": {
+   "road_m_near_change": 1280,
+   "road_m_total": 1280
+  },
+  "huaraz-01-r12c04": {
+   "road_m_near_change": 1148,
+   "road_m_total": 1148
+  },
+  "huaraz-01-r12c05": {
+   "road_m_near_change": 1458,
+   "road_m_total": 1458
+  },
+  "huaraz-01-r12c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r12c07": {
+   "road_m_near_change": 952,
+   "road_m_total": 957
+  },
+  "huaraz-01-r12c08": {
+   "road_m_near_change": 4408,
+   "road_m_total": 4420
+  },
+  "huaraz-01-r12c09": {
+   "road_m_near_change": 523,
+   "road_m_total": 523
+  },
+  "huaraz-01-r12c10": {
+   "road_m_near_change": 2738,
+   "road_m_total": 2738
+  },
+  "huaraz-01-r12c11": {
+   "road_m_near_change": 918,
+   "road_m_total": 918
+  },
+  "huaraz-01-r12c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r12c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r12c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r13c00": {
+   "road_m_near_change": 728,
+   "road_m_total": 728
+  },
+  "huaraz-01-r13c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r13c02": {
+   "road_m_near_change": 485,
+   "road_m_total": 485
+  },
+  "huaraz-01-r13c03": {
+   "road_m_near_change": 1370,
+   "road_m_total": 1370
+  },
+  "huaraz-01-r13c04": {
+   "road_m_near_change": 506,
+   "road_m_total": 506
+  },
+  "huaraz-01-r13c05": {
+   "road_m_near_change": 638,
+   "road_m_total": 638
+  },
+  "huaraz-01-r13c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r13c07": {
+   "road_m_near_change": 192,
+   "road_m_total": 192
+  },
+  "huaraz-01-r13c08": {
+   "road_m_near_change": 3245,
+   "road_m_total": 3245
+  },
+  "huaraz-01-r13c09": {
+   "road_m_near_change": 4666,
+   "road_m_total": 4666
+  },
+  "huaraz-01-r13c10": {
+   "road_m_near_change": 1757,
+   "road_m_total": 1757
+  },
+  "huaraz-01-r13c11": {
+   "road_m_near_change": 1505,
+   "road_m_total": 1505
+  },
+  "huaraz-01-r13c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r13c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r13c14": {
+   "road_m_near_change": 1051,
+   "road_m_total": 1051
+  },
+  "huaraz-01-r14c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r14c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r14c02": {
+   "road_m_near_change": 803,
+   "road_m_total": 803
+  },
+  "huaraz-01-r14c03": {
+   "road_m_near_change": 253,
+   "road_m_total": 253
+  },
+  "huaraz-01-r14c04": {
+   "road_m_near_change": 2419,
+   "road_m_total": 2419
+  },
+  "huaraz-01-r14c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r14c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r14c07": {
+   "road_m_near_change": 740,
+   "road_m_total": 740
+  },
+  "huaraz-01-r14c08": {
+   "road_m_near_change": 337,
+   "road_m_total": 337
+  },
+  "huaraz-01-r14c09": {
+   "road_m_near_change": 3206,
+   "road_m_total": 3206
+  },
+  "huaraz-01-r14c10": {
+   "road_m_near_change": 1179,
+   "road_m_total": 1179
+  },
+  "huaraz-01-r14c11": {
+   "road_m_near_change": 2822,
+   "road_m_total": 2822
+  },
+  "huaraz-01-r14c12": {
+   "road_m_near_change": 1782,
+   "road_m_total": 1782
+  },
+  "huaraz-01-r14c13": {
+   "road_m_near_change": 1370,
+   "road_m_total": 1370
+  },
+  "huaraz-01-r14c14": {
+   "road_m_near_change": 397,
+   "road_m_total": 397
+  },
+  "huaraz-01-r15c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r15c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r15c02": {
+   "road_m_near_change": 391,
+   "road_m_total": 391
+  },
+  "huaraz-01-r15c03": {
+   "road_m_near_change": 1519,
+   "road_m_total": 1519
+  },
+  "huaraz-01-r15c04": {
+   "road_m_near_change": 2424,
+   "road_m_total": 2424
+  },
+  "huaraz-01-r15c05": {
+   "road_m_near_change": 335,
+   "road_m_total": 335
+  },
+  "huaraz-01-r15c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r15c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r15c08": {
+   "road_m_near_change": 2841,
+   "road_m_total": 2841
+  },
+  "huaraz-01-r15c09": {
+   "road_m_near_change": 3207,
+   "road_m_total": 3207
+  },
+  "huaraz-01-r15c10": {
+   "road_m_near_change": 2068,
+   "road_m_total": 2068
+  },
+  "huaraz-01-r15c11": {
+   "road_m_near_change": 2853,
+   "road_m_total": 2853
+  },
+  "huaraz-01-r15c12": {
+   "road_m_near_change": 1934,
+   "road_m_total": 1934
+  },
+  "huaraz-01-r15c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "huaraz-01-r15c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  }
+ }
+}

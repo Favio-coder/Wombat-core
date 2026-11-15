@@ -1,0 +1,2699 @@
+{
+ "product": "OPERA_L3_DSWx-S1",
+ "derived_from": "Sentinel-1",
+ "t1": {
+  "granules": [
+   "OPERA_L3_DSWx-S1_T17MPM_20261025T105352Z_20261026T015425Z_S1C_30_v1.0",
+   "OPERA_L3_DSWx-S1_T17MPN_20261025T105321Z_20261025T230955Z_S1C_30_v1.0"
+  ],
+  "gap_days": 1
+ },
+ "t2": {
+  "granules": [
+   "OPERA_L3_DSWx-S1_T17MPM_20261106T105352Z_20261108T090436Z_S1C_30_v1.0",
+   "OPERA_L3_DSWx-S1_T17MPN_20261106T105322Z_20261108T072413Z_S1C_30_v1.0"
+  ],
+  "gap_days": 1
+ },
+ "stats": {
+  "nisar_changed_fraction": 0.0181,
+  "opera_new_water_fraction": 0.001,
+  "of_nisar_changed_is_opera_new_water": 0.0415,
+  "of_nisar_changed_is_opera_water_at_t2": 0.0415,
+  "of_opera_new_water_is_nisar_changed": 0.7179,
+  "of_nisar_unchanged_is_opera_new_water": 0.0003,
+  "opera_valid_fraction": 0.9944,
+  "cells_without_opera": 0
+ },
+ "within_max_gap": true,
+ "cells": {
+  "jequetepeque-01-r00c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r00c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r01c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r02c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r03c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r04c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r05c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c19": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5636
+  },
+  "jequetepeque-01-r06c20": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6151
+  },
+  "jequetepeque-01-r06c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r06c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c20": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3512
+  },
+  "jequetepeque-01-r07c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0098
+  },
+  "jequetepeque-01-r07c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r07c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.14
+  },
+  "jequetepeque-01-r08c24": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6418
+  },
+  "jequetepeque-01-r08c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r08c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r09c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r10c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r11c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r12c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r13c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r14c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r15c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c18": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2561
+  },
+  "jequetepeque-01-r16c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r16c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r17c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r18c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r19c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r20c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r21c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c24": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c25": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c26": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c27": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "jequetepeque-01-r22c28": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  }
+ }
+}

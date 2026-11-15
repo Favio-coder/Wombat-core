@@ -1,0 +1,56 @@
+{
+  "aoi_id": "huaraz-01",
+  "aoi_name": "Huaraz, Ancash (sierra)",
+  "data_origin": "nisar_real",
+  "crs_compute": "EPSG:32718",
+  "bbox_wgs84": [
+    -77.605667,
+    -9.607574,
+    -77.468056,
+    -9.462005
+  ],
+  "nisar": {
+    "product": "NISAR_L2_GCOV",
+    "maturity": "PROVISIONAL",
+    "frame": "093",
+    "orbit_direction": "descending",
+    "mode": "4005",
+    "frequency": "A",
+    "polarization": "HHHH",
+    "pixel_spacing_m": 10,
+    "t1": {
+      "granule": "NISAR_L2_PR_GCOV_030_083_D_093_4005_DHDH_A_20260911T232445_20260911T232524_P05023_N_F_J_001",
+      "datetime": "2026-09-11T23:24:45Z"
+    },
+    "t2": {
+      "granule": "NISAR_L2_PR_GCOV_031_083_D_093_4005_DHDH_A_20260923T232445_20260923T232524_P05023_N_F_J_001",
+      "datetime": "2026-09-23T23:24:45Z"
+    },
+    "comparable": true,
+    "comparable_checks": {
+      "same_frame": true,
+      "same_orbit_direction": true,
+      "same_mode": true,
+      "same_frequency": true,
+      "same_polarization": true,
+      "same_maturity": true
+    }
+  },
+  "opera": {
+    "product": "OPERA_L3_DSWx-S1",
+    "derived_from": "Sentinel-1",
+    "status": "unavailable",
+    "t1": {
+      "granules": [],
+      "gap_days": null
+    },
+    "t2": {
+      "granules": [],
+      "gap_days": null
+    }
+  },
+  "pipeline": {
+    "commit": "b9782df",
+    "risk_config_version": "risk-config/0.1"
+  }
+}

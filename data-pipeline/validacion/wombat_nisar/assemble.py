@@ -108,7 +108,7 @@ def build_cells(grid: Grid, metrics: dict, inputs: Inputs) -> tuple[dict, list[s
     elif no_roads:
         warnings.append(f"{no_roads} celdas sin fila en road_cells.json: quedan en 0")
     fc = {"type": "FeatureCollection",
-          "crs_note": "geometry en EPSG:4326 para el mapa; calculos hechos en EPSG:32717",
+          "crs_note": f"geometry en EPSG:4326 para el mapa; calculos hechos en {grid.crs}",
           "features": feats}
     return fc, warnings
 
