@@ -1,0 +1,39 @@
+{
+  "id": "sha256:01e46d48de31f8bc2925295e38a7a4c29f4656ca9a1855c272bd4efb19e82daa",
+  "signature": "4f069f99e7feb99b70f602c72405fc79153901059eeed6f5aa7b2527c5ce5f1d1135b7fe7786d55cb0d1f60f542a6e504429433064ab8cad402143d423dac304",
+  "wonb_version": "0.2",
+  "type": "action",
+  "topic": "wombat/pe/piura/tailandia-01/action",
+  "issued_at": "2026-11-15T15:17:54Z",
+  "valid_until": "2026-11-15T16:17:54Z",
+  "issuer": "ed25519:277cfe8e61989939675d9ac3412bc37f1316d0ad4cca235b1e3124a521aed8fc",
+  "parents": [
+    "sha256:a1615533248166464e2fc000592582d9148634fb9dc9a506373ead4cd8d4c4e3"
+  ],
+  "payload": {
+    "cell_id": "tailandia-01-r18c14",
+    "rank": 2,
+    "action": "field_verification_first",
+    "audience": "GORE Piura risk analyst"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "product": "NISAR_L2_GCOV",
+        "granule": "NISAR_L2_PR_GCOV_031_004_D_081_4005_DHDH_A_20260918T114712_20260918T114746_P05023_F_F_J_001/NISAR_L2_PR_GCOV_032_004_D_081_4005_DHDH_A_20260930T114712_20260930T114746_P05023_N_F_J_001",
+        "maturity": "PROVISIONAL"
+      },
+      {
+        "product": "OPERA_L3_DSWx-S1",
+        "derived_from": "Sentinel-1",
+        "granule": "OPERA_L3_DSWx-S1_T47PPR_20260919T230839Z_20261012T162941Z_S1D_30_v1.0/OPERA_L3_DSWx-S1_T47PPS_20260919T230811Z_20261012T162730Z_S1D_30_v1.0/OPERA_L3_DSWx-S1_T47PPR_20261001T230839Z_20261013T115214Z_S1D_30_v1.0/OPERA_L3_DSWx-S1_T47PPS_20261001T230811Z_20261013T114851Z_S1D_30_v1.0"
+      },
+      {
+        "product": "OpenStreetMap",
+        "retrieved_at": "2026-11-15"
+      }
+    ],
+    "method": "risk-config/0.1",
+    "code_commit": "84e55830483a155b65ed3b67927d4c0dd93c4a6e"
+  }
+}

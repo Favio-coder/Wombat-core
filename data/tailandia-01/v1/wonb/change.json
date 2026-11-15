@@ -1,0 +1,41 @@
+{
+  "id": "sha256:7d15846f4b52f44a4a05a08d36ebf46e0425381ef97315d552d5e2950903bcf7",
+  "signature": "0fd74ed48dcf98a59c127a16a4562547b2bd259e50cd882613ce7402339303f8ace087dc8f1276f2fa97e57f18efdce856fd83e12b5771ca3fe31527e429330d",
+  "wonb_version": "0.2",
+  "type": "change",
+  "topic": "wombat/pe/piura/tailandia-01/change",
+  "issued_at": "2026-11-15T15:17:54Z",
+  "valid_until": null,
+  "issuer": "ed25519:277cfe8e61989939675d9ac3412bc37f1316d0ad4cca235b1e3124a521aed8fc",
+  "parents": [],
+  "payload": {
+    "aoi_id": "tailandia-01",
+    "data_origin": "nisar_real",
+    "t1": "2026-09-18T11:47:12Z",
+    "t2": "2026-09-30T11:47:12Z",
+    "polarization": "HHHH",
+    "frequency": "A",
+    "pixel_spacing_m": 10,
+    "delta_db_threshold_cdb": 300,
+    "aoi_valid_bp": 7754,
+    "aoi_decrease_bp": 3741,
+    "aoi_increase_bp": 55,
+    "overlay_sha256": {
+      "t1.png": "c67a0a180aee33f854bbb69544274b0e52bca79f68058e17a7b27cccc05d11c7",
+      "t2.png": "67cda739bb999067eb4a437f094d5cd025be038cdde41675b50b487369e7bc54",
+      "delta.png": "2b59eb602471989f22c8653bcce1f74cbaf1f5cdea38e39e4695419ca5649e6c"
+    },
+    "cells_geojson_sha256": "d34934282399bfdc82bd52c61ab8ab69f66cfab6e227871fe49131586e1b1f19"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "product": "NISAR_L2_GCOV",
+        "granule": "NISAR_L2_PR_GCOV_031_004_D_081_4005_DHDH_A_20260918T114712_20260918T114746_P05023_F_F_J_001/NISAR_L2_PR_GCOV_032_004_D_081_4005_DHDH_A_20260930T114712_20260930T114746_P05023_N_F_J_001",
+        "maturity": "PROVISIONAL"
+      }
+    ],
+    "method": "risk-config/0.1",
+    "code_commit": "84e55830483a155b65ed3b67927d4c0dd93c4a6e"
+  }
+}

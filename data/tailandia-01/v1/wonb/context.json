@@ -1,0 +1,28 @@
+{
+  "id": "sha256:be781ff7f30d4c7ef800395bfa50d52418e4869afec088bd9da19218f46dc43a",
+  "signature": "8b0b431258b50d535e4d7138c2f149df168b239bfc0790fcefcdc721117a2221f388ddba76905a47f2104f488a16dbad0db2af2c588d15c89424363d1d0b2200",
+  "wonb_version": "0.2",
+  "type": "context",
+  "topic": "wombat/pe/piura/tailandia-01/context",
+  "issued_at": "2026-11-15T15:17:54Z",
+  "valid_until": null,
+  "issuer": "ed25519:277cfe8e61989939675d9ac3412bc37f1316d0ad4cca235b1e3124a521aed8fc",
+  "parents": [],
+  "payload": {
+    "aoi_id": "tailandia-01",
+    "roads_total_m": 2082247,
+    "road_buffer_m": 250,
+    "osm_retrieved_at": "2026-11-15T04:59:09Z",
+    "roads_geojson_sha256": "47d3ed44704879faeceecbe3b22d0ff257d227751d8e088c4bdfdf7be57e3706"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "product": "OpenStreetMap",
+        "retrieved_at": "2026-11-15"
+      }
+    ],
+    "method": "risk-config/0.1",
+    "code_commit": "84e55830483a155b65ed3b67927d4c0dd93c4a6e"
+  }
+}

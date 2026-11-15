@@ -1,0 +1,61 @@
+{
+  "id": "sha256:7810339e7e417646c5e40714cdeaf0f3092cfdd5214a9690dea2c96a8b796202",
+  "signature": "047ec77c7733c7276ccc3059fc582696a23f3545a7dc809fbbd17ec95f9b2840be9a6894f759d4efcabcf5ed0f7823c780c735926da848b02bb50cd000c0c60c",
+  "wonb_version": "0.2",
+  "type": "risk",
+  "topic": "wombat/pe/piura/tailandia-01/risk",
+  "issued_at": "2026-11-15T15:17:54Z",
+  "valid_until": "2026-11-16T15:17:54Z",
+  "issuer": "ed25519:277cfe8e61989939675d9ac3412bc37f1316d0ad4cca235b1e3124a521aed8fc",
+  "parents": [
+    "sha256:7d15846f4b52f44a4a05a08d36ebf46e0425381ef97315d552d5e2950903bcf7",
+    "sha256:be781ff7f30d4c7ef800395bfa50d52418e4869afec088bd9da19218f46dc43a"
+  ],
+  "payload": {
+    "cell_id": "tailandia-01-r09c09",
+    "status": "review_high",
+    "rank": 161,
+    "score_bp": 7136,
+    "components_bp": {
+      "change": 10000,
+      "opera": 6166,
+      "road": 2389
+    },
+    "metrics": {
+      "valid_bp": 9900,
+      "decrease_bp": 7172,
+      "increase_bp": 0,
+      "changed_bp": 7172,
+      "p90_abs_delta_cdb": 699,
+      "opera_status": "corroborated",
+      "opera_overlap_bp": 6166,
+      "road_m_near_change": 2585,
+      "road_m_total": 2585
+    },
+    "explanation": [
+      "72% of valid pixels decreased ≥3 dB; 0% increased ≥3 dB.",
+      "OPERA DSWx-S1 (Sentinel-1) shows new water on 62% of changed area (threshold 20%).",
+      "2.6 km of road lie within 250 m of changed pixels."
+    ]
+  },
+  "provenance": {
+    "sources": [
+      {
+        "product": "NISAR_L2_GCOV",
+        "granule": "NISAR_L2_PR_GCOV_031_004_D_081_4005_DHDH_A_20260918T114712_20260918T114746_P05023_F_F_J_001/NISAR_L2_PR_GCOV_032_004_D_081_4005_DHDH_A_20260930T114712_20260930T114746_P05023_N_F_J_001",
+        "maturity": "PROVISIONAL"
+      },
+      {
+        "product": "OPERA_L3_DSWx-S1",
+        "derived_from": "Sentinel-1",
+        "granule": "OPERA_L3_DSWx-S1_T47PPR_20260919T230839Z_20261012T162941Z_S1D_30_v1.0/OPERA_L3_DSWx-S1_T47PPS_20260919T230811Z_20261012T162730Z_S1D_30_v1.0/OPERA_L3_DSWx-S1_T47PPR_20261001T230839Z_20261013T115214Z_S1D_30_v1.0/OPERA_L3_DSWx-S1_T47PPS_20261001T230811Z_20261013T114851Z_S1D_30_v1.0"
+      },
+      {
+        "product": "OpenStreetMap",
+        "retrieved_at": "2026-11-15"
+      }
+    ],
+    "method": "risk-config/0.1",
+    "code_commit": "84e55830483a155b65ed3b67927d4c0dd93c4a6e"
+  }
+}
