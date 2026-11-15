@@ -1,4 +1,4 @@
-# WOMBAT node para Linux x86_64 y Windows x86_64
+# WOMBAT node para Linux x86_64, Linux ARM64 y Windows x86_64
 
 Este paquete contiene el binario precompilado `wombat-node`, un archivo público
 de ejemplo `trusted-issuers.json` y archivos de configuración de ejemplo. No
@@ -12,6 +12,32 @@ descomprímelo:
 ```sh
 tar -xzf wombat-node-linux-x86_64.tar.gz
 cd wombat-node-linux-x86_64
+```
+
+## Raspberry Pi 5 / Debian ARM64
+
+Descarga el paquete `wombat-node-linux-aarch64.tar.gz` del tag deseado y
+extráelo. Este paquete es para Linux ARM64 (`aarch64`); el paquete
+`wombat-node-linux-x86_64.tar.gz` no es compatible con Raspberry Pi.
+
+```sh
+release_tag="vX.Y.Z"
+package="wombat-node-linux-aarch64.tar.gz"
+curl -fL "https://github.com/Favio-coder/Wombat-core/releases/download/${release_tag}/${package}" -o "$package"
+tar -xzf "$package"
+cd wombat-node-linux-aarch64
+sha256sum -c SHA256SUMS
+cp relay.env.example relay.env
+# Edita relay.env con tu editor preferido.
+set -a
+. ./relay.env
+set +a
+./wombat-node run \
+  --listen "$WOMBAT_LISTEN" \
+  --peer "$WOMBAT_RELAY" \
+  --topic "$WOMBAT_TOPIC" \
+  --trusted-issuers "$WOMBAT_TRUSTED_ISSUERS" \
+  --identity-key "$WOMBAT_IDENTITY_KEY"
 ```
 
 ## Windows x86_64 (PowerShell)
