@@ -3,6 +3,15 @@
   "$id": "wombat/contracts/v1/cells",
   "title": "WOMBAT cells (Python → Rust)",
   "type": "object",
+  "$defs": {
+    "provenance_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
   "required": [
     "type",
     "features"
@@ -10,6 +19,16 @@
   "properties": {
     "type": {
       "const": "FeatureCollection"
+    },
+    "aoi_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "AOI dueño de esta colección; obligatorio en el perfil integrado por AOI."
+    },
+    "crs_compute": {
+      "type": "string",
+      "pattern": "^EPSG:(326|327)\\d{2}$",
+      "description": "CRS proyectado usado para los cálculos, no el CRS WGS84 de las geometrías."
     },
     "crs_note": {
       "type": "string"
@@ -60,6 +79,10 @@
               "road_m_total"
             ],
             "properties": {
+              "aoi_id": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+              },
               "cell_id": {
                 "type": "string",
                 "pattern": "^[a-z0-9]+(-[a-z0-9]+)*-r[0-9]{2}c[0-9]{2}$"
@@ -117,6 +140,56 @@
               "road_m_total": {
                 "type": "integer",
                 "minimum": 0
+              },
+              "source_status": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "nisar",
+                  "opera",
+                  "osm"
+                ],
+                "properties": {
+                  "nisar": {
+                    "enum": [
+                      "available",
+                      "unavailable",
+                      "simulated"
+                    ]
+                  },
+                  "opera": {
+                    "enum": [
+                      "available",
+                      "unavailable"
+                    ]
+                  },
+                  "osm": {
+                    "enum": [
+                      "available",
+                      "unavailable"
+                    ]
+                  }
+                }
+              },
+              "provenance_refs": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "nisar",
+                  "opera",
+                  "osm"
+                ],
+                "properties": {
+                  "nisar": {
+                    "$ref": "#/$defs/provenance_refs"
+                  },
+                  "opera": {
+                    "$ref": "#/$defs/provenance_refs"
+                  },
+                  "osm": {
+                    "$ref": "#/$defs/provenance_refs"
+                  }
+                }
               }
             },
             "allOf": [
@@ -148,5 +221,30 @@
         }
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": ["aoi_id"]
+      },
+      "then": {
+        "required": ["crs_compute"],
+        "properties": {
+          "features": {
+            "items": {
+              "properties": {
+                "properties": {
+                  "required": [
+                    "aoi_id",
+                    "source_status",
+                    "provenance_refs"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
 }

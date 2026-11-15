@@ -7,6 +7,7 @@
 
 use std::path::{Path, PathBuf};
 
+use clap::ValueEnum;
 use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
 use wombat_core::v02::DataOrigin;
@@ -23,9 +24,19 @@ pub struct Index {
     pub bundle_version: String,
     pub aoi_id: String,
     pub data_origin: DataOrigin,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub purpose: Option<BundlePurpose>,
     pub generated_at: String,
     pub core_commit: String,
     pub files: Vec<FileEntry>,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, ValueEnum)]
+#[serde(rename_all = "snake_case")]
+pub enum BundlePurpose {
+    Scientific,
+    Baseline,
+    Preparation,
 }
 
 /// Un archivo del bundle y su hash.

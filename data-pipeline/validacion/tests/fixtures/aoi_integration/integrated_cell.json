@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "aoi_id": "tailandia-01",
+  "crs_compute": "EPSG:32647",
+  "crs_note": "Geometries EPSG:4326; area calculations EPSG:32647",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[100.35, 14.35], [100.4, 14.35], [100.4, 14.4], [100.35, 14.4], [100.35, 14.35]]]
+      },
+      "properties": {
+        "aoi_id": "tailandia-01",
+        "cell_id": "tailandia-01-r00c00",
+        "valid_fraction": 0.9,
+        "decrease_fraction": 0.05,
+        "increase_fraction": 0.05,
+        "changed_fraction": 0.1,
+        "p90_abs_delta_db": 1.25,
+        "opera_status": "unavailable",
+        "opera_overlap_ratio": null,
+        "road_m_near_change": 0,
+        "road_m_total": 0,
+        "source_status": {
+          "nisar": "available",
+          "opera": "unavailable",
+          "osm": "unavailable"
+        },
+        "provenance_refs": {
+          "nisar": ["manifest.json#/nisar"],
+          "opera": ["manifest.json#/opera"],
+          "osm": []
+        }
+      }
+    }
+  ]
+}

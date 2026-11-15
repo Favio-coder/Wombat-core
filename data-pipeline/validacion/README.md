@@ -5,6 +5,11 @@ Sirve para probar el método con escenas reales en cualquier lugar y para medir 
 cambian el resultado: el ruido de speckle, las zonas que cambian sin evento y el contraste con OPERA.
 Python no firma (R14) ni rankea (R15).
 
+La integración final es por AOI. Antes de usar una salida como científica o pasarla a Rust,
+validar `manifest.json`, `cells.geojson`, grilla, insumos y rutas con
+`validate_aoi_integration.py`; las salidas baseline/preparación no pueden contener Risk/Action.
+El contrato y los CRS por AOI están en `docs/aoi-integration-contract.md`.
+
 ## En qué se diferencia del pipeline oficial
 
 | | `data-pipeline/nisar/` (oficial) | `data-pipeline/validacion/` |
@@ -94,8 +99,38 @@ en la búsqueda y no cubrir el recuadro: hay que revisar la línea "Cobertura OP
 
 `resultados/peru-fuentes-nasa/ciudades/` tiene Huaraz, Tumbes, Piura y Jequetepeque con el mismo
 contenido que el par completo de Tailandia: cambio NISAR, OPERA y vías por celda, y `manifest.json`
-y `cells.geojson` que cumplen el contrato v1.1.0. Las vías de esos AOI están en
+y `cells.geojson` que cumplen el contrato v1.2.0. Las vías de esos AOI están en
 `data-pipeline/inputs/<aoi>/`.
+
+## Integración y estado por AOI
+
+| AOI | CRS de cálculo | Clasificación | Límite operativo |
+|---|---|---|---|
+| `piura-demo` | EPSG:32717 | Fixture simulado | Solo pruebas; no es evidencia de Piura. |
+| `piura-01` | EPSG:32717 | Baseline comparable 7–19 oct 2026; evento bloqueado | El par exploratorio 19–31 oct tiene madurez mixta. No emitir alerta científica. |
+| `sechura-01` | EPSG:32717 | Control real NISAR | No representa el evento de Piura; integración incompleta. |
+| `tumbes-01` | EPSG:32717 | Control real NISAR integrado a celdas | No representa el evento de Piura. |
+| `huaraz-01` | EPSG:32718 | Par real integrado a celdas | Cambio observado de causa no determinada; no es Piura. |
+| `jequetepeque-01` | EPSG:32717 | Par real integrado a celdas | Cambios ambiguos; no hay bundle de ranking. |
+| `tailandia-01` | EPSG:32647 | Validación de método PROVISIONAL | El bundle local inmutable `v1` tiene topics/audiencias de Piura y `crs_note` erróneo; está en cuarentena semántica y no se debe enrutar ni reutilizar. |
+
+El bundle Tailandia `data/tailandia-01/v1/` no debe editarse: una corrección requiere una
+versión nueva. La documentación de la región y el contrato AOI explican las discrepancias
+heredadas y el flujo seguro de reemisión.
+
+Validación estricta, sin escribir datos ni hacer llamadas de red:
+
+```bash
+python data-pipeline/validacion/validate_aoi_integration.py \
+  --in data-pipeline/validacion/resultados/peru-fuentes-nasa/ciudades/piura-01/previo-07oct-19oct \
+  --purpose baseline \
+  --inputs data-pipeline/inputs/piura-01 \
+  --roads data-pipeline/inputs/piura-01/roads.geojson
+```
+
+Ese resultado histórico es anterior al perfil integrado y el validador lo
+rechaza por sus metadatos de celda faltantes; no editarlo a mano. Reprocesar
+solo con insumos locales autorizados para crear una versión nueva.
 
 ## Límites
 

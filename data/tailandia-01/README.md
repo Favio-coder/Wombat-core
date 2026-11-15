@@ -1,8 +1,12 @@
-# tailandia-01 — validación del método sobre un evento real
+# tailandia-01 — bundle histórico de validación PROVISIONAL
 
-Este bundle **no es un producto para Piura**. Es la prueba de que el método
-funciona de punta a punta sobre datos NISAR reales: cambio medido, contraste con
-una fuente independiente, exposición vial por celda, priorización y firma.
+Este bundle es una validación de método PROVISIONAL, no una alerta ni un
+producto operativo. El bundle local inmutable `v1/` contiene un error de
+aislamiento: sus topics y audiencias de Action están configurados para Piura,
+y el `crs_note` de `cells.geojson` declara EPSG:32717 aunque el CRS correcto de
+cálculo de Tailandia es EPSG:32647. No enrutar ni reutilizar sus acciones.
+Reemitir una versión nueva con insumos corregidos y el exportador Rust; nunca
+editar ni sobrescribir `v1/`.
 
 | | |
 |---|---|

@@ -1,0 +1,32 @@
+{
+  "aoi_id": "tailandia-01",
+  "data_origin": "nisar_real",
+  "crs_compute": "EPSG:32647",
+  "bbox_wgs84": [100.3, 14.3, 100.5, 14.5],
+  "nisar": {
+    "product": "NISAR_L2_GCOV",
+    "maturity": "PROVISIONAL",
+    "polarization": "HHHH",
+    "frequency": "A",
+    "pixel_spacing_m": 20,
+    "comparable": true,
+    "comparable_checks": {
+      "same_frame": true,
+      "same_orbit_direction": true,
+      "same_mode": true,
+      "same_frequency": true,
+      "same_polarization": true,
+      "same_maturity": true
+    },
+    "t1": {"granule": "NISAR-T1", "datetime": "2026-09-18T10:00:00Z"},
+    "t2": {"granule": "NISAR-T2", "datetime": "2026-09-30T10:00:00Z"}
+  },
+  "opera": {
+    "product": "OPERA_L3_DSWx-S1",
+    "derived_from": "Sentinel-1",
+    "t1": {"granules": ["OPERA-T1"]},
+    "t2": {"granules": ["OPERA-T2"]}
+  },
+  "osm": {"retrieved_at": "2026-09-30T11:00:00Z"},
+  "pipeline": {"risk_config_version": "risk-config/1.2.0"}
+}

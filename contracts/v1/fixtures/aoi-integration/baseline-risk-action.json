@@ -1,0 +1,11 @@
+{
+  "purpose": "baseline",
+  "manifest": {
+    "aoi_id": "piura-01",
+    "data_origin": "nisar_real",
+    "crs_compute": "EPSG:32717",
+    "nisar": {"comparable": false}
+  },
+  "blocks": ["change", "context", "risk", "action"],
+  "expected": "reject"
+}

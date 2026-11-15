@@ -83,7 +83,8 @@ def main(argv=None) -> int:
         total = sum(c["road_m_total"] for c in inputs.roads.values())
         print(f"Vias: {total / 1000:.0f} km en la grilla; {near / 1000:.0f} km a menos de "
               f"{config['road_buffer_meters']} m del cambio")
-    cells, warnings = assemble.build_cells(grid, metrics, inputs)
+    cells, warnings = assemble.build_cells(
+        grid, metrics, inputs, data_origin=manifest.get("data_origin", "nisar_real"))
     simulated = manifest.get("data_origin") == "simulated"
     stretch = overlays.write_overlays(d / "overlays", t1[0], t2[0], delta_map, t1[1], t1[2],
                                       simulated=simulated)

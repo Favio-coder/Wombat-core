@@ -45,10 +45,17 @@ impl Inputs {
     /// La geometría se ignora: la regla de riesgo no la usa, y arrastrarla solo
     /// daría ocasión de que alguien calcule algo con ella fuera de este crate.
     pub fn from_cells_geojson(aoi_id: impl Into<String>, s: &str) -> Result<Self, RiskError> {
+        let aoi_id = aoi_id.into();
         let fc: FeatureCollection = serde_json::from_str(s)?;
+        if fc.aoi_id.as_deref().is_some_and(|id| id != aoi_id) {
+            return Err(RiskError::Input(format!(
+                "cells.geojson declara aoi_id {:?}, esperado {aoi_id:?}",
+                fc.aoi_id
+            )));
+        }
         let mut cells = Vec::with_capacity(fc.features.len());
         for feature in fc.features {
-            cells.push(feature.properties.convert()?);
+            cells.push(feature.properties.convert(&aoi_id)?);
         }
         if cells.is_empty() {
             return Err(RiskError::Input("cells.geojson no tiene celdas".into()));
@@ -60,15 +67,14 @@ impl Inputs {
                 cell_id: dup[0].to_string(),
             });
         }
-        Ok(Inputs {
-            aoi_id: aoi_id.into(),
-            cells,
-        })
+        Ok(Inputs { aoi_id, cells })
     }
 }
 
 #[derive(Debug, Deserialize)]
 struct FeatureCollection {
+    #[serde(default)]
+    aoi_id: Option<String>,
     features: Vec<Feature>,
 }
 
@@ -81,6 +87,8 @@ struct Feature {
 #[derive(Debug, Deserialize)]
 #[serde(deny_unknown_fields)]
 struct RawCell {
+    #[serde(default)]
+    aoi_id: Option<String>,
     cell_id: String,
     valid_fraction: f64,
     decrease_fraction: f64,
@@ -91,10 +99,50 @@ struct RawCell {
     opera_overlap_ratio: Option<f64>,
     road_m_near_change: u32,
     road_m_total: u32,
+    #[serde(default)]
+    source_status: Option<CellSourceStatus>,
+    #[serde(default)]
+    provenance_refs: Option<CellProvenanceRefs>,
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(deny_unknown_fields)]
+struct CellSourceStatus {
+    nisar: SourceAvailability,
+    opera: SourceAvailability,
+    osm: SourceAvailability,
+}
+
+#[derive(Debug, Deserialize, PartialEq, Eq)]
+#[serde(rename_all = "snake_case")]
+enum SourceAvailability {
+    Available,
+    Unavailable,
+    Simulated,
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(deny_unknown_fields)]
+struct CellProvenanceRefs {
+    nisar: Vec<String>,
+    opera: Vec<String>,
+    osm: Vec<String>,
 }
 
 impl RawCell {
-    fn convert(self) -> Result<CellInput, RiskError> {
+    fn convert(self, aoi_id: &str) -> Result<CellInput, RiskError> {
+        if !self.cell_id.starts_with(&format!("{aoi_id}-r")) {
+            return Err(RiskError::Input(format!(
+                "{}: cell_id no pertenece a {aoi_id}",
+                self.cell_id
+            )));
+        }
+        if self.aoi_id.as_deref().is_some_and(|id| id != aoi_id) {
+            return Err(RiskError::Input(format!(
+                "{}: aoi_id {:?} no coincide con {aoi_id}",
+                self.cell_id, self.aoi_id
+            )));
+        }
         // El esquema ata el solapamiento al estado: `unavailable` implica null y
         // cualquier otro estado implica un número. Si la entrada se contradice,
         // es mejor rechazarla que inventar un 0 que bajaría el score.
@@ -112,6 +160,35 @@ impl RawCell {
                 )))
             }
             _ => {}
+        }
+        match (&self.source_status, &self.provenance_refs) {
+            (Some(status), Some(refs)) => {
+                if status.nisar == SourceAvailability::Unavailable
+                    || (status.nisar != SourceAvailability::Simulated && refs.nisar.is_empty())
+                    || (status.opera != SourceAvailability::Unavailable && refs.opera.is_empty())
+                    || (status.osm != SourceAvailability::Unavailable && refs.osm.is_empty())
+                {
+                    return Err(RiskError::Input(format!(
+                        "{}: disponibilidad de fuentes y referencias de procedencia no coinciden",
+                        self.cell_id
+                    )));
+                }
+                if (self.opera_status == OperaStatus::Unavailable)
+                    != (status.opera == SourceAvailability::Unavailable)
+                {
+                    return Err(RiskError::Input(format!(
+                        "{}: source_status.opera contradice opera_status",
+                        self.cell_id
+                    )));
+                }
+            }
+            (None, None) => {}
+            _ => {
+                return Err(RiskError::Input(format!(
+                    "{}: source_status y provenance_refs deben aparecer juntos",
+                    self.cell_id
+                )))
+            }
         }
         Ok(CellInput {
             valid_fraction: fraction(&self.cell_id, "valid_fraction", self.valid_fraction)?,
@@ -197,6 +274,41 @@ pub(crate) mod tests {
             Exact::from_decimal_str("0.03").unwrap()
         );
         assert_eq!(cell.road_m_near_change, 300);
+    }
+
+    #[test]
+    fn integrated_cells_are_accepted_but_a_mixed_aoi_is_rejected() {
+        let json = r#"{"type":"FeatureCollection","aoi_id":"tailandia-01","crs_compute":"EPSG:32647",
+            "features":[{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[0,0]]]},
+            "properties":{"aoi_id":"tailandia-01","cell_id":"tailandia-01-r00c00",
+            "valid_fraction":0.9,"decrease_fraction":0.1,"increase_fraction":0.0,
+            "changed_fraction":0.1,"p90_abs_delta_db":4.0,"opera_status":"unavailable",
+            "opera_overlap_ratio":null,"road_m_near_change":0,"road_m_total":0,
+            "source_status":{"nisar":"available","opera":"unavailable","osm":"available"},
+            "provenance_refs":{"nisar":["manifest.json#/nisar"],
+            "opera":["manifest.json#/opera"],"osm":["roads.geojson"]}}}]}"#;
+        assert!(Inputs::from_cells_geojson("tailandia-01", json).is_ok());
+
+        let mixed = json.replace(
+            "\"aoi_id\":\"tailandia-01\",\"cell_id\":\"tailandia-01-r00c00\"",
+            "\"aoi_id\":\"piura-01\",\"cell_id\":\"piura-01-r00c00\"",
+        );
+        assert!(matches!(
+            Inputs::from_cells_geojson("tailandia-01", &mixed),
+            Err(RiskError::Input(_))
+        ));
+    }
+
+    #[test]
+    fn collection_aoi_must_match_the_requested_aoi() {
+        let json = one_cell_geojson(&props("tailandia-01-r00c00", "0.95", "0.02", "0.01")).replace(
+            "\"type\":\"FeatureCollection\"",
+            "\"type\":\"FeatureCollection\",\"aoi_id\":\"piura-01\"",
+        );
+        assert!(matches!(
+            Inputs::from_cells_geojson("tailandia-01", &json),
+            Err(RiskError::Input(_))
+        ));
     }
 
     #[test]
