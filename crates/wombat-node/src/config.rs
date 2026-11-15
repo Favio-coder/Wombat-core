@@ -55,6 +55,10 @@ pub enum Commands {
         /// Timeout de arranque, conexión y espera de suscripción (segundos).
         #[arg(long, default_value_t = 30, value_parser = clap::value_parser!(u64).range(1..))]
         timeout_secs: u64,
+
+        /// Archivo JSONL de cambios simulados recibidos y verificados.
+        #[arg(long)]
+        event_out: Option<PathBuf>,
     },
     /// Publica un WONB desde un archivo JSON.
     Publish {
@@ -91,6 +95,7 @@ pub struct NodeConfig {
     pub trusted_issuers: Option<PathBuf>,
     pub identity_key: Option<PathBuf>,
     pub timeout_secs: u64,
+    pub event_out: Option<PathBuf>,
 }
 
 impl Default for NodeConfig {
@@ -104,6 +109,7 @@ impl Default for NodeConfig {
             trusted_issuers: None,
             identity_key: None,
             timeout_secs: 30,
+            event_out: None,
         }
     }
 }

@@ -17,8 +17,11 @@ use libp2p::{
     swarm::SwarmEvent,
     tcp, yamux, Multiaddr, PeerId, Swarm, SwarmBuilder,
 };
+use serde::Serialize;
 use tracing::{error, info, warn};
-use wombat_core::v02::{verify_chain, Block, BlockType, TrustedIssuers};
+use wombat_core::v02::{
+    verify_chain, Block, BlockType, ChangePayload, DataOrigin, Payload, Provenance, TrustedIssuers,
+};
 
 use crate::config::NodeConfig;
 
@@ -49,6 +52,7 @@ struct CachedBlock {
     readiness: BlockReadiness,
     inserted_at: Instant,
     size_bytes: usize,
+    received_at: String,
 }
 
 struct PendingBlockCache {
@@ -123,6 +127,7 @@ impl PendingBlockCache {
                 readiness: BlockReadiness::Pending,
                 inserted_at: now,
                 size_bytes,
+                received_at: Utc::now().to_rfc3339_opts(SecondsFormat::Secs, true),
             },
         );
         self.size_bytes += size_bytes;
@@ -205,6 +210,10 @@ impl PendingBlockCache {
     fn readiness(&self, id: &str) -> Option<BlockReadiness> {
         self.entries.get(id).map(|entry| entry.readiness)
     }
+
+    fn get(&self, id: &str) -> Option<&CachedBlock> {
+        self.entries.get(id)
+    }
 }
 
 enum ChainReadiness {
@@ -214,6 +223,7 @@ enum ChainReadiness {
 }
 
 pub async fn run(config: NodeConfig) -> Result<()> {
+    let event_out = config.event_out;
     let trusted_path = config
         .trusted_issuers
         .as_deref()
@@ -339,7 +349,13 @@ pub async fn run(config: NodeConfig) -> Result<()> {
                 }
             }
             event @ SwarmEvent::Behaviour(gossipsub::Event::Message { .. }) => {
-                handle_message_event(event, &mut swarm, &trusted, &mut pending_blocks)?;
+                handle_message_event(
+                    event,
+                    &mut swarm,
+                    &trusted,
+                    &mut pending_blocks,
+                    event_out.as_deref(),
+                )?;
             }
             event => log_other_event(event),
         }
@@ -360,7 +376,13 @@ pub async fn run(config: NodeConfig) -> Result<()> {
             }
             event = swarm.select_next_some() => match event {
                 event @ SwarmEvent::Behaviour(gossipsub::Event::Message { .. }) => {
-                    handle_message_event(event, &mut swarm, &trusted, &mut pending_blocks)?;
+                    handle_message_event(
+                        event,
+                        &mut swarm,
+                        &trusted,
+                        &mut pending_blocks,
+                        event_out.as_deref(),
+                    )?;
                 }
                 SwarmEvent::ConnectionEstablished { peer_id, .. } => {
                     info!(%peer_id, "Conexión P2P establecida");
@@ -538,6 +560,7 @@ fn handle_message_event(
     swarm: &mut NodeSwarm,
     trusted: &TrustedIssuers,
     pending_blocks: &mut PendingBlockCache,
+    event_out: Option<&Path>,
 ) -> Result<()> {
     let SwarmEvent::Behaviour(gossipsub::Event::Message {
         propagation_source,
@@ -596,6 +619,16 @@ fn handle_message_event(
                 );
             }
             for ready_id in newly_ready {
+                if let Some(path) = event_out {
+                    if let Some(cached) = pending_blocks.get(&ready_id) {
+                        append_verified_event(
+                            path,
+                            &cached.block,
+                            &cached.received_at,
+                            pending_blocks,
+                        )?;
+                    }
+                }
                 info!(
                     wonb_id = %ready_id,
                     "Cadena WONB completa y verificada; bloque listo para consumidores"
@@ -613,6 +646,166 @@ fn handle_message_event(
             Ok(())
         }
     }
+}
+
+#[derive(Serialize)]
+struct VerifiedWonbEvent<'a> {
+    event_type: &'static str,
+    wonb_id: &'a str,
+    #[serde(rename = "type")]
+    type_: String,
+    wonb_type: String,
+    aoi_id: &'a str,
+    cell_id: Option<&'a str>,
+    topic: &'a str,
+    received_at: &'a str,
+    issued_at: &'a str,
+    data_origin: Option<&'static str>,
+    payload: serde_json::Value,
+    provenance: &'a Provenance,
+    verified: bool,
+    simulation: bool,
+}
+
+fn append_verified_event(
+    path: &Path,
+    block: &Block,
+    received_at: &str,
+    cache: &PendingBlockCache,
+) -> Result<()> {
+    let (aoi_id, cell_id) = event_location(&block.body.payload, block, cache)?;
+    let event = VerifiedWonbEvent {
+        event_type: "verified_wonb",
+        wonb_id: &block.id,
+        type_: block.body.block_type.to_string(),
+        wonb_type: block.body.block_type.to_string(),
+        aoi_id,
+        cell_id,
+        topic: &block.body.topic,
+        received_at,
+        issued_at: &block.body.issued_at,
+        data_origin: event_data_origin(block, cache),
+        payload: serde_json::to_value(&block.body.payload)
+            .context("no se pudo serializar payload del evento verificado")?,
+        provenance: &block.body.provenance,
+        verified: true,
+        simulation: chain_is_simulated(block, cache),
+    };
+    let mut file = OpenOptions::new()
+        .create(true)
+        .append(true)
+        .open(path)
+        .with_context(|| format!("no se pudo abrir salida JSONL: {}", path.display()))?;
+    serde_json::to_writer(&mut file, &event)
+        .with_context(|| format!("no se pudo serializar evento JSONL: {}", path.display()))?;
+    file.write_all(b"\n")
+        .with_context(|| format!("no se pudo escribir evento JSONL: {}", path.display()))
+}
+
+fn event_location<'a>(
+    payload: &'a Payload,
+    block: &'a Block,
+    cache: &'a PendingBlockCache,
+) -> Result<(&'a str, Option<&'a str>)> {
+    match payload {
+        Payload::Change(change) => Ok((
+            change.aoi_id.as_str(),
+            block.body.provenance.sources.iter().find_map(|source| {
+                source
+                    .extra
+                    .get("cell_id")
+                    .and_then(serde_json::Value::as_str)
+            }),
+        )),
+        Payload::Context(context) => Ok((context.aoi_id.as_str(), None)),
+        Payload::Risk(risk) => event_location_for_dependent(&risk.cell_id, block, cache),
+        Payload::Action(action) => event_location_for_dependent(&action.cell_id, block, cache),
+    }
+}
+
+fn event_location_for_dependent<'a>(
+    cell_id: &'a str,
+    block: &'a Block,
+    cache: &'a PendingBlockCache,
+) -> Result<(&'a str, Option<&'a str>)> {
+    let root_change = find_change_ancestor(block, cache)
+        .context("no se pudo resolver el Change de la cadena verificada")?;
+    let Payload::Change(change) = &root_change.body.payload else {
+        bail!("el bloque raíz de la cadena no es Change");
+    };
+    Ok((change.aoi_id.as_str(), Some(cell_id)))
+}
+
+fn find_change_ancestor<'a>(block: &'a Block, cache: &'a PendingBlockCache) -> Option<&'a Block> {
+    let mut pending = vec![block];
+    let mut visited = HashSet::new();
+    while let Some(current) = pending.pop() {
+        if !visited.insert(current.id.as_str()) {
+            continue;
+        }
+        if current.body.block_type == BlockType::Change {
+            return Some(current);
+        }
+        for parent_id in &current.body.parents {
+            if let Some(parent) = cache.get(parent_id) {
+                pending.push(&parent.block);
+            }
+        }
+    }
+    None
+}
+
+fn chain_is_simulated(block: &Block, cache: &PendingBlockCache) -> bool {
+    let mut pending = vec![block];
+    let mut visited = HashSet::new();
+    while let Some(current) = pending.pop() {
+        if !visited.insert(current.id.as_str()) {
+            continue;
+        }
+        if explicitly_simulated(current) {
+            return true;
+        }
+        for parent_id in &current.body.parents {
+            if let Some(parent) = cache.get(parent_id) {
+                pending.push(&parent.block);
+            }
+        }
+    }
+    false
+}
+
+fn event_data_origin(block: &Block, cache: &PendingBlockCache) -> Option<&'static str> {
+    let change = find_change_ancestor(block, cache)?;
+    let Payload::Change(payload) = &change.body.payload else {
+        return None;
+    };
+    Some(match payload.data_origin {
+        DataOrigin::NisarReal => "nisar_real",
+        DataOrigin::Simulated => "simulated",
+    })
+}
+
+fn explicitly_simulated(block: &Block) -> bool {
+    if matches!(
+        &block.body.payload,
+        Payload::Change(ChangePayload {
+            data_origin: DataOrigin::Simulated,
+            ..
+        })
+    ) {
+        return true;
+    }
+    let method_marked = block.body.provenance.method.contains("simulated");
+    let source_marked = block.body.provenance.sources.iter().any(|source| {
+        source.product.starts_with("SIMULATED-")
+            || source.extra.get("simulation") == Some(&serde_json::Value::Bool(true))
+            || source
+                .extra
+                .get("simulation")
+                .and_then(serde_json::Value::as_str)
+                == Some("simulated")
+    });
+    method_marked || source_marked
 }
 
 fn receive_block(
@@ -826,6 +1019,121 @@ mod tests {
             block.id,
             "sha256:02da13aa3d9cfb4c94ed1512d9728ddb3ed7a945e98c9a3bbd98c9cb791de683"
         );
+    }
+
+    #[test]
+    fn verified_simulated_change_is_written_as_jsonl() {
+        let (json, trusted) = fixture_block_and_trusted();
+        let directory = tempfile::tempdir().unwrap();
+        let output = directory.path().join("events.jsonl");
+        let mut cache = PendingBlockCache::new();
+        let (block, readiness, newly_ready) = receive_block(
+            &json,
+            Some("wombat/pe/piura/piura-demo/change"),
+            json.len(),
+            &trusted,
+            &mut cache,
+        )
+        .unwrap();
+
+        assert_eq!(readiness, BlockReadiness::Ready);
+        assert_eq!(newly_ready, vec![block.id.clone()]);
+        for id in &newly_ready {
+            let cached = cache.get(id).unwrap();
+            append_verified_event(&output, &cached.block, &cached.received_at, &cache).unwrap();
+        }
+
+        let contents = fs::read_to_string(output).unwrap();
+        let event: serde_json::Value = serde_json::from_str(contents.trim()).unwrap();
+        assert_eq!(event["event_type"], "verified_wonb");
+        assert_eq!(event["wonb_id"], block.id);
+        assert_eq!(event["type"], "change");
+        assert_eq!(event["wonb_type"], "change");
+        assert_eq!(event["aoi_id"], "piura-demo");
+        assert_eq!(event["topic"], "wombat/pe/piura/piura-demo/change");
+        assert_eq!(event["cell_id"], serde_json::Value::Null);
+        assert_eq!(event["issued_at"], "2026-11-14T17:00:00Z");
+        assert_eq!(event["data_origin"], "simulated");
+        assert_eq!(event["payload"]["data_origin"], "simulated");
+        assert_eq!(event["verified"], true);
+        assert_eq!(event["simulation"], true);
+        assert!(event["provenance"].is_object());
+        assert!(event["received_at"].as_str().is_some());
+    }
+
+    #[test]
+    fn invalid_wonb_does_not_create_jsonl_event() {
+        let (json, trusted) = fixture_block_and_trusted();
+        let mut raw: serde_json::Value = serde_json::from_str(&json).unwrap();
+        raw["signature"] = json!("00");
+        let invalid = raw.to_string();
+        let directory = tempfile::tempdir().unwrap();
+        let output = directory.path().join("events.jsonl");
+        let mut cache = PendingBlockCache::new();
+
+        assert!(receive_block(
+            &invalid,
+            Some("wombat/pe/piura/piura-demo/change"),
+            invalid.len(),
+            &trusted,
+            &mut cache,
+        )
+        .is_err());
+        assert!(!output.exists());
+    }
+
+    #[test]
+    fn pending_wonb_does_not_create_jsonl_event() {
+        let (_, _, _, action, trusted) = signed_chain();
+        let payload = action.to_canonical_json().unwrap();
+        let directory = tempfile::tempdir().unwrap();
+        let output = directory.path().join("events.jsonl");
+        let mut cache = PendingBlockCache::new();
+        let (_, readiness, newly_ready) = receive_block(
+            &payload,
+            Some(&action.body.topic),
+            payload.len(),
+            &trusted,
+            &mut cache,
+        )
+        .unwrap();
+
+        assert_eq!(readiness, BlockReadiness::Pending);
+        assert!(newly_ready.is_empty());
+        assert!(!output.exists());
+    }
+
+    #[test]
+    fn expired_wonb_does_not_create_jsonl_event() {
+        let (payload, trusted) = expired_block_and_trusted();
+        let directory = tempfile::tempdir().unwrap();
+        let output = directory.path().join("events.jsonl");
+        let mut cache = PendingBlockCache::new();
+
+        assert!(receive_block(&payload, None, payload.len(), &trusted, &mut cache).is_err());
+        assert!(!output.exists());
+    }
+
+    #[test]
+    fn untrusted_wonb_does_not_create_jsonl_event() {
+        let (payload, _) = fixture_block_and_trusted();
+        let trusted = TrustedIssuers {
+            version: 1,
+            issuers: Vec::new(),
+        };
+        let directory = tempfile::tempdir().unwrap();
+        let output = directory.path().join("events.jsonl");
+        let mut cache = PendingBlockCache::new();
+
+        assert!(receive_block(
+            &payload,
+            Some("wombat/pe/piura/piura-demo/change"),
+            payload.len(),
+            &trusted,
+            &mut cache,
+        )
+        .is_err());
+        assert!(!output.exists());
     }
 
     #[test]

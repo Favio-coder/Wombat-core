@@ -6,6 +6,7 @@ members = [
     "crates/wombat-cli",
     "crates/wombat-node",
     "crates/wombat-gateway",
+    "crates/wombat-demo-publisher",
 ]
 
 [workspace.package]

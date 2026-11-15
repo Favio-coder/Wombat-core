@@ -1,4 +1,4 @@
-# Contratos WOMBAT v1.2.0
+# Contratos WOMBAT v1.3.0
 
 Frontera entre personas y repos (plan maestro v2, §7 y R20/R26–R28). **No se cambia un campo "en caliente":**
 un PR que toque este directorio actualiza esquema + fixture + `VERSION` a la vez.
@@ -23,6 +23,7 @@ un PR que toque este directorio actualiza esquema + fixture + `VERSION` a la vez
 | `tools/verify-rs/` | Verificador Rust independiente (`serde_jcs` + `ed25519-dalek 2`). Puede copiarse a `wonb-core`. |
 | `tools/verify-js/` | Verificador JS (`canonicalize` + `@noble`). Base de `src/verify/` del dashboard. |
 | `tools/gen_fixture_bundle.py` | **Bootstrap** que generó el fixture. Ver "Firma del fixture". |
+| `fixtures/topics/thailand-demo/` | WONB `Change` simulado y firmado para comprobar el topic Tailandia. |
 
 ## Comprobar un bundle
 
@@ -100,6 +101,13 @@ son unos 108 000 m, así que un AOI tropical sobreestima el total de vías en to
 al 2 %. No se cambia acá porque esa fórmula es la que firmó el bundle fixture y
 el test de extremo a extremo exige reproducir sus 21 payloads byte por byte.
 Cambiarla es un cambio de contrato aparte, con fixture nuevo.
+
+### 1.3.0 — Topic aislado para demo de Tailandia
+
+Se admite aditivamente el namespace `wombat/th/thailand/<aoi_id>/<type>` además
+de `wombat/pe/<region>/<aoi_id>/<type>`. Los bloques históricos conservan sus
+topics y no se modifican. El publicador demo solo genera `Change` con
+`data_origin: simulated`; no representa observaciones científicas.
 
 ### 1.2.0 — Integración aislada por AOI
 

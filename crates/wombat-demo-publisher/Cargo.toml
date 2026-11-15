@@ -1,0 +1,23 @@
+[package]
+name = "wombat-demo-publisher"
+description = "Publicador P2P de WONBs Change para demos WOMBAT"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+chrono = { workspace = true }
+clap = { workspace = true }
+ed25519-dalek = { workspace = true }
+futures-util = "0.3"
+hex = { workspace = true }
+libp2p = { version = "=0.57.1", default-features = false, features = ["tokio", "tcp", "noise", "yamux", "gossipsub", "ed25519"] }
+sha2 = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+wombat-core = { path = "../wombat-core" }
+
+[dev-dependencies]
+tempfile = { workspace = true }

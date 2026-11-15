@@ -92,6 +92,7 @@ async fn main() -> Result<()> {
             trusted_issuers,
             identity_key,
             timeout_secs,
+            event_out,
         } => {
             let config = NodeConfig {
                 listen_addr: listen,
@@ -102,6 +103,7 @@ async fn main() -> Result<()> {
                 trusted_issuers,
                 identity_key,
                 timeout_secs,
+                event_out,
             };
             run_cmd(config).await
         }

@@ -1,0 +1,41 @@
+{
+  "id": "sha256:e9b83fd0521b23f4edceaf02aa01444bebef59da849962da547b9824852b5fe6",
+  "signature": "7cc9a4bba1f703c601e99d56b8f705facf411c234e1771d71b23c60e4432c165e4f1e56a83e3efe120795dfcb7aef55e60015093798e86d7a1fcaafc1f978306",
+  "wonb_version": "0.2",
+  "type": "change",
+  "topic": "wombat/th/thailand/thailand-demo/change",
+  "issued_at": "2026-11-15T19:00:00Z",
+  "valid_until": null,
+  "issuer": "ed25519:9f71871171eaf7952256b5c183e4b4ff56c4382bb9f9488062304b1332c46b5c",
+  "parents": [],
+  "payload": {
+    "aoi_id": "thailand-demo",
+    "data_origin": "simulated",
+    "t1": "2026-10-14T23:00:00Z",
+    "t2": "2026-10-26T23:00:00Z",
+    "polarization": "HHHH",
+    "frequency": "A",
+    "pixel_spacing_m": 20,
+    "delta_db_threshold_cdb": 300,
+    "aoi_valid_bp": 9000,
+    "aoi_decrease_bp": 1000,
+    "aoi_increase_bp": 500,
+    "overlay_sha256": {
+      "t1.png": "1111111111111111111111111111111111111111111111111111111111111111",
+      "t2.png": "2222222222222222222222222222222222222222222222222222222222222222",
+      "delta.png": "3333333333333333333333333333333333333333333333333333333333333333"
+    },
+    "cells_geojson_sha256": "4444444444444444444444444444444444444444444444444444444444444444"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "product": "SIMULATED-WOMBAT-DEMO",
+        "cell_id": "thailand-demo-simulated-cell",
+        "simulation": "simulated"
+      }
+    ],
+    "method": "wombat-demo-publisher/simulated/1",
+    "code_commit": "simulated-no-scientific-code"
+  }
+}

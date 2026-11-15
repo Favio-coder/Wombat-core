@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "issuers": [
+    {
+      "issuer": "ed25519:9f71871171eaf7952256b5c183e4b4ff56c4382bb9f9488062304b1332c46b5c",
+      "name": "simulated Thailand demo fixture",
+      "roles": ["change"]
+    }
+  ]
+}

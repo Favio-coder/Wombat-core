@@ -166,6 +166,18 @@ fn fixture_change_block_never_expires() {
 }
 
 #[test]
+fn simulated_thailand_change_uses_its_own_valid_topic() {
+    let fixture_dir = Path::new(env!("CARGO_MANIFEST_DIR"))
+        .join("../../contracts/v1/fixtures/topics/thailand-demo");
+    let block = Block::from_json(&read(&fixture_dir.join("change.json"))).unwrap();
+    let trusted =
+        TrustedIssuers::from_json(&read(&fixture_dir.join("trusted-issuers.json"))).unwrap();
+
+    block.verify(Some(&block.body.issued_at), &trusted).unwrap();
+    assert_eq!(block.body.topic, "wombat/th/thailand/thailand-demo/change");
+}
+
+#[test]
 fn a_risk_block_alone_has_no_parents_to_point_at() {
     let risk = Block::from_json(&read(
         &bundle_dir().join("wonb/risk/piura-demo-r02c01.json"),

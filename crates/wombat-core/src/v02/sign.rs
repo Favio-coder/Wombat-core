@@ -133,8 +133,9 @@ impl Block {
             )));
         }
         let suffix = format!("/{}", self.body.block_type);
-        let namespaced =
-            self.body.topic.starts_with("wombat/pe/") || self.body.topic.starts_with("wombat/aoi/");
+        let namespaced = self.body.topic.starts_with("wombat/pe/")
+            || self.body.topic.starts_with("wombat/aoi/")
+            || self.body.topic.starts_with("wombat/th/thailand/");
         if !namespaced || !self.body.topic.ends_with(&suffix) {
             return Err(WonbError::Schema(format!(
                 "topic {} no corresponde a un bloque {}",

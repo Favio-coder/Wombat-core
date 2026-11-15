@@ -35,7 +35,7 @@
     },
     "topic": {
       "type": "string",
-      "pattern": "^wombat/pe/[a-z0-9-]+/[a-z0-9-]+/(change|context|risk|action)$"
+      "pattern": "^wombat/(?:pe/[a-z0-9-]+/[a-z0-9-]+|th/thailand/[a-z0-9-]+)/(change|context|risk|action)$"
     },
     "issued_at": {
       "type": "string",
