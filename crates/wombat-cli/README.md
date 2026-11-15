@@ -78,7 +78,7 @@ Se niega a construir si:
 Todo eso se comprueba **antes** de escribir el primer byte: un bundle a medio
 escribir es peor que uno que no existe.
 
-### `verify <dir> [--as-of <iso>]`
+### `verify <dir> [--as-of <iso>] [--trusted <archivo>]`
 
 Comprueba el `sha256` de cada archivo contra `index.json`, el `id` de cada
 bloque, la firma, el emisor y su rol, el TTL y que cada padre exista. Cierra el
@@ -98,6 +98,31 @@ Sale con 0 solo si no hubo ningún error.
 Sin `--as-of`, el TTL se mide contra `index.generated_at`: un bundle estático es
 una foto histórica, y evaluarlo con la hora real haría que todo saliera expirado
 días después. En modo vivo hay que pasar la hora explícitamente.
+
+#### La lista de confianza viene de afuera
+
+`--trusted` apunta al `trusted-issuers.json` con el que se miden las firmas, y
+su defecto es `config/trusted-issuers.json`, el del repositorio.
+
+El bundle trae un `trusted-issuers.json` propio y **no se lee nunca solo**. Un
+bundle que se autoavala no prueba nada: quien pueda escribir en el directorio
+cambia esa lista, vuelve a firmar con su clave y se lleva un `OK`. Una firma solo
+significa algo contra una lista que el verificador ya tenía antes de ver el
+bundle. El `trusted-issuers.json` de dentro sigue en el contrato, con su hash en
+`index.json`, como declaración de quién *dice* el productor que firmó; para
+usarlo hay que nombrarlo a mano:
+
+```bash
+# Lo normal: la confianza la decide config/, no el bundle.
+wombat verify data/piura-01/v1
+
+# El fixture está firmado por una clave de desarrollo que a propósito no está
+# en config/trusted-issuers.json. Se nombra su lista explícitamente.
+wombat verify contracts/v1/fixtures/bundle/piura-demo/v0   --trusted contracts/v1/fixtures/bundle/piura-demo/v0/trusted-issuers.json
+```
+
+Si el archivo no existe, `verify` falla nombrándolo. No hay defecto silencioso:
+sin lista de confianza no hay verificación posible.
 
 ## Las tres implementaciones
 

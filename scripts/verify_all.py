@@ -200,6 +200,24 @@ def find_bundles() -> list[Path]:
     return [d for d in candidates if (d / "index.json").is_file()]
 
 
+def trusted_for(bundle: Path) -> Path | None:
+    """Con qué lista de emisores se mide este bundle. `None` = el defecto.
+
+    El defecto de `wombat verify` es `config/trusted-issuers.json`, y es lo que
+    corresponde para un bundle publicado en `data/`: la confianza se decide
+    afuera, nunca con la lista que viene dentro del bundle.
+
+    Los fixtures son la excepción, y explícita. Los firmó una clave de
+    desarrollo que **a propósito** no está en la confianza de producción: su
+    privada se declaró descartada y no hay razón para que `config/` cargue con
+    ella. Para esos bundles se nombra su propia lista a mano. Que haga falta
+    escribirlo es justamente el comportamiento buscado.
+    """
+    if bundle.is_relative_to(ROOT / "contracts/v1/fixtures/bundle"):
+        return bundle / "trusted-issuers.json"
+    return None
+
+
 def wombat_command() -> tuple[list[str], str]:
     """Cómo invocar el CLI, y una nota de dónde salió.
 
@@ -222,10 +240,17 @@ def check_wombat_verify(report: Report, bundles: list[Path]) -> None:
         return
 
     for bundle in bundles:
-        code, output, seconds = timed([*command, "verify", str(bundle)])
+        args = [*command, "verify", str(bundle)]
+        trusted = trusted_for(bundle)
+        if trusted is not None:
+            args += ["--trusted", str(trusted)]
+        code, output, seconds = timed(args)
         step = f"wombat verify  {rel(bundle)}"
         if code == 0:
-            report.add(OK, step, seconds, f"{blocks_of(output)} ({origin})")
+            nota = f"{blocks_of(output)} ({origin})"
+            if trusted is not None:
+                nota += " [lista del fixture]"
+            report.add(OK, step, seconds, nota)
         else:
             report.add(FAIL, step, seconds, last_line(output)[:70])
 
