@@ -25,21 +25,22 @@ use wombat_risk::{
     build_action_bodies, build_risk_bodies, evaluate, load, BlockContext, Exact, RiskConfig,
 };
 
-use crate::bundle::{self, Index};
+use crate::bundle::{self, BundlePurpose, Index};
 use crate::error::{self, CliError};
 use crate::inputs::{self, Manifest};
 use crate::keys;
 
-/// Prefijo de tópico del contrato (§7.6). El AOI y el tipo se añaden después.
-const TOPIC_PREFIX: &str = "wombat/pe/piura";
+/// El demo conserva su topic histórico; todo AOI nuevo queda aislado por id.
+const DEMO_TOPIC_PREFIX: &str = "wombat/pe/piura";
+const AOI_TOPIC_PREFIX: &str = "wombat/aoi";
 
-/// Los cuatro roles que una clave necesita para firmar un bundle completo.
-const REQUIRED_ROLES: [BlockType; 4] = [
+const SCIENTIFIC_ROLES: [BlockType; 4] = [
     BlockType::Change,
     BlockType::Context,
     BlockType::Risk,
     BlockType::Action,
 ];
+const NON_OPERATIONAL_ROLES: [BlockType; 2] = [BlockType::Change, BlockType::Context];
 
 /// Lo que `build` recibe de la línea de comandos.
 #[derive(Debug, Clone)]
@@ -50,6 +51,7 @@ pub struct Request {
     pub key_path: PathBuf,
     pub issued_at: Option<String>,
     pub out_dir: PathBuf,
+    pub purpose: BundlePurpose,
     pub config_dir: PathBuf,
 }
 
@@ -68,7 +70,10 @@ pub fn run(request: &Request) -> Result<Report, CliError> {
     bundle::refuse_if_published(&request.out_dir)?;
 
     let manifest = Manifest::load(&request.input_dir.join("manifest.json"))?;
-    manifest.check_comparable()?;
+    if request.purpose == BundlePurpose::Scientific {
+        manifest.check_comparable()?;
+    }
+    manifest.check_crs()?;
     check_aoi_matches(&manifest, &request.aoi_id)?;
 
     let signing_key = keys::load_signing_key(&request.key_path)?;
@@ -76,14 +81,28 @@ pub fn run(request: &Request) -> Result<Report, CliError> {
 
     let trusted_path = request.config_dir.join("trusted-issuers.json");
     let trusted = TrustedIssuers::from_json(&error::read_to_string(&trusted_path)?)?;
-    check_issuer_trusted(&trusted, &issuer, &trusted_path)?;
+    check_issuer_trusted(&trusted, &issuer, request.purpose, &trusted_path)?;
 
     let config_path = request.config_dir.join("risk-config.json");
     let config = load::load_config(&config_path)?;
 
     let cells_in = request.input_dir.join("cells.geojson");
+    let crs_compute = manifest
+        .crs_compute
+        .as_deref()
+        .ok_or_else(|| CliError::BadInput {
+            path: "manifest.json".to_string(),
+            reason: "crs_compute es obligatorio para bundles 1.2.0".to_string(),
+        })?;
+    check_cells_profile(&request.aoi_id, crs_compute, &cells_in)?;
+    let roads_in = request.input_dir.join("roads.geojson");
+    check_roads_profile(&request.aoi_id, &roads_in)?;
     let cell_inputs = load::load_inputs(&request.aoi_id, &cells_in)?;
-    let scored = evaluate(&config, &cell_inputs)?;
+    let scored = if request.purpose == BundlePurpose::Scientific {
+        Some(evaluate(&config, &cell_inputs)?)
+    } else {
+        None
+    };
 
     let issued_at = match &request.issued_at {
         Some(given) => given.clone(),
@@ -123,24 +142,29 @@ pub fn run(request: &Request) -> Result<Report, CliError> {
         &signing_key,
     )?;
 
-    let block_context = BlockContext {
-        aoi_id: request.aoi_id.clone(),
-        topic_prefix: TOPIC_PREFIX.to_string(),
-        issued_at: issued_at.clone(),
-        issuer: issuer.clone(),
-        change_id: change.id.clone(),
-        context_id: context.id.clone(),
-        provenance: manifest.full_provenance(&code_commit),
+    let (risks, actions) = match scored {
+        Some(scored) => {
+            let block_context = BlockContext {
+                aoi_id: request.aoi_id.clone(),
+                topic_prefix: topic_prefix(&request.aoi_id).to_string(),
+                issued_at: issued_at.clone(),
+                issuer: issuer.clone(),
+                change_id: change.id.clone(),
+                context_id: context.id.clone(),
+                provenance: manifest.full_provenance(&code_commit),
+            };
+            let risks: Vec<Block> = build_risk_bodies(&config, &scored, &block_context)?
+                .into_iter()
+                .map(|body| Block::seal(body, &signing_key))
+                .collect::<Result<_, _>>()?;
+            let actions: Vec<Block> = build_action_bodies(&config, &risks, &block_context)?
+                .into_iter()
+                .map(|body| Block::seal(body, &signing_key))
+                .collect::<Result<_, _>>()?;
+            (risks, actions)
+        }
+        None => (Vec::new(), Vec::new()),
     };
-
-    let risks: Vec<Block> = build_risk_bodies(&config, &scored, &block_context)?
-        .into_iter()
-        .map(|body| Block::seal(body, &signing_key))
-        .collect::<Result<_, _>>()?;
-    let actions: Vec<Block> = build_action_bodies(&config, &risks, &block_context)?
-        .into_iter()
-        .map(|body| Block::seal(body, &signing_key))
-        .collect::<Result<_, _>>()?;
 
     // --- 4. Escribir los bloques y el índice -------------------------------
     bundle::write_json(&out.join("wonb/change.json"), &change)?;
@@ -159,6 +183,7 @@ pub fn run(request: &Request) -> Result<Report, CliError> {
         bundle_version: request.bundle_version.clone(),
         aoi_id: request.aoi_id.clone(),
         data_origin: manifest.data_origin,
+        purpose: Some(request.purpose),
         generated_at: issued_at.clone(),
         core_commit: code_commit,
         files: bundle::index_entries(out)?,
@@ -194,17 +219,56 @@ fn check_aoi_matches(manifest: &Manifest, aoi_id: &str) -> Result<(), CliError> 
 fn check_issuer_trusted(
     trusted: &TrustedIssuers,
     issuer: &str,
+    purpose: BundlePurpose,
     path: &Path,
 ) -> Result<(), CliError> {
-    let allowed = REQUIRED_ROLES
-        .iter()
-        .all(|role| trusted.allows(issuer, *role));
+    let required = if purpose == BundlePurpose::Scientific {
+        &SCIENTIFIC_ROLES[..]
+    } else {
+        &NON_OPERATIONAL_ROLES[..]
+    };
+    let allowed = required.iter().all(|role| trusted.allows(issuer, *role));
     if allowed {
         return Ok(());
     }
+
     Err(CliError::IssuerNotTrusted {
         issuer: issuer.to_string(),
         path: path.display().to_string(),
+    })
+}
+
+fn check_cells_profile(aoi_id: &str, crs_compute: &str, path: &Path) -> Result<(), CliError> {
+    let raw = error::read_to_string(path)?;
+    let cells: serde_json::Value =
+        serde_json::from_str(&raw).map_err(|err| CliError::BadInput {
+            path: path.display().to_string(),
+            reason: err.to_string(),
+        })?;
+    let errors = inputs::cell_profile_errors(aoi_id, crs_compute, &cells);
+    if errors.is_empty() {
+        return Ok(());
+    }
+    Err(CliError::BadInput {
+        path: path.display().to_string(),
+        reason: errors.join("; "),
+    })
+}
+
+fn check_roads_profile(aoi_id: &str, path: &Path) -> Result<(), CliError> {
+    let raw = error::read_to_string(path)?;
+    let roads: serde_json::Value =
+        serde_json::from_str(&raw).map_err(|err| CliError::BadInput {
+            path: path.display().to_string(),
+            reason: err.to_string(),
+        })?;
+    let errors = inputs::roads_profile_errors(aoi_id, &roads);
+    if errors.is_empty() {
+        return Ok(());
+    }
+    Err(CliError::BadInput {
+        path: path.display().to_string(),
+        reason: errors.join("; "),
     })
 }
 
@@ -338,7 +402,15 @@ fn mean_bp(values: impl Iterator<Item = Exact>, count: usize) -> Result<u32, Cli
 }
 
 fn topic(aoi_id: &str, block_type: BlockType) -> String {
-    format!("{TOPIC_PREFIX}/{aoi_id}/{block_type}")
+    format!("{}/{aoi_id}/{block_type}", topic_prefix(aoi_id))
+}
+
+fn topic_prefix(aoi_id: &str) -> &'static str {
+    if aoi_id == "piura-demo" {
+        DEMO_TOPIC_PREFIX
+    } else {
+        AOI_TOPIC_PREFIX
+    }
 }
 
 fn risk_cell_id(block: &Block) -> Result<&str, CliError> {
@@ -407,6 +479,18 @@ fn now_rfc3339() -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn topics_are_namespaced_by_aoi_without_reusing_piura_for_other_regions() {
+        assert_eq!(
+            topic("tailandia-01", BlockType::Action),
+            "wombat/aoi/tailandia-01/action"
+        );
+        assert_eq!(
+            topic("piura-demo", BlockType::Action),
+            "wombat/pe/piura/piura-demo/action"
+        );
+    }
 
     #[test]
     fn the_contract_version_is_readable_and_semver() {
@@ -479,8 +563,13 @@ mod tests {
                   "roles":["change","context","risk"]}]}"#,
         )
         .unwrap();
-        let err = check_issuer_trusted(&trusted, "ed25519:aa", Path::new("trusted-issuers.json"))
-            .unwrap_err();
+        let err = check_issuer_trusted(
+            &trusted,
+            "ed25519:aa",
+            BundlePurpose::Scientific,
+            Path::new("trusted-issuers.json"),
+        )
+        .unwrap_err();
         assert!(matches!(err, CliError::IssuerNotTrusted { .. }), "{err}");
     }
 
@@ -492,7 +581,59 @@ mod tests {
                   "roles":["change","context","risk","action"]}]}"#,
         )
         .unwrap();
-        check_issuer_trusted(&trusted, "ed25519:aa", Path::new("trusted-issuers.json")).unwrap();
+        check_issuer_trusted(
+            &trusted,
+            "ed25519:aa",
+            BundlePurpose::Scientific,
+            Path::new("trusted-issuers.json"),
+        )
+        .unwrap();
+    }
+
+    #[test]
+    fn baseline_issuer_needs_only_change_and_context_roles() {
+        let trusted = TrustedIssuers::from_json(include_str!(
+            "../../../contracts/v1/fixtures/aoi-integration/baseline-minimum-roles.json"
+        ))
+        .unwrap();
+        check_issuer_trusted(
+            &trusted,
+            "ed25519:baseline-test",
+            BundlePurpose::Baseline,
+            Path::new("trusted-issuers.json"),
+        )
+        .unwrap();
+        assert!(check_issuer_trusted(
+            &trusted,
+            "ed25519:baseline-test",
+            BundlePurpose::Scientific,
+            Path::new("trusted-issuers.json"),
+        )
+        .is_err());
+    }
+
+    #[test]
+    fn manifest_crs_must_match_the_aoi_policy() {
+        let bundle_dir = Path::new(env!("CARGO_MANIFEST_DIR"))
+            .join("../../contracts/v1/fixtures/bundle/piura-demo/v0");
+        let manifest = Manifest::load(&bundle_dir.join("manifest.json")).unwrap();
+        manifest.check_crs().unwrap();
+
+        let mut wrong = manifest;
+        wrong.crs_compute = Some("EPSG:32647".to_string());
+        assert!(wrong.check_crs().is_err());
+        wrong.crs_compute = None;
+        assert!(wrong.check_crs().is_err());
+    }
+
+    #[test]
+    fn scientific_manifest_fixture_satisfies_comparability_and_crs() {
+        let manifest: Manifest = serde_json::from_str(include_str!(
+            "../../../contracts/v1/fixtures/aoi-integration/manifest-scientific.json"
+        ))
+        .unwrap();
+        manifest.check_comparable().unwrap();
+        manifest.check_crs().unwrap();
     }
 
     #[test]

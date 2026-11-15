@@ -133,7 +133,9 @@ impl Block {
             )));
         }
         let suffix = format!("/{}", self.body.block_type);
-        if !self.body.topic.starts_with("wombat/pe/") || !self.body.topic.ends_with(&suffix) {
+        let namespaced =
+            self.body.topic.starts_with("wombat/pe/") || self.body.topic.starts_with("wombat/aoi/");
+        if !namespaced || !self.body.topic.ends_with(&suffix) {
             return Err(WonbError::Schema(format!(
                 "topic {} no corresponde a un bloque {}",
                 self.body.topic, self.body.block_type
@@ -254,6 +256,14 @@ mod tests {
     #[test]
     fn seal_then_verify_roundtrip() {
         let (block, _key, trusted) = sealed(context_json());
+        block.verify(None, &trusted).unwrap();
+    }
+
+    #[test]
+    fn aoi_topic_namespace_is_accepted_by_the_envelope_verifier() {
+        let mut raw = context_json();
+        raw["topic"] = serde_json::json!("wombat/aoi/tailandia-01/context");
+        let (block, _key, trusted) = sealed(raw);
         block.verify(None, &trusted).unwrap();
     }
 

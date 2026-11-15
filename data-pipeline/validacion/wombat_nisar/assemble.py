@@ -55,8 +55,9 @@ class Inputs:
     def __init__(self, inputs_dir: str | Path, grid: Grid):
         d = Path(inputs_dir)
         self.roads_path = d / "roads.geojson" if (d / "roads.geojson").exists() else None
+        self.road_cells_path = d / "road_cells.json" if (d / "road_cells.json").exists() else None
         opera_doc = _load(d / "opera_cells.json")
-        road_doc = _load(d / "road_cells.json")
+        road_doc = _load(self.road_cells_path) if self.road_cells_path else None
         self.opera = _per_cell(opera_doc, "opera_cells.json", grid) if opera_doc else None
         self.roads = _per_cell(road_doc, "road_cells.json", grid) if road_doc else None
         self.opera_meta = opera_doc if isinstance(opera_doc, dict) else {}
@@ -81,7 +82,8 @@ def _meters(roads: dict | None, key: str) -> int:
     return int(round(float(roads[key]))) if roads else 0
 
 
-def build_cells(grid: Grid, metrics: dict, inputs: Inputs) -> tuple[dict, list[str]]:
+def build_cells(grid: Grid, metrics: dict, inputs: Inputs,
+                data_origin: str = "nisar_real") -> tuple[dict, list[str]]:
     """FeatureCollection de cells.geojson (geometria en EPSG:4326) y avisos."""
     warnings, feats = [], []
     no_opera = no_roads = 0
@@ -91,16 +93,33 @@ def build_cells(grid: Grid, metrics: dict, inputs: Inputs) -> tuple[dict, list[s
         roads = (inputs.roads or {}).get(cid)
         no_opera += opera is None
         no_roads += roads is None
+        opera_available = bool(opera and opera.get("opera_status") != "unavailable")
+        osm_available = bool((inputs.roads_path or inputs.road_cells_path) and roads)
         feats.append({
             "type": "Feature",
             "geometry": {"type": "Polygon", "coordinates": [grid.ring_wgs84(k)]},
             "properties": {
+                "aoi_id": grid.aoi_id,
                 "cell_id": cid,
                 **metrics[cid],
                 "opera_status": opera["opera_status"] if opera else "unavailable",
                 "opera_overlap_ratio": _ratio(opera),
                 "road_m_near_change": _meters(roads, "road_m_near_change"),
                 "road_m_total": _meters(roads, "road_m_total"),
+                "source_status": {
+                    "nisar": "available" if data_origin == "nisar_real" else "simulated",
+                    "opera": "available" if opera_available else "unavailable",
+                    "osm": "available" if osm_available else "unavailable",
+                },
+                "provenance_refs": {
+                    "nisar": ["manifest.json#/nisar"],
+                    "opera": (["manifest.json#/opera", f"opera_cells.json#/{cid}"]
+                              if opera_available else ["manifest.json#/opera"]),
+                    "osm": ((["manifest.json#/osm"]
+                             + (["roads.geojson"] if inputs.roads_path else [])
+                             + ([f"road_cells.json#/{cid}"] if inputs.road_cells_path else []))
+                            if osm_available else []),
+                },
             },
         })
     if inputs.opera is None:
@@ -112,6 +131,8 @@ def build_cells(grid: Grid, metrics: dict, inputs: Inputs) -> tuple[dict, list[s
     elif no_roads:
         warnings.append(f"{no_roads} celdas sin fila en road_cells.json: quedan en 0")
     fc = {"type": "FeatureCollection",
+          "aoi_id": grid.aoi_id,
+          "crs_compute": grid.crs,
           "crs_note": f"geometry en EPSG:4326 para el mapa; calculos hechos en {grid.crs}",
           "features": feats}
     return fc, warnings

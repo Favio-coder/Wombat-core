@@ -81,9 +81,49 @@ impl Workspace {
         let out_dir = root.path().join("out/v1");
 
         // Los insumos que produce Python: evidencia sin firmar.
-        for name in ["cells.geojson", "roads.geojson"] {
-            copy(&fixture_bundle().join(name), &input_dir.join(name));
+        let mut cells: serde_json::Value =
+            serde_json::from_slice(&std::fs::read(fixture_bundle().join("cells.geojson")).unwrap())
+                .unwrap();
+        cells["aoi_id"] = serde_json::json!("piura-demo");
+        cells["crs_compute"] = serde_json::json!("EPSG:32717");
+        for feature in cells["features"].as_array_mut().unwrap() {
+            let properties = feature["properties"].as_object_mut().unwrap();
+            properties.insert("aoi_id".to_string(), serde_json::json!("piura-demo"));
+            let opera_available =
+                properties.get("opera_status").and_then(|v| v.as_str()) != Some("unavailable");
+            properties.insert(
+                "source_status".to_string(),
+                serde_json::json!({
+                    "nisar": "simulated",
+                    "opera": if opera_available { "available" } else { "unavailable" },
+                    "osm": "available"
+                }),
+            );
+            properties.insert(
+                "provenance_refs".to_string(),
+                serde_json::json!({
+                    "nisar": [],
+                    "opera": if opera_available {
+                        vec!["manifest.json#/opera"]
+                    } else {
+                        Vec::<&str>::new()
+                    },
+                    "osm": ["manifest.json#/osm"]
+                }),
+            );
         }
+        write(
+            &input_dir.join("cells.geojson"),
+            &format!("{}\n", serde_json::to_string(&cells).unwrap()),
+        );
+        let mut roads: serde_json::Value =
+            serde_json::from_slice(&std::fs::read(fixture_bundle().join("roads.geojson")).unwrap())
+                .unwrap();
+        roads["aoi_id"] = serde_json::json!("piura-demo");
+        write(
+            &input_dir.join("roads.geojson"),
+            &format!("{}\n", serde_json::to_string(&roads).unwrap()),
+        );
         let manifest = std::fs::read_to_string(fixture_bundle().join("manifest.json")).unwrap();
         write(&input_dir.join("manifest.json"), &edit(&manifest));
         copy_dir(
@@ -268,8 +308,33 @@ fn every_one_of_the_twenty_one_payloads_matches_the_published_fixture() {
 
     for (relative, theirs_block) in &theirs {
         let ours_block = &ours[relative];
+        let mut ours_payload = ours_block["payload"].clone();
+        let mut theirs_payload = theirs_block["payload"].clone();
+        match relative.as_str() {
+            "wonb/change.json" => {
+                ours_payload
+                    .as_object_mut()
+                    .unwrap()
+                    .remove("cells_geojson_sha256");
+                theirs_payload
+                    .as_object_mut()
+                    .unwrap()
+                    .remove("cells_geojson_sha256");
+            }
+            "wonb/context.json" => {
+                ours_payload
+                    .as_object_mut()
+                    .unwrap()
+                    .remove("roads_geojson_sha256");
+                theirs_payload
+                    .as_object_mut()
+                    .unwrap()
+                    .remove("roads_geojson_sha256");
+            }
+            _ => {}
+        }
         assert_eq!(
-            ours_block["payload"], theirs_block["payload"],
+            ours_payload, theirs_payload,
             "el payload de {relative} difiere del publicado"
         );
         // Lo que sí cambia, y tiene que cambiar: la clave del fixture se

@@ -1,0 +1,22 @@
+{
+  "purpose": "baseline",
+  "manifest": {
+    "aoi_id": "piura-01",
+    "data_origin": "nisar_real",
+    "crs_compute": "EPSG:32717",
+    "nisar": {
+      "comparable": false,
+      "comparable_checks": {
+        "same_frame": false,
+        "same_orbit_direction": true,
+        "same_mode": true,
+        "same_frequency": true,
+        "same_polarization": true,
+        "same_maturity": true
+      },
+      "t1": {"granule": "PIURA-T1", "datetime": "2026-10-07T10:00:00Z"},
+      "t2": {"granule": "PIURA-T2", "datetime": "2026-10-19T10:00:00Z"}
+    }
+  },
+  "allowed_blocks": ["change", "context"]
+}

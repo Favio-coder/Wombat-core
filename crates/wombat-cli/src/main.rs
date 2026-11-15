@@ -34,6 +34,7 @@ use std::process::ExitCode;
 
 use clap::{Parser, Subcommand};
 
+use bundle::BundlePurpose;
 use error::CliError;
 
 /// Directorio de configuración por defecto, relativo al directorio de trabajo.
@@ -102,6 +103,10 @@ enum Command {
         #[arg(long)]
         out: PathBuf,
 
+        /// Clase de salida. Baseline/preparation no emiten Risk ni Action.
+        #[arg(long, value_enum, default_value = "scientific")]
+        purpose: BundlePurpose,
+
         /// Directorio con risk-config.json y trusted-issuers.json.
         #[arg(long, default_value = DEFAULT_CONFIG_DIR)]
         config: PathBuf,
@@ -148,6 +153,7 @@ fn run() -> Result<(), CliError> {
             key,
             issued_at,
             out,
+            purpose,
             config,
         } => {
             let request = build::Request {
@@ -157,6 +163,7 @@ fn run() -> Result<(), CliError> {
                 key_path: key,
                 issued_at,
                 out_dir: out,
+                purpose,
                 config_dir: config,
             };
             let report = build::run(&request)?;

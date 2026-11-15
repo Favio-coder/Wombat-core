@@ -87,15 +87,46 @@ que el contrato del manifiesto no admite; no inventa fechas de descarga. Los esq
 Rust completa el bundle público `data/piura-01/v1/`: índice, hashes, emisores y cadena WONB.
 Validar ciencia no equivale a superar el verificador oficial del bundle.
 
+## Identidad y aislamiento por AOI
+
+`data-pipeline/nisar/` es el flujo oficial actualmente configurado para `piura-01`
+(`EPSG:32717`). El flujo exploratorio multi-AOI vive en `data-pipeline/validacion/`;
+no se debe reutilizar la grilla ni el CRS de Piura para otra región. Usa los CRS
+de `docs/aoi-integration-contract.md`: Tailandia `EPSG:32647`, Huaraz
+`EPSG:32718`, y los AOI peruanos restantes `EPSG:32717`.
+
+Antes de pasar un paquete al exportador Rust, valida su aislamiento y propósito:
+
+```bash
+python data-pipeline/validacion/validate_aoi_integration.py \
+  --in RUTA/DEL/PAQUETE \
+  --purpose scientific \
+  --inputs data-pipeline/inputs/ID_DEL_AOI \
+  --roads data-pipeline/inputs/ID_DEL_AOI/roads.geojson
+```
+
+`scientific` requiere t1/t2 seleccionados y comparables; `data_origin` sigue
+determinando si el contenido es real o un fixture simulado, que nunca debe
+presentarse como evidencia real. `baseline` y `preparation` son explícitos y no
+pueden generar Risk ni Action. El validador
+rechaza AOI/CRS inconsistentes, identidad de celda o ruta cruzada, fuentes sin
+procedencia, y cadenas WONB con padres de otro AOI. Las fracciones en
+`cells.geojson` son evidencia no firmada; Rust conserva la serialización y
+firma de enteros en los payloads WONB.
+
 ## Estado y referencias
 
-Una consulta ASF ejecutada el 14 nov 2026 para la ventana 1 oct–10 nov encontró 4 escenas PROVISIONAL
-(7 y 19 oct), 2 VALIDATED (31 oct) y 0 BETA; no se encontró un par de igual madurez a ambos lados del
-evento. Las respuestas y preflight de ASF quedan en `out/piura-01/`, que es salida generada, ignorada y
-no versionada. El HEAD consultado respondió HTTP 200 con rangos disponibles (1 488 977 920 bytes); no se
-descargó el cuerpo. No hay métricas ni imágenes científicas reales de Piura. Faltan un par comparable,
-HDF5 y vías de Jelibeth; OPERA puede quedar unavailable. El verificador oficial ejecutado anteriormente
-falló por falta de `index.json`. Los HDF5 de los tests son fabricados y permanecen en temporales.
+Una consulta ASF registrada el 14 nov 2026 para la ventana 1 oct–10 nov encontró 4 escenas
+PROVISIONAL (7 y 19 oct), 2 VALIDATED (31 oct) y 0 BETA; no encontró un par de igual madurez
+a ambos lados del evento. Las respuestas y preflight de ASF quedan en `out/piura-01/`, salida
+generada, ignorada y no versionada. El flujo oficial no tiene un bundle de evento verificable:
+Piura sigue bloqueado para una alerta científica. Hay una línea base comparable 7–19 oct en
+`data-pipeline/validacion/resultados/peru-fuentes-nasa/ciudades/piura-01/`, pero no representa
+el evento; el par exploratorio 19–31 oct tiene madurez mixta. Las vías OSM locales están en
+`inputs/piura-01/`; su presencia no desbloquea el par NISAR. El bundle local
+`data/tailandia-01/v1/` es provisional e inmutable, y sus rutas/audiencias de Action y nota CRS
+son contradictorias: no reutilizarlo para Piura ni enrutar sus acciones. Los HDF5 fabricados
+por tests permanecen solo en temporales.
 
 [GCOV ASF](https://nisar-docs.asf.alaska.edu/gcov/) y
 [JPL D-102274 Rev F, v1.5.0](https://cumulus.asf.earthdatacloud.nasa.gov/PUBLIC/DATA/NISAR/NISAR_D-102274_RevF_NASA_SDS_Product_Specification_L2_GCOV_w-esigs.pdf):

@@ -33,6 +33,8 @@ pub const COPIED_INPUTS: [&str; 3] = ["manifest.json", "cells.geojson", "roads.g
 #[derive(Debug, Clone, Deserialize)]
 pub struct Manifest {
     pub aoi_id: String,
+    #[serde(default)]
+    pub crs_compute: Option<String>,
     pub data_origin: DataOrigin,
     pub nisar: Nisar,
     pub opera: Opera,
@@ -120,6 +122,26 @@ impl Manifest {
             });
         }
         Ok(())
+    }
+
+    pub fn check_crs(&self) -> Result<(), CliError> {
+        let expected = expected_compute_crs(&self.aoi_id).ok_or_else(|| CliError::BadInput {
+            path: "manifest.json".to_string(),
+            reason: format!(
+                "no hay una política CRS registrada para AOI {}",
+                self.aoi_id
+            ),
+        })?;
+        if self.crs_compute.as_deref() == Some(expected) {
+            return Ok(());
+        }
+        Err(CliError::BadInput {
+            path: "manifest.json".to_string(),
+            reason: format!(
+                "crs_compute debe ser {expected} para {}, llegó {:?}",
+                self.aoi_id, self.crs_compute
+            ),
+        })
     }
 
     /// Fuente NISAR para la procedencia de los bloques.
@@ -212,6 +234,77 @@ impl Manifest {
             method: self.pipeline.risk_config_version.clone(),
             code_commit: code_commit.to_string(),
         }
+    }
+}
+
+pub fn expected_compute_crs(aoi_id: &str) -> Option<&'static str> {
+    match aoi_id {
+        "piura-01" | "piura-demo" | "sechura-01" | "tumbes-01" | "jequetepeque-01" => {
+            Some("EPSG:32717")
+        }
+        "huaraz-01" => Some("EPSG:32718"),
+        "tailandia-01" => Some("EPSG:32647"),
+        _ => None,
+    }
+}
+
+pub fn cell_profile_errors(
+    aoi_id: &str,
+    crs_compute: &str,
+    cells: &serde_json::Value,
+) -> Vec<String> {
+    let mut errors = Vec::new();
+    if cells.get("aoi_id").and_then(serde_json::Value::as_str) != Some(aoi_id) {
+        errors.push(format!("cells.geojson.aoi_id debe ser {aoi_id}"));
+    }
+    if cells.get("crs_compute").and_then(serde_json::Value::as_str) != Some(crs_compute) {
+        errors.push(format!(
+            "cells.geojson.crs_compute debe coincidir con {crs_compute}"
+        ));
+    }
+    let Some(features) = cells.get("features").and_then(serde_json::Value::as_array) else {
+        errors.push("cells.geojson.features debe ser una lista".to_string());
+        return errors;
+    };
+    if features.is_empty() {
+        errors.push("cells.geojson.features no puede estar vacía".to_string());
+    }
+    for (index, feature) in features.iter().enumerate() {
+        let Some(properties) = feature.get("properties") else {
+            errors.push(format!("cells.geojson.features[{index}].properties falta"));
+            continue;
+        };
+        let cell_id = properties
+            .get("cell_id")
+            .and_then(serde_json::Value::as_str);
+        if properties.get("aoi_id").and_then(serde_json::Value::as_str) != Some(aoi_id)
+            || !cell_id.is_some_and(|id| id.starts_with(&format!("{aoi_id}-r")))
+        {
+            errors.push(format!(
+                "cells.geojson.features[{index}] tiene aoi_id/cell_id ajeno a {aoi_id}"
+            ));
+        }
+        for field in ["source_status", "provenance_refs"] {
+            if !properties
+                .get(field)
+                .is_some_and(serde_json::Value::is_object)
+            {
+                errors.push(format!(
+                    "cells.geojson.features[{index}].{field} debe declararse en contrato 1.2.0"
+                ));
+            }
+        }
+    }
+    errors
+}
+
+pub fn roads_profile_errors(aoi_id: &str, roads: &serde_json::Value) -> Vec<String> {
+    if roads.get("aoi_id").and_then(serde_json::Value::as_str) == Some(aoi_id) {
+        Vec::new()
+    } else {
+        vec![format!(
+            "roads.geojson.aoi_id debe ser {aoi_id} en contrato 1.2.0"
+        )]
     }
 }
 

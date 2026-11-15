@@ -70,7 +70,7 @@ pub fn build_action_payloads(
             cell_id: cell.cell_id.clone(),
             rank: cell.rank.unwrap_or_default(),
             action: ActionKind::FieldVerificationFirst,
-            audience: AUDIENCE.to_string(),
+            audience: action_audience(&cell.cell_id),
         })
         .collect())
 }
@@ -144,15 +144,20 @@ pub fn build_action_bodies(
                 cell_id: cell_id.to_string(),
                 rank,
                 action: ActionKind::FieldVerificationFirst,
-                audience: AUDIENCE.to_string(),
+                audience: action_audience(cell_id),
             }),
             provenance: ctx.provenance.clone(),
         })
         .collect())
 }
 
-/// A quién va dirigida la acción. Igual que en el bundle fixture.
-const AUDIENCE: &str = "GORE Piura risk analyst";
+fn action_audience(cell_id: &str) -> String {
+    if cell_id.starts_with("piura-demo-") {
+        return "GORE Piura risk analyst".to_string();
+    }
+    let aoi_id = cell_id.rsplit_once("-r").map_or("unknown", |(aoi, _)| aoi);
+    format!("Risk analyst for AOI {aoi_id}")
+}
 
 fn risk_payload(cell: &CellRisk) -> RiskPayload {
     RiskPayload {
@@ -255,6 +260,34 @@ mod tests {
             actions[0].cell_id, "piura-demo-r00c03",
             "la de más carretera"
         );
+    }
+
+    #[test]
+    fn non_demo_actions_name_only_their_own_aoi() {
+        let cfg = config();
+        let mut cells = evaluate(&cfg, &inputs()).unwrap();
+        for cell in &mut cells {
+            cell.cell_id = cell.cell_id.replace("piura-demo", "tailandia-01");
+        }
+        let (key, vk) = generate_ephemeral_keypair();
+        let mut ctx = context(issuer_string(&vk));
+        ctx.aoi_id = "tailandia-01".into();
+        ctx.topic_prefix = "wombat/aoi".into();
+        let risks: Vec<Block> = build_risk_bodies(&cfg, &cells, &ctx)
+            .unwrap()
+            .into_iter()
+            .map(|body| Block::seal(body, &key).unwrap())
+            .collect();
+        let actions = build_action_bodies(&cfg, &risks, &ctx).unwrap();
+
+        assert_eq!(actions[0].topic, "wombat/aoi/tailandia-01/action");
+        for action in actions {
+            let Payload::Action(payload) = action.payload else {
+                panic!("se esperaba un bloque action")
+            };
+            assert_eq!(payload.audience, "Risk analyst for AOI tailandia-01");
+            assert!(!payload.audience.to_lowercase().contains("piura"));
+        }
     }
 
     #[test]

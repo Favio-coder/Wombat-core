@@ -320,8 +320,12 @@ def test_inputs_are_written_as_rust_reads_them(scene):
     assert cell["opera_overlap_ratio"] == 0.3333             # 4 decimales, no 0.3333333333333333
     assert (cell["road_m_near_change"], cell["road_m_total"]) == (2400, 5100)
     assert "e-" not in text and "NaN" not in text            # sin notacion exponencial ni NaN
-    for feature in json.loads(text)["features"]:             # mismas 10 propiedades que RawCell
-        assert len(feature["properties"]) == 10
+    for feature in json.loads(text)["features"]:
+        props = feature["properties"]
+        assert props["aoi_id"] == "synth-01"
+        assert props["source_status"]["nisar"] == "available"
+        assert set(props["provenance_refs"]) == {"nisar", "opera", "osm"}
+        assert len(props) == 13
 
 
 def test_roads_are_measured_from_roads_geojson(scene):

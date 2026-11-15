@@ -1,0 +1,16 @@
+{
+  "index_aoi_id": "tailandia-01",
+  "change": {"aoi_id": "piura-01", "topic": "wombat/aoi/tailandia-01/change"},
+  "context": {"aoi_id": "tailandia-01", "topic": "wombat/aoi/tailandia-01/context"},
+  "risk": {
+    "cell_id": "tailandia-01-r00c00",
+    "parents": ["change-piura", "context-thailand"],
+    "topic": "wombat/aoi/tailandia-01/risk"
+  },
+  "action": {
+    "cell_id": "tailandia-01-r00c00",
+    "parents": ["risk-thailand"],
+    "topic": "wombat/aoi/tailandia-01/action"
+  },
+  "expected": "reject"
+}

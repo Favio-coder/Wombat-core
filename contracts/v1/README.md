@@ -1,4 +1,4 @@
-# Contratos WOMBAT v1.1.0
+# Contratos WOMBAT v1.2.0
 
 Frontera entre personas y repos (plan maestro v2, §7 y R20/R26–R28). **No se cambia un campo "en caliente":**
 un PR que toque este directorio actualiza esquema + fixture + `VERSION` a la vez.
@@ -13,10 +13,10 @@ un PR que toque este directorio actualiza esquema + fixture + `VERSION` a la vez
 | Archivo | Qué valida |
 |---|---|
 | `manifest.schema.json` | `manifest.json` (Python → todos). Incluye `data_origin` (`nisar_real` \| `simulated`, ver R1) y obliga a `comparable_checks` todos `true` si `comparable: true` (R6). |
-| `cells.schema.json` | `cells.geojson` (Python → Rust). Floats permitidos aquí. |
+| `cells.schema.json` | `cells.geojson` (Python → Rust). El perfil integrado añade identidad y procedencia por AOI; floats permitidos aquí, nunca en payloads WONB. |
 | `risk-config.schema.json` | `config/risk-config.json` (R3). |
 | `wonb-envelope.schema.json` + `wonb-payloads.schema.json` | Bloques WONB 0.2. **Payload sin floats (R16).** Cada `type` fija sus `parents` y `valid_until`. |
-| `bundle-index.schema.json` | `index.json` del bundle publicado. |
+| `bundle-index.schema.json` | `index.json` del bundle publicado; `purpose` clasifica `scientific`, `baseline` o `preparation`. |
 | `fixtures/bundle/piura-demo/v0/` | Bundle **SIMULADO y firmado**: 16 celdas, 21 bloques, PNG con marca "SIMULATED DATA". |
 | `fixtures/expected/ranking.json` | Ranking dorado para el test de `wombat-risk` (Rust). |
 | `tools/verify_bundle.py` | Verificador Python (esquemas + sha256 + hash + firma + issuer + TTL + cadena). |
@@ -100,3 +100,18 @@ son unos 108 000 m, así que un AOI tropical sobreestima el total de vías en to
 al 2 %. No se cambia acá porque esa fórmula es la que firmó el bundle fixture y
 el test de extremo a extremo exige reproducir sus 21 payloads byte por byte.
 Cambiarla es un cambio de contrato aparte, con fixture nuevo.
+
+### 1.2.0 — Integración aislada por AOI
+
+El perfil nuevo de `cells.geojson` declara `aoi_id` y `crs_compute` en la
+colección, además de `aoi_id`, `source_status` y `provenance_refs` en cada
+celda. Estos campos son aditivos: Rust conserva las métricas y el algoritmo
+existentes, pero rechaza IDs de celda o AOI que no coincidan con el AOI
+solicitado.
+
+`index.json.purpose` distingue una salida `scientific` de un paquete
+`baseline` o `preparation`. Solo `scientific` calcula ranking y emite Risk o
+Action, y requiere `manifest.nisar.comparable: true` con los seis chequeos
+verdaderos. Los otros dos tipos pueden conservar evidencia de un par no
+comparable, pero Rust firma solo Change/Context y el verificador rechaza Risk o
+Action en ellos.

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "issuers": [
+    {
+      "issuer": "ed25519:baseline-test",
+      "name": "baseline-fixture",
+      "roles": ["change", "context"]
+    }
+  ],
+  "purpose": "baseline",
+  "expected": "accept"
+}
