@@ -151,8 +151,21 @@ impl Workspace {
             .arg(&self.config_dir))
     }
 
+    /// `wombat verify` midiendo las firmas contra la lista de **este** banco.
+    ///
+    /// El flag es obligatorio acá porque el defecto es
+    /// `config/trusted-issuers.json` relativo al directorio de trabajo, y el
+    /// del test es el del crate, no la raíz del repositorio.
     fn verify(&self) -> Output {
-        run(wombat().arg("verify").arg(&self.out_dir))
+        self.verify_against(&self.config_dir.join("trusted-issuers.json"))
+    }
+
+    fn verify_against(&self, trusted: &Path) -> Output {
+        run(wombat()
+            .arg("verify")
+            .arg(&self.out_dir)
+            .arg("--trusted")
+            .arg(trusted))
     }
 }
 
@@ -563,5 +576,90 @@ fn flipping_one_byte_of_a_signed_block_makes_verify_fail_naming_it() {
     assert!(
         report.contains("piura-demo-r02c01"),
         "el error debe nombrar el bloque:\n{report}"
+    );
+}
+
+// --- (f) CONFIANZA EXTERNA ----------------------------------------------
+
+#[test]
+fn a_bundle_signed_by_another_key_is_rejected_against_the_real_trust_list() {
+    // Dos bancos independientes: cada uno genera su propia clave con `keygen`,
+    // así que firman con claves distintas. Es el caso que importa: un bundle
+    // perfectamente bien construido, con todos sus hashes y firmas en orden,
+    // pero emitido por alguien que no está en nuestra lista.
+    let nuestro = Workspace::new();
+    let ajeno = Workspace::new();
+    assert_ne!(
+        nuestro.issuer, ajeno.issuer,
+        "keygen debería dar dos claves distintas"
+    );
+
+    assert!(
+        ajeno.build().status.success(),
+        "el bundle ajeno se construye"
+    );
+    assert!(
+        ajeno.verify().status.success(),
+        "y verifica contra su propia lista"
+    );
+
+    // Mismo bundle, nuestra lista.
+    let output = ajeno.verify_against(&nuestro.config_dir.join("trusted-issuers.json"));
+    let report = stdout(&output);
+
+    assert!(
+        !output.status.success(),
+        "un emisor fuera de la lista debe fallar:
+{report}"
+    );
+    assert!(summary_line(&report).starts_with("FALLA"), "{report}");
+    // Los 21 bloques caen: la firma es válida, el firmante no es de confianza.
+    assert!(
+        summary_line(&report).contains("21 error(es)"),
+        "deberían caer los 21 bloques:
+{report}"
+    );
+}
+
+#[test]
+fn swapping_the_trust_list_inside_the_bundle_does_not_buy_a_pass() {
+    // El ataque que `--trusted` cierra: quien pueda escribir en el directorio
+    // del bundle reemplaza su `trusted-issuers.json` por uno que incluya su
+    // propia clave. Antes eso alcanzaba, porque el verificador leía esa lista.
+    let nuestro = Workspace::new();
+    let atacante = Workspace::new();
+    assert!(atacante.build().status.success());
+
+    // El atacante se declara de confianza dentro de su propio bundle.
+    let dentro = atacante.out_dir.join("trusted-issuers.json");
+    std::fs::copy(atacante.config_dir.join("trusted-issuers.json"), &dentro).unwrap();
+
+    let output = atacante.verify_against(&nuestro.config_dir.join("trusted-issuers.json"));
+    let report = stdout(&output);
+
+    assert!(
+        !output.status.success(),
+        "la lista de dentro del bundle no debe decidir nada:
+{report}"
+    );
+}
+
+#[test]
+fn verify_without_a_trust_list_fails_naming_the_missing_file() {
+    let workspace = Workspace::new();
+    assert!(workspace.build().status.success());
+
+    let ausente = workspace.config_dir.join("no-existe.json");
+    let output = workspace.verify_against(&ausente);
+
+    assert!(
+        !output.status.success(),
+        "sin lista de confianza no hay verificación posible"
+    );
+    let salida = format!("{}{}", stdout(&output), stderr(&output));
+    assert!(
+        salida.contains("no-existe.json"),
+        "el error debe nombrar el archivo que falta:
+{salida}"
     );
 }
