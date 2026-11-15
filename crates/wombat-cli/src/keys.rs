@@ -133,10 +133,16 @@ fn restrict_key_file_windows(path: &std::path::Path) -> Result<(), CliError> {
 
 /// Lo que hay que decirle a quien acaba de generar una clave, según el sistema.
 pub fn permissions_note() -> &'static str {
+    // DECISIÓN: tres ramas y no dos. `restrict_permissions` es un no-op en
+    // cualquier target que no sea unix ni windows, así que prometer icacls en
+    // el `else` sería afirmar una protección que no se aplicó. Un aviso
+    // incómodo es mejor que la ilusión de que la clave está restringida.
     if cfg!(unix) {
         "permisos 0600 (solo tu usuario)"
-    } else {
+    } else if cfg!(windows) {
         "permisos de archivo restringidos (icacls: solo tu usuario)"
+    } else {
+        "ATENCIÓN: en este sistema el CLI no pudo restringir los permisos.          El archivo hereda los de su carpeta: guardalo fuera de carpetas          sincronizadas (OneDrive, Dropbox) y fuera de cualquier repo"
     }
 }
 
