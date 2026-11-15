@@ -178,7 +178,7 @@ fn check_bundle_purpose(
     }
     if index.purpose == Some(BundlePurpose::Scientific) {
         let checks = manifest.pointer("/nisar/comparable_checks");
-        if checks.map_or(true, |checks| {
+        if checks.is_none_or(|checks| {
             [
                 "same_frame",
                 "same_orbit_direction",

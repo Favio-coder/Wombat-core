@@ -323,7 +323,9 @@ def test_inputs_are_written_as_rust_reads_them(scene):
     for feature in json.loads(text)["features"]:
         props = feature["properties"]
         assert props["aoi_id"] == "synth-01"
-        assert props["source_status"]["nisar"] == "available"
+        assert props["source_status"]["nisar"] == "simulated", (
+            "synthetic input must not be labeled as available real NISAR evidence"
+        )
         assert set(props["provenance_refs"]) == {"nisar", "opera", "osm"}
         assert len(props) == 13
 
