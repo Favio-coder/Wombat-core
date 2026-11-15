@@ -179,8 +179,11 @@ misión y sus valores absolutos pueden cambiar. Lo que sostenemos es el **orden
 relativo** de las celdas, no la magnitud en decibelios.
 
 **2. No hay par de evento para Piura.** El catálogo de ASF sobre el AOI de Piura
-(`-80.80 -5.35 -80.55 -5.10`), consultado hasta el 30 nov 2026, devuelve escenas
-el 7 oct y el 19 oct (PROVISIONAL) y el 31 oct (VALIDATED), en ambos tracks.
+(`-80.80 -5.35 -80.55 -5.10`), con ventana de búsqueda 1 oct – 16 nov 2026 y
+consultado el 14 nov 2026 — `query` y `retrieved_at` de
+`data-pipeline/validacion/resultados/peru-fuentes-nasa/ciudades/piura-01/candidates.json` —,
+devuelve escenas el 7 oct y el 19 oct (PROVISIONAL) y el 31 oct (VALIDATED), en
+ambos tracks.
 **Ningún par encierra el evento sin mezclar madureces**, y mezclarlas está
 prohibido (R6/R7). Lo que sí existe es un par de **control** 7 oct → 19 oct, con
 0,00 % de cambio medio: el resultado correcto para dos escenas previas al evento.
@@ -232,14 +235,15 @@ legado a propósito, y migrarlo es trabajo de fase 2. Detalles en
 
 ## Equipo
 
-| módulo | responsable |
+| responsable | módulo |
 |---|---|
-| Core Rust / P2P | Richard |
-| Adaptador geoespacial Python | Gustavo |
-| Nodo edge Raspberry Pi | Jelibeth |
-| Agente de riesgo / dashboard | Mireya |
-| Landing / pitch / UI | Ximena |
-| QA, integración, Actions, fixtures, modo demo | Jayo |
+| Favio | core Rust, WONB 0.2, P2P |
+| Jelibeth | pipeline de datos NISAR / OPERA / OSM |
+| Gustavo | nodo edge Raspberry Pi |
+| Mireya | dashboard React / MapLibre |
+| Ximena | diseño visual y narrativa |
+| Jayo | CI y despliegue |
+| Alex | coordinación, integración y firma de bundles |
 
 Dos repositorios (**R26**): este core, y `wombat-dashboard` aparte.
 
