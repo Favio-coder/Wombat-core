@@ -31,7 +31,9 @@
       "description": "R1: 'simulated' obliga al dashboard a mostrar el rótulo SIMULATED DATA"
     },
     "crs_compute": {
-      "const": "EPSG:32717"
+      "type": "string",
+      "pattern": "^EPSG:(326|327)\\d{2}$",
+      "$comment": "Cualquier zona UTM WGS84: 326NN norte, 327NN sur. Hasta 1.0.0 esto era const EPSG:32717, la zona de Piura, y eso dejaba fuera cualquier AOI de otra zona."
     },
     "bbox_wgs84": {
       "type": "array",

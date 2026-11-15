@@ -1,4 +1,4 @@
-# Contratos WOMBAT v1.0.0
+# Contratos WOMBAT v1.1.0
 
 Frontera entre personas y repos (plan maestro v2, §7 y R20/R26–R28). **No se cambia un campo "en caliente":**
 un PR que toque este directorio actualiza esquema + fixture + `VERSION` a la vez.
@@ -65,3 +65,38 @@ Los fixtures tienen sha256 fijos; no los abras ni los guardes con editores que c
 ## Versionado
 
 `VERSION` es semver. Cambio que rompe → mayor +1 y aviso en el grupo **antes** del merge (R27). El dashboard declara qué mayor acepta.
+
+### 1.1.0 — `crs_compute` admite cualquier zona UTM WGS84
+
+`manifest.crs_compute` era `const "EPSG:32717"`, la zona de Piura. Eso ataba el
+contrato a un solo AOI: cualquier otra zona UTM producía un manifest que no
+validaba, aunque el resto estuviera impecable. Ahora es un patrón:
+
+```json
+"crs_compute": { "type": "string", "pattern": "^EPSG:(326|327)\\d{2}$" }
+```
+
+`326NN` para el hemisferio norte y `327NN` para el sur. Sigue rechazando lo que
+no es UTM WGS84 (`EPSG:4326`, `EPSG:3857`) y es sensible a mayúsculas.
+
+**Es retrocompatible y sube la menor, no la mayor.** `EPSG:32717` sigue
+validando, los bundles `1.0.0` publicados siguen siendo válidos y ningún
+verificador los rechaza: los tres comparan **solo la mayor** de
+`contract_version` contra la de `VERSION` (`verify_bundle.py` línea 67,
+`check_contract_major` en `crates/wombat-cli/src/verify.rs`). Un bundle que
+declare `1.0.0` y uno que declare `1.1.0` se aceptan igual.
+
+No se tocó ningún otro campo, ningún fixture ni ningún bundle publicado (R28).
+`bundle-index.contract_version` ya era el patrón `^[0-9]+\\.[0-9]+\\.[0-9]+$`, así
+que no hizo falta cambiarlo.
+
+#### Lo que esta versión **no** arregla
+
+`roads_total_m` del bloque Context lo calcula `crates/wombat-cli/src/inputs.rs`
+con una proyección equirectangular de constantes fijas (110 400 m por grado de
+longitud, 110 570 por grado de latitud), que son las de la latitud de Piura. No
+es una geodésica ni mide en la zona UTM declarada: a 14° N, un grado de longitud
+son unos 108 000 m, así que un AOI tropical sobreestima el total de vías en torno
+al 2 %. No se cambia acá porque esa fórmula es la que firmó el bundle fixture y
+el test de extremo a extremo exige reproducir sus 21 payloads byte por byte.
+Cambiarla es un cambio de contrato aparte, con fixture nuevo.
