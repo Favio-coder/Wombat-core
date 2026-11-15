@@ -15,6 +15,12 @@ node_modules
 *.pem
 dist/
 data-pipeline/out/
+
+# Bytecode de Python. Son artefactos de la maquina que corrio el pipeline:
+# cambian con la version del interprete y no aportan nada al arbol.
+__pycache__/
+*.py[cod]
+.pytest_cache/
 *.h5
 *.hdf5
 *.he5

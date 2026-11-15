@@ -1,0 +1,22 @@
+{
+  "pixels": 60000,
+  "valid_fraction": 1.0,
+  "warnings": [],
+  "decrease_fraction": 0.02665,
+  "increase_fraction": 0.017916666666666668,
+  "mean_db": -0.11210563033819199,
+  "std_db": 1.355452299118042,
+  "p02_db": -3.2707930183410645,
+  "p50_db": -0.012383145280182362,
+  "p98_db": 2.8798151731491086,
+  "delta_db_threshold": 3.0,
+  "mask_rule_confirmed": true,
+  "native_pixel_m": 10.0,
+  "multilook_meters": 100,
+  "analysis_pixel_m": 100.0,
+  "excluded_fraction": null,
+  "native_looks_median": 4.42,
+  "effective_looks": 441.9,
+  "speckle_std_db": 0.292,
+  "expected_false_change_fraction": 0.0
+}

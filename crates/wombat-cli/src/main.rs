@@ -44,6 +44,14 @@ use error::CliError;
 /// repositorio— es peor que un flag.
 const DEFAULT_CONFIG_DIR: &str = "config";
 
+/// La lista de confianza con la que `verify` mide las firmas.
+///
+/// DECISIÓN: es la del repositorio y **no** la que viene dentro del bundle. Un
+/// bundle que trae su propia lista de emisores se autoavala: cambiarla y volver
+/// a firmar da un "OK" que no significa nada. Ver el doc de módulo de
+/// `verify.rs`.
+const DEFAULT_TRUSTED: &str = "config/trusted-issuers.json";
+
 #[derive(Parser)]
 #[command(
     name = "wombat",
@@ -108,6 +116,10 @@ enum Command {
         /// `index.generated_at`: un bundle estático es una foto histórica.
         #[arg(long = "as-of")]
         as_of: Option<String>,
+
+        /// Lista de emisores de confianza. Nunca se lee la del bundle.
+        #[arg(long, default_value = DEFAULT_TRUSTED)]
+        trusted: PathBuf,
     },
 }
 
@@ -157,7 +169,11 @@ fn run() -> Result<(), CliError> {
             );
             Ok(())
         }
-        Command::Verify { bundle, as_of } => verify::run(&bundle, as_of.as_deref()).map(|_| ()),
+        Command::Verify {
+            bundle,
+            as_of,
+            trusted,
+        } => verify::run(&bundle, as_of.as_deref(), &trusted).map(|_| ()),
     }
 }
 

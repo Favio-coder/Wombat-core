@@ -1,127 +1,91 @@
-# WOMBAT — Protocolo de intercambio de bloques de evidencia (WONB)
+# WOMBAT — El Niño Evidence Mesh
 
-WOMBAT (Wombat Observation and Monitoring Blockchain-style Transport) es un
-prototipo de protocolo P2P para intercambiar bloques JSON de evidencia llamados
-**WONB** (*Wombat Observation Notation Block*) entre nodos heterogéneos.
+WOMBAT convierte cambios observados por **NISAR GCOV** en evidencia firmada: contrasta la señal con **OPERA DSWx-S1**, calcula exposición vial por celdas de **1 km × 1 km** y prioriza qué zona verificar primero. Cada resultado se expresa como bloques WONB verificables con Ed25519. El usuario objetivo es el analista del **Gobierno Regional de Piura (GORE Piura)**: esto sirve para **preparación, no para emitir alertas**.
 
-El MVP usa **Rust + Tokio + libp2p** como nodo P2P, con **Python** para un futuro
-adaptador geoespacial, **TypeScript/React** para el futuro dashboard y agente de
-riesgo, y **Raspberry Pi** como futuro nodo edge.
+> **Los datos de los fixtures son SIMULADOS.** El bundle `piura-demo/v0` no representa observaciones NISAR reales ni una evaluación científica operacional. Un cambio observado no confirma ni predice una inundación.
 
-> ⚠️ Estado: núcleo, contratos compartidos, modo P2P TCP/GossipSub local, pruebas y estructura de integración.
-> No incluye dashboard completo, procesamiento SAR real, integración NISAR real ni
-> GPIO de Raspberry. Los valores NISAR de los fixtures son **simulados para la
-> demo**.
+## Estado del proyecto
 
-## ¿Qué es un WONB?
+| IMPLEMENTADO | LEGADO | PLANIFICADO |
+|---|---|---|
+| `contracts/v1/`: contrato 1.0.0, bundle y los tres verificadores (Rust, Python, JS). | `wombat-node` implementa WONB **0.1**, un contrato distinto del vigente. | Pipeline geoespacial completo en `data-pipeline/`; hoy no hay insumos NISAR reales. |
+| WONB 0.2 en `wombat-core` (`wonb-core` en el plan): JCS, hash por contenido, firma y verificación. | Su payload firmado lleva `confidence` como `f64`, lo que **viola R16**. | `wombat-gateway` REST/WS y modo `live`. |
+| `wombat-cli`: `keygen`, `build` y `verify`. **R14: solo Rust firma.** | El transporte TCP + GossipSub del nodo legado requiere compilar con `--features p2p`; el nodo es distinto del contrato v1 vigente. | Dashboard en el repositorio aparte `wombat-dashboard` (**R26**); modo `static` obligatorio (**R17**), `remote`/`live` opcionales. |
+| `wombat-risk`: ranking determinista con prueba de ranking dorado. | `publish` valida e imprime el WONB; sin esa feature **no transmite**. | Edge Raspberry/ESP32 como P2; no hay hardware ni conexión implementados. |
+| Fixture firmado y **simulado** `contracts/v1/fixtures/bundle/piura-demo/v0`. | Los esquemas y fixtures 0.1 siguen en CI mientras exista compatibilidad. |  |
 
-Un WONB es un bloque JSON de evidencia firmado que contiene:
+WONB 0.1 y 0.2 son contratos distintos. El nodo actual continúa usando 0.1; el contrato v1 y el ranking usan 0.2. Consulta [la documentación del contrato v1](contracts/v1/README.md) y [la especificación legada 0.1](docs/wonb-spec.md).
 
-- `spec_version`: versión del esquema (`wombat/0.1`).
-- `id`: identificador único (`wonb:<tipo>:<uuid>`).
-- `type`: `anomaly` | `context` | `risk` | `tool`.
-- `schema`: esquema de dominio (ej. `geospatial.surface-displacement/1.0`).
-- `source`: proveedor, adaptador y referencia de origen.
-- `payload`: datos del bloque (objeto JSON arbitrario).
-- `provenance`: cuándo, por quién, confianza, hash SHA-256 y versión de regla.
-- `routing`: topic, TTL y prioridad.
-- `evidence_refs`: referencias a evidencia externa.
-- `signature`: firma Ed25519 (hex) sobre el hash canónico del contenido.
+## Repositorios y componentes
 
-## Arquitectura breve
+- **Core:** este repositorio `wombat-core`, con contratos, Rust y el directorio `data-pipeline/` reservado al pipeline.
+- **Dashboard:** repositorio separado `wombat-dashboard`; no vive en este core.
+- **Pipeline:** `data-pipeline/` dentro de este repositorio.
+- **Edge:** `edge/` cuando exista; el prototipo Raspberry anterior no forma parte del árbol actual.
+- **Landing/pitch:** no hay una aplicación landing implementada en este repositorio.
 
-```
-crates/wombat-core   -> Modelo WONB, validación, hash SHA-256, firmas Ed25519
-crates/wombat-node   -> Nodo libp2p + GossipSub, CLI (run/publish/validate)
-contracts/schemas    -> Esquemas JSON de los 4 tipos de WONB
-contracts/fixtures   -> Ejemplos válidos e inválidos para pruebas y demo
-adapters/*           -> Futuro adaptador geoespacial Python y nodo edge Pi
-apps/*               -> Futuro dashboard y landing
-docs/*               -> Especificación WONB, arquitectura, guía de demo
-```
+## El flujo que se demuestra
 
-P2P es transporte; A2A es coordinación semántica mediante WONBs. MCP o
-adaptadores conectarán fuentes y herramientas locales (no implementados todavía).
-
-## Requisitos
-
-- Rust toolchain estable (1.88+ para el modo P2P libp2p 0.57.1).
-- `cargo` y `clang`/`gcc` (libp2p compila código nativo).
-- Opcional: Docker y Docker Compose para la demo local.
-
-## Comandos exactos
-
-Desde la raíz del workspace (`wombat/`):
+Clave → bundle firmado → verificación cruzada. El detalle paso a paso está en el
+[runbook](docs/demo-runbook.md).
 
 ```bash
-# Formato
-cargo fmt --check
+# Las cuatro verificaciones y las tres puertas de calidad, en una tabla.
+python scripts/verify_all.py
 
-# Lint (clippy, errores como advertencias)
-cargo clippy --workspace -- -D warnings
+# 1. Clave Ed25519 fuera del repositorio (R19: el comando rechaza un destino versionado).
+cargo run -p wombat-cli -- keygen --out ~/.wombat-keys/demo.key --name wombat-core-demo
 
-# Pruebas automatizadas (criterio de aceptación #1)
-cargo test --workspace
+# 2. Bundle firmado e inmutable por versión (R28). Falla antes de escribir si
+#    las escenas no son comparables (R6/R7).
+cargo run -p wombat-cli -- build --in data-pipeline/out/piura-01   --aoi piura-01 --version v1 --key ~/.wombat-keys/demo.key --out data/piura-01/v1
 
-# Validar también transporte TCP/GossipSub opcional
-cargo clippy --workspace --all-features -- -D warnings
-cargo test --workspace --all-features
-
-# Construir el nodo
-cargo build --workspace
-
-# Validar el fixture de anomalía (criterio de aceptación #3)
-cargo run -p wombat-node -- validate --file \
-  contracts/fixtures/anomaly-valid.json
-
-# Publicar el fixture de anomalía (modo demo, sin red)
-cargo run -p wombat-node -- publish --file \
-  contracts/fixtures/anomaly-valid.json
+# 3. Verificar: sha256, id por contenido, firma, emisor, TTL y cadena.
+#    --trusted es la lista de emisores; el defecto es config/trusted-issuers.json
+#    y nunca la que viene dentro del bundle. El fixture lo firmó una clave de
+#    desarrollo que a propósito no está en la confianza de producción.
+cargo run -p wombat-cli -- verify contracts/v1/fixtures/bundle/piura-demo/v0   --trusted contracts/v1/fixtures/bundle/piura-demo/v0/trusted-issuers.json
 ```
 
-## Verificar todo de una vez
+Las tres implementaciones del verificador —Rust, `contracts/v1/tools/verify_bundle.py`
+y `contracts/v1/tools/verify-js/verify.mjs`— leen el mismo bundle y deben
+coincidir. Sobre el fixture dan **21 bloques, 0 con error**.
 
-`scripts/verify_all.py` corre las tres puertas de calidad, los tres verificadores
-de bundle (Rust, Python, JS), el hash de cada archivo del `index.json` y la
-higiene del árbol versionado, y lo resume en una tabla ✔/✘ con tiempos. Solo
-biblioteca estándar: no hay nada que instalar, y corre igual en Windows y Linux.
-Sale con 1 si algo falla; un paso saltado se marca ⊘ y **nunca** cuenta como ✔.
+No comprueban lo mismo, y conviene no venderlo así: solo `wombat verify` mide la
+confianza contra una lista externa al bundle, y solo Rust y Python comprueban la
+integridad de los archivos contra `index.json`. JS y `verify-rs` comprueban `id`
+y firma contra la clave que el propio bloque declara. El
+[runbook](docs/demo-runbook.md#las-tres-no-comprueban-lo-mismo) tiene la tabla.
 
-```bash
-python scripts/verify_all.py            # todo
-python scripts/verify_all.py --quick    # sin cargo fmt, clippy ni test
-```
+El nodo legado 0.1 (`validate`, `publish`, `--features p2p`) no participa del
+flujo de bundle v1; está documentado en el
+[runbook](docs/demo-runbook.md#wonb-01-y-el-nodo-p2p--legado). Su transporte
+P2P real usa TCP y GossipSub, pero no cambia el contrato del nodo a WONB v1.
 
-## Levantar dos nodos locales
+## Arquitectura objetivo
 
-El nodo conserva un **modo demo local sin red**. El modo P2P real requiere
-compilar con `--features p2p`, TCP en loopback y una dirección del peer explícita;
-no usa mDNS, DNS, WebSocket, QUIC ni servicios externos.
+El flujo planificado es **NISAR GCOV → cambio observado → contraste OPERA → exposición vial por celda → ranking Rust → bloques WONB firmados → bundle → dashboard**. El contrato de datos es la interfaz entre `wombat-core` y `wombat-dashboard`; el navegador no habla libp2p.
 
-1. Terminal 1 — nodo A en modo demo:
-   ```bash
-   cargo run -p wombat-node -- run --demo
-   ```
+Los modos del dashboard descritos por el plan son:
 
-2. Terminal 2 — nodo B, valida el fixture:
-   ```bash
-   cargo run -p wombat-node -- validate --file \
-     contracts/fixtures/anomaly-valid.json
-   ```
+- **static:** bundle fijado dentro del build del dashboard; no depende de un backend.
+- **remote:** bundle publicado en GitHub Pages, cargado desde el repositorio core.
+- **live:** gateway REST/WS para estado y bloques recientes.
 
-3. El subcomando `publish` solo valida e imprime el bloque localmente; no
-   transmite porque no comparte el Swarm de un proceso `run`.
+El dashboard y el gateway que consumirían esos modos aún están planificados. El flujo existente de CI valida el fixture del contrato; eso no significa que haya una aplicación dashboard disponible.
 
-### Dos nodos reales en loopback
+### Transporte P2P: TCP + GossipSub
 
-Primero inicia el publicador A. Anota el PeerId y la multiaddr que imprime; el
-proceso esperará a que un peer remoto se suscriba al topic antes de publicar:
+El nodo P2P usa libp2p sobre TCP con GossipSub. Para probar dos nodos en
+loopback, inicia el publicador A; anota el PeerId y la multiaddr que imprime.
+El proceso esperará a que un peer remoto se suscriba al topic antes de publicar:
 
 ```bash
 cargo run -p wombat-node --features p2p -- run \
   --listen /ip4/127.0.0.1/tcp/9000 \
   --topic wombat/pe/piura/piura-demo/change \
   --trusted-issuers contracts/v1/fixtures/bundle/piura-demo/v0/trusted-issuers.json \
+  --identity-key ~/.wombat/transport-a.key \
   --publish contracts/v1/fixtures/bundle/piura-demo/v0/wonb/change.json \
   --timeout-secs 60
 ```
@@ -135,8 +99,15 @@ cargo run -p wombat-node --features p2p -- run \
   --peer /ip4/127.0.0.1/tcp/9000/p2p/<PEER_ID_A> \
   --topic wombat/pe/piura/piura-demo/change \
   --trusted-issuers contracts/v1/fixtures/bundle/piura-demo/v0/trusted-issuers.json \
+  --identity-key ~/.wombat/transport-b.key \
   --timeout-secs 60
 ```
+
+`--identity-key <PATH>` crea una clave Ed25519 de transporte libp2p si no existe
+y la guarda con permisos `0600`; al volver a usarla conserva el PeerId. Si se
+omite, el nodo advierte que usa una identidad efímera que cambia al reiniciar.
+Esta identidad de transporte no es una clave de firma WONB. Mantén el archivo
+privado fuera del repositorio y no lo compartas.
 
 La demo se considera exitosa cuando B registra recepción del mismo ID WONB,
 topic y peer de origen. GossipSub no almacena mensajes históricos ni ofrece ACK
@@ -144,6 +115,25 @@ de aplicación: el resultado solo puede verificarse mientras B está conectado y
 antes del timeout. Ambos nodos validan el contrato WONB 0.2, la firma, el emisor
 confiable, TTL y topic; A publica únicamente después del evento de suscripción
 remota correspondiente.
+
+### Conectarse a un relay
+
+Para conectar un nodo a un relay público, usa la multiaddr TCP del relay,
+incluyendo su PeerId, como argumento `--peer`. Sustituye el ejemplo por los
+datos publicados por el operador del relay:
+
+```bash
+./wombat-node run \
+  --listen /ip4/0.0.0.0/tcp/0 \
+  --peer /ip4/<RELAY_PUBLIC_IP>/tcp/9000/p2p/<RELAY_PEER_ID> \
+  --topic wombat/pe/piura/piura-demo/change \
+  --trusted-issuers ./trusted-issuers.json \
+  --identity-key ./wombat-transport.key
+```
+
+La multiaddr y el topic deben coincidir con la configuración del relay. Para
+exponer un relay propio se requiere permitir conexiones entrantes TCP en el
+puerto 9000; no se necesita abrir SSH para el tráfico P2P.
 
 Para validar el fixture de anomalía localmente:
 
@@ -155,10 +145,11 @@ cargo run -p wombat-node -- publish --file \
 Este comando es una validación local y **no publica en la red**.
 Consulta `docs/demo-runbook.md` para la guía detallada.
 
-## Binario precompilado Linux x86_64
+### Binario precompilado Linux x86_64
 
-Las GitHub Releases incluyen `wombat-node-linux-x86_64.tar.gz`; no necesitas
-clonar el repositorio ni instalar Rust o Cargo:
+Las GitHub Releases incluyen `wombat-node-linux-x86_64.tar.gz` para Linux
+x86_64. Los usuarios finales no necesitan clonar el repositorio ni instalar
+Rust o Cargo:
 
 ```sh
 tar -xzf wombat-node-linux-x86_64.tar.gz
@@ -168,10 +159,11 @@ cp relay.env.example relay.env
 ```
 
 Revisa y edita `relay.env` con el relay multiaddr, topic y trusted issuers de tu
-red. Después consulta el `README.md` del paquete y ejecuta `./wombat-node run`
-con esos valores y `--identity-key` para conservar el PeerId entre reinicios.
-La identidad de transporte libp2p es una clave privada local, no una clave para
-firmar WONBs; mantenla fuera del repositorio.
+red. Comprueba los checksums con `sha256sum -c SHA256SUMS`, revisa el
+`README.md` incluido y ejecuta `./wombat-node run` con esos valores y
+`--identity-key` para conservar el PeerId entre reinicios. El paquete contiene
+el binario, `trusted-issuers.json` público de ejemplo y archivos de ejemplo;
+no contiene el código fuente ni claves privadas.
 
 ## Contratos y revisión
 
@@ -206,6 +198,9 @@ actualización de fixtures y pruebas.
 - El MVP usa una **regla demostrativa**, no un modelo científico operacional.
 - No incluir claves privadas ni secretos en el repositorio.
 
+Más detalles: [arquitectura](docs/architecture.md),
+[runbook](docs/demo-runbook.md) y [contrato WONB 0.2](contracts/v1/README.md).
+
 ## Licencia
 
-MIT. Véase `LICENSE`.
+MIT. Véase [LICENSE](LICENSE).

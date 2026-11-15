@@ -1,6 +1,7 @@
 {
   "version": 1,
   "issuers": [
-    { "issuer": "ed25519:49be596f7fe05158fcc03e0f9d1bef7949f6c1378742cd82de93cbf86f26b843", "name": "wombat-piura-demo", "roles": ["change", "context", "risk", "action"] }
+    { "issuer": "ed25519:49be596f7fe05158fcc03e0f9d1bef7949f6c1378742cd82de93cbf86f26b843", "name": "wombat-piura-demo", "roles": ["change", "context", "risk", "action"] },
+    { "issuer": "ed25519:277cfe8e61989939675d9ac3412bc37f1316d0ad4cca235b1e3124a521aed8fc", "name": "wombat-prod-2026-11", "roles": ["change", "context", "risk", "action"] }
   ]
 }

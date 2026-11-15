@@ -1,0 +1,2429 @@
+{
+ "product": "OPERA_L3_DSWx-S1",
+ "derived_from": "Sentinel-1",
+ "t1": {
+  "granules": [
+   "OPERA_L3_DSWx-S1_T47PPR_20260919T230839Z_20261012T162941Z_S1D_30_v1.0",
+   "OPERA_L3_DSWx-S1_T47PPS_20260919T230811Z_20261012T162730Z_S1D_30_v1.0"
+  ],
+  "gap_days": 1
+ },
+ "t2": {
+  "granules": [
+   "OPERA_L3_DSWx-S1_T47PPR_20261001T230839Z_20261013T115214Z_S1D_30_v1.0",
+   "OPERA_L3_DSWx-S1_T47PPS_20261001T230811Z_20261013T114851Z_S1D_30_v1.0"
+  ],
+  "gap_days": 1
+ },
+ "stats": {
+  "nisar_changed_fraction": 0.3684,
+  "opera_new_water_fraction": 0.2707,
+  "of_nisar_changed_is_opera_new_water": 0.5364,
+  "of_nisar_changed_is_opera_water_at_t2": 0.5452,
+  "of_opera_new_water_is_nisar_changed": 0.7299,
+  "of_nisar_unchanged_is_opera_new_water": 0.1157
+ },
+ "within_max_gap": true,
+ "cells": {
+  "tailandia-01-r00c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r00c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r00c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r00c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r00c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1833
+  },
+  "tailandia-01-r00c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r00c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2381
+  },
+  "tailandia-01-r00c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0227
+  },
+  "tailandia-01-r00c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6705
+  },
+  "tailandia-01-r00c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7256
+  },
+  "tailandia-01-r00c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.503
+  },
+  "tailandia-01-r00c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r00c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.016
+  },
+  "tailandia-01-r00c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0204
+  },
+  "tailandia-01-r00c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r00c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0365
+  },
+  "tailandia-01-r00c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r00c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3333
+  },
+  "tailandia-01-r00c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r00c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r00c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0095
+  },
+  "tailandia-01-r00c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r00c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r00c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r01c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.021
+  },
+  "tailandia-01-r01c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r01c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0762
+  },
+  "tailandia-01-r01c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1992
+  },
+  "tailandia-01-r01c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1782
+  },
+  "tailandia-01-r01c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2681
+  },
+  "tailandia-01-r01c06": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1857
+  },
+  "tailandia-01-r01c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r01c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6638
+  },
+  "tailandia-01-r01c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7244
+  },
+  "tailandia-01-r01c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6184
+  },
+  "tailandia-01-r01c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4727
+  },
+  "tailandia-01-r01c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r01c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r01c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r01c15": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.25
+  },
+  "tailandia-01-r01c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r01c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r01c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0625
+  },
+  "tailandia-01-r01c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r01c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0879
+  },
+  "tailandia-01-r01c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0149
+  },
+  "tailandia-01-r01c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0826
+  },
+  "tailandia-01-r01c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r02c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4461
+  },
+  "tailandia-01-r02c01": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3853
+  },
+  "tailandia-01-r02c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r02c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4152
+  },
+  "tailandia-01-r02c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8251
+  },
+  "tailandia-01-r02c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6058
+  },
+  "tailandia-01-r02c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6426
+  },
+  "tailandia-01-r02c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4423
+  },
+  "tailandia-01-r02c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8281
+  },
+  "tailandia-01-r02c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4915
+  },
+  "tailandia-01-r02c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2843
+  },
+  "tailandia-01-r02c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.416
+  },
+  "tailandia-01-r02c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3709
+  },
+  "tailandia-01-r02c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5588
+  },
+  "tailandia-01-r02c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r02c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r02c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2041
+  },
+  "tailandia-01-r02c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r02c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r02c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0769
+  },
+  "tailandia-01-r02c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0827
+  },
+  "tailandia-01-r02c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0309
+  },
+  "tailandia-01-r02c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.069
+  },
+  "tailandia-01-r02c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r03c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.813
+  },
+  "tailandia-01-r03c01": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4735
+  },
+  "tailandia-01-r03c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0282
+  },
+  "tailandia-01-r03c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r03c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6752
+  },
+  "tailandia-01-r03c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4958
+  },
+  "tailandia-01-r03c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7731
+  },
+  "tailandia-01-r03c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0465
+  },
+  "tailandia-01-r03c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7181
+  },
+  "tailandia-01-r03c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.53
+  },
+  "tailandia-01-r03c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r03c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0081
+  },
+  "tailandia-01-r03c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.025
+  },
+  "tailandia-01-r03c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2062
+  },
+  "tailandia-01-r03c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r03c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r03c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0952
+  },
+  "tailandia-01-r03c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r03c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1212
+  },
+  "tailandia-01-r03c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0571
+  },
+  "tailandia-01-r03c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.04
+  },
+  "tailandia-01-r03c21": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4615
+  },
+  "tailandia-01-r03c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1875
+  },
+  "tailandia-01-r03c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r04c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7329
+  },
+  "tailandia-01-r04c01": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7959
+  },
+  "tailandia-01-r04c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r04c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5263
+  },
+  "tailandia-01-r04c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5213
+  },
+  "tailandia-01-r04c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.798
+  },
+  "tailandia-01-r04c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8478
+  },
+  "tailandia-01-r04c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0541
+  },
+  "tailandia-01-r04c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1889
+  },
+  "tailandia-01-r04c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2424
+  },
+  "tailandia-01-r04c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4981
+  },
+  "tailandia-01-r04c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1511
+  },
+  "tailandia-01-r04c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r04c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r04c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r04c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r04c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r04c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r04c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0183
+  },
+  "tailandia-01-r04c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.029
+  },
+  "tailandia-01-r04c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0781
+  },
+  "tailandia-01-r04c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0621
+  },
+  "tailandia-01-r04c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0562
+  },
+  "tailandia-01-r04c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1364
+  },
+  "tailandia-01-r05c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6044
+  },
+  "tailandia-01-r05c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1737
+  },
+  "tailandia-01-r05c02": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7703
+  },
+  "tailandia-01-r05c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5217
+  },
+  "tailandia-01-r05c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0712
+  },
+  "tailandia-01-r05c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8829
+  },
+  "tailandia-01-r05c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7718
+  },
+  "tailandia-01-r05c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5652
+  },
+  "tailandia-01-r05c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5504
+  },
+  "tailandia-01-r05c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6382
+  },
+  "tailandia-01-r05c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6288
+  },
+  "tailandia-01-r05c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6636
+  },
+  "tailandia-01-r05c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0563
+  },
+  "tailandia-01-r05c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.03
+  },
+  "tailandia-01-r05c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1111
+  },
+  "tailandia-01-r05c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0909
+  },
+  "tailandia-01-r05c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0476
+  },
+  "tailandia-01-r05c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6667
+  },
+  "tailandia-01-r05c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r05c19": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3875
+  },
+  "tailandia-01-r05c20": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2491
+  },
+  "tailandia-01-r05c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1993
+  },
+  "tailandia-01-r05c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0202
+  },
+  "tailandia-01-r05c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0207
+  },
+  "tailandia-01-r06c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7431
+  },
+  "tailandia-01-r06c01": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6207
+  },
+  "tailandia-01-r06c02": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5833
+  },
+  "tailandia-01-r06c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5294
+  },
+  "tailandia-01-r06c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1765
+  },
+  "tailandia-01-r06c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5819
+  },
+  "tailandia-01-r06c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.599
+  },
+  "tailandia-01-r06c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3973
+  },
+  "tailandia-01-r06c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6096
+  },
+  "tailandia-01-r06c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.759
+  },
+  "tailandia-01-r06c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7928
+  },
+  "tailandia-01-r06c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4126
+  },
+  "tailandia-01-r06c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r06c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r06c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r06c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r06c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r06c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r06c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1698
+  },
+  "tailandia-01-r06c19": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5535
+  },
+  "tailandia-01-r06c20": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4344
+  },
+  "tailandia-01-r06c21": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3088
+  },
+  "tailandia-01-r06c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0205
+  },
+  "tailandia-01-r06c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0026
+  },
+  "tailandia-01-r07c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7275
+  },
+  "tailandia-01-r07c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0612
+  },
+  "tailandia-01-r07c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1519
+  },
+  "tailandia-01-r07c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9352
+  },
+  "tailandia-01-r07c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8283
+  },
+  "tailandia-01-r07c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8793
+  },
+  "tailandia-01-r07c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7207
+  },
+  "tailandia-01-r07c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6096
+  },
+  "tailandia-01-r07c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4772
+  },
+  "tailandia-01-r07c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7589
+  },
+  "tailandia-01-r07c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7966
+  },
+  "tailandia-01-r07c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6021
+  },
+  "tailandia-01-r07c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2917
+  },
+  "tailandia-01-r07c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3333
+  },
+  "tailandia-01-r07c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r07c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r07c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r07c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.05
+  },
+  "tailandia-01-r07c18": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2391
+  },
+  "tailandia-01-r07c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0762
+  },
+  "tailandia-01-r07c20": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3655
+  },
+  "tailandia-01-r07c21": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2515
+  },
+  "tailandia-01-r07c22": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3501
+  },
+  "tailandia-01-r07c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0722
+  },
+  "tailandia-01-r08c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7019
+  },
+  "tailandia-01-r08c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r08c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0315
+  },
+  "tailandia-01-r08c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7923
+  },
+  "tailandia-01-r08c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8499
+  },
+  "tailandia-01-r08c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7281
+  },
+  "tailandia-01-r08c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6118
+  },
+  "tailandia-01-r08c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7218
+  },
+  "tailandia-01-r08c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1587
+  },
+  "tailandia-01-r08c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4527
+  },
+  "tailandia-01-r08c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8667
+  },
+  "tailandia-01-r08c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7922
+  },
+  "tailandia-01-r08c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8952
+  },
+  "tailandia-01-r08c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0476
+  },
+  "tailandia-01-r08c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r08c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0727
+  },
+  "tailandia-01-r08c16": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r08c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1892
+  },
+  "tailandia-01-r08c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1333
+  },
+  "tailandia-01-r08c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1012
+  },
+  "tailandia-01-r08c20": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6126
+  },
+  "tailandia-01-r08c21": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6693
+  },
+  "tailandia-01-r08c22": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5485
+  },
+  "tailandia-01-r08c23": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6793
+  },
+  "tailandia-01-r09c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6752
+  },
+  "tailandia-01-r09c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r09c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r09c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0653
+  },
+  "tailandia-01-r09c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8419
+  },
+  "tailandia-01-r09c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5471
+  },
+  "tailandia-01-r09c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4888
+  },
+  "tailandia-01-r09c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8607
+  },
+  "tailandia-01-r09c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5158
+  },
+  "tailandia-01-r09c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6166
+  },
+  "tailandia-01-r09c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5587
+  },
+  "tailandia-01-r09c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.66
+  },
+  "tailandia-01-r09c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6281
+  },
+  "tailandia-01-r09c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0156
+  },
+  "tailandia-01-r09c14": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.037
+  },
+  "tailandia-01-r09c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.124
+  },
+  "tailandia-01-r09c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2705
+  },
+  "tailandia-01-r09c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2714
+  },
+  "tailandia-01-r09c18": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2907
+  },
+  "tailandia-01-r09c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r09c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0658
+  },
+  "tailandia-01-r09c21": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6591
+  },
+  "tailandia-01-r09c22": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4218
+  },
+  "tailandia-01-r09c23": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6051
+  },
+  "tailandia-01-r10c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0539
+  },
+  "tailandia-01-r10c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0227
+  },
+  "tailandia-01-r10c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r10c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r10c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0018
+  },
+  "tailandia-01-r10c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5956
+  },
+  "tailandia-01-r10c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.688
+  },
+  "tailandia-01-r10c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9185
+  },
+  "tailandia-01-r10c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8043
+  },
+  "tailandia-01-r10c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.592
+  },
+  "tailandia-01-r10c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0141
+  },
+  "tailandia-01-r10c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.498
+  },
+  "tailandia-01-r10c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8707
+  },
+  "tailandia-01-r10c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8492
+  },
+  "tailandia-01-r10c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2824
+  },
+  "tailandia-01-r10c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1824
+  },
+  "tailandia-01-r10c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7912
+  },
+  "tailandia-01-r10c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3796
+  },
+  "tailandia-01-r10c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0068
+  },
+  "tailandia-01-r10c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1266
+  },
+  "tailandia-01-r10c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1343
+  },
+  "tailandia-01-r10c21": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6397
+  },
+  "tailandia-01-r10c22": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8701
+  },
+  "tailandia-01-r10c23": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7509
+  },
+  "tailandia-01-r11c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0411
+  },
+  "tailandia-01-r11c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r11c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r11c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r11c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1187
+  },
+  "tailandia-01-r11c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8592
+  },
+  "tailandia-01-r11c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8355
+  },
+  "tailandia-01-r11c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9294
+  },
+  "tailandia-01-r11c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8942
+  },
+  "tailandia-01-r11c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7325
+  },
+  "tailandia-01-r11c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3558
+  },
+  "tailandia-01-r11c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3364
+  },
+  "tailandia-01-r11c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.915
+  },
+  "tailandia-01-r11c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8942
+  },
+  "tailandia-01-r11c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7462
+  },
+  "tailandia-01-r11c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.102
+  },
+  "tailandia-01-r11c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8336
+  },
+  "tailandia-01-r11c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6768
+  },
+  "tailandia-01-r11c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0122
+  },
+  "tailandia-01-r11c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0096
+  },
+  "tailandia-01-r11c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r11c21": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6024
+  },
+  "tailandia-01-r11c22": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2759
+  },
+  "tailandia-01-r11c23": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.513
+  },
+  "tailandia-01-r12c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0027
+  },
+  "tailandia-01-r12c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r12c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r12c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r12c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r12c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8283
+  },
+  "tailandia-01-r12c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9038
+  },
+  "tailandia-01-r12c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.923
+  },
+  "tailandia-01-r12c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9405
+  },
+  "tailandia-01-r12c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6676
+  },
+  "tailandia-01-r12c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7264
+  },
+  "tailandia-01-r12c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8338
+  },
+  "tailandia-01-r12c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8723
+  },
+  "tailandia-01-r12c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8856
+  },
+  "tailandia-01-r12c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4393
+  },
+  "tailandia-01-r12c15": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6009
+  },
+  "tailandia-01-r12c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6232
+  },
+  "tailandia-01-r12c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8112
+  },
+  "tailandia-01-r12c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0917
+  },
+  "tailandia-01-r12c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r12c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r12c21": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3148
+  },
+  "tailandia-01-r12c22": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7986
+  },
+  "tailandia-01-r12c23": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7723
+  },
+  "tailandia-01-r13c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r13c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r13c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1013
+  },
+  "tailandia-01-r13c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7485
+  },
+  "tailandia-01-r13c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.681
+  },
+  "tailandia-01-r13c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4013
+  },
+  "tailandia-01-r13c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8736
+  },
+  "tailandia-01-r13c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9873
+  },
+  "tailandia-01-r13c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9377
+  },
+  "tailandia-01-r13c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6626
+  },
+  "tailandia-01-r13c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7147
+  },
+  "tailandia-01-r13c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7457
+  },
+  "tailandia-01-r13c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7952
+  },
+  "tailandia-01-r13c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8579
+  },
+  "tailandia-01-r13c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6129
+  },
+  "tailandia-01-r13c15": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8725
+  },
+  "tailandia-01-r13c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5408
+  },
+  "tailandia-01-r13c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9458
+  },
+  "tailandia-01-r13c18": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8426
+  },
+  "tailandia-01-r13c19": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2222
+  },
+  "tailandia-01-r13c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r13c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.131
+  },
+  "tailandia-01-r13c22": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4271
+  },
+  "tailandia-01-r13c23": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7652
+  },
+  "tailandia-01-r14c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r14c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r14c02": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2474
+  },
+  "tailandia-01-r14c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.767
+  },
+  "tailandia-01-r14c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5461
+  },
+  "tailandia-01-r14c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8964
+  },
+  "tailandia-01-r14c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8593
+  },
+  "tailandia-01-r14c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9333
+  },
+  "tailandia-01-r14c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8241
+  },
+  "tailandia-01-r14c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7735
+  },
+  "tailandia-01-r14c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6425
+  },
+  "tailandia-01-r14c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5886
+  },
+  "tailandia-01-r14c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.953
+  },
+  "tailandia-01-r14c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8966
+  },
+  "tailandia-01-r14c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8219
+  },
+  "tailandia-01-r14c15": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5263
+  },
+  "tailandia-01-r14c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7781
+  },
+  "tailandia-01-r14c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7543
+  },
+  "tailandia-01-r14c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1589
+  },
+  "tailandia-01-r14c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r14c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0288
+  },
+  "tailandia-01-r14c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0481
+  },
+  "tailandia-01-r14c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r14c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1667
+  },
+  "tailandia-01-r15c00": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1089
+  },
+  "tailandia-01-r15c01": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r15c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r15c03": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0365
+  },
+  "tailandia-01-r15c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7143
+  },
+  "tailandia-01-r15c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6778
+  },
+  "tailandia-01-r15c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6459
+  },
+  "tailandia-01-r15c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8276
+  },
+  "tailandia-01-r15c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8616
+  },
+  "tailandia-01-r15c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8609
+  },
+  "tailandia-01-r15c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5244
+  },
+  "tailandia-01-r15c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4641
+  },
+  "tailandia-01-r15c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7546
+  },
+  "tailandia-01-r15c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8478
+  },
+  "tailandia-01-r15c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.293
+  },
+  "tailandia-01-r15c15": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5638
+  },
+  "tailandia-01-r15c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.701
+  },
+  "tailandia-01-r15c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8761
+  },
+  "tailandia-01-r15c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1838
+  },
+  "tailandia-01-r15c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r15c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r15c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0574
+  },
+  "tailandia-01-r15c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r15c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r16c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4205
+  },
+  "tailandia-01-r16c01": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4351
+  },
+  "tailandia-01-r16c02": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2648
+  },
+  "tailandia-01-r16c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6829
+  },
+  "tailandia-01-r16c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7225
+  },
+  "tailandia-01-r16c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8825
+  },
+  "tailandia-01-r16c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8259
+  },
+  "tailandia-01-r16c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.822
+  },
+  "tailandia-01-r16c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.903
+  },
+  "tailandia-01-r16c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.892
+  },
+  "tailandia-01-r16c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8866
+  },
+  "tailandia-01-r16c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7793
+  },
+  "tailandia-01-r16c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7126
+  },
+  "tailandia-01-r16c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8016
+  },
+  "tailandia-01-r16c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6073
+  },
+  "tailandia-01-r16c15": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.781
+  },
+  "tailandia-01-r16c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3231
+  },
+  "tailandia-01-r16c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8958
+  },
+  "tailandia-01-r16c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0979
+  },
+  "tailandia-01-r16c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r16c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r16c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r16c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r16c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r17c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8278
+  },
+  "tailandia-01-r17c01": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9752
+  },
+  "tailandia-01-r17c02": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9241
+  },
+  "tailandia-01-r17c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9529
+  },
+  "tailandia-01-r17c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.907
+  },
+  "tailandia-01-r17c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9297
+  },
+  "tailandia-01-r17c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8966
+  },
+  "tailandia-01-r17c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.766
+  },
+  "tailandia-01-r17c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.825
+  },
+  "tailandia-01-r17c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8851
+  },
+  "tailandia-01-r17c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9127
+  },
+  "tailandia-01-r17c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.858
+  },
+  "tailandia-01-r17c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5049
+  },
+  "tailandia-01-r17c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.814
+  },
+  "tailandia-01-r17c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8595
+  },
+  "tailandia-01-r17c15": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8076
+  },
+  "tailandia-01-r17c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9295
+  },
+  "tailandia-01-r17c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8801
+  },
+  "tailandia-01-r17c18": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5938
+  },
+  "tailandia-01-r17c19": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6813
+  },
+  "tailandia-01-r17c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r17c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r17c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0667
+  },
+  "tailandia-01-r17c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r18c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7243
+  },
+  "tailandia-01-r18c01": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8367
+  },
+  "tailandia-01-r18c02": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7112
+  },
+  "tailandia-01-r18c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4552
+  },
+  "tailandia-01-r18c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9729
+  },
+  "tailandia-01-r18c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9265
+  },
+  "tailandia-01-r18c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8783
+  },
+  "tailandia-01-r18c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8427
+  },
+  "tailandia-01-r18c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4867
+  },
+  "tailandia-01-r18c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8962
+  },
+  "tailandia-01-r18c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9002
+  },
+  "tailandia-01-r18c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9614
+  },
+  "tailandia-01-r18c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6751
+  },
+  "tailandia-01-r18c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8862
+  },
+  "tailandia-01-r18c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8941
+  },
+  "tailandia-01-r18c15": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9316
+  },
+  "tailandia-01-r18c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9741
+  },
+  "tailandia-01-r18c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.933
+  },
+  "tailandia-01-r18c18": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5366
+  },
+  "tailandia-01-r18c19": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.806
+  },
+  "tailandia-01-r18c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0175
+  },
+  "tailandia-01-r18c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0178
+  },
+  "tailandia-01-r18c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0112
+  },
+  "tailandia-01-r18c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r19c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8603
+  },
+  "tailandia-01-r19c01": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9016
+  },
+  "tailandia-01-r19c02": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7388
+  },
+  "tailandia-01-r19c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6054
+  },
+  "tailandia-01-r19c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4151
+  },
+  "tailandia-01-r19c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.846
+  },
+  "tailandia-01-r19c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9484
+  },
+  "tailandia-01-r19c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8468
+  },
+  "tailandia-01-r19c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.851
+  },
+  "tailandia-01-r19c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6614
+  },
+  "tailandia-01-r19c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8151
+  },
+  "tailandia-01-r19c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3543
+  },
+  "tailandia-01-r19c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8193
+  },
+  "tailandia-01-r19c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9333
+  },
+  "tailandia-01-r19c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8899
+  },
+  "tailandia-01-r19c15": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9939
+  },
+  "tailandia-01-r19c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9649
+  },
+  "tailandia-01-r19c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7989
+  },
+  "tailandia-01-r19c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r19c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r19c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r19c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r19c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r19c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.008
+  },
+  "tailandia-01-r20c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5544
+  },
+  "tailandia-01-r20c01": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6614
+  },
+  "tailandia-01-r20c02": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6637
+  },
+  "tailandia-01-r20c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5924
+  },
+  "tailandia-01-r20c04": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0606
+  },
+  "tailandia-01-r20c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.603
+  },
+  "tailandia-01-r20c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.807
+  },
+  "tailandia-01-r20c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9381
+  },
+  "tailandia-01-r20c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8602
+  },
+  "tailandia-01-r20c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5957
+  },
+  "tailandia-01-r20c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6626
+  },
+  "tailandia-01-r20c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5918
+  },
+  "tailandia-01-r20c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6084
+  },
+  "tailandia-01-r20c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9287
+  },
+  "tailandia-01-r20c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6128
+  },
+  "tailandia-01-r20c15": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9486
+  },
+  "tailandia-01-r20c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7824
+  },
+  "tailandia-01-r20c17": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7214
+  },
+  "tailandia-01-r20c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r20c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r20c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1533
+  },
+  "tailandia-01-r20c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r20c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0426
+  },
+  "tailandia-01-r20c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r21c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3889
+  },
+  "tailandia-01-r21c01": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4837
+  },
+  "tailandia-01-r21c02": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3736
+  },
+  "tailandia-01-r21c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4095
+  },
+  "tailandia-01-r21c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5452
+  },
+  "tailandia-01-r21c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3114
+  },
+  "tailandia-01-r21c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7785
+  },
+  "tailandia-01-r21c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6287
+  },
+  "tailandia-01-r21c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8137
+  },
+  "tailandia-01-r21c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1855
+  },
+  "tailandia-01-r21c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4933
+  },
+  "tailandia-01-r21c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2381
+  },
+  "tailandia-01-r21c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.9026
+  },
+  "tailandia-01-r21c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8537
+  },
+  "tailandia-01-r21c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6667
+  },
+  "tailandia-01-r21c15": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2857
+  },
+  "tailandia-01-r21c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3804
+  },
+  "tailandia-01-r21c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.027
+  },
+  "tailandia-01-r21c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r21c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0244
+  },
+  "tailandia-01-r21c20": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4784
+  },
+  "tailandia-01-r21c21": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5995
+  },
+  "tailandia-01-r21c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r21c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1969
+  },
+  "tailandia-01-r22c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6734
+  },
+  "tailandia-01-r22c01": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4962
+  },
+  "tailandia-01-r22c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1551
+  },
+  "tailandia-01-r22c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3879
+  },
+  "tailandia-01-r22c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3926
+  },
+  "tailandia-01-r22c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5747
+  },
+  "tailandia-01-r22c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7232
+  },
+  "tailandia-01-r22c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3663
+  },
+  "tailandia-01-r22c08": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r22c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0119
+  },
+  "tailandia-01-r22c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.285
+  },
+  "tailandia-01-r22c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r22c12": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1765
+  },
+  "tailandia-01-r22c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5439
+  },
+  "tailandia-01-r22c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5372
+  },
+  "tailandia-01-r22c15": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4479
+  },
+  "tailandia-01-r22c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4658
+  },
+  "tailandia-01-r22c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r22c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r22c19": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0195
+  },
+  "tailandia-01-r22c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0314
+  },
+  "tailandia-01-r22c21": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2236
+  },
+  "tailandia-01-r22c22": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3441
+  },
+  "tailandia-01-r22c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1282
+  },
+  "tailandia-01-r23c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.842
+  },
+  "tailandia-01-r23c01": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4603
+  },
+  "tailandia-01-r23c02": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4447
+  },
+  "tailandia-01-r23c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2236
+  },
+  "tailandia-01-r23c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3426
+  },
+  "tailandia-01-r23c05": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1429
+  },
+  "tailandia-01-r23c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6309
+  },
+  "tailandia-01-r23c07": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3973
+  },
+  "tailandia-01-r23c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.65
+  },
+  "tailandia-01-r23c09": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1485
+  },
+  "tailandia-01-r23c10": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1429
+  },
+  "tailandia-01-r23c11": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4885
+  },
+  "tailandia-01-r23c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.8235
+  },
+  "tailandia-01-r23c13": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7363
+  },
+  "tailandia-01-r23c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.316
+  },
+  "tailandia-01-r23c15": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r23c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2297
+  },
+  "tailandia-01-r23c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0078
+  },
+  "tailandia-01-r23c18": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2505
+  },
+  "tailandia-01-r23c19": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2748
+  },
+  "tailandia-01-r23c20": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2384
+  },
+  "tailandia-01-r23c21": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1672
+  },
+  "tailandia-01-r23c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0047
+  },
+  "tailandia-01-r23c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r24c00": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3988
+  },
+  "tailandia-01-r24c01": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4152
+  },
+  "tailandia-01-r24c02": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1462
+  },
+  "tailandia-01-r24c03": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3147
+  },
+  "tailandia-01-r24c04": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6496
+  },
+  "tailandia-01-r24c05": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5253
+  },
+  "tailandia-01-r24c06": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.7374
+  },
+  "tailandia-01-r24c07": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0365
+  },
+  "tailandia-01-r24c08": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.6467
+  },
+  "tailandia-01-r24c09": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.5351
+  },
+  "tailandia-01-r24c10": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4978
+  },
+  "tailandia-01-r24c11": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1812
+  },
+  "tailandia-01-r24c12": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2174
+  },
+  "tailandia-01-r24c13": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.1606
+  },
+  "tailandia-01-r24c14": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3443
+  },
+  "tailandia-01-r24c15": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.4854
+  },
+  "tailandia-01-r24c16": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.3621
+  },
+  "tailandia-01-r24c17": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0
+  },
+  "tailandia-01-r24c18": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0552
+  },
+  "tailandia-01-r24c19": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.2323
+  },
+  "tailandia-01-r24c20": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.155
+  },
+  "tailandia-01-r24c21": {
+   "opera_status": "corroborated",
+   "opera_overlap_ratio": 0.219
+  },
+  "tailandia-01-r24c22": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.017
+  },
+  "tailandia-01-r24c23": {
+   "opera_status": "not_corroborated",
+   "opera_overlap_ratio": 0.0031
+  }
+ }
+}

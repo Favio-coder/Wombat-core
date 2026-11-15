@@ -1,0 +1,5 @@
+{
+  "multilook_meters": 100,
+  "min_valid_fraction_per_block": 0.5,
+  "why": "Antes de calcular delta_db se promedia gamma0 (potencia lineal) en bloques de 100 m. A resolucion nativa el ruido de speckle domina: con ~8.7 looks (20 m) da ~2.1 dB de desviacion y con ~4.2 looks (10 m) ~3.0 dB, asi que un umbral de 3 dB por pixel marca como cambio entre 15 % y 30 % de una celda que no cambio. Medido el 14 nov 2026 sobre Piura (pista 104) y Jequetepeque (pista 011). Con multilook_meters = 0 se vuelve al calculo pixel a pixel del plan (seccion 6.5). Decision de metodo pendiente de confirmar por Gustavo y de declararse en la pantalla Metodo (R3)."
+}
