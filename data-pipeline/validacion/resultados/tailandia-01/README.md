@@ -60,6 +60,19 @@ Por celda (par dentro de la regla, umbral de corroboración 20 %): de las 305 ce
 
 Las dos fuentes coinciden en lo principal. NISAR marca más área que OPERA; con estos datos no se puede decir cuál acierta en la diferencia (banda L y banda C responden distinto bajo vegetación, y en una llanura arrocera parte del agua puede ser de cultivo).
 
+## Vías expuestas (OpenStreetMap), par 18 → 30 sep
+
+Vías reales de OSM (`data-pipeline/inputs/tailandia-01/roads.geojson`, 5 571 tramos, descarga del 15 nov 2026, © OpenStreetMap contributors). `06_cells.py` mide por celda la longitud de vías y cuánta queda a menos de 250 m del cambio (§6.7), en metros de la zona UTM de la grilla.
+
+| | |
+|---|---|
+| Vías dentro de la grilla | 1 848 km, en 551 de las 600 celdas |
+| Vías a menos de 250 m del cambio | 1 419 km (77 %), en 542 celdas |
+| Celdas con > 25 % de cambio y vías cerca | 278 de 305 |
+| De esas, además corroboradas por OPERA | 215 |
+
+Con esto `cells.geojson` y `manifest.json` del par 18 → 30 sep quedan completos (cambio NISAR, OPERA y vías) y **cumplen el contrato v1.1.0**, que admite cualquier zona UTM. El ranking y la firma los hace Rust.
+
 ## Cómo se comprobó
 
 | Qué | Cómo | Resultado |
@@ -76,9 +89,10 @@ No comprobado: exactitud frente a datos de campo o a un mapa oficial de la emerg
 ## Límites
 
 - No dice nada sobre Perú. Es una prueba del método, no el caso del proyecto; no aporta a Local Impact.
-- El recuadro está en `EPSG:32647` y el contrato v1 fija `EPSG:32717`: estos `manifest.json` no cumplen el esquema y **esto no es un bundle**. Por eso está aquí y no en `data/`.
-- Los `manifest.json` no llevan `osm` (no se calcularon vías) y sus `cells.geojson` tienen `road_m_*` en 0.
-- `pipeline.commit` en los manifest es el `HEAD` del repositorio al momento de correr (`ce7ae33`); las herramientas se versionaron después, en `c4570ed`.
+- El recuadro está en `EPSG:32647`. Desde el contrato v1.1.0 eso es válido; antes no lo era. Esta carpeta sigue siendo evidencia sin firmar, **no un bundle**: el bundle lo arma y firma Rust en `data/`.
+- Solo el par **18 → 30 sep** tiene vías y `osm` en el manifest. Los pares 6 → 30 sep y 13 → 25 ago siguen con `road_m_*` en 0 y sin `osm`: sirven de referencia, no para firmar.
+- `pipeline.commit` es el `HEAD` del repositorio al momento de correr: `1b55f9b` en el par 18 → 30 sep y `ce7ae33` en los otros. El cálculo de vías se agregó al código en el mismo cambio que sube estos archivos.
+- Las longitudes de vías se miden en UTM. `roads_total_m` del bloque Context lo calcula Rust con otra fórmula (ver `contracts/v1/README.md`), así que su total puede diferir en torno al 2 %.
 - OPERA también es radar: es independiente de NISAR, pero comparte algunas limitaciones.
 - Los umbrales (±3 dB, 20 %) son los demostrativos del plan.
 
@@ -86,14 +100,15 @@ No comprobado: exactitud frente a datos de campo o a un mapa oficial de la emerg
 
 | Archivo | Qué es |
 |---|---|
-| `imagenes/antes_06sep.png`, `despues_30sep.png` | Gamma0 HHHH en dB, mismo estiramiento, reducidas a un tercio |
+| `imagenes/antes_06sep.png`, `despues_30sep.png` | Gamma0 HHHH en dB, mismo estiramiento, reducidas a un tercio (par 6 → 30 sep) |
 | `imagenes/cambio_06sep_30sep.png`, `cambio_18sep_30sep.png` | `delta_db` a 100 m: azul bajó, rojo subió, transparente enmascarado |
 | `grid.geojson` | Las 600 celdas, `EPSG:32647` |
 | `candidates.json` | Granules NISAR encontrados sobre la zona, con URL y cobertura |
 | `exclude.json` | Parámetros y fracciones de la máscara de exclusión |
 | `base-13ago-25ago/` | `manifest.json` y `change_summary.json` del par sin inundación |
 | `evento-06sep-30sep/` | `manifest.json`, `change_summary.json`, `cells.geojson` (OPERA `unavailable`: queda a 9 días), `bounds.json` y el contraste OPERA complementario |
-| `evento-18sep-30sep/` | Lo mismo, con `opera_cells.json` y `cells.geojson` con OPERA dentro de la regla |
+| `evento-18sep-30sep/` | **El par completo**: `manifest.json` (con `osm` y `opera`), `cells.geojson` (cambio, OPERA y vías), `opera_cells.json`, `change_summary.json` y `overlays/` con `t1.png` (18 sep), `t2.png` (30 sep), `delta.png` y `bounds.json` |
+| `imagenes/antes_18sep.png` | La escena del 18 de septiembre (igual a `evento-18sep-30sep/overlays/t1.png`) |
 | `opera/granules.json` | Granules OPERA DSWx-S1 consultados |
 
 No se incluyen los rásteres (`t1.tif`, `delta_db.tif`, la máscara) ni las imágenes a tamaño completo: pesan cientos de megas y se regeneran.

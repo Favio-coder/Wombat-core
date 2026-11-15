@@ -5,7 +5,9 @@ Une los agregados NISAR con los insumos de Jelibeth en data-pipeline/inputs/<aoi
                     "retrieved_at", "query", "attribution".
   opera_cells.json  por cell_id: opera_status, opera_overlap_ratio. Opcional en la raiz:
                     "status", "t1", "t2" (granules y gap_days) para el manifest.
-  road_cells.json   por cell_id: road_m_near_change, road_m_total.
+  road_cells.json   por cell_id: road_m_near_change, road_m_total. Si no existe y hay
+                    roads.geojson, 06_cells.py lo calcula con changed.tif (wombat_nisar.roads).
+  osm-metadata.json query, retrieved_at, attribution (formato de data-pipeline/README.md).
 Los archivos por celda pueden ser {cell_id: {...}}, una lista de objetos con "cell_id",
 o cualquiera de las dos dentro de la clave "cells". Nada se edita a mano.
 """
@@ -55,9 +57,12 @@ class Inputs:
         self.roads = _per_cell(road_doc, "road_cells.json", grid) if road_doc else None
         self.opera_meta = opera_doc if isinstance(opera_doc, dict) else {}
         roads_doc = _load(self.roads_path) if self.roads_path else {}
+        # Metadatos de OSM: osm-metadata.json (formato del equipo, data-pipeline/README.md) o,
+        # si no existe, las claves en la raiz de roads.geojson.
         self.osm_meta = {**roads_doc.get("metadata", {}),
                          **{k: roads_doc[k] for k in ("retrieved_at", "query", "attribution")
-                            if k in roads_doc}}
+                            if k in roads_doc},
+                         **(_load(d / "osm-metadata.json") or {})}
 
 
 def _ratio(opera: dict | None):

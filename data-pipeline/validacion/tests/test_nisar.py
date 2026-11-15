@@ -218,6 +218,21 @@ def test_exclusion_mask_from_base_pair(scene):
     info = json.loads(mask_path.with_suffix(".json").read_text(encoding="utf-8"))
     assert info["fraction_water"] == 0 and 0.09 < info["fraction_habitual_change"] < 0.11
 
+    # Agua permanente de otra fuente (p. ej. OPERA) en vez del umbral de brillo
+    from rasterio.transform import from_origin
+    from wombat_nisar import raster_io
+    water = np.zeros((200, 200), dtype=np.uint8)
+    water[:, 160:] = 1                                                 # franja este: x >= 4800 m
+    raster_io.write(out / "agua_externa.tif", water, from_origin(538000, 9428000, 30, 30), "EPSG:32717")
+    other = out / "exclude_externa.tif"
+    r = _run("make_exclude.py", "--base", out, "--out", other, "--grow-blocks", 0,
+             "--water-raster", out / "agua_externa.tif")
+    assert r.returncode == 0, r.stdout + r.stderr
+    ext = np.array(Image.open(other))
+    assert ext[:, 49:].all() and not ext[52:, 16:46].any()             # la franja queda excluida
+    ext_info = json.loads(other.with_suffix(".json").read_text(encoding="utf-8"))
+    assert "raster externo" in ext_info["water_source"] and 0.19 < ext_info["fraction_water"] < 0.21
+
     r = _run("03_change.py", "--in", out)                              # ahora la aplica sola
     assert r.returncode == 0 and "Mascara de exclusion" in r.stdout
     assert _run("06_cells.py", "--in", out, "--inputs", inputs).returncode == 0
@@ -307,6 +322,33 @@ def test_inputs_are_written_as_rust_reads_them(scene):
     assert "e-" not in text and "NaN" not in text            # sin notacion exponencial ni NaN
     for feature in json.loads(text)["features"]:             # mismas 10 propiedades que RawCell
         assert len(feature["properties"]) == 10
+
+
+def test_roads_are_measured_from_roads_geojson(scene):
+    out, inputs = scene
+    assert _run("03_change.py", "--in", out).returncode == 0
+    (inputs / "road_cells.json").unlink()                              # solo queda roads.geojson
+    (inputs / "osm-metadata.json").write_text(json.dumps({
+        "query": "way[highway]", "retrieved_at": "2026-11-15T04:59:09Z",
+        "attribution": "© OpenStreetMap contributors", "source": "Overpass API"}), encoding="utf-8")
+    r = _run("06_cells.py", "--in", out, "--inputs", inputs)
+    assert r.returncode == 0 and "Vias:" in r.stdout, r.stdout + r.stderr
+    cells = {f["properties"]["cell_id"]: f["properties"] for f in
+             json.loads((out / "cells.geojson").read_text(encoding="utf-8"))["features"]}
+    road = lambda cid: (cells[cid]["road_m_near_change"], cells[cid]["road_m_total"])
+    # Via este-oeste en y = 9425800 (fila r02), de x = 538200 a 543800
+    assert road("synth-01-r02c00")[1] == 800 and road("synth-01-r02c01")[1] == 1000
+    assert road("synth-01-r02c05") == (0, 800)
+    # El parche que bajo va de x = 541000 a 542600; con 250 m de margen: 540750 a 542850
+    assert road("synth-01-r02c02") == (250, 1000)
+    assert road("synth-01-r02c03") == (1000, 1000)
+    assert road("synth-01-r02c04") == (850, 1000)
+    # Via norte-sur en x = 543500, lejos de todo cambio
+    assert road("synth-01-r03c05") == (0, 700) and road("synth-01-r04c05") == (0, 1000)
+    assert road("synth-01-r00c00") == (0, 0)
+    manifest = json.loads((out / "manifest.json").read_text(encoding="utf-8"))
+    assert manifest["osm"] == {"query": "way[highway]", "retrieved_at": "2026-11-15T04:59:09Z",
+                               "attribution": "© OpenStreetMap contributors"}   # sin claves extra
 
 
 def test_missing_inputs_are_reported_not_invented(scene):

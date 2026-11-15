@@ -1,0 +1,125 @@
+{
+ "aoi": "Bajo Piura",
+ "bbox_wgs84": [
+  -80.8,
+  -5.35,
+  -80.55,
+  -5.1
+ ],
+ "bounds_utm": [
+  522158.7327322642,
+  9408628.769505363,
+  549877.32206088,
+  9436278.399138262
+ ],
+ "transform": [
+  30.0,
+  0.0,
+  522158.7327322642,
+  0.0,
+  -30.0,
+  9436278.399138262
+ ],
+ "passes": [
+  {
+   "date": "2026-10-09",
+   "utc": "2343",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0022,
+   "inundated_veg_fraction": 0.002,
+   "water_fraction": 0.0042
+  },
+  {
+   "date": "2026-10-12",
+   "utc": "1101",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.002,
+   "inundated_veg_fraction": 0.0036,
+   "water_fraction": 0.0056
+  },
+  {
+   "date": "2026-10-18",
+   "utc": "1101",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.002,
+   "inundated_veg_fraction": 0.0031,
+   "water_fraction": 0.0052
+  },
+  {
+   "date": "2026-10-21",
+   "utc": "2343",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0024,
+   "inundated_veg_fraction": 0.0022,
+   "water_fraction": 0.0046
+  },
+  {
+   "date": "2026-10-24",
+   "utc": "1101",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0026,
+   "inundated_veg_fraction": 0.004,
+   "water_fraction": 0.0066
+  },
+  {
+   "date": "2026-10-30",
+   "utc": "1101",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0029,
+   "inundated_veg_fraction": 0.0032,
+   "water_fraction": 0.0061
+  },
+  {
+   "date": "2026-11-02",
+   "utc": "2343",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0025,
+   "inundated_veg_fraction": 0.0024,
+   "water_fraction": 0.0049
+  },
+  {
+   "date": "2026-11-05",
+   "utc": "1101",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0026,
+   "inundated_veg_fraction": 0.0036,
+   "water_fraction": 0.0061
+  },
+  {
+   "date": "2026-11-08",
+   "utc": "2343",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0015,
+   "inundated_veg_fraction": 0.0025,
+   "water_fraction": 0.0039
+  },
+  {
+   "date": "2026-11-11",
+   "utc": "1101",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.0023,
+   "inundated_veg_fraction": 0.0035,
+   "water_fraction": 0.0058
+  }
+ ]
+}

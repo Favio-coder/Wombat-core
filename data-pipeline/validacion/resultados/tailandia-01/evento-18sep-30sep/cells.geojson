@@ -40,8 +40,8 @@
         "p90_abs_delta_db": 4.16,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2371,
+        "road_m_total": 2371
       }
     },
     {
@@ -82,8 +82,8 @@
         "p90_abs_delta_db": 4.5,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2879,
+        "road_m_total": 3920
       }
     },
     {
@@ -124,8 +124,8 @@
         "p90_abs_delta_db": 6.39,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 527,
+        "road_m_total": 782
       }
     },
     {
@@ -166,8 +166,8 @@
         "p90_abs_delta_db": 2.36,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 984,
+        "road_m_total": 1173
       }
     },
     {
@@ -208,8 +208,8 @@
         "p90_abs_delta_db": 3.6,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1833,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2816,
+        "road_m_total": 3926
       }
     },
     {
@@ -250,8 +250,8 @@
         "p90_abs_delta_db": 2.87,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3643,
+        "road_m_total": 5284
       }
     },
     {
@@ -292,8 +292,8 @@
         "p90_abs_delta_db": 1.18,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2381,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2690,
+        "road_m_total": 8127
       }
     },
     {
@@ -334,8 +334,8 @@
         "p90_abs_delta_db": 1.55,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0227,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3285,
+        "road_m_total": 5310
       }
     },
     {
@@ -376,8 +376,8 @@
         "p90_abs_delta_db": 4.08,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6705,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1960,
+        "road_m_total": 1960
       }
     },
     {
@@ -418,8 +418,8 @@
         "p90_abs_delta_db": 6.29,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7256,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1490,
+        "road_m_total": 1490
       }
     },
     {
@@ -460,8 +460,8 @@
         "p90_abs_delta_db": 3.92,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.503,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2714,
+        "road_m_total": 2714
       }
     },
     {
@@ -544,8 +544,8 @@
         "p90_abs_delta_db": 3.25,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.016,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2668,
+        "road_m_total": 3200
       }
     },
     {
@@ -586,8 +586,8 @@
         "p90_abs_delta_db": 2.41,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0204,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1461,
+        "road_m_total": 3275
       }
     },
     {
@@ -629,7 +629,7 @@
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
         "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_total": 2024
       }
     },
     {
@@ -670,8 +670,8 @@
         "p90_abs_delta_db": 3.46,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0365,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 688,
+        "road_m_total": 4464
       }
     },
     {
@@ -712,8 +712,8 @@
         "p90_abs_delta_db": 3.37,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 774,
+        "road_m_total": 3747
       }
     },
     {
@@ -754,8 +754,8 @@
         "p90_abs_delta_db": 1.25,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3333,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1681,
+        "road_m_total": 5639
       }
     },
     {
@@ -796,8 +796,8 @@
         "p90_abs_delta_db": 0.93,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 23,
+        "road_m_total": 4245
       }
     },
     {
@@ -838,8 +838,8 @@
         "p90_abs_delta_db": 1.14,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 822,
+        "road_m_total": 4120
       }
     },
     {
@@ -880,8 +880,8 @@
         "p90_abs_delta_db": 3.26,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0095,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2141,
+        "road_m_total": 2478
       }
     },
     {
@@ -922,8 +922,8 @@
         "p90_abs_delta_db": 3.55,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1199,
+        "road_m_total": 1622
       }
     },
     {
@@ -964,8 +964,8 @@
         "p90_abs_delta_db": 2.02,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 839,
+        "road_m_total": 4309
       }
     },
     {
@@ -1006,8 +1006,8 @@
         "p90_abs_delta_db": 1.02,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2228,
+        "road_m_total": 5710
       }
     },
     {
@@ -1048,8 +1048,8 @@
         "p90_abs_delta_db": 5.63,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.021,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2626,
+        "road_m_total": 2653
       }
     },
     {
@@ -1090,8 +1090,8 @@
         "p90_abs_delta_db": 1.78,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1278,
+        "road_m_total": 4312
       }
     },
     {
@@ -1132,8 +1132,8 @@
         "p90_abs_delta_db": 6.63,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0762,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2629,
+        "road_m_total": 2629
       }
     },
     {
@@ -1174,8 +1174,8 @@
         "p90_abs_delta_db": 9.67,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1992,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3475,
+        "road_m_total": 3475
       }
     },
     {
@@ -1216,8 +1216,8 @@
         "p90_abs_delta_db": 5.68,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1782,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1731,
+        "road_m_total": 1731
       }
     },
     {
@@ -1258,8 +1258,8 @@
         "p90_abs_delta_db": 6.98,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2681,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2690,
+        "road_m_total": 2690
       }
     },
     {
@@ -1300,8 +1300,8 @@
         "p90_abs_delta_db": 5.02,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1857,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1296,
+        "road_m_total": 1314
       }
     },
     {
@@ -1342,8 +1342,8 @@
         "p90_abs_delta_db": 1.28,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2424,
+        "road_m_total": 5194
       }
     },
     {
@@ -1384,8 +1384,8 @@
         "p90_abs_delta_db": 3.59,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6638,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 415,
+        "road_m_total": 415
       }
     },
     {
@@ -1426,8 +1426,8 @@
         "p90_abs_delta_db": 4.47,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7244,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1928,
+        "road_m_total": 1928
       }
     },
     {
@@ -1468,8 +1468,8 @@
         "p90_abs_delta_db": 7.29,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6184,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1503,
+        "road_m_total": 1503
       }
     },
     {
@@ -1552,8 +1552,8 @@
         "p90_abs_delta_db": 2.61,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3683,
+        "road_m_total": 4184
       }
     },
     {
@@ -1594,8 +1594,8 @@
         "p90_abs_delta_db": 4.45,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1683,
+        "road_m_total": 4567
       }
     },
     {
@@ -1637,7 +1637,7 @@
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
         "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_total": 4049
       }
     },
     {
@@ -1678,8 +1678,8 @@
         "p90_abs_delta_db": 1.51,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.25,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 396,
+        "road_m_total": 750
       }
     },
     {
@@ -1720,8 +1720,8 @@
         "p90_abs_delta_db": 1.51,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1668,
+        "road_m_total": 4246
       }
     },
     {
@@ -1762,8 +1762,8 @@
         "p90_abs_delta_db": 1.48,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1208,
+        "road_m_total": 3940
       }
     },
     {
@@ -1804,8 +1804,8 @@
         "p90_abs_delta_db": 2.34,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0625,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2727,
+        "road_m_total": 7035
       }
     },
     {
@@ -1846,8 +1846,8 @@
         "p90_abs_delta_db": 2.32,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1827,
+        "road_m_total": 2926
       }
     },
     {
@@ -1888,8 +1888,8 @@
         "p90_abs_delta_db": 4.44,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0879,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1887,
+        "road_m_total": 2023
       }
     },
     {
@@ -1930,8 +1930,8 @@
         "p90_abs_delta_db": 2.79,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0149,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 207,
+        "road_m_total": 207
       }
     },
     {
@@ -1972,8 +1972,8 @@
         "p90_abs_delta_db": 3.26,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0826,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 770,
+        "road_m_total": 770
       }
     },
     {
@@ -2014,8 +2014,8 @@
         "p90_abs_delta_db": 1.38,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 655,
+        "road_m_total": 5780
       }
     },
     {
@@ -2056,8 +2056,8 @@
         "p90_abs_delta_db": 4.32,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4461,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2553,
+        "road_m_total": 2553
       }
     },
     {
@@ -2098,8 +2098,8 @@
         "p90_abs_delta_db": 3.97,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3853,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1700,
+        "road_m_total": 3278
       }
     },
     {
@@ -2182,8 +2182,8 @@
         "p90_abs_delta_db": 6.66,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4152,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3185,
+        "road_m_total": 3185
       }
     },
     {
@@ -2224,8 +2224,8 @@
         "p90_abs_delta_db": 8.03,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8251,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 547,
+        "road_m_total": 547
       }
     },
     {
@@ -2266,8 +2266,8 @@
         "p90_abs_delta_db": 7.52,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6058,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1853,
+        "road_m_total": 1853
       }
     },
     {
@@ -2308,8 +2308,8 @@
         "p90_abs_delta_db": 6.39,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6426,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2568,
+        "road_m_total": 2568
       }
     },
     {
@@ -2350,8 +2350,8 @@
         "p90_abs_delta_db": 2.83,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4423,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4939,
+        "road_m_total": 6144
       }
     },
     {
@@ -2392,8 +2392,8 @@
         "p90_abs_delta_db": 7.65,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8281,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2010,
+        "road_m_total": 2010
       }
     },
     {
@@ -2434,8 +2434,8 @@
         "p90_abs_delta_db": 6.28,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4915,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3689,
+        "road_m_total": 3994
       }
     },
     {
@@ -2476,8 +2476,8 @@
         "p90_abs_delta_db": 7.6,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2843,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1707,
+        "road_m_total": 2132
       }
     },
     {
@@ -2518,8 +2518,8 @@
         "p90_abs_delta_db": 5.72,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.416,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2705,
+        "road_m_total": 2705
       }
     },
     {
@@ -2560,8 +2560,8 @@
         "p90_abs_delta_db": 5.68,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3709,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5382,
+        "road_m_total": 5813
       }
     },
     {
@@ -2602,8 +2602,8 @@
         "p90_abs_delta_db": 8.1,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5588,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2262,
+        "road_m_total": 3565
       }
     },
     {
@@ -2644,8 +2644,8 @@
         "p90_abs_delta_db": 1.11,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 866,
+        "road_m_total": 5884
       }
     },
     {
@@ -2686,8 +2686,8 @@
         "p90_abs_delta_db": 2.53,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3013,
+        "road_m_total": 6797
       }
     },
     {
@@ -2728,8 +2728,8 @@
         "p90_abs_delta_db": 1.81,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2041,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5365,
+        "road_m_total": 8517
       }
     },
     {
@@ -2770,8 +2770,8 @@
         "p90_abs_delta_db": 1.08,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1066,
+        "road_m_total": 5493
       }
     },
     {
@@ -2812,8 +2812,8 @@
         "p90_abs_delta_db": 1.4,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 311,
+        "road_m_total": 1530
       }
     },
     {
@@ -2854,8 +2854,8 @@
         "p90_abs_delta_db": 2.22,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0769,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1403,
+        "road_m_total": 2090
       }
     },
     {
@@ -2896,8 +2896,8 @@
         "p90_abs_delta_db": 4.34,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0827,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2460,
+        "road_m_total": 2872
       }
     },
     {
@@ -2938,8 +2938,8 @@
         "p90_abs_delta_db": 3.3,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0309,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1797,
+        "road_m_total": 2115
       }
     },
     {
@@ -2980,8 +2980,8 @@
         "p90_abs_delta_db": 2.27,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.069,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 952,
+        "road_m_total": 1956
       }
     },
     {
@@ -3022,8 +3022,8 @@
         "p90_abs_delta_db": 2.06,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 184,
+        "road_m_total": 1270
       }
     },
     {
@@ -3064,8 +3064,8 @@
         "p90_abs_delta_db": 7.41,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.813,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1828,
+        "road_m_total": 1828
       }
     },
     {
@@ -3106,8 +3106,8 @@
         "p90_abs_delta_db": 6.18,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4735,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2254,
+        "road_m_total": 2254
       }
     },
     {
@@ -3148,8 +3148,8 @@
         "p90_abs_delta_db": 1.97,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0282,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1814,
+        "road_m_total": 1840
       }
     },
     {
@@ -3190,8 +3190,8 @@
         "p90_abs_delta_db": 2.89,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2938,
+        "road_m_total": 3802
       }
     },
     {
@@ -3232,8 +3232,8 @@
         "p90_abs_delta_db": 8.1,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6752,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1077,
+        "road_m_total": 1077
       }
     },
     {
@@ -3274,8 +3274,8 @@
         "p90_abs_delta_db": 6.23,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4958,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3936,
+        "road_m_total": 3936
       }
     },
     {
@@ -3316,8 +3316,8 @@
         "p90_abs_delta_db": 8.48,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7731,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1013,
+        "road_m_total": 1013
       }
     },
     {
@@ -3358,8 +3358,8 @@
         "p90_abs_delta_db": 1.67,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0465,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5370,
+        "road_m_total": 5370
       }
     },
     {
@@ -3442,8 +3442,8 @@
         "p90_abs_delta_db": 4.7,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.53,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2337,
+        "road_m_total": 5337
       }
     },
     {
@@ -3484,8 +3484,8 @@
         "p90_abs_delta_db": 5.59,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5243,
+        "road_m_total": 8320
       }
     },
     {
@@ -3526,8 +3526,8 @@
         "p90_abs_delta_db": 6.12,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0081,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4554,
+        "road_m_total": 6714
       }
     },
     {
@@ -3568,8 +3568,8 @@
         "p90_abs_delta_db": 1.5,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.025,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3940,
+        "road_m_total": 9373
       }
     },
     {
@@ -3610,8 +3610,8 @@
         "p90_abs_delta_db": 5.06,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2062,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4454,
+        "road_m_total": 6301
       }
     },
     {
@@ -3652,8 +3652,8 @@
         "p90_abs_delta_db": 1.03,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2953,
+        "road_m_total": 6523
       }
     },
     {
@@ -3694,8 +3694,8 @@
         "p90_abs_delta_db": 0.71,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 215,
+        "road_m_total": 11974
       }
     },
     {
@@ -3736,8 +3736,8 @@
         "p90_abs_delta_db": 1.76,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0952,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1068,
+        "road_m_total": 4556
       }
     },
     {
@@ -3779,7 +3779,7 @@
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
         "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_total": 7312
       }
     },
     {
@@ -3820,8 +3820,8 @@
         "p90_abs_delta_db": 1.88,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1212,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2332,
+        "road_m_total": 4646
       }
     },
     {
@@ -3862,8 +3862,8 @@
         "p90_abs_delta_db": 2.28,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0571,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2171,
+        "road_m_total": 2980
       }
     },
     {
@@ -3904,8 +3904,8 @@
         "p90_abs_delta_db": 2.92,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.04,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2437,
+        "road_m_total": 2745
       }
     },
     {
@@ -3946,8 +3946,8 @@
         "p90_abs_delta_db": 2.07,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4615,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3375,
+        "road_m_total": 6881
       }
     },
     {
@@ -3988,8 +3988,8 @@
         "p90_abs_delta_db": 3.6,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1875,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2777,
+        "road_m_total": 4518
       }
     },
     {
@@ -4030,8 +4030,8 @@
         "p90_abs_delta_db": 1.43,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 292,
+        "road_m_total": 3257
       }
     },
     {
@@ -4072,8 +4072,8 @@
         "p90_abs_delta_db": 8.04,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7329,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1007,
+        "road_m_total": 1007
       }
     },
     {
@@ -4114,8 +4114,8 @@
         "p90_abs_delta_db": 9.61,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7959,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2714,
+        "road_m_total": 3815
       }
     },
     {
@@ -4156,8 +4156,8 @@
         "p90_abs_delta_db": 0.78,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 187,
+        "road_m_total": 1453
       }
     },
     {
@@ -4198,8 +4198,8 @@
         "p90_abs_delta_db": 5.95,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5263,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3571,
+        "road_m_total": 3945
       }
     },
     {
@@ -4240,8 +4240,8 @@
         "p90_abs_delta_db": 8.07,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5213,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4128,
+        "road_m_total": 4128
       }
     },
     {
@@ -4282,8 +4282,8 @@
         "p90_abs_delta_db": 9.86,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.798,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 322,
+        "road_m_total": 322
       }
     },
     {
@@ -4324,8 +4324,8 @@
         "p90_abs_delta_db": 8.85,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8478,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3965,
+        "road_m_total": 4676
       }
     },
     {
@@ -4366,8 +4366,8 @@
         "p90_abs_delta_db": 1.81,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0541,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1565,
+        "road_m_total": 3057
       }
     },
     {
@@ -4408,8 +4408,8 @@
         "p90_abs_delta_db": 5.15,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1889,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2642,
+        "road_m_total": 3244
       }
     },
     {
@@ -4450,8 +4450,8 @@
         "p90_abs_delta_db": 6.35,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2424,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5153,
+        "road_m_total": 5626
       }
     },
     {
@@ -4492,8 +4492,8 @@
         "p90_abs_delta_db": 7.22,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4981,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3430,
+        "road_m_total": 3481
       }
     },
     {
@@ -4534,8 +4534,8 @@
         "p90_abs_delta_db": 5.51,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1511,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1715,
+        "road_m_total": 1715
       }
     },
     {
@@ -4576,8 +4576,8 @@
         "p90_abs_delta_db": 3.19,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2538,
+        "road_m_total": 2732
       }
     },
     {
@@ -4618,8 +4618,8 @@
         "p90_abs_delta_db": 2.63,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 51,
+        "road_m_total": 900
       }
     },
     {
@@ -4661,7 +4661,7 @@
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
         "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_total": 1110
       }
     },
     {
@@ -4702,8 +4702,8 @@
         "p90_abs_delta_db": 1.27,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 39,
+        "road_m_total": 5346
       }
     },
     {
@@ -4744,8 +4744,8 @@
         "p90_abs_delta_db": 0.97,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1034,
+        "road_m_total": 6066
       }
     },
     {
@@ -4786,8 +4786,8 @@
         "p90_abs_delta_db": 1.09,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 801,
+        "road_m_total": 4484
       }
     },
     {
@@ -4828,8 +4828,8 @@
         "p90_abs_delta_db": 3.19,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0183,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1311,
+        "road_m_total": 1311
       }
     },
     {
@@ -4870,8 +4870,8 @@
         "p90_abs_delta_db": 4.74,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.029,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1428,
+        "road_m_total": 2311
       }
     },
     {
@@ -4912,8 +4912,8 @@
         "p90_abs_delta_db": 3.46,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0781,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1063,
+        "road_m_total": 1370
       }
     },
     {
@@ -4954,8 +4954,8 @@
         "p90_abs_delta_db": 3.56,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0621,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1021,
+        "road_m_total": 2444
       }
     },
     {
@@ -4996,8 +4996,8 @@
         "p90_abs_delta_db": 3.75,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0562,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6835,
+        "road_m_total": 7429
       }
     },
     {
@@ -5038,8 +5038,8 @@
         "p90_abs_delta_db": 3.36,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1364,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2562,
+        "road_m_total": 4314
       }
     },
     {
@@ -5080,8 +5080,8 @@
         "p90_abs_delta_db": 6.33,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6044,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1921,
+        "road_m_total": 1921
       }
     },
     {
@@ -5122,8 +5122,8 @@
         "p90_abs_delta_db": 5.87,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1737,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2044,
+        "road_m_total": 2145
       }
     },
     {
@@ -5164,8 +5164,8 @@
         "p90_abs_delta_db": 9.45,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7703,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2428,
+        "road_m_total": 2585
       }
     },
     {
@@ -5206,8 +5206,8 @@
         "p90_abs_delta_db": 2.92,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5217,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 701,
+        "road_m_total": 2552
       }
     },
     {
@@ -5248,8 +5248,8 @@
         "p90_abs_delta_db": 7.89,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0712,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1058,
+        "road_m_total": 1058
       }
     },
     {
@@ -5290,8 +5290,8 @@
         "p90_abs_delta_db": 12.18,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8829,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1593,
+        "road_m_total": 1593
       }
     },
     {
@@ -5374,8 +5374,8 @@
         "p90_abs_delta_db": 3.0,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5652,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3282,
+        "road_m_total": 4894
       }
     },
     {
@@ -5416,8 +5416,8 @@
         "p90_abs_delta_db": 6.32,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5504,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2756,
+        "road_m_total": 5672
       }
     },
     {
@@ -5458,8 +5458,8 @@
         "p90_abs_delta_db": 9.68,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6382,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1198,
+        "road_m_total": 1198
       }
     },
     {
@@ -5500,8 +5500,8 @@
         "p90_abs_delta_db": 7.67,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6288,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2602,
+        "road_m_total": 2602
       }
     },
     {
@@ -5542,8 +5542,8 @@
         "p90_abs_delta_db": 7.11,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6636,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1257,
+        "road_m_total": 1257
       }
     },
     {
@@ -5584,8 +5584,8 @@
         "p90_abs_delta_db": 4.48,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0563,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1288,
+        "road_m_total": 2155
       }
     },
     {
@@ -5626,8 +5626,8 @@
         "p90_abs_delta_db": 3.3,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.03,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 928,
+        "road_m_total": 1191
       }
     },
     {
@@ -5669,7 +5669,7 @@
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1111,
         "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_total": 241
       }
     },
     {
@@ -5710,8 +5710,8 @@
         "p90_abs_delta_db": 2.37,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0909,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 670,
+        "road_m_total": 1457
       }
     },
     {
@@ -5752,8 +5752,8 @@
         "p90_abs_delta_db": 1.24,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0476,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1560,
+        "road_m_total": 5479
       }
     },
     {
@@ -5794,8 +5794,8 @@
         "p90_abs_delta_db": 1.13,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6667,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1093,
+        "road_m_total": 4609
       }
     },
     {
@@ -5836,8 +5836,8 @@
         "p90_abs_delta_db": 2.49,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 493,
+        "road_m_total": 493
       }
     },
     {
@@ -5878,8 +5878,8 @@
         "p90_abs_delta_db": 4.92,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3875,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 985,
+        "road_m_total": 987
       }
     },
     {
@@ -6004,8 +6004,8 @@
         "p90_abs_delta_db": 5.94,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0202,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3848,
+        "road_m_total": 3858
       }
     },
     {
@@ -6046,8 +6046,8 @@
         "p90_abs_delta_db": 4.55,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0207,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1072,
+        "road_m_total": 1072
       }
     },
     {
@@ -6088,8 +6088,8 @@
         "p90_abs_delta_db": 4.41,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7431,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3428,
+        "road_m_total": 3428
       }
     },
     {
@@ -6130,8 +6130,8 @@
         "p90_abs_delta_db": 1.94,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6207,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4275,
+        "road_m_total": 7777
       }
     },
     {
@@ -6172,8 +6172,8 @@
         "p90_abs_delta_db": 2.63,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5833,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1996,
+        "road_m_total": 4256
       }
     },
     {
@@ -6214,8 +6214,8 @@
         "p90_abs_delta_db": 2.58,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5294,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3019,
+        "road_m_total": 3566
       }
     },
     {
@@ -6256,8 +6256,8 @@
         "p90_abs_delta_db": 5.33,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1765,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2320,
+        "road_m_total": 2320
       }
     },
     {
@@ -6298,8 +6298,8 @@
         "p90_abs_delta_db": 9.1,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5819,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3737,
+        "road_m_total": 3737
       }
     },
     {
@@ -6340,8 +6340,8 @@
         "p90_abs_delta_db": 9.6,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.599,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2959,
+        "road_m_total": 2959
       }
     },
     {
@@ -6382,8 +6382,8 @@
         "p90_abs_delta_db": 2.26,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3973,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6862,
+        "road_m_total": 10578
       }
     },
     {
@@ -6424,8 +6424,8 @@
         "p90_abs_delta_db": 9.77,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6096,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3833,
+        "road_m_total": 4145
       }
     },
     {
@@ -6466,8 +6466,8 @@
         "p90_abs_delta_db": 12.04,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.759,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 175,
+        "road_m_total": 175
       }
     },
     {
@@ -6508,8 +6508,8 @@
         "p90_abs_delta_db": 10.44,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7928,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2678,
+        "road_m_total": 2678
       }
     },
     {
@@ -6550,8 +6550,8 @@
         "p90_abs_delta_db": 6.69,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4126,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4682,
+        "road_m_total": 5283
       }
     },
     {
@@ -6593,7 +6593,7 @@
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
         "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_total": 284
       }
     },
     {
@@ -6634,8 +6634,8 @@
         "p90_abs_delta_db": 4.11,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1047,
+        "road_m_total": 2041
       }
     },
     {
@@ -6760,8 +6760,8 @@
         "p90_abs_delta_db": 1.7,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 722,
+        "road_m_total": 2302
       }
     },
     {
@@ -6803,7 +6803,7 @@
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
         "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_total": 7903
       }
     },
     {
@@ -6844,8 +6844,8 @@
         "p90_abs_delta_db": 2.95,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1698,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 797,
+        "road_m_total": 1669
       }
     },
     {
@@ -7012,8 +7012,8 @@
         "p90_abs_delta_db": 5.79,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0205,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 705,
+        "road_m_total": 705
       }
     },
     {
@@ -7054,8 +7054,8 @@
         "p90_abs_delta_db": 6.09,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0026,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4832,
+        "road_m_total": 4832
       }
     },
     {
@@ -7096,8 +7096,8 @@
         "p90_abs_delta_db": 7.62,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7275,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1679,
+        "road_m_total": 1835
       }
     },
     {
@@ -7138,8 +7138,8 @@
         "p90_abs_delta_db": 5.7,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0612,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3139,
+        "road_m_total": 4905
       }
     },
     {
@@ -7180,8 +7180,8 @@
         "p90_abs_delta_db": 5.3,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1519,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5188,
+        "road_m_total": 6178
       }
     },
     {
@@ -7222,8 +7222,8 @@
         "p90_abs_delta_db": 8.99,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9352,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1409,
+        "road_m_total": 1520
       }
     },
     {
@@ -7264,8 +7264,8 @@
         "p90_abs_delta_db": 11.32,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8283,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 171,
+        "road_m_total": 171
       }
     },
     {
@@ -7348,8 +7348,8 @@
         "p90_abs_delta_db": 11.17,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7207,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1872,
+        "road_m_total": 1872
       }
     },
     {
@@ -7390,8 +7390,8 @@
         "p90_abs_delta_db": 6.82,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6096,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6062,
+        "road_m_total": 9372
       }
     },
     {
@@ -7432,8 +7432,8 @@
         "p90_abs_delta_db": 8.61,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4772,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3699,
+        "road_m_total": 4298
       }
     },
     {
@@ -7474,8 +7474,8 @@
         "p90_abs_delta_db": 13.36,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7589,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1205,
+        "road_m_total": 1205
       }
     },
     {
@@ -7516,8 +7516,8 @@
         "p90_abs_delta_db": 12.79,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7966,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2010,
+        "road_m_total": 2010
       }
     },
     {
@@ -7558,8 +7558,8 @@
         "p90_abs_delta_db": 5.2,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6021,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1890,
+        "road_m_total": 1890
       }
     },
     {
@@ -7642,8 +7642,8 @@
         "p90_abs_delta_db": 2.42,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3333,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 894,
+        "road_m_total": 1155
       }
     },
     {
@@ -7685,7 +7685,7 @@
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
         "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_total": 1191
       }
     },
     {
@@ -7726,8 +7726,8 @@
         "p90_abs_delta_db": 2.33,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1129,
+        "road_m_total": 2049
       }
     },
     {
@@ -7768,8 +7768,8 @@
         "p90_abs_delta_db": 1.26,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2130,
+        "road_m_total": 4555
       }
     },
     {
@@ -7810,8 +7810,8 @@
         "p90_abs_delta_db": 1.08,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.05,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2532,
+        "road_m_total": 8399
       }
     },
     {
@@ -7852,8 +7852,8 @@
         "p90_abs_delta_db": 6.08,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2391,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1550,
+        "road_m_total": 1708
       }
     },
     {
@@ -8020,8 +8020,8 @@
         "p90_abs_delta_db": 7.73,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3501,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 52,
+        "road_m_total": 52
       }
     },
     {
@@ -8062,8 +8062,8 @@
         "p90_abs_delta_db": 6.29,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0722,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 759,
+        "road_m_total": 759
       }
     },
     {
@@ -8104,8 +8104,8 @@
         "p90_abs_delta_db": 7.33,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7019,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2655,
+        "road_m_total": 2657
       }
     },
     {
@@ -8146,8 +8146,8 @@
         "p90_abs_delta_db": 12.06,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 832,
+        "road_m_total": 832
       }
     },
     {
@@ -8188,8 +8188,8 @@
         "p90_abs_delta_db": 12.06,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0315,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1710,
+        "road_m_total": 1710
       }
     },
     {
@@ -8230,8 +8230,8 @@
         "p90_abs_delta_db": 10.12,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7923,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1656,
+        "road_m_total": 1656
       }
     },
     {
@@ -8314,8 +8314,8 @@
         "p90_abs_delta_db": 9.53,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7281,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 53,
+        "road_m_total": 53
       }
     },
     {
@@ -8356,8 +8356,8 @@
         "p90_abs_delta_db": 8.88,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6118,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3127,
+        "road_m_total": 3239
       }
     },
     {
@@ -8398,8 +8398,8 @@
         "p90_abs_delta_db": 5.37,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7218,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 7764,
+        "road_m_total": 8335
       }
     },
     {
@@ -8440,8 +8440,8 @@
         "p90_abs_delta_db": 5.95,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1587,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3980,
+        "road_m_total": 3980
       }
     },
     {
@@ -8482,8 +8482,8 @@
         "p90_abs_delta_db": 8.15,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4527,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1330,
+        "road_m_total": 1330
       }
     },
     {
@@ -8524,8 +8524,8 @@
         "p90_abs_delta_db": 9.43,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8667,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1062,
+        "road_m_total": 1062
       }
     },
     {
@@ -8566,8 +8566,8 @@
         "p90_abs_delta_db": 5.67,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7922,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3879,
+        "road_m_total": 3879
       }
     },
     {
@@ -8650,8 +8650,8 @@
         "p90_abs_delta_db": 2.57,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0476,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 848,
+        "road_m_total": 1005
       }
     },
     {
@@ -8692,8 +8692,8 @@
         "p90_abs_delta_db": 2.08,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 137,
+        "road_m_total": 353
       }
     },
     {
@@ -8734,8 +8734,8 @@
         "p90_abs_delta_db": 1.9,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0727,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5412,
+        "road_m_total": 7344
       }
     },
     {
@@ -8776,8 +8776,8 @@
         "p90_abs_delta_db": 1.4,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6640,
+        "road_m_total": 9776
       }
     },
     {
@@ -8818,8 +8818,8 @@
         "p90_abs_delta_db": 1.29,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1892,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5670,
+        "road_m_total": 9411
       }
     },
     {
@@ -8860,8 +8860,8 @@
         "p90_abs_delta_db": 2.28,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1333,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1840,
+        "road_m_total": 3597
       }
     },
     {
@@ -8902,8 +8902,8 @@
         "p90_abs_delta_db": 4.57,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1012,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1430,
+        "road_m_total": 1430
       }
     },
     {
@@ -8944,8 +8944,8 @@
         "p90_abs_delta_db": 9.08,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6126,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1434,
+        "road_m_total": 1434
       }
     },
     {
@@ -9070,8 +9070,8 @@
         "p90_abs_delta_db": 5.62,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6793,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 394,
+        "road_m_total": 394
       }
     },
     {
@@ -9112,8 +9112,8 @@
         "p90_abs_delta_db": 7.75,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6752,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1689,
+        "road_m_total": 1689
       }
     },
     {
@@ -9154,8 +9154,8 @@
         "p90_abs_delta_db": 12.19,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 904,
+        "road_m_total": 904
       }
     },
     {
@@ -9196,8 +9196,8 @@
         "p90_abs_delta_db": 12.93,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 798,
+        "road_m_total": 798
       }
     },
     {
@@ -9238,8 +9238,8 @@
         "p90_abs_delta_db": 9.37,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0653,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2506,
+        "road_m_total": 2506
       }
     },
     {
@@ -9280,8 +9280,8 @@
         "p90_abs_delta_db": 9.89,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8419,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2514,
+        "road_m_total": 2514
       }
     },
     {
@@ -9322,8 +9322,8 @@
         "p90_abs_delta_db": 7.97,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5471,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3748,
+        "road_m_total": 3752
       }
     },
     {
@@ -9364,8 +9364,8 @@
         "p90_abs_delta_db": 11.62,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4888,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3376,
+        "road_m_total": 3880
       }
     },
     {
@@ -9406,8 +9406,8 @@
         "p90_abs_delta_db": 9.5,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8607,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3537,
+        "road_m_total": 3650
       }
     },
     {
@@ -9448,8 +9448,8 @@
         "p90_abs_delta_db": 4.02,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5158,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6326,
+        "road_m_total": 6329
       }
     },
     {
@@ -9490,8 +9490,8 @@
         "p90_abs_delta_db": 6.99,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6166,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2585,
+        "road_m_total": 2585
       }
     },
     {
@@ -9532,8 +9532,8 @@
         "p90_abs_delta_db": 8.2,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5587,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1002,
+        "road_m_total": 1002
       }
     },
     {
@@ -9574,8 +9574,8 @@
         "p90_abs_delta_db": 7.06,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.66,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3698,
+        "road_m_total": 3698
       }
     },
     {
@@ -9616,8 +9616,8 @@
         "p90_abs_delta_db": 7.33,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6281,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1385,
+        "road_m_total": 1385
       }
     },
     {
@@ -9658,8 +9658,8 @@
         "p90_abs_delta_db": 5.04,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0156,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1128,
+        "road_m_total": 1128
       }
     },
     {
@@ -9700,8 +9700,8 @@
         "p90_abs_delta_db": 3.42,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.037,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1375,
+        "road_m_total": 1375
       }
     },
     {
@@ -9742,8 +9742,8 @@
         "p90_abs_delta_db": 3.42,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.124,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 7005,
+        "road_m_total": 7070
       }
     },
     {
@@ -9784,8 +9784,8 @@
         "p90_abs_delta_db": 5.74,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2705,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1197,
+        "road_m_total": 1342
       }
     },
     {
@@ -9826,8 +9826,8 @@
         "p90_abs_delta_db": 5.65,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2714,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3670,
+        "road_m_total": 3734
       }
     },
     {
@@ -9868,8 +9868,8 @@
         "p90_abs_delta_db": 2.96,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2907,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6234,
+        "road_m_total": 6861
       }
     },
     {
@@ -9910,8 +9910,8 @@
         "p90_abs_delta_db": 1.1,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3097,
+        "road_m_total": 5269
       }
     },
     {
@@ -9952,8 +9952,8 @@
         "p90_abs_delta_db": 4.44,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0658,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 898,
+        "road_m_total": 1050
       }
     },
     {
@@ -9994,8 +9994,8 @@
         "p90_abs_delta_db": 3.09,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6591,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1712,
+        "road_m_total": 1712
       }
     },
     {
@@ -10036,8 +10036,8 @@
         "p90_abs_delta_db": 3.45,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4218,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2393,
+        "road_m_total": 2400
       }
     },
     {
@@ -10078,8 +10078,8 @@
         "p90_abs_delta_db": 6.7,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6051,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 557,
+        "road_m_total": 579
       }
     },
     {
@@ -10120,8 +10120,8 @@
         "p90_abs_delta_db": 11.34,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0539,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2319,
+        "road_m_total": 2319
       }
     },
     {
@@ -10162,8 +10162,8 @@
         "p90_abs_delta_db": 9.69,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0227,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3446,
+        "road_m_total": 3446
       }
     },
     {
@@ -10204,8 +10204,8 @@
         "p90_abs_delta_db": 8.95,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1028,
+        "road_m_total": 1028
       }
     },
     {
@@ -10246,8 +10246,8 @@
         "p90_abs_delta_db": 8.14,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 102,
+        "road_m_total": 102
       }
     },
     {
@@ -10288,8 +10288,8 @@
         "p90_abs_delta_db": 8.68,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0018,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1929,
+        "road_m_total": 1929
       }
     },
     {
@@ -10330,8 +10330,8 @@
         "p90_abs_delta_db": 12.48,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5956,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3058,
+        "road_m_total": 3058
       }
     },
     {
@@ -10372,8 +10372,8 @@
         "p90_abs_delta_db": 11.47,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.688,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1395,
+        "road_m_total": 1395
       }
     },
     {
@@ -10414,8 +10414,8 @@
         "p90_abs_delta_db": 10.98,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9185,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1036,
+        "road_m_total": 1036
       }
     },
     {
@@ -10456,8 +10456,8 @@
         "p90_abs_delta_db": 10.71,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8043,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2826,
+        "road_m_total": 2826
       }
     },
     {
@@ -10498,8 +10498,8 @@
         "p90_abs_delta_db": 6.71,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.592,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3326,
+        "road_m_total": 3326
       }
     },
     {
@@ -10540,8 +10540,8 @@
         "p90_abs_delta_db": 8.35,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0141,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 419,
+        "road_m_total": 419
       }
     },
     {
@@ -10582,8 +10582,8 @@
         "p90_abs_delta_db": 6.6,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.498,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3118,
+        "road_m_total": 3118
       }
     },
     {
@@ -10624,8 +10624,8 @@
         "p90_abs_delta_db": 7.73,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8707,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2175,
+        "road_m_total": 2175
       }
     },
     {
@@ -10666,8 +10666,8 @@
         "p90_abs_delta_db": 7.68,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8492,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2176,
+        "road_m_total": 2176
       }
     },
     {
@@ -10708,8 +10708,8 @@
         "p90_abs_delta_db": 3.64,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2824,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2779,
+        "road_m_total": 2999
       }
     },
     {
@@ -10750,8 +10750,8 @@
         "p90_abs_delta_db": 3.53,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1824,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 7114,
+        "road_m_total": 7310
       }
     },
     {
@@ -10834,8 +10834,8 @@
         "p90_abs_delta_db": 6.81,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3796,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2529,
+        "road_m_total": 2747
       }
     },
     {
@@ -10876,8 +10876,8 @@
         "p90_abs_delta_db": 3.43,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0068,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 9653,
+        "road_m_total": 9788
       }
     },
     {
@@ -10918,8 +10918,8 @@
         "p90_abs_delta_db": 2.47,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1266,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 10821,
+        "road_m_total": 11353
       }
     },
     {
@@ -10960,8 +10960,8 @@
         "p90_abs_delta_db": 2.69,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1343,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6322,
+        "road_m_total": 7313
       }
     },
     {
@@ -11002,8 +11002,8 @@
         "p90_abs_delta_db": 4.45,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6397,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2007,
+        "road_m_total": 2153
       }
     },
     {
@@ -11044,8 +11044,8 @@
         "p90_abs_delta_db": 3.36,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8701,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 867,
+        "road_m_total": 867
       }
     },
     {
@@ -11086,8 +11086,8 @@
         "p90_abs_delta_db": 6.88,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7509,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1524,
+        "road_m_total": 2837
       }
     },
     {
@@ -11128,8 +11128,8 @@
         "p90_abs_delta_db": 9.95,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0411,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1420,
+        "road_m_total": 1420
       }
     },
     {
@@ -11170,8 +11170,8 @@
         "p90_abs_delta_db": 10.85,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 203,
+        "road_m_total": 203
       }
     },
     {
@@ -11296,8 +11296,8 @@
         "p90_abs_delta_db": 9.54,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1187,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 68,
+        "road_m_total": 68
       }
     },
     {
@@ -11338,8 +11338,8 @@
         "p90_abs_delta_db": 10.81,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8592,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2582,
+        "road_m_total": 2582
       }
     },
     {
@@ -11380,8 +11380,8 @@
         "p90_abs_delta_db": 9.67,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8355,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 32,
+        "road_m_total": 32
       }
     },
     {
@@ -11464,8 +11464,8 @@
         "p90_abs_delta_db": 11.2,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8942,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 315,
+        "road_m_total": 315
       }
     },
     {
@@ -11506,8 +11506,8 @@
         "p90_abs_delta_db": 8.07,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7325,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5353,
+        "road_m_total": 5354
       }
     },
     {
@@ -11548,8 +11548,8 @@
         "p90_abs_delta_db": 6.74,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3558,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4080,
+        "road_m_total": 4129
       }
     },
     {
@@ -11590,8 +11590,8 @@
         "p90_abs_delta_db": 6.71,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3364,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2628,
+        "road_m_total": 2628
       }
     },
     {
@@ -11632,8 +11632,8 @@
         "p90_abs_delta_db": 6.13,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.915,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 338,
+        "road_m_total": 338
       }
     },
     {
@@ -11674,8 +11674,8 @@
         "p90_abs_delta_db": 7.37,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8942,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 673,
+        "road_m_total": 673
       }
     },
     {
@@ -11716,8 +11716,8 @@
         "p90_abs_delta_db": 8.34,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7462,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1576,
+        "road_m_total": 1576
       }
     },
     {
@@ -11758,8 +11758,8 @@
         "p90_abs_delta_db": 4.13,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.102,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 7245,
+        "road_m_total": 7288
       }
     },
     {
@@ -11842,8 +11842,8 @@
         "p90_abs_delta_db": 7.32,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6768,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1209,
+        "road_m_total": 1209
       }
     },
     {
@@ -11884,8 +11884,8 @@
         "p90_abs_delta_db": 6.59,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0122,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3633,
+        "road_m_total": 3913
       }
     },
     {
@@ -11926,8 +11926,8 @@
         "p90_abs_delta_db": 3.11,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0096,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5990,
+        "road_m_total": 7958
       }
     },
     {
@@ -11968,8 +11968,8 @@
         "p90_abs_delta_db": 1.92,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2271,
+        "road_m_total": 5434
       }
     },
     {
@@ -12010,8 +12010,8 @@
         "p90_abs_delta_db": 3.7,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6024,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3630,
+        "road_m_total": 5866
       }
     },
     {
@@ -12052,8 +12052,8 @@
         "p90_abs_delta_db": 6.39,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2759,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1565,
+        "road_m_total": 1565
       }
     },
     {
@@ -12094,8 +12094,8 @@
         "p90_abs_delta_db": 6.8,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.513,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1133,
+        "road_m_total": 1133
       }
     },
     {
@@ -12136,8 +12136,8 @@
         "p90_abs_delta_db": 7.07,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0027,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3647,
+        "road_m_total": 3647
       }
     },
     {
@@ -12178,8 +12178,8 @@
         "p90_abs_delta_db": 9.32,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 561,
+        "road_m_total": 561
       }
     },
     {
@@ -12304,8 +12304,8 @@
         "p90_abs_delta_db": 8.25,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 796,
+        "road_m_total": 846
       }
     },
     {
@@ -12346,8 +12346,8 @@
         "p90_abs_delta_db": 10.53,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8283,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2073,
+        "road_m_total": 2073
       }
     },
     {
@@ -12472,8 +12472,8 @@
         "p90_abs_delta_db": 7.91,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9405,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 192,
+        "road_m_total": 192
       }
     },
     {
@@ -12556,8 +12556,8 @@
         "p90_abs_delta_db": 7.58,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7264,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5697,
+        "road_m_total": 5697
       }
     },
     {
@@ -12598,8 +12598,8 @@
         "p90_abs_delta_db": 6.41,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8338,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2622,
+        "road_m_total": 2827
       }
     },
     {
@@ -12682,8 +12682,8 @@
         "p90_abs_delta_db": 7.15,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8856,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 687,
+        "road_m_total": 687
       }
     },
     {
@@ -12724,8 +12724,8 @@
         "p90_abs_delta_db": 3.58,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4393,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6521,
+        "road_m_total": 6757
       }
     },
     {
@@ -12766,8 +12766,8 @@
         "p90_abs_delta_db": 6.17,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6009,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1604,
+        "road_m_total": 1720
       }
     },
     {
@@ -12808,8 +12808,8 @@
         "p90_abs_delta_db": 5.81,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6232,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1648,
+        "road_m_total": 1648
       }
     },
     {
@@ -12850,8 +12850,8 @@
         "p90_abs_delta_db": 6.93,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8112,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1491,
+        "road_m_total": 1491
       }
     },
     {
@@ -12892,8 +12892,8 @@
         "p90_abs_delta_db": 2.97,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0917,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 9747,
+        "road_m_total": 11182
       }
     },
     {
@@ -12934,8 +12934,8 @@
         "p90_abs_delta_db": 2.26,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1991,
+        "road_m_total": 3599
       }
     },
     {
@@ -12976,8 +12976,8 @@
         "p90_abs_delta_db": 3.53,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 915,
+        "road_m_total": 915
       }
     },
     {
@@ -13018,8 +13018,8 @@
         "p90_abs_delta_db": 1.7,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3148,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2883,
+        "road_m_total": 4092
       }
     },
     {
@@ -13060,8 +13060,8 @@
         "p90_abs_delta_db": 7.69,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7986,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 775,
+        "road_m_total": 775
       }
     },
     {
@@ -13102,8 +13102,8 @@
         "p90_abs_delta_db": 8.08,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7723,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3957,
+        "road_m_total": 4786
       }
     },
     {
@@ -13144,8 +13144,8 @@
         "p90_abs_delta_db": 9.13,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 175,
+        "road_m_total": 175
       }
     },
     {
@@ -13186,8 +13186,8 @@
         "p90_abs_delta_db": 5.89,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4482,
+        "road_m_total": 4482
       }
     },
     {
@@ -13228,8 +13228,8 @@
         "p90_abs_delta_db": 8.92,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1013,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 208,
+        "road_m_total": 208
       }
     },
     {
@@ -13270,8 +13270,8 @@
         "p90_abs_delta_db": 7.91,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7485,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1443,
+        "road_m_total": 1546
       }
     },
     {
@@ -13312,8 +13312,8 @@
         "p90_abs_delta_db": 9.59,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.681,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2511,
+        "road_m_total": 2541
       }
     },
     {
@@ -13354,8 +13354,8 @@
         "p90_abs_delta_db": 6.61,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4013,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 435,
+        "road_m_total": 435
       }
     },
     {
@@ -13396,8 +13396,8 @@
         "p90_abs_delta_db": 10.08,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8736,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2064,
+        "road_m_total": 2064
       }
     },
     {
@@ -13438,8 +13438,8 @@
         "p90_abs_delta_db": 9.74,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9873,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 77,
+        "road_m_total": 77
       }
     },
     {
@@ -13480,8 +13480,8 @@
         "p90_abs_delta_db": 11.27,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9377,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1393,
+        "road_m_total": 1393
       }
     },
     {
@@ -13522,8 +13522,8 @@
         "p90_abs_delta_db": 7.93,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6626,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1396,
+        "road_m_total": 1482
       }
     },
     {
@@ -13564,8 +13564,8 @@
         "p90_abs_delta_db": 9.29,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7147,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3194,
+        "road_m_total": 3194
       }
     },
     {
@@ -13606,8 +13606,8 @@
         "p90_abs_delta_db": 4.75,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7457,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3863,
+        "road_m_total": 3863
       }
     },
     {
@@ -13732,8 +13732,8 @@
         "p90_abs_delta_db": 3.63,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6129,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3744,
+        "road_m_total": 6056
       }
     },
     {
@@ -13774,8 +13774,8 @@
         "p90_abs_delta_db": 7.62,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8725,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1196,
+        "road_m_total": 2209
       }
     },
     {
@@ -13816,8 +13816,8 @@
         "p90_abs_delta_db": 4.78,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5408,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2319,
+        "road_m_total": 2319
       }
     },
     {
@@ -13858,8 +13858,8 @@
         "p90_abs_delta_db": 5.69,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9458,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1290,
+        "road_m_total": 1290
       }
     },
     {
@@ -13900,8 +13900,8 @@
         "p90_abs_delta_db": 5.81,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8426,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5432,
+        "road_m_total": 6326
       }
     },
     {
@@ -13942,8 +13942,8 @@
         "p90_abs_delta_db": 1.28,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2222,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 731,
+        "road_m_total": 3511
       }
     },
     {
@@ -13984,8 +13984,8 @@
         "p90_abs_delta_db": 4.4,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 138,
+        "road_m_total": 138
       }
     },
     {
@@ -14026,8 +14026,8 @@
         "p90_abs_delta_db": 6.72,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.131,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2669,
+        "road_m_total": 2669
       }
     },
     {
@@ -14068,8 +14068,8 @@
         "p90_abs_delta_db": 7.87,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4271,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4237,
+        "road_m_total": 4237
       }
     },
     {
@@ -14110,8 +14110,8 @@
         "p90_abs_delta_db": 6.64,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7652,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1939,
+        "road_m_total": 1939
       }
     },
     {
@@ -14152,8 +14152,8 @@
         "p90_abs_delta_db": 11.65,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1528,
+        "road_m_total": 1528
       }
     },
     {
@@ -14194,8 +14194,8 @@
         "p90_abs_delta_db": 11.82,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 436,
+        "road_m_total": 436
       }
     },
     {
@@ -14236,8 +14236,8 @@
         "p90_abs_delta_db": 7.86,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2474,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3098,
+        "road_m_total": 3098
       }
     },
     {
@@ -14278,8 +14278,8 @@
         "p90_abs_delta_db": 10.05,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.767,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2800,
+        "road_m_total": 2800
       }
     },
     {
@@ -14320,8 +14320,8 @@
         "p90_abs_delta_db": 6.79,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5461,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1834,
+        "road_m_total": 1951
       }
     },
     {
@@ -14362,8 +14362,8 @@
         "p90_abs_delta_db": 10.13,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8964,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 445,
+        "road_m_total": 445
       }
     },
     {
@@ -14404,8 +14404,8 @@
         "p90_abs_delta_db": 10.34,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8593,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1949,
+        "road_m_total": 1949
       }
     },
     {
@@ -14446,8 +14446,8 @@
         "p90_abs_delta_db": 10.06,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9333,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 429,
+        "road_m_total": 429
       }
     },
     {
@@ -14488,8 +14488,8 @@
         "p90_abs_delta_db": 9.47,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8241,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1739,
+        "road_m_total": 1739
       }
     },
     {
@@ -14530,8 +14530,8 @@
         "p90_abs_delta_db": 6.46,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7735,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3249,
+        "road_m_total": 3249
       }
     },
     {
@@ -14572,8 +14572,8 @@
         "p90_abs_delta_db": 6.18,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6425,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5304,
+        "road_m_total": 5503
       }
     },
     {
@@ -14614,8 +14614,8 @@
         "p90_abs_delta_db": 4.49,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5886,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3964,
+        "road_m_total": 3964
       }
     },
     {
@@ -14740,8 +14740,8 @@
         "p90_abs_delta_db": 7.46,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8219,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4066,
+        "road_m_total": 4068
       }
     },
     {
@@ -14782,8 +14782,8 @@
         "p90_abs_delta_db": 5.7,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5263,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4538,
+        "road_m_total": 5134
       }
     },
     {
@@ -14824,8 +14824,8 @@
         "p90_abs_delta_db": 8.11,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7781,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2609,
+        "road_m_total": 2609
       }
     },
     {
@@ -14866,8 +14866,8 @@
         "p90_abs_delta_db": 8.66,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7543,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 39,
+        "road_m_total": 39
       }
     },
     {
@@ -14908,8 +14908,8 @@
         "p90_abs_delta_db": 6.11,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1589,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3111,
+        "road_m_total": 3175
       }
     },
     {
@@ -14950,8 +14950,8 @@
         "p90_abs_delta_db": 1.44,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1981,
+        "road_m_total": 8770
       }
     },
     {
@@ -14992,8 +14992,8 @@
         "p90_abs_delta_db": 3.76,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0288,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1732,
+        "road_m_total": 2427
       }
     },
     {
@@ -15076,8 +15076,8 @@
         "p90_abs_delta_db": 5.31,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 574,
+        "road_m_total": 842
       }
     },
     {
@@ -15118,8 +15118,8 @@
         "p90_abs_delta_db": 2.05,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1667,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3704,
+        "road_m_total": 4388
       }
     },
     {
@@ -15160,8 +15160,8 @@
         "p90_abs_delta_db": 9.36,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1089,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3576,
+        "road_m_total": 3576
       }
     },
     {
@@ -15202,8 +15202,8 @@
         "p90_abs_delta_db": 6.58,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3464,
+        "road_m_total": 3464
       }
     },
     {
@@ -15244,8 +15244,8 @@
         "p90_abs_delta_db": 11.17,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3641,
+        "road_m_total": 3641
       }
     },
     {
@@ -15286,8 +15286,8 @@
         "p90_abs_delta_db": 9.16,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0365,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6157,
+        "road_m_total": 6157
       }
     },
     {
@@ -15328,8 +15328,8 @@
         "p90_abs_delta_db": 10.54,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7143,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4009,
+        "road_m_total": 4094
       }
     },
     {
@@ -15370,8 +15370,8 @@
         "p90_abs_delta_db": 12.27,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6778,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3996,
+        "road_m_total": 3996
       }
     },
     {
@@ -15412,8 +15412,8 @@
         "p90_abs_delta_db": 8.71,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6459,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5884,
+        "road_m_total": 6096
       }
     },
     {
@@ -15454,8 +15454,8 @@
         "p90_abs_delta_db": 8.99,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8276,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2630,
+        "road_m_total": 3317
       }
     },
     {
@@ -15496,8 +15496,8 @@
         "p90_abs_delta_db": 10.44,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8616,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2442,
+        "road_m_total": 2442
       }
     },
     {
@@ -15538,8 +15538,8 @@
         "p90_abs_delta_db": 8.73,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8609,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1637,
+        "road_m_total": 1637
       }
     },
     {
@@ -15580,8 +15580,8 @@
         "p90_abs_delta_db": 5.77,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5244,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5131,
+        "road_m_total": 5131
       }
     },
     {
@@ -15622,8 +15622,8 @@
         "p90_abs_delta_db": 4.34,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4641,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6996,
+        "road_m_total": 7067
       }
     },
     {
@@ -15706,8 +15706,8 @@
         "p90_abs_delta_db": 7.32,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8478,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1857,
+        "road_m_total": 1857
       }
     },
     {
@@ -15748,8 +15748,8 @@
         "p90_abs_delta_db": 4.09,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.293,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5335,
+        "road_m_total": 6919
       }
     },
     {
@@ -15832,8 +15832,8 @@
         "p90_abs_delta_db": 3.44,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.701,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5134,
+        "road_m_total": 5163
       }
     },
     {
@@ -15874,8 +15874,8 @@
         "p90_abs_delta_db": 6.84,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8761,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 441,
+        "road_m_total": 441
       }
     },
     {
@@ -15916,8 +15916,8 @@
         "p90_abs_delta_db": 6.48,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1838,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1088,
+        "road_m_total": 1088
       }
     },
     {
@@ -15958,8 +15958,8 @@
         "p90_abs_delta_db": 2.55,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 556,
+        "road_m_total": 2107
       }
     },
     {
@@ -16000,8 +16000,8 @@
         "p90_abs_delta_db": 3.5,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2139,
+        "road_m_total": 6841
       }
     },
     {
@@ -16042,8 +16042,8 @@
         "p90_abs_delta_db": 4.21,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0574,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 765,
+        "road_m_total": 905
       }
     },
     {
@@ -16126,8 +16126,8 @@
         "p90_abs_delta_db": 3.09,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1309,
+        "road_m_total": 1868
       }
     },
     {
@@ -16168,8 +16168,8 @@
         "p90_abs_delta_db": 7.77,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4205,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3452,
+        "road_m_total": 3452
       }
     },
     {
@@ -16210,8 +16210,8 @@
         "p90_abs_delta_db": 9.01,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4351,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3384,
+        "road_m_total": 3384
       }
     },
     {
@@ -16252,8 +16252,8 @@
         "p90_abs_delta_db": 9.14,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2648,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1598,
+        "road_m_total": 1598
       }
     },
     {
@@ -16294,8 +16294,8 @@
         "p90_abs_delta_db": 8.43,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6829,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3825,
+        "road_m_total": 3844
       }
     },
     {
@@ -16336,8 +16336,8 @@
         "p90_abs_delta_db": 9.95,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7225,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2656,
+        "road_m_total": 2681
       }
     },
     {
@@ -16378,8 +16378,8 @@
         "p90_abs_delta_db": 10.79,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8825,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3755,
+        "road_m_total": 3755
       }
     },
     {
@@ -16420,8 +16420,8 @@
         "p90_abs_delta_db": 9.0,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8259,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1903,
+        "road_m_total": 2227
       }
     },
     {
@@ -16462,8 +16462,8 @@
         "p90_abs_delta_db": 7.07,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.822,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4472,
+        "road_m_total": 5378
       }
     },
     {
@@ -16504,8 +16504,8 @@
         "p90_abs_delta_db": 9.05,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.903,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 24,
+        "road_m_total": 24
       }
     },
     {
@@ -16546,8 +16546,8 @@
         "p90_abs_delta_db": 9.88,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.892,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1532,
+        "road_m_total": 1532
       }
     },
     {
@@ -16630,8 +16630,8 @@
         "p90_abs_delta_db": 4.02,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7793,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4569,
+        "road_m_total": 7127
       }
     },
     {
@@ -16672,8 +16672,8 @@
         "p90_abs_delta_db": 6.03,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7126,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5525,
+        "road_m_total": 6351
       }
     },
     {
@@ -16714,8 +16714,8 @@
         "p90_abs_delta_db": 6.13,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8016,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4913,
+        "road_m_total": 4913
       }
     },
     {
@@ -16756,8 +16756,8 @@
         "p90_abs_delta_db": 6.92,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6073,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2507,
+        "road_m_total": 2507
       }
     },
     {
@@ -16798,8 +16798,8 @@
         "p90_abs_delta_db": 8.43,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.781,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 418,
+        "road_m_total": 418
       }
     },
     {
@@ -16840,8 +16840,8 @@
         "p90_abs_delta_db": 4.8,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3231,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 151,
+        "road_m_total": 151
       }
     },
     {
@@ -16882,8 +16882,8 @@
         "p90_abs_delta_db": 7.74,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8958,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 641,
+        "road_m_total": 641
       }
     },
     {
@@ -16924,8 +16924,8 @@
         "p90_abs_delta_db": 8.87,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0979,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3600,
+        "road_m_total": 3600
       }
     },
     {
@@ -16966,8 +16966,8 @@
         "p90_abs_delta_db": 7.17,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5620,
+        "road_m_total": 7104
       }
     },
     {
@@ -17009,7 +17009,7 @@
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
         "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_total": 12175
       }
     },
     {
@@ -17050,8 +17050,8 @@
         "p90_abs_delta_db": 1.01,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 911,
+        "road_m_total": 4952
       }
     },
     {
@@ -17092,8 +17092,8 @@
         "p90_abs_delta_db": 1.52,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1178,
+        "road_m_total": 6846
       }
     },
     {
@@ -17134,8 +17134,8 @@
         "p90_abs_delta_db": 1.34,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3355,
+        "road_m_total": 6056
       }
     },
     {
@@ -17176,8 +17176,8 @@
         "p90_abs_delta_db": 8.9,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8278,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3272,
+        "road_m_total": 3272
       }
     },
     {
@@ -17218,8 +17218,8 @@
         "p90_abs_delta_db": 10.35,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9752,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 149,
+        "road_m_total": 149
       }
     },
     {
@@ -17344,8 +17344,8 @@
         "p90_abs_delta_db": 11.92,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.907,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 355,
+        "road_m_total": 355
       }
     },
     {
@@ -17386,8 +17386,8 @@
         "p90_abs_delta_db": 8.65,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9297,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1194,
+        "road_m_total": 1194
       }
     },
     {
@@ -17428,8 +17428,8 @@
         "p90_abs_delta_db": 8.24,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8966,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1347,
+        "road_m_total": 1347
       }
     },
     {
@@ -17470,8 +17470,8 @@
         "p90_abs_delta_db": 8.15,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.766,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2848,
+        "road_m_total": 2848
       }
     },
     {
@@ -17512,8 +17512,8 @@
         "p90_abs_delta_db": 6.71,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.825,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3642,
+        "road_m_total": 3642
       }
     },
     {
@@ -17554,8 +17554,8 @@
         "p90_abs_delta_db": 9.15,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8851,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2923,
+        "road_m_total": 2923
       }
     },
     {
@@ -17596,8 +17596,8 @@
         "p90_abs_delta_db": 9.56,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9127,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 199,
+        "road_m_total": 199
       }
     },
     {
@@ -17638,8 +17638,8 @@
         "p90_abs_delta_db": 6.88,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.858,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1736,
+        "road_m_total": 1736
       }
     },
     {
@@ -17680,8 +17680,8 @@
         "p90_abs_delta_db": 2.94,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5049,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 7101,
+        "road_m_total": 8609
       }
     },
     {
@@ -17722,8 +17722,8 @@
         "p90_abs_delta_db": 6.33,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.814,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3013,
+        "road_m_total": 3013
       }
     },
     {
@@ -17764,8 +17764,8 @@
         "p90_abs_delta_db": 5.38,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8595,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2478,
+        "road_m_total": 2630
       }
     },
     {
@@ -17806,8 +17806,8 @@
         "p90_abs_delta_db": 9.15,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8076,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2992,
+        "road_m_total": 3014
       }
     },
     {
@@ -17848,8 +17848,8 @@
         "p90_abs_delta_db": 7.14,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9295,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1905,
+        "road_m_total": 1905
       }
     },
     {
@@ -17890,8 +17890,8 @@
         "p90_abs_delta_db": 8.75,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8801,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3000,
+        "road_m_total": 3000
       }
     },
     {
@@ -17932,8 +17932,8 @@
         "p90_abs_delta_db": 3.13,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5938,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3094,
+        "road_m_total": 3094
       }
     },
     {
@@ -17974,8 +17974,8 @@
         "p90_abs_delta_db": 2.68,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6813,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2191,
+        "road_m_total": 3161
       }
     },
     {
@@ -18016,8 +18016,8 @@
         "p90_abs_delta_db": 1.58,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1784,
+        "road_m_total": 6678
       }
     },
     {
@@ -18058,8 +18058,8 @@
         "p90_abs_delta_db": 1.44,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 815,
+        "road_m_total": 2515
       }
     },
     {
@@ -18100,8 +18100,8 @@
         "p90_abs_delta_db": 1.23,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0667,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3511,
+        "road_m_total": 6041
       }
     },
     {
@@ -18142,8 +18142,8 @@
         "p90_abs_delta_db": 1.24,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3324,
+        "road_m_total": 7334
       }
     },
     {
@@ -18184,8 +18184,8 @@
         "p90_abs_delta_db": 8.66,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7243,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2470,
+        "road_m_total": 2470
       }
     },
     {
@@ -18226,8 +18226,8 @@
         "p90_abs_delta_db": 12.59,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8367,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4653,
+        "road_m_total": 4653
       }
     },
     {
@@ -18268,8 +18268,8 @@
         "p90_abs_delta_db": 9.8,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7112,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4270,
+        "road_m_total": 4393
       }
     },
     {
@@ -18310,8 +18310,8 @@
         "p90_abs_delta_db": 6.25,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4552,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 462,
+        "road_m_total": 462
       }
     },
     {
@@ -18352,8 +18352,8 @@
         "p90_abs_delta_db": 8.44,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9729,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1271,
+        "road_m_total": 1271
       }
     },
     {
@@ -18436,8 +18436,8 @@
         "p90_abs_delta_db": 9.7,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8783,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 864,
+        "road_m_total": 864
       }
     },
     {
@@ -18478,8 +18478,8 @@
         "p90_abs_delta_db": 9.64,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8427,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1046,
+        "road_m_total": 1046
       }
     },
     {
@@ -18520,8 +18520,8 @@
         "p90_abs_delta_db": 6.18,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4867,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4385,
+        "road_m_total": 4462
       }
     },
     {
@@ -18562,8 +18562,8 @@
         "p90_abs_delta_db": 9.12,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8962,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 680,
+        "road_m_total": 680
       }
     },
     {
@@ -18604,8 +18604,8 @@
         "p90_abs_delta_db": 7.91,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9002,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2737,
+        "road_m_total": 2737
       }
     },
     {
@@ -18646,8 +18646,8 @@
         "p90_abs_delta_db": 7.55,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9614,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4723,
+        "road_m_total": 4723
       }
     },
     {
@@ -18688,8 +18688,8 @@
         "p90_abs_delta_db": 5.61,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6751,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 8787,
+        "road_m_total": 8787
       }
     },
     {
@@ -18730,8 +18730,8 @@
         "p90_abs_delta_db": 5.96,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8862,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1087,
+        "road_m_total": 1087
       }
     },
     {
@@ -18772,8 +18772,8 @@
         "p90_abs_delta_db": 8.38,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8941,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5053,
+        "road_m_total": 5053
       }
     },
     {
@@ -18814,8 +18814,8 @@
         "p90_abs_delta_db": 8.42,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9316,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2006,
+        "road_m_total": 2006
       }
     },
     {
@@ -18898,8 +18898,8 @@
         "p90_abs_delta_db": 7.99,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.933,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1128,
+        "road_m_total": 1128
       }
     },
     {
@@ -18940,8 +18940,8 @@
         "p90_abs_delta_db": 2.85,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5366,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5422,
+        "road_m_total": 6370
       }
     },
     {
@@ -18982,8 +18982,8 @@
         "p90_abs_delta_db": 1.42,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.806,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6719,
+        "road_m_total": 8821
       }
     },
     {
@@ -19024,8 +19024,8 @@
         "p90_abs_delta_db": 7.35,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0175,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 848,
+        "road_m_total": 1466
       }
     },
     {
@@ -19066,8 +19066,8 @@
         "p90_abs_delta_db": 7.08,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0178,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 375,
+        "road_m_total": 375
       }
     },
     {
@@ -19108,8 +19108,8 @@
         "p90_abs_delta_db": 2.85,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0112,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2359,
+        "road_m_total": 2359
       }
     },
     {
@@ -19150,8 +19150,8 @@
         "p90_abs_delta_db": 8.41,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1470,
+        "road_m_total": 1470
       }
     },
     {
@@ -19192,8 +19192,8 @@
         "p90_abs_delta_db": 10.39,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8603,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1783,
+        "road_m_total": 1783
       }
     },
     {
@@ -19276,8 +19276,8 @@
         "p90_abs_delta_db": 13.68,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7388,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1164,
+        "road_m_total": 1164
       }
     },
     {
@@ -19318,8 +19318,8 @@
         "p90_abs_delta_db": 6.5,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6054,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3369,
+        "road_m_total": 3477
       }
     },
     {
@@ -19360,8 +19360,8 @@
         "p90_abs_delta_db": 5.25,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4151,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 752,
+        "road_m_total": 752
       }
     },
     {
@@ -19486,8 +19486,8 @@
         "p90_abs_delta_db": 9.04,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8468,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 307,
+        "road_m_total": 307
       }
     },
     {
@@ -19528,8 +19528,8 @@
         "p90_abs_delta_db": 5.58,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.851,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3185,
+        "road_m_total": 3337
       }
     },
     {
@@ -19570,8 +19570,8 @@
         "p90_abs_delta_db": 4.88,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6614,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4364,
+        "road_m_total": 4364
       }
     },
     {
@@ -19612,8 +19612,8 @@
         "p90_abs_delta_db": 7.68,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8151,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3669,
+        "road_m_total": 3669
       }
     },
     {
@@ -19654,8 +19654,8 @@
         "p90_abs_delta_db": 4.38,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3543,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5505,
+        "road_m_total": 5505
       }
     },
     {
@@ -19696,8 +19696,8 @@
         "p90_abs_delta_db": 6.36,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8193,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6663,
+        "road_m_total": 6663
       }
     },
     {
@@ -19738,8 +19738,8 @@
         "p90_abs_delta_db": 6.65,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9333,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 8,
+        "road_m_total": 8
       }
     },
     {
@@ -19780,8 +19780,8 @@
         "p90_abs_delta_db": 7.76,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8899,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2591,
+        "road_m_total": 2591
       }
     },
     {
@@ -19822,8 +19822,8 @@
         "p90_abs_delta_db": 7.68,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9939,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1149,
+        "road_m_total": 1149
       }
     },
     {
@@ -19864,8 +19864,8 @@
         "p90_abs_delta_db": 9.3,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9649,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6,
+        "road_m_total": 6
       }
     },
     {
@@ -19906,8 +19906,8 @@
         "p90_abs_delta_db": 8.8,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7989,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2425,
+        "road_m_total": 2425
       }
     },
     {
@@ -19948,8 +19948,8 @@
         "p90_abs_delta_db": 1.55,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4118,
+        "road_m_total": 5524
       }
     },
     {
@@ -19990,8 +19990,8 @@
         "p90_abs_delta_db": 5.35,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1168,
+        "road_m_total": 1168
       }
     },
     {
@@ -20032,8 +20032,8 @@
         "p90_abs_delta_db": 4.88,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3332,
+        "road_m_total": 3456
       }
     },
     {
@@ -20074,8 +20074,8 @@
         "p90_abs_delta_db": 4.41,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2866,
+        "road_m_total": 2866
       }
     },
     {
@@ -20116,8 +20116,8 @@
         "p90_abs_delta_db": 2.79,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4085,
+        "road_m_total": 5413
       }
     },
     {
@@ -20158,8 +20158,8 @@
         "p90_abs_delta_db": 8.09,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.008,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4622,
+        "road_m_total": 4757
       }
     },
     {
@@ -20200,8 +20200,8 @@
         "p90_abs_delta_db": 9.47,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5544,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4898,
+        "road_m_total": 6290
       }
     },
     {
@@ -20242,8 +20242,8 @@
         "p90_abs_delta_db": 12.25,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6614,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2150,
+        "road_m_total": 2412
       }
     },
     {
@@ -20284,8 +20284,8 @@
         "p90_abs_delta_db": 12.07,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6637,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1540,
+        "road_m_total": 1540
       }
     },
     {
@@ -20326,8 +20326,8 @@
         "p90_abs_delta_db": 6.93,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5924,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 278,
+        "road_m_total": 278
       }
     },
     {
@@ -20368,8 +20368,8 @@
         "p90_abs_delta_db": 3.21,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0606,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1095,
+        "road_m_total": 1142
       }
     },
     {
@@ -20410,8 +20410,8 @@
         "p90_abs_delta_db": 8.07,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.603,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 733,
+        "road_m_total": 733
       }
     },
     {
@@ -20452,8 +20452,8 @@
         "p90_abs_delta_db": 8.24,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.807,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1420,
+        "road_m_total": 1420
       }
     },
     {
@@ -20494,8 +20494,8 @@
         "p90_abs_delta_db": 9.3,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9381,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 362,
+        "road_m_total": 362
       }
     },
     {
@@ -20536,8 +20536,8 @@
         "p90_abs_delta_db": 8.61,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8602,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1823,
+        "road_m_total": 1823
       }
     },
     {
@@ -20578,8 +20578,8 @@
         "p90_abs_delta_db": 7.41,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5957,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3662,
+        "road_m_total": 3662
       }
     },
     {
@@ -20620,8 +20620,8 @@
         "p90_abs_delta_db": 4.52,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6626,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6605,
+        "road_m_total": 7492
       }
     },
     {
@@ -20662,8 +20662,8 @@
         "p90_abs_delta_db": 5.48,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5918,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3630,
+        "road_m_total": 3630
       }
     },
     {
@@ -20704,8 +20704,8 @@
         "p90_abs_delta_db": 5.96,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6084,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1002,
+        "road_m_total": 1002
       }
     },
     {
@@ -20746,8 +20746,8 @@
         "p90_abs_delta_db": 7.75,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9287,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 962,
+        "road_m_total": 962
       }
     },
     {
@@ -20788,8 +20788,8 @@
         "p90_abs_delta_db": 6.85,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6128,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3759,
+        "road_m_total": 3759
       }
     },
     {
@@ -20830,8 +20830,8 @@
         "p90_abs_delta_db": 7.88,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9486,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 464,
+        "road_m_total": 464
       }
     },
     {
@@ -20872,8 +20872,8 @@
         "p90_abs_delta_db": 8.71,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7824,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2735,
+        "road_m_total": 2735
       }
     },
     {
@@ -20914,8 +20914,8 @@
         "p90_abs_delta_db": 6.99,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7214,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2734,
+        "road_m_total": 2734
       }
     },
     {
@@ -20956,8 +20956,8 @@
         "p90_abs_delta_db": 1.84,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2952,
+        "road_m_total": 7618
       }
     },
     {
@@ -20998,8 +20998,8 @@
         "p90_abs_delta_db": 4.23,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2656,
+        "road_m_total": 2985
       }
     },
     {
@@ -21040,8 +21040,8 @@
         "p90_abs_delta_db": 5.23,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1533,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2099,
+        "road_m_total": 2099
       }
     },
     {
@@ -21082,8 +21082,8 @@
         "p90_abs_delta_db": 5.1,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3725,
+        "road_m_total": 3725
       }
     },
     {
@@ -21124,8 +21124,8 @@
         "p90_abs_delta_db": 4.73,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0426,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2251,
+        "road_m_total": 2251
       }
     },
     {
@@ -21208,8 +21208,8 @@
         "p90_abs_delta_db": 2.4,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3889,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4642,
+        "road_m_total": 6081
       }
     },
     {
@@ -21250,8 +21250,8 @@
         "p90_abs_delta_db": 7.21,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4837,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 8547,
+        "road_m_total": 8889
       }
     },
     {
@@ -21292,8 +21292,8 @@
         "p90_abs_delta_db": 8.29,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3736,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5128,
+        "road_m_total": 5387
       }
     },
     {
@@ -21334,8 +21334,8 @@
         "p90_abs_delta_db": 6.11,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4095,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4413,
+        "road_m_total": 4413
       }
     },
     {
@@ -21376,8 +21376,8 @@
         "p90_abs_delta_db": 9.2,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5452,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3049,
+        "road_m_total": 3049
       }
     },
     {
@@ -21418,8 +21418,8 @@
         "p90_abs_delta_db": 8.16,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3114,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1086,
+        "road_m_total": 1086
       }
     },
     {
@@ -21460,8 +21460,8 @@
         "p90_abs_delta_db": 7.1,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7785,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2441,
+        "road_m_total": 2441
       }
     },
     {
@@ -21502,8 +21502,8 @@
         "p90_abs_delta_db": 7.3,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6287,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4604,
+        "road_m_total": 4604
       }
     },
     {
@@ -21544,8 +21544,8 @@
         "p90_abs_delta_db": 8.07,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8137,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2533,
+        "road_m_total": 2637
       }
     },
     {
@@ -21586,8 +21586,8 @@
         "p90_abs_delta_db": 3.32,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1855,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5680,
+        "road_m_total": 6383
       }
     },
     {
@@ -21628,8 +21628,8 @@
         "p90_abs_delta_db": 2.0,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4933,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5899,
+        "road_m_total": 8957
       }
     },
     {
@@ -21670,8 +21670,8 @@
         "p90_abs_delta_db": 1.91,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2381,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5161,
+        "road_m_total": 10096
       }
     },
     {
@@ -21712,8 +21712,8 @@
         "p90_abs_delta_db": 5.81,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.9026,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2638,
+        "road_m_total": 2638
       }
     },
     {
@@ -21754,8 +21754,8 @@
         "p90_abs_delta_db": 9.87,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8537,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1350,
+        "road_m_total": 3475
       }
     },
     {
@@ -21796,8 +21796,8 @@
         "p90_abs_delta_db": 2.15,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6667,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3957,
+        "road_m_total": 5588
       }
     },
     {
@@ -21838,8 +21838,8 @@
         "p90_abs_delta_db": 3.84,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2857,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 8666,
+        "road_m_total": 8965
       }
     },
     {
@@ -21880,8 +21880,8 @@
         "p90_abs_delta_db": 2.61,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3804,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 7123,
+        "road_m_total": 10600
       }
     },
     {
@@ -21922,8 +21922,8 @@
         "p90_abs_delta_db": 1.63,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.027,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4899,
+        "road_m_total": 7747
       }
     },
     {
@@ -21964,8 +21964,8 @@
         "p90_abs_delta_db": 1.01,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1726,
+        "road_m_total": 9261
       }
     },
     {
@@ -22006,8 +22006,8 @@
         "p90_abs_delta_db": 4.86,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0244,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3745,
+        "road_m_total": 3745
       }
     },
     {
@@ -22048,8 +22048,8 @@
         "p90_abs_delta_db": 7.89,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4784,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3202,
+        "road_m_total": 3202
       }
     },
     {
@@ -22090,8 +22090,8 @@
         "p90_abs_delta_db": 5.96,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5995,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2210,
+        "road_m_total": 2474
       }
     },
     {
@@ -22132,8 +22132,8 @@
         "p90_abs_delta_db": 5.52,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3626,
+        "road_m_total": 3626
       }
     },
     {
@@ -22174,8 +22174,8 @@
         "p90_abs_delta_db": 6.89,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1969,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1049,
+        "road_m_total": 1049
       }
     },
     {
@@ -22216,8 +22216,8 @@
         "p90_abs_delta_db": 6.06,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6734,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6362,
+        "road_m_total": 6820
       }
     },
     {
@@ -22258,8 +22258,8 @@
         "p90_abs_delta_db": 12.17,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4962,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4357,
+        "road_m_total": 4410
       }
     },
     {
@@ -22300,8 +22300,8 @@
         "p90_abs_delta_db": 7.04,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1551,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4273,
+        "road_m_total": 4967
       }
     },
     {
@@ -22342,8 +22342,8 @@
         "p90_abs_delta_db": 7.24,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3879,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5954,
+        "road_m_total": 5961
       }
     },
     {
@@ -22384,8 +22384,8 @@
         "p90_abs_delta_db": 8.89,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3926,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4468,
+        "road_m_total": 4813
       }
     },
     {
@@ -22426,8 +22426,8 @@
         "p90_abs_delta_db": 13.6,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5747,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3475,
+        "road_m_total": 3488
       }
     },
     {
@@ -22468,8 +22468,8 @@
         "p90_abs_delta_db": 9.1,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7232,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4639,
+        "road_m_total": 4756
       }
     },
     {
@@ -22510,8 +22510,8 @@
         "p90_abs_delta_db": 2.39,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3663,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 9529,
+        "road_m_total": 9553
       }
     },
     {
@@ -22552,8 +22552,8 @@
         "p90_abs_delta_db": 2.98,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5808,
+        "road_m_total": 8436
       }
     },
     {
@@ -22594,8 +22594,8 @@
         "p90_abs_delta_db": 5.95,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0119,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2307,
+        "road_m_total": 3512
       }
     },
     {
@@ -22636,8 +22636,8 @@
         "p90_abs_delta_db": 6.0,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.285,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2112,
+        "road_m_total": 5101
       }
     },
     {
@@ -22678,8 +22678,8 @@
         "p90_abs_delta_db": 0.84,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5285,
+        "road_m_total": 11435
       }
     },
     {
@@ -22720,8 +22720,8 @@
         "p90_abs_delta_db": 1.64,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1765,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 6290,
+        "road_m_total": 11486
       }
     },
     {
@@ -22762,8 +22762,8 @@
         "p90_abs_delta_db": 9.43,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5439,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 7286,
+        "road_m_total": 9314
       }
     },
     {
@@ -22804,8 +22804,8 @@
         "p90_abs_delta_db": 7.28,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5372,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3408,
+        "road_m_total": 3620
       }
     },
     {
@@ -22846,8 +22846,8 @@
         "p90_abs_delta_db": 2.48,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4479,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 808,
+        "road_m_total": 837
       }
     },
     {
@@ -22888,8 +22888,8 @@
         "p90_abs_delta_db": 3.37,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4658,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3769,
+        "road_m_total": 3997
       }
     },
     {
@@ -22930,8 +22930,8 @@
         "p90_abs_delta_db": 5.65,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2962,
+        "road_m_total": 3073
       }
     },
     {
@@ -22972,8 +22972,8 @@
         "p90_abs_delta_db": 2.55,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3134,
+        "road_m_total": 3672
       }
     },
     {
@@ -23014,8 +23014,8 @@
         "p90_abs_delta_db": 4.02,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0195,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3466,
+        "road_m_total": 3466
       }
     },
     {
@@ -23056,8 +23056,8 @@
         "p90_abs_delta_db": 6.59,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0314,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3370,
+        "road_m_total": 3370
       }
     },
     {
@@ -23098,8 +23098,8 @@
         "p90_abs_delta_db": 6.41,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2236,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5797,
+        "road_m_total": 5797
       }
     },
     {
@@ -23140,8 +23140,8 @@
         "p90_abs_delta_db": 6.72,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3441,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2445,
+        "road_m_total": 2445
       }
     },
     {
@@ -23182,8 +23182,8 @@
         "p90_abs_delta_db": 6.49,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1282,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3004,
+        "road_m_total": 3004
       }
     },
     {
@@ -23224,8 +23224,8 @@
         "p90_abs_delta_db": 10.75,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.842,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1357,
+        "road_m_total": 1357
       }
     },
     {
@@ -23266,8 +23266,8 @@
         "p90_abs_delta_db": 11.66,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4603,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3058,
+        "road_m_total": 3058
       }
     },
     {
@@ -23308,8 +23308,8 @@
         "p90_abs_delta_db": 9.13,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4447,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1061,
+        "road_m_total": 1416
       }
     },
     {
@@ -23350,8 +23350,8 @@
         "p90_abs_delta_db": 7.0,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2236,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2188,
+        "road_m_total": 2443
       }
     },
     {
@@ -23392,8 +23392,8 @@
         "p90_abs_delta_db": 6.05,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3426,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2292,
+        "road_m_total": 3452
       }
     },
     {
@@ -23434,8 +23434,8 @@
         "p90_abs_delta_db": 1.68,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1429,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2291,
+        "road_m_total": 2955
       }
     },
     {
@@ -23476,8 +23476,8 @@
         "p90_abs_delta_db": 7.4,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6309,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3173,
+        "road_m_total": 3173
       }
     },
     {
@@ -23518,8 +23518,8 @@
         "p90_abs_delta_db": 7.04,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3973,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5340,
+        "road_m_total": 5745
       }
     },
     {
@@ -23560,8 +23560,8 @@
         "p90_abs_delta_db": 2.93,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.65,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4592,
+        "road_m_total": 8578
       }
     },
     {
@@ -23602,8 +23602,8 @@
         "p90_abs_delta_db": 8.56,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1485,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4317,
+        "road_m_total": 4317
       }
     },
     {
@@ -23644,8 +23644,8 @@
         "p90_abs_delta_db": 7.72,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1429,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3838,
+        "road_m_total": 3838
       }
     },
     {
@@ -23686,8 +23686,8 @@
         "p90_abs_delta_db": 4.16,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4885,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5239,
+        "road_m_total": 6226
       }
     },
     {
@@ -23728,8 +23728,8 @@
         "p90_abs_delta_db": 3.81,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.8235,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3136,
+        "road_m_total": 4206
       }
     },
     {
@@ -23770,8 +23770,8 @@
         "p90_abs_delta_db": 10.7,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7363,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2470,
+        "road_m_total": 2685
       }
     },
     {
@@ -23812,8 +23812,8 @@
         "p90_abs_delta_db": 10.09,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.316,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2338,
+        "road_m_total": 2338
       }
     },
     {
@@ -23854,8 +23854,8 @@
         "p90_abs_delta_db": 1.46,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1168,
+        "road_m_total": 1644
       }
     },
     {
@@ -23896,8 +23896,8 @@
         "p90_abs_delta_db": 4.33,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2297,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3097,
+        "road_m_total": 3919
       }
     },
     {
@@ -23938,8 +23938,8 @@
         "p90_abs_delta_db": 5.08,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0078,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1573,
+        "road_m_total": 2220
       }
     },
     {
@@ -23980,8 +23980,8 @@
         "p90_abs_delta_db": 6.01,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2505,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1328,
+        "road_m_total": 1328
       }
     },
     {
@@ -24022,8 +24022,8 @@
         "p90_abs_delta_db": 5.96,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2748,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 118,
+        "road_m_total": 118
       }
     },
     {
@@ -24064,8 +24064,8 @@
         "p90_abs_delta_db": 7.11,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2384,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3716,
+        "road_m_total": 3716
       }
     },
     {
@@ -24106,8 +24106,8 @@
         "p90_abs_delta_db": 5.89,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1672,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4856,
+        "road_m_total": 5177
       }
     },
     {
@@ -24148,8 +24148,8 @@
         "p90_abs_delta_db": 6.67,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0047,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2334,
+        "road_m_total": 2334
       }
     },
     {
@@ -24190,8 +24190,8 @@
         "p90_abs_delta_db": 5.75,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3507,
+        "road_m_total": 3533
       }
     },
     {
@@ -24232,8 +24232,8 @@
         "p90_abs_delta_db": 10.96,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3988,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3330,
+        "road_m_total": 3330
       }
     },
     {
@@ -24274,8 +24274,8 @@
         "p90_abs_delta_db": 14.45,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4152,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1131,
+        "road_m_total": 1131
       }
     },
     {
@@ -24316,8 +24316,8 @@
         "p90_abs_delta_db": 4.23,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1462,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1408,
+        "road_m_total": 1982
       }
     },
     {
@@ -24358,8 +24358,8 @@
         "p90_abs_delta_db": 5.99,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3147,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5105,
+        "road_m_total": 5675
       }
     },
     {
@@ -24400,8 +24400,8 @@
         "p90_abs_delta_db": 7.9,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6496,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 483,
+        "road_m_total": 483
       }
     },
     {
@@ -24442,8 +24442,8 @@
         "p90_abs_delta_db": 12.29,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5253,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 50,
+        "road_m_total": 50
       }
     },
     {
@@ -24484,8 +24484,8 @@
         "p90_abs_delta_db": 11.0,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.7374,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1782,
+        "road_m_total": 1782
       }
     },
     {
@@ -24526,8 +24526,8 @@
         "p90_abs_delta_db": 9.5,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0365,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2551,
+        "road_m_total": 2617
       }
     },
     {
@@ -24568,8 +24568,8 @@
         "p90_abs_delta_db": 7.08,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.6467,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1785,
+        "road_m_total": 1785
       }
     },
     {
@@ -24610,8 +24610,8 @@
         "p90_abs_delta_db": 8.31,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.5351,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2557,
+        "road_m_total": 2557
       }
     },
     {
@@ -24652,8 +24652,8 @@
         "p90_abs_delta_db": 8.32,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4978,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1456,
+        "road_m_total": 1456
       }
     },
     {
@@ -24694,8 +24694,8 @@
         "p90_abs_delta_db": 4.34,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1812,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3286,
+        "road_m_total": 3286
       }
     },
     {
@@ -24736,8 +24736,8 @@
         "p90_abs_delta_db": 2.8,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2174,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 5402,
+        "road_m_total": 6779
       }
     },
     {
@@ -24778,8 +24778,8 @@
         "p90_abs_delta_db": 6.02,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.1606,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2952,
+        "road_m_total": 4276
       }
     },
     {
@@ -24820,8 +24820,8 @@
         "p90_abs_delta_db": 6.29,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3443,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2569,
+        "road_m_total": 2569
       }
     },
     {
@@ -24862,8 +24862,8 @@
         "p90_abs_delta_db": 7.39,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.4854,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3227,
+        "road_m_total": 3261
       }
     },
     {
@@ -24904,8 +24904,8 @@
         "p90_abs_delta_db": 6.55,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.3621,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3652,
+        "road_m_total": 3729
       }
     },
     {
@@ -24946,8 +24946,8 @@
         "p90_abs_delta_db": 2.18,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1844,
+        "road_m_total": 5893
       }
     },
     {
@@ -24988,8 +24988,8 @@
         "p90_abs_delta_db": 5.89,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0552,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 2389,
+        "road_m_total": 2412
       }
     },
     {
@@ -25030,8 +25030,8 @@
         "p90_abs_delta_db": 4.93,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.2323,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1932,
+        "road_m_total": 2332
       }
     },
     {
@@ -25072,8 +25072,8 @@
         "p90_abs_delta_db": 6.14,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.155,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 3466,
+        "road_m_total": 4560
       }
     },
     {
@@ -25114,8 +25114,8 @@
         "p90_abs_delta_db": 6.84,
         "opera_status": "corroborated",
         "opera_overlap_ratio": 0.219,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4091,
+        "road_m_total": 4091
       }
     },
     {
@@ -25156,8 +25156,8 @@
         "p90_abs_delta_db": 8.47,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.017,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 4400,
+        "road_m_total": 4400
       }
     },
     {
@@ -25198,8 +25198,8 @@
         "p90_abs_delta_db": 8.22,
         "opera_status": "not_corroborated",
         "opera_overlap_ratio": 0.0031,
-        "road_m_near_change": 0,
-        "road_m_total": 0
+        "road_m_near_change": 1785,
+        "road_m_total": 1785
       }
     }
   ]

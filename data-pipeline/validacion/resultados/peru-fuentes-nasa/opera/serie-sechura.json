@@ -1,0 +1,185 @@
+{
+ "aoi": "Sechura sur",
+ "bbox_wgs84": [
+  -81.0,
+  -6.3,
+  -80.7,
+  -6.0
+ ],
+ "bounds_utm": [
+  500000.0,
+  9303623.063288562,
+  533200.9797665643,
+  9336795.432607338
+ ],
+ "transform": [
+  30.0,
+  0.0,
+  500000.0,
+  0.0,
+  -30.0,
+  9336795.432607338
+ ],
+ "passes": [
+  {
+   "date": "2026-10-09",
+   "utc": "2342",
+   "sat": "S1C",
+   "tiles": 4,
+   "valid_fraction": 0.9998,
+   "open_water_fraction": 0.2168,
+   "inundated_veg_fraction": 0.0034,
+   "water_fraction": 0.2202
+  },
+  {
+   "date": "2026-10-12",
+   "utc": "1101",
+   "sat": "S1D",
+   "tiles": 4,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.2154,
+   "inundated_veg_fraction": 0.0035,
+   "water_fraction": 0.219
+  },
+  {
+   "date": "2026-10-13",
+   "utc": "1053",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 0.0,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0,
+   "water_fraction": 0.0
+  },
+  {
+   "date": "2026-10-18",
+   "utc": "1101",
+   "sat": "S1C",
+   "tiles": 4,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.2112,
+   "inundated_veg_fraction": 0.0044,
+   "water_fraction": 0.2156
+  },
+  {
+   "date": "2026-10-19",
+   "utc": "1053",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 0.0,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0,
+   "water_fraction": 0.0
+  },
+  {
+   "date": "2026-10-21",
+   "utc": "2342",
+   "sat": "S1C",
+   "tiles": 4,
+   "valid_fraction": 0.9998,
+   "open_water_fraction": 0.2209,
+   "inundated_veg_fraction": 0.0025,
+   "water_fraction": 0.2234
+  },
+  {
+   "date": "2026-10-24",
+   "utc": "1101",
+   "sat": "S1D",
+   "tiles": 4,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.2168,
+   "inundated_veg_fraction": 0.0049,
+   "water_fraction": 0.2217
+  },
+  {
+   "date": "2026-10-25",
+   "utc": "1053",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 0.0,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0,
+   "water_fraction": 0.0
+  },
+  {
+   "date": "2026-10-30",
+   "utc": "1101",
+   "sat": "S1C",
+   "tiles": 4,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.2282,
+   "inundated_veg_fraction": 0.0044,
+   "water_fraction": 0.2327
+  },
+  {
+   "date": "2026-10-31",
+   "utc": "1053",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 0.0,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0,
+   "water_fraction": 0.0
+  },
+  {
+   "date": "2026-11-02",
+   "utc": "2342",
+   "sat": "S1C",
+   "tiles": 4,
+   "valid_fraction": 0.9998,
+   "open_water_fraction": 0.317,
+   "inundated_veg_fraction": 0.003,
+   "water_fraction": 0.3199
+  },
+  {
+   "date": "2026-11-05",
+   "utc": "1101",
+   "sat": "S1D",
+   "tiles": 4,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.2313,
+   "inundated_veg_fraction": 0.0037,
+   "water_fraction": 0.235
+  },
+  {
+   "date": "2026-11-06",
+   "utc": "1053",
+   "sat": "S1C",
+   "tiles": 1,
+   "valid_fraction": 0.0,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0,
+   "water_fraction": 0.0
+  },
+  {
+   "date": "2026-11-08",
+   "utc": "2343",
+   "sat": "S1D",
+   "tiles": 4,
+   "valid_fraction": 0.9998,
+   "open_water_fraction": 0.3147,
+   "inundated_veg_fraction": 0.0041,
+   "water_fraction": 0.3188
+  },
+  {
+   "date": "2026-11-11",
+   "utc": "1101",
+   "sat": "S1C",
+   "tiles": 4,
+   "valid_fraction": 1.0,
+   "open_water_fraction": 0.2255,
+   "inundated_veg_fraction": 0.0037,
+   "water_fraction": 0.2293
+  },
+  {
+   "date": "2026-11-12",
+   "utc": "1053",
+   "sat": "S1D",
+   "tiles": 1,
+   "valid_fraction": 0.0,
+   "open_water_fraction": 0.0,
+   "inundated_veg_fraction": 0.0,
+   "water_fraction": 0.0
+  }
+ ]
+}
