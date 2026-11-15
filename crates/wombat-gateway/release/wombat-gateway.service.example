@@ -1,0 +1,20 @@
+[Unit]
+Description=WOMBAT read-only HTTP gateway
+After=network.target wombat-node.service
+
+[Service]
+Type=simple
+User=wombat
+Group=wombat
+ExecStart=/opt/wombat/wombat-gateway \
+  --bind 127.0.0.1:3000 \
+  --event-in /var/lib/wombat/events.jsonl
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/var/lib/wombat/events.jsonl
+
+[Install]
+WantedBy=multi-user.target
