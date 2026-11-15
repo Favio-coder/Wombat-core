@@ -22,7 +22,7 @@ def main(argv=None) -> int:
     ap.add_argument("--bbox", nargs=4, type=float, required=True,
                     metavar=("OESTE", "SUR", "ESTE", "NORTE"), help="en grados (EPSG:4326)")
     ap.add_argument("--crs", default="EPSG:32717",
-                    help="zona UTM del AOI; fuera de EPSG:32717 solo para validar el metodo")
+                    help="zona UTM del AOI (el contrato v1.1.0 admite cualquier zona UTM)")
     ap.add_argument("--out", help="por defecto data-pipeline/inputs/<aoi>/grid.geojson")
     ap.add_argument("--force", action="store_true", help="reemplazar una grilla ya publicada")
     args = ap.parse_args(argv)
@@ -34,8 +34,8 @@ def main(argv=None) -> int:
         return 1
     grid = Grid.from_bbox(args.aoi, args.bbox, args.crs)
     if args.crs != "EPSG:32717":
-        print(f"NOTA: grilla en {args.crs}. El contrato v1 fija EPSG:32717, asi que este AOI "
-              "sirve para validar el metodo, no para publicar un bundle.")
+        print(f"NOTA: grilla en {args.crs}, no en la zona de piura-01 (EPSG:32717). "
+              "Valido desde el contrato v1.1.0; todo el AOI debe usar esta misma zona.")
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(grid.to_geojson()) + "\n", encoding="utf-8")
     Grid.from_geojson(out)  # relectura: confirma que el archivo publicado es consistente

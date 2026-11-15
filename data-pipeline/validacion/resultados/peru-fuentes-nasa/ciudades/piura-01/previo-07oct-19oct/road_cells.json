@@ -1,0 +1,3257 @@
+{
+ "method": "vias recortadas a cada celda en el CRS de la grilla; near_change = interseccion con los pixeles changed==1 dilatados road_buffer_meters",
+ "road_buffer_meters": 250,
+ "crs_compute": "EPSG:32717",
+ "roads": "roads.geojson",
+ "changed": "changed.tif",
+ "cells": {
+  "piura-01-r00c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c03": {
+   "road_m_near_change": 2000,
+   "road_m_total": 2000
+  },
+  "piura-01-r00c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c10": {
+   "road_m_near_change": 1374,
+   "road_m_total": 2601
+  },
+  "piura-01-r00c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c12": {
+   "road_m_near_change": 311,
+   "road_m_total": 1458
+  },
+  "piura-01-r00c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 100
+  },
+  "piura-01-r00c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 2598
+  },
+  "piura-01-r00c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 4362
+  },
+  "piura-01-r00c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 1998
+  },
+  "piura-01-r00c17": {
+   "road_m_near_change": 40,
+   "road_m_total": 3251
+  },
+  "piura-01-r00c18": {
+   "road_m_near_change": 596,
+   "road_m_total": 2393
+  },
+  "piura-01-r00c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c22": {
+   "road_m_near_change": 941,
+   "road_m_total": 1466
+  },
+  "piura-01-r00c23": {
+   "road_m_near_change": 1063,
+   "road_m_total": 1080
+  },
+  "piura-01-r00c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r00c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 306
+  },
+  "piura-01-r01c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r01c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r01c02": {
+   "road_m_near_change": 476,
+   "road_m_total": 476
+  },
+  "piura-01-r01c03": {
+   "road_m_near_change": 3426,
+   "road_m_total": 3426
+  },
+  "piura-01-r01c04": {
+   "road_m_near_change": 242,
+   "road_m_total": 242
+  },
+  "piura-01-r01c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r01c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 320
+  },
+  "piura-01-r01c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 1006
+  },
+  "piura-01-r01c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 1742
+  },
+  "piura-01-r01c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 3279
+  },
+  "piura-01-r01c10": {
+   "road_m_near_change": 4479,
+   "road_m_total": 10246
+  },
+  "piura-01-r01c11": {
+   "road_m_near_change": 339,
+   "road_m_total": 3796
+  },
+  "piura-01-r01c12": {
+   "road_m_near_change": 222,
+   "road_m_total": 2676
+  },
+  "piura-01-r01c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 1608
+  },
+  "piura-01-r01c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 6319
+  },
+  "piura-01-r01c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 4922
+  },
+  "piura-01-r01c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 551
+  },
+  "piura-01-r01c17": {
+   "road_m_near_change": 792,
+   "road_m_total": 4153
+  },
+  "piura-01-r01c18": {
+   "road_m_near_change": 1650,
+   "road_m_total": 3029
+  },
+  "piura-01-r01c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r01c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 1197
+  },
+  "piura-01-r01c21": {
+   "road_m_near_change": 982,
+   "road_m_total": 1250
+  },
+  "piura-01-r01c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 1361
+  },
+  "piura-01-r01c23": {
+   "road_m_near_change": 239,
+   "road_m_total": 3216
+  },
+  "piura-01-r01c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 3057
+  },
+  "piura-01-r01c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 1450
+  },
+  "piura-01-r01c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 210
+  },
+  "piura-01-r01c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 1041
+  },
+  "piura-01-r02c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r02c01": {
+   "road_m_near_change": 515,
+   "road_m_total": 515
+  },
+  "piura-01-r02c02": {
+   "road_m_near_change": 1191,
+   "road_m_total": 2152
+  },
+  "piura-01-r02c03": {
+   "road_m_near_change": 1289,
+   "road_m_total": 1289
+  },
+  "piura-01-r02c04": {
+   "road_m_near_change": 2087,
+   "road_m_total": 3100
+  },
+  "piura-01-r02c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r02c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r02c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 796
+  },
+  "piura-01-r02c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 2369
+  },
+  "piura-01-r02c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 2619
+  },
+  "piura-01-r02c10": {
+   "road_m_near_change": 2503,
+   "road_m_total": 4991
+  },
+  "piura-01-r02c11": {
+   "road_m_near_change": 2762,
+   "road_m_total": 4054
+  },
+  "piura-01-r02c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 776
+  },
+  "piura-01-r02c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 3665
+  },
+  "piura-01-r02c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 3244
+  },
+  "piura-01-r02c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 3578
+  },
+  "piura-01-r02c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 1062
+  },
+  "piura-01-r02c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 1493
+  },
+  "piura-01-r02c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 1094
+  },
+  "piura-01-r02c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r02c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 2191
+  },
+  "piura-01-r02c21": {
+   "road_m_near_change": 286,
+   "road_m_total": 5152
+  },
+  "piura-01-r02c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 1981
+  },
+  "piura-01-r02c23": {
+   "road_m_near_change": 1472,
+   "road_m_total": 5402
+  },
+  "piura-01-r02c24": {
+   "road_m_near_change": 717,
+   "road_m_total": 7604
+  },
+  "piura-01-r02c25": {
+   "road_m_near_change": 1152,
+   "road_m_total": 4709
+  },
+  "piura-01-r02c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 1038
+  },
+  "piura-01-r02c27": {
+   "road_m_near_change": 260,
+   "road_m_total": 1042
+  },
+  "piura-01-r03c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r03c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r03c02": {
+   "road_m_near_change": 102,
+   "road_m_total": 1479
+  },
+  "piura-01-r03c03": {
+   "road_m_near_change": 426,
+   "road_m_total": 520
+  },
+  "piura-01-r03c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 1020
+  },
+  "piura-01-r03c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r03c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r03c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r03c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 327
+  },
+  "piura-01-r03c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 1007
+  },
+  "piura-01-r03c10": {
+   "road_m_near_change": 241,
+   "road_m_total": 1010
+  },
+  "piura-01-r03c11": {
+   "road_m_near_change": 2138,
+   "road_m_total": 2138
+  },
+  "piura-01-r03c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 327
+  },
+  "piura-01-r03c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 2466
+  },
+  "piura-01-r03c14": {
+   "road_m_near_change": 504,
+   "road_m_total": 2245
+  },
+  "piura-01-r03c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 6422
+  },
+  "piura-01-r03c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 2470
+  },
+  "piura-01-r03c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 8517
+  },
+  "piura-01-r03c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 1799
+  },
+  "piura-01-r03c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r03c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 1812
+  },
+  "piura-01-r03c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 10904
+  },
+  "piura-01-r03c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 1044
+  },
+  "piura-01-r03c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 935
+  },
+  "piura-01-r03c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 5556
+  },
+  "piura-01-r03c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 3128
+  },
+  "piura-01-r03c26": {
+   "road_m_near_change": 703,
+   "road_m_total": 2799
+  },
+  "piura-01-r03c27": {
+   "road_m_near_change": 1350,
+   "road_m_total": 1509
+  },
+  "piura-01-r04c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r04c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r04c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 2194
+  },
+  "piura-01-r04c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 1778
+  },
+  "piura-01-r04c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 1867
+  },
+  "piura-01-r04c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r04c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r04c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r04c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r04c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r04c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r04c11": {
+   "road_m_near_change": 3292,
+   "road_m_total": 3324
+  },
+  "piura-01-r04c12": {
+   "road_m_near_change": 8276,
+   "road_m_total": 9530
+  },
+  "piura-01-r04c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 4931
+  },
+  "piura-01-r04c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 7074
+  },
+  "piura-01-r04c15": {
+   "road_m_near_change": 109,
+   "road_m_total": 4758
+  },
+  "piura-01-r04c16": {
+   "road_m_near_change": 450,
+   "road_m_total": 1032
+  },
+  "piura-01-r04c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 5199
+  },
+  "piura-01-r04c18": {
+   "road_m_near_change": 1331,
+   "road_m_total": 8953
+  },
+  "piura-01-r04c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r04c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 2320
+  },
+  "piura-01-r04c21": {
+   "road_m_near_change": 460,
+   "road_m_total": 2040
+  },
+  "piura-01-r04c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 1069
+  },
+  "piura-01-r04c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 1022
+  },
+  "piura-01-r04c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 733
+  },
+  "piura-01-r04c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 851
+  },
+  "piura-01-r04c26": {
+   "road_m_near_change": 309,
+   "road_m_total": 1891
+  },
+  "piura-01-r04c27": {
+   "road_m_near_change": 626,
+   "road_m_total": 1047
+  },
+  "piura-01-r05c00": {
+   "road_m_near_change": 2043,
+   "road_m_total": 2043
+  },
+  "piura-01-r05c01": {
+   "road_m_near_change": 1358,
+   "road_m_total": 1626
+  },
+  "piura-01-r05c02": {
+   "road_m_near_change": 125,
+   "road_m_total": 1978
+  },
+  "piura-01-r05c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 4314
+  },
+  "piura-01-r05c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 3392
+  },
+  "piura-01-r05c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r05c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r05c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 1109
+  },
+  "piura-01-r05c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 1946
+  },
+  "piura-01-r05c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 1123
+  },
+  "piura-01-r05c10": {
+   "road_m_near_change": 851,
+   "road_m_total": 1277
+  },
+  "piura-01-r05c11": {
+   "road_m_near_change": 3775,
+   "road_m_total": 4533
+  },
+  "piura-01-r05c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 3502
+  },
+  "piura-01-r05c13": {
+   "road_m_near_change": 1822,
+   "road_m_total": 11473
+  },
+  "piura-01-r05c14": {
+   "road_m_near_change": 1768,
+   "road_m_total": 8384
+  },
+  "piura-01-r05c15": {
+   "road_m_near_change": 373,
+   "road_m_total": 12468
+  },
+  "piura-01-r05c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 10835
+  },
+  "piura-01-r05c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 8054
+  },
+  "piura-01-r05c18": {
+   "road_m_near_change": 4445,
+   "road_m_total": 15646
+  },
+  "piura-01-r05c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 6374
+  },
+  "piura-01-r05c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 4685
+  },
+  "piura-01-r05c21": {
+   "road_m_near_change": 2369,
+   "road_m_total": 6076
+  },
+  "piura-01-r05c22": {
+   "road_m_near_change": 231,
+   "road_m_total": 3455
+  },
+  "piura-01-r05c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 4636
+  },
+  "piura-01-r05c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 9916
+  },
+  "piura-01-r05c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 4757
+  },
+  "piura-01-r05c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 561
+  },
+  "piura-01-r05c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r06c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r06c01": {
+   "road_m_near_change": 1037,
+   "road_m_total": 1544
+  },
+  "piura-01-r06c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 3019
+  },
+  "piura-01-r06c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 4008
+  },
+  "piura-01-r06c04": {
+   "road_m_near_change": 1729,
+   "road_m_total": 2885
+  },
+  "piura-01-r06c05": {
+   "road_m_near_change": 1315,
+   "road_m_total": 2716
+  },
+  "piura-01-r06c06": {
+   "road_m_near_change": 446,
+   "road_m_total": 1054
+  },
+  "piura-01-r06c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r06c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 5773
+  },
+  "piura-01-r06c09": {
+   "road_m_near_change": 1033,
+   "road_m_total": 3023
+  },
+  "piura-01-r06c10": {
+   "road_m_near_change": 314,
+   "road_m_total": 314
+  },
+  "piura-01-r06c11": {
+   "road_m_near_change": 3074,
+   "road_m_total": 3074
+  },
+  "piura-01-r06c12": {
+   "road_m_near_change": 839,
+   "road_m_total": 3322
+  },
+  "piura-01-r06c13": {
+   "road_m_near_change": 4065,
+   "road_m_total": 15479
+  },
+  "piura-01-r06c14": {
+   "road_m_near_change": 6449,
+   "road_m_total": 22452
+  },
+  "piura-01-r06c15": {
+   "road_m_near_change": 15050,
+   "road_m_total": 27743
+  },
+  "piura-01-r06c16": {
+   "road_m_near_change": 6498,
+   "road_m_total": 22028
+  },
+  "piura-01-r06c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 14633
+  },
+  "piura-01-r06c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 11325
+  },
+  "piura-01-r06c19": {
+   "road_m_near_change": 4892,
+   "road_m_total": 18474
+  },
+  "piura-01-r06c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 7087
+  },
+  "piura-01-r06c21": {
+   "road_m_near_change": 407,
+   "road_m_total": 6851
+  },
+  "piura-01-r06c22": {
+   "road_m_near_change": 30,
+   "road_m_total": 4173
+  },
+  "piura-01-r06c23": {
+   "road_m_near_change": 1107,
+   "road_m_total": 4630
+  },
+  "piura-01-r06c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 3732
+  },
+  "piura-01-r06c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 13240
+  },
+  "piura-01-r06c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 5372
+  },
+  "piura-01-r06c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r07c00": {
+   "road_m_near_change": 1605,
+   "road_m_total": 1619
+  },
+  "piura-01-r07c01": {
+   "road_m_near_change": 1044,
+   "road_m_total": 1147
+  },
+  "piura-01-r07c02": {
+   "road_m_near_change": 575,
+   "road_m_total": 1665
+  },
+  "piura-01-r07c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r07c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 769
+  },
+  "piura-01-r07c05": {
+   "road_m_near_change": 664,
+   "road_m_total": 1421
+  },
+  "piura-01-r07c06": {
+   "road_m_near_change": 1414,
+   "road_m_total": 2031
+  },
+  "piura-01-r07c07": {
+   "road_m_near_change": 772,
+   "road_m_total": 3095
+  },
+  "piura-01-r07c08": {
+   "road_m_near_change": 3805,
+   "road_m_total": 5321
+  },
+  "piura-01-r07c09": {
+   "road_m_near_change": 3040,
+   "road_m_total": 3654
+  },
+  "piura-01-r07c10": {
+   "road_m_near_change": 2245,
+   "road_m_total": 3012
+  },
+  "piura-01-r07c11": {
+   "road_m_near_change": 2239,
+   "road_m_total": 2778
+  },
+  "piura-01-r07c12": {
+   "road_m_near_change": 7477,
+   "road_m_total": 9296
+  },
+  "piura-01-r07c13": {
+   "road_m_near_change": 2320,
+   "road_m_total": 25601
+  },
+  "piura-01-r07c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 31507
+  },
+  "piura-01-r07c15": {
+   "road_m_near_change": 1496,
+   "road_m_total": 29172
+  },
+  "piura-01-r07c16": {
+   "road_m_near_change": 4500,
+   "road_m_total": 31444
+  },
+  "piura-01-r07c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 24285
+  },
+  "piura-01-r07c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 22159
+  },
+  "piura-01-r07c19": {
+   "road_m_near_change": 314,
+   "road_m_total": 12562
+  },
+  "piura-01-r07c20": {
+   "road_m_near_change": 1658,
+   "road_m_total": 8698
+  },
+  "piura-01-r07c21": {
+   "road_m_near_change": 1252,
+   "road_m_total": 21761
+  },
+  "piura-01-r07c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 16758
+  },
+  "piura-01-r07c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 7217
+  },
+  "piura-01-r07c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 3865
+  },
+  "piura-01-r07c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 18494
+  },
+  "piura-01-r07c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 5148
+  },
+  "piura-01-r07c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r08c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r08c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r08c02": {
+   "road_m_near_change": 105,
+   "road_m_total": 1061
+  },
+  "piura-01-r08c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 1047
+  },
+  "piura-01-r08c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 1208
+  },
+  "piura-01-r08c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r08c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 196
+  },
+  "piura-01-r08c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r08c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 391
+  },
+  "piura-01-r08c09": {
+   "road_m_near_change": 413,
+   "road_m_total": 1533
+  },
+  "piura-01-r08c10": {
+   "road_m_near_change": 3383,
+   "road_m_total": 5900
+  },
+  "piura-01-r08c11": {
+   "road_m_near_change": 2132,
+   "road_m_total": 3625
+  },
+  "piura-01-r08c12": {
+   "road_m_near_change": 1890,
+   "road_m_total": 15231
+  },
+  "piura-01-r08c13": {
+   "road_m_near_change": 1952,
+   "road_m_total": 9240
+  },
+  "piura-01-r08c14": {
+   "road_m_near_change": 8609,
+   "road_m_total": 21806
+  },
+  "piura-01-r08c15": {
+   "road_m_near_change": 498,
+   "road_m_total": 23704
+  },
+  "piura-01-r08c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 28237
+  },
+  "piura-01-r08c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 16689
+  },
+  "piura-01-r08c18": {
+   "road_m_near_change": 450,
+   "road_m_total": 15961
+  },
+  "piura-01-r08c19": {
+   "road_m_near_change": 979,
+   "road_m_total": 11499
+  },
+  "piura-01-r08c20": {
+   "road_m_near_change": 2404,
+   "road_m_total": 11979
+  },
+  "piura-01-r08c21": {
+   "road_m_near_change": 1236,
+   "road_m_total": 24631
+  },
+  "piura-01-r08c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 16544
+  },
+  "piura-01-r08c23": {
+   "road_m_near_change": 3306,
+   "road_m_total": 10664
+  },
+  "piura-01-r08c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 19569
+  },
+  "piura-01-r08c25": {
+   "road_m_near_change": 5177,
+   "road_m_total": 21089
+  },
+  "piura-01-r08c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 4230
+  },
+  "piura-01-r08c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 12667
+  },
+  "piura-01-r09c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r09c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r09c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r09c03": {
+   "road_m_near_change": 587,
+   "road_m_total": 800
+  },
+  "piura-01-r09c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 411
+  },
+  "piura-01-r09c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r09c06": {
+   "road_m_near_change": 451,
+   "road_m_total": 1047
+  },
+  "piura-01-r09c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 108
+  },
+  "piura-01-r09c08": {
+   "road_m_near_change": 529,
+   "road_m_total": 4423
+  },
+  "piura-01-r09c09": {
+   "road_m_near_change": 1226,
+   "road_m_total": 2317
+  },
+  "piura-01-r09c10": {
+   "road_m_near_change": 2712,
+   "road_m_total": 3371
+  },
+  "piura-01-r09c11": {
+   "road_m_near_change": 6098,
+   "road_m_total": 6158
+  },
+  "piura-01-r09c12": {
+   "road_m_near_change": 6258,
+   "road_m_total": 26588
+  },
+  "piura-01-r09c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 25810
+  },
+  "piura-01-r09c14": {
+   "road_m_near_change": 1357,
+   "road_m_total": 22019
+  },
+  "piura-01-r09c15": {
+   "road_m_near_change": 238,
+   "road_m_total": 10872
+  },
+  "piura-01-r09c16": {
+   "road_m_near_change": 3735,
+   "road_m_total": 19479
+  },
+  "piura-01-r09c17": {
+   "road_m_near_change": 2604,
+   "road_m_total": 27474
+  },
+  "piura-01-r09c18": {
+   "road_m_near_change": 833,
+   "road_m_total": 12350
+  },
+  "piura-01-r09c19": {
+   "road_m_near_change": 3514,
+   "road_m_total": 10884
+  },
+  "piura-01-r09c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 8745
+  },
+  "piura-01-r09c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 24082
+  },
+  "piura-01-r09c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 14962
+  },
+  "piura-01-r09c23": {
+   "road_m_near_change": 4190,
+   "road_m_total": 16991
+  },
+  "piura-01-r09c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 19760
+  },
+  "piura-01-r09c25": {
+   "road_m_near_change": 2992,
+   "road_m_total": 12307
+  },
+  "piura-01-r09c26": {
+   "road_m_near_change": 35,
+   "road_m_total": 6865
+  },
+  "piura-01-r09c27": {
+   "road_m_near_change": 1098,
+   "road_m_total": 15342
+  },
+  "piura-01-r10c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r10c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r10c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r10c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r10c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 2974
+  },
+  "piura-01-r10c05": {
+   "road_m_near_change": 459,
+   "road_m_total": 2478
+  },
+  "piura-01-r10c06": {
+   "road_m_near_change": 210,
+   "road_m_total": 436
+  },
+  "piura-01-r10c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r10c08": {
+   "road_m_near_change": 162,
+   "road_m_total": 490
+  },
+  "piura-01-r10c09": {
+   "road_m_near_change": 1850,
+   "road_m_total": 2694
+  },
+  "piura-01-r10c10": {
+   "road_m_near_change": 1932,
+   "road_m_total": 1932
+  },
+  "piura-01-r10c11": {
+   "road_m_near_change": 2721,
+   "road_m_total": 3469
+  },
+  "piura-01-r10c12": {
+   "road_m_near_change": 17849,
+   "road_m_total": 26076
+  },
+  "piura-01-r10c13": {
+   "road_m_near_change": 1910,
+   "road_m_total": 28551
+  },
+  "piura-01-r10c14": {
+   "road_m_near_change": 2218,
+   "road_m_total": 24402
+  },
+  "piura-01-r10c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 16918
+  },
+  "piura-01-r10c16": {
+   "road_m_near_change": 2040,
+   "road_m_total": 25751
+  },
+  "piura-01-r10c17": {
+   "road_m_near_change": 3678,
+   "road_m_total": 24050
+  },
+  "piura-01-r10c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 24106
+  },
+  "piura-01-r10c19": {
+   "road_m_near_change": 5891,
+   "road_m_total": 18637
+  },
+  "piura-01-r10c20": {
+   "road_m_near_change": 293,
+   "road_m_total": 17203
+  },
+  "piura-01-r10c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 30174
+  },
+  "piura-01-r10c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 24187
+  },
+  "piura-01-r10c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 30323
+  },
+  "piura-01-r10c24": {
+   "road_m_near_change": 241,
+   "road_m_total": 23741
+  },
+  "piura-01-r10c25": {
+   "road_m_near_change": 6443,
+   "road_m_total": 13024
+  },
+  "piura-01-r10c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 3187
+  },
+  "piura-01-r10c27": {
+   "road_m_near_change": 345,
+   "road_m_total": 1001
+  },
+  "piura-01-r11c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r11c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r11c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r11c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r11c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 1202
+  },
+  "piura-01-r11c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 1868
+  },
+  "piura-01-r11c06": {
+   "road_m_near_change": 593,
+   "road_m_total": 795
+  },
+  "piura-01-r11c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r11c08": {
+   "road_m_near_change": 712,
+   "road_m_total": 712
+  },
+  "piura-01-r11c09": {
+   "road_m_near_change": 1207,
+   "road_m_total": 1207
+  },
+  "piura-01-r11c10": {
+   "road_m_near_change": 3286,
+   "road_m_total": 3286
+  },
+  "piura-01-r11c11": {
+   "road_m_near_change": 2507,
+   "road_m_total": 3675
+  },
+  "piura-01-r11c12": {
+   "road_m_near_change": 4583,
+   "road_m_total": 9202
+  },
+  "piura-01-r11c13": {
+   "road_m_near_change": 7675,
+   "road_m_total": 16253
+  },
+  "piura-01-r11c14": {
+   "road_m_near_change": 12691,
+   "road_m_total": 22084
+  },
+  "piura-01-r11c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 20942
+  },
+  "piura-01-r11c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 28938
+  },
+  "piura-01-r11c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 24615
+  },
+  "piura-01-r11c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 20914
+  },
+  "piura-01-r11c19": {
+   "road_m_near_change": 6969,
+   "road_m_total": 17355
+  },
+  "piura-01-r11c20": {
+   "road_m_near_change": 2564,
+   "road_m_total": 13771
+  },
+  "piura-01-r11c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 12621
+  },
+  "piura-01-r11c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 25623
+  },
+  "piura-01-r11c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 19806
+  },
+  "piura-01-r11c24": {
+   "road_m_near_change": 1879,
+   "road_m_total": 22256
+  },
+  "piura-01-r11c25": {
+   "road_m_near_change": 8409,
+   "road_m_total": 17357
+  },
+  "piura-01-r11c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 1827
+  },
+  "piura-01-r11c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 1925
+  },
+  "piura-01-r12c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r12c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r12c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r12c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r12c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r12c05": {
+   "road_m_near_change": 1024,
+   "road_m_total": 1041
+  },
+  "piura-01-r12c06": {
+   "road_m_near_change": 1080,
+   "road_m_total": 1085
+  },
+  "piura-01-r12c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r12c08": {
+   "road_m_near_change": 1602,
+   "road_m_total": 1602
+  },
+  "piura-01-r12c09": {
+   "road_m_near_change": 1151,
+   "road_m_total": 1151
+  },
+  "piura-01-r12c10": {
+   "road_m_near_change": 500,
+   "road_m_total": 630
+  },
+  "piura-01-r12c11": {
+   "road_m_near_change": 861,
+   "road_m_total": 2377
+  },
+  "piura-01-r12c12": {
+   "road_m_near_change": 438,
+   "road_m_total": 3820
+  },
+  "piura-01-r12c13": {
+   "road_m_near_change": 2277,
+   "road_m_total": 7214
+  },
+  "piura-01-r12c14": {
+   "road_m_near_change": 1137,
+   "road_m_total": 3548
+  },
+  "piura-01-r12c15": {
+   "road_m_near_change": 508,
+   "road_m_total": 18705
+  },
+  "piura-01-r12c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 30450
+  },
+  "piura-01-r12c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 22773
+  },
+  "piura-01-r12c18": {
+   "road_m_near_change": 850,
+   "road_m_total": 25492
+  },
+  "piura-01-r12c19": {
+   "road_m_near_change": 6380,
+   "road_m_total": 18446
+  },
+  "piura-01-r12c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 10005
+  },
+  "piura-01-r12c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 4985
+  },
+  "piura-01-r12c22": {
+   "road_m_near_change": 1021,
+   "road_m_total": 16270
+  },
+  "piura-01-r12c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 17864
+  },
+  "piura-01-r12c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 20954
+  },
+  "piura-01-r12c25": {
+   "road_m_near_change": 1246,
+   "road_m_total": 9619
+  },
+  "piura-01-r12c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 1308
+  },
+  "piura-01-r12c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 1977
+  },
+  "piura-01-r13c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r13c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r13c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 4
+  },
+  "piura-01-r13c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 664
+  },
+  "piura-01-r13c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r13c05": {
+   "road_m_near_change": 299,
+   "road_m_total": 1257
+  },
+  "piura-01-r13c06": {
+   "road_m_near_change": 252,
+   "road_m_total": 1298
+  },
+  "piura-01-r13c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r13c08": {
+   "road_m_near_change": 1269,
+   "road_m_total": 1269
+  },
+  "piura-01-r13c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r13c10": {
+   "road_m_near_change": 1199,
+   "road_m_total": 1199
+  },
+  "piura-01-r13c11": {
+   "road_m_near_change": 2670,
+   "road_m_total": 2739
+  },
+  "piura-01-r13c12": {
+   "road_m_near_change": 3362,
+   "road_m_total": 3685
+  },
+  "piura-01-r13c13": {
+   "road_m_near_change": 2056,
+   "road_m_total": 4136
+  },
+  "piura-01-r13c14": {
+   "road_m_near_change": 544,
+   "road_m_total": 6801
+  },
+  "piura-01-r13c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 9312
+  },
+  "piura-01-r13c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 16744
+  },
+  "piura-01-r13c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 9443
+  },
+  "piura-01-r13c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 11171
+  },
+  "piura-01-r13c19": {
+   "road_m_near_change": 101,
+   "road_m_total": 25091
+  },
+  "piura-01-r13c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 5670
+  },
+  "piura-01-r13c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 5432
+  },
+  "piura-01-r13c22": {
+   "road_m_near_change": 2757,
+   "road_m_total": 8052
+  },
+  "piura-01-r13c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 10663
+  },
+  "piura-01-r13c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 15992
+  },
+  "piura-01-r13c25": {
+   "road_m_near_change": 927,
+   "road_m_total": 12713
+  },
+  "piura-01-r13c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 3472
+  },
+  "piura-01-r13c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 4341
+  },
+  "piura-01-r14c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r14c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r14c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r14c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 799
+  },
+  "piura-01-r14c04": {
+   "road_m_near_change": 600,
+   "road_m_total": 697
+  },
+  "piura-01-r14c05": {
+   "road_m_near_change": 88,
+   "road_m_total": 1092
+  },
+  "piura-01-r14c06": {
+   "road_m_near_change": 1157,
+   "road_m_total": 1260
+  },
+  "piura-01-r14c07": {
+   "road_m_near_change": 1005,
+   "road_m_total": 1005
+  },
+  "piura-01-r14c08": {
+   "road_m_near_change": 1782,
+   "road_m_total": 1782
+  },
+  "piura-01-r14c09": {
+   "road_m_near_change": 1054,
+   "road_m_total": 1054
+  },
+  "piura-01-r14c10": {
+   "road_m_near_change": 2468,
+   "road_m_total": 2468
+  },
+  "piura-01-r14c11": {
+   "road_m_near_change": 2558,
+   "road_m_total": 2558
+  },
+  "piura-01-r14c12": {
+   "road_m_near_change": 528,
+   "road_m_total": 736
+  },
+  "piura-01-r14c13": {
+   "road_m_near_change": 140,
+   "road_m_total": 2675
+  },
+  "piura-01-r14c14": {
+   "road_m_near_change": 659,
+   "road_m_total": 2785
+  },
+  "piura-01-r14c15": {
+   "road_m_near_change": 2227,
+   "road_m_total": 10755
+  },
+  "piura-01-r14c16": {
+   "road_m_near_change": 3292,
+   "road_m_total": 12273
+  },
+  "piura-01-r14c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 14391
+  },
+  "piura-01-r14c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 23553
+  },
+  "piura-01-r14c19": {
+   "road_m_near_change": 678,
+   "road_m_total": 23320
+  },
+  "piura-01-r14c20": {
+   "road_m_near_change": 937,
+   "road_m_total": 18617
+  },
+  "piura-01-r14c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 6352
+  },
+  "piura-01-r14c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 2275
+  },
+  "piura-01-r14c23": {
+   "road_m_near_change": 2867,
+   "road_m_total": 4290
+  },
+  "piura-01-r14c24": {
+   "road_m_near_change": 252,
+   "road_m_total": 10066
+  },
+  "piura-01-r14c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 11313
+  },
+  "piura-01-r14c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 4408
+  },
+  "piura-01-r14c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 4449
+  },
+  "piura-01-r15c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r15c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r15c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r15c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r15c04": {
+   "road_m_near_change": 636,
+   "road_m_total": 845
+  },
+  "piura-01-r15c05": {
+   "road_m_near_change": 823,
+   "road_m_total": 1346
+  },
+  "piura-01-r15c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r15c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r15c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r15c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r15c10": {
+   "road_m_near_change": 1013,
+   "road_m_total": 1589
+  },
+  "piura-01-r15c11": {
+   "road_m_near_change": 2719,
+   "road_m_total": 5305
+  },
+  "piura-01-r15c12": {
+   "road_m_near_change": 1897,
+   "road_m_total": 4341
+  },
+  "piura-01-r15c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 4895
+  },
+  "piura-01-r15c14": {
+   "road_m_near_change": 358,
+   "road_m_total": 9334
+  },
+  "piura-01-r15c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 15519
+  },
+  "piura-01-r15c16": {
+   "road_m_near_change": 50,
+   "road_m_total": 8357
+  },
+  "piura-01-r15c17": {
+   "road_m_near_change": 6131,
+   "road_m_total": 10348
+  },
+  "piura-01-r15c18": {
+   "road_m_near_change": 2937,
+   "road_m_total": 14833
+  },
+  "piura-01-r15c19": {
+   "road_m_near_change": 3801,
+   "road_m_total": 10648
+  },
+  "piura-01-r15c20": {
+   "road_m_near_change": 4637,
+   "road_m_total": 8470
+  },
+  "piura-01-r15c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 3139
+  },
+  "piura-01-r15c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 3168
+  },
+  "piura-01-r15c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 4224
+  },
+  "piura-01-r15c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 8149
+  },
+  "piura-01-r15c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 4419
+  },
+  "piura-01-r15c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 4345
+  },
+  "piura-01-r15c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 2994
+  },
+  "piura-01-r16c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r16c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r16c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r16c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r16c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r16c05": {
+   "road_m_near_change": 1468,
+   "road_m_total": 1499
+  },
+  "piura-01-r16c06": {
+   "road_m_near_change": 66,
+   "road_m_total": 66
+  },
+  "piura-01-r16c07": {
+   "road_m_near_change": 563,
+   "road_m_total": 563
+  },
+  "piura-01-r16c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r16c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 922
+  },
+  "piura-01-r16c10": {
+   "road_m_near_change": 2000,
+   "road_m_total": 2906
+  },
+  "piura-01-r16c11": {
+   "road_m_near_change": 1120,
+   "road_m_total": 4265
+  },
+  "piura-01-r16c12": {
+   "road_m_near_change": 46,
+   "road_m_total": 3455
+  },
+  "piura-01-r16c13": {
+   "road_m_near_change": 0,
+   "road_m_total": 4343
+  },
+  "piura-01-r16c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 9624
+  },
+  "piura-01-r16c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 7008
+  },
+  "piura-01-r16c16": {
+   "road_m_near_change": 5432,
+   "road_m_total": 9889
+  },
+  "piura-01-r16c17": {
+   "road_m_near_change": 835,
+   "road_m_total": 5802
+  },
+  "piura-01-r16c18": {
+   "road_m_near_change": 135,
+   "road_m_total": 6315
+  },
+  "piura-01-r16c19": {
+   "road_m_near_change": 2922,
+   "road_m_total": 8759
+  },
+  "piura-01-r16c20": {
+   "road_m_near_change": 318,
+   "road_m_total": 1082
+  },
+  "piura-01-r16c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 494
+  },
+  "piura-01-r16c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 2236
+  },
+  "piura-01-r16c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 4370
+  },
+  "piura-01-r16c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 6067
+  },
+  "piura-01-r16c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 1506
+  },
+  "piura-01-r16c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 1023
+  },
+  "piura-01-r16c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 1159
+  },
+  "piura-01-r17c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r17c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r17c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r17c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r17c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r17c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r17c06": {
+   "road_m_near_change": 1730,
+   "road_m_total": 1730
+  },
+  "piura-01-r17c07": {
+   "road_m_near_change": 1804,
+   "road_m_total": 1804
+  },
+  "piura-01-r17c08": {
+   "road_m_near_change": 1014,
+   "road_m_total": 1317
+  },
+  "piura-01-r17c09": {
+   "road_m_near_change": 750,
+   "road_m_total": 857
+  },
+  "piura-01-r17c10": {
+   "road_m_near_change": 4810,
+   "road_m_total": 7787
+  },
+  "piura-01-r17c11": {
+   "road_m_near_change": 3432,
+   "road_m_total": 6087
+  },
+  "piura-01-r17c12": {
+   "road_m_near_change": 484,
+   "road_m_total": 1886
+  },
+  "piura-01-r17c13": {
+   "road_m_near_change": 1586,
+   "road_m_total": 7515
+  },
+  "piura-01-r17c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 7453
+  },
+  "piura-01-r17c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 7544
+  },
+  "piura-01-r17c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 8325
+  },
+  "piura-01-r17c17": {
+   "road_m_near_change": 3340,
+   "road_m_total": 7075
+  },
+  "piura-01-r17c18": {
+   "road_m_near_change": 2317,
+   "road_m_total": 5138
+  },
+  "piura-01-r17c19": {
+   "road_m_near_change": 1561,
+   "road_m_total": 7538
+  },
+  "piura-01-r17c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 6489
+  },
+  "piura-01-r17c21": {
+   "road_m_near_change": 500,
+   "road_m_total": 3648
+  },
+  "piura-01-r17c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 2551
+  },
+  "piura-01-r17c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 1837
+  },
+  "piura-01-r17c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 3921
+  },
+  "piura-01-r17c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r17c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r17c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 1730
+  },
+  "piura-01-r18c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r18c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r18c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r18c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r18c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r18c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r18c06": {
+   "road_m_near_change": 7522,
+   "road_m_total": 7522
+  },
+  "piura-01-r18c07": {
+   "road_m_near_change": 4410,
+   "road_m_total": 4487
+  },
+  "piura-01-r18c08": {
+   "road_m_near_change": 218,
+   "road_m_total": 659
+  },
+  "piura-01-r18c09": {
+   "road_m_near_change": 933,
+   "road_m_total": 1766
+  },
+  "piura-01-r18c10": {
+   "road_m_near_change": 5946,
+   "road_m_total": 9780
+  },
+  "piura-01-r18c11": {
+   "road_m_near_change": 2360,
+   "road_m_total": 6039
+  },
+  "piura-01-r18c12": {
+   "road_m_near_change": 1038,
+   "road_m_total": 7925
+  },
+  "piura-01-r18c13": {
+   "road_m_near_change": 322,
+   "road_m_total": 11718
+  },
+  "piura-01-r18c14": {
+   "road_m_near_change": 2604,
+   "road_m_total": 16263
+  },
+  "piura-01-r18c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 15865
+  },
+  "piura-01-r18c16": {
+   "road_m_near_change": 2446,
+   "road_m_total": 4825
+  },
+  "piura-01-r18c17": {
+   "road_m_near_change": 2871,
+   "road_m_total": 6834
+  },
+  "piura-01-r18c18": {
+   "road_m_near_change": 3786,
+   "road_m_total": 5221
+  },
+  "piura-01-r18c19": {
+   "road_m_near_change": 2087,
+   "road_m_total": 3569
+  },
+  "piura-01-r18c20": {
+   "road_m_near_change": 2775,
+   "road_m_total": 5497
+  },
+  "piura-01-r18c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 2047
+  },
+  "piura-01-r18c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 112
+  },
+  "piura-01-r18c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 1537
+  },
+  "piura-01-r18c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 721
+  },
+  "piura-01-r18c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 742
+  },
+  "piura-01-r18c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 1121
+  },
+  "piura-01-r18c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 748
+  },
+  "piura-01-r19c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r19c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r19c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r19c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r19c04": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r19c05": {
+   "road_m_near_change": 348,
+   "road_m_total": 348
+  },
+  "piura-01-r19c06": {
+   "road_m_near_change": 3852,
+   "road_m_total": 4869
+  },
+  "piura-01-r19c07": {
+   "road_m_near_change": 7123,
+   "road_m_total": 8475
+  },
+  "piura-01-r19c08": {
+   "road_m_near_change": 1367,
+   "road_m_total": 9073
+  },
+  "piura-01-r19c09": {
+   "road_m_near_change": 490,
+   "road_m_total": 4873
+  },
+  "piura-01-r19c10": {
+   "road_m_near_change": 4833,
+   "road_m_total": 7685
+  },
+  "piura-01-r19c11": {
+   "road_m_near_change": 995,
+   "road_m_total": 7905
+  },
+  "piura-01-r19c12": {
+   "road_m_near_change": 1699,
+   "road_m_total": 4154
+  },
+  "piura-01-r19c13": {
+   "road_m_near_change": 2423,
+   "road_m_total": 20741
+  },
+  "piura-01-r19c14": {
+   "road_m_near_change": 6192,
+   "road_m_total": 23494
+  },
+  "piura-01-r19c15": {
+   "road_m_near_change": 1828,
+   "road_m_total": 5890
+  },
+  "piura-01-r19c16": {
+   "road_m_near_change": 834,
+   "road_m_total": 2014
+  },
+  "piura-01-r19c17": {
+   "road_m_near_change": 2095,
+   "road_m_total": 4027
+  },
+  "piura-01-r19c18": {
+   "road_m_near_change": 2752,
+   "road_m_total": 4567
+  },
+  "piura-01-r19c19": {
+   "road_m_near_change": 2399,
+   "road_m_total": 3134
+  },
+  "piura-01-r19c20": {
+   "road_m_near_change": 35,
+   "road_m_total": 1867
+  },
+  "piura-01-r19c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 1334
+  },
+  "piura-01-r19c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r19c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 800
+  },
+  "piura-01-r19c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 1125
+  },
+  "piura-01-r19c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 327
+  },
+  "piura-01-r19c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r19c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r20c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r20c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r20c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r20c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r20c04": {
+   "road_m_near_change": 195,
+   "road_m_total": 195
+  },
+  "piura-01-r20c05": {
+   "road_m_near_change": 15,
+   "road_m_total": 15
+  },
+  "piura-01-r20c06": {
+   "road_m_near_change": 8729,
+   "road_m_total": 11454
+  },
+  "piura-01-r20c07": {
+   "road_m_near_change": 1163,
+   "road_m_total": 5898
+  },
+  "piura-01-r20c08": {
+   "road_m_near_change": 0,
+   "road_m_total": 8128
+  },
+  "piura-01-r20c09": {
+   "road_m_near_change": 2275,
+   "road_m_total": 12821
+  },
+  "piura-01-r20c10": {
+   "road_m_near_change": 1285,
+   "road_m_total": 3984
+  },
+  "piura-01-r20c11": {
+   "road_m_near_change": 0,
+   "road_m_total": 4393
+  },
+  "piura-01-r20c12": {
+   "road_m_near_change": 1753,
+   "road_m_total": 10203
+  },
+  "piura-01-r20c13": {
+   "road_m_near_change": 2247,
+   "road_m_total": 11222
+  },
+  "piura-01-r20c14": {
+   "road_m_near_change": 0,
+   "road_m_total": 4120
+  },
+  "piura-01-r20c15": {
+   "road_m_near_change": 451,
+   "road_m_total": 2599
+  },
+  "piura-01-r20c16": {
+   "road_m_near_change": 117,
+   "road_m_total": 2965
+  },
+  "piura-01-r20c17": {
+   "road_m_near_change": 680,
+   "road_m_total": 4037
+  },
+  "piura-01-r20c18": {
+   "road_m_near_change": 2024,
+   "road_m_total": 5615
+  },
+  "piura-01-r20c19": {
+   "road_m_near_change": 2002,
+   "road_m_total": 3248
+  },
+  "piura-01-r20c20": {
+   "road_m_near_change": 988,
+   "road_m_total": 5523
+  },
+  "piura-01-r20c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 2815
+  },
+  "piura-01-r20c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 1219
+  },
+  "piura-01-r20c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 359
+  },
+  "piura-01-r20c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r20c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r20c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r20c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r21c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r21c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r21c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r21c03": {
+   "road_m_near_change": 568,
+   "road_m_total": 568
+  },
+  "piura-01-r21c04": {
+   "road_m_near_change": 2650,
+   "road_m_total": 2650
+  },
+  "piura-01-r21c05": {
+   "road_m_near_change": 1205,
+   "road_m_total": 1205
+  },
+  "piura-01-r21c06": {
+   "road_m_near_change": 3615,
+   "road_m_total": 3903
+  },
+  "piura-01-r21c07": {
+   "road_m_near_change": 607,
+   "road_m_total": 5005
+  },
+  "piura-01-r21c08": {
+   "road_m_near_change": 2571,
+   "road_m_total": 5196
+  },
+  "piura-01-r21c09": {
+   "road_m_near_change": 1478,
+   "road_m_total": 4729
+  },
+  "piura-01-r21c10": {
+   "road_m_near_change": 1028,
+   "road_m_total": 3906
+  },
+  "piura-01-r21c11": {
+   "road_m_near_change": 1463,
+   "road_m_total": 4305
+  },
+  "piura-01-r21c12": {
+   "road_m_near_change": 1706,
+   "road_m_total": 4767
+  },
+  "piura-01-r21c13": {
+   "road_m_near_change": 543,
+   "road_m_total": 3711
+  },
+  "piura-01-r21c14": {
+   "road_m_near_change": 1844,
+   "road_m_total": 2809
+  },
+  "piura-01-r21c15": {
+   "road_m_near_change": 472,
+   "road_m_total": 1164
+  },
+  "piura-01-r21c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 2196
+  },
+  "piura-01-r21c17": {
+   "road_m_near_change": 683,
+   "road_m_total": 3446
+  },
+  "piura-01-r21c18": {
+   "road_m_near_change": 1438,
+   "road_m_total": 2386
+  },
+  "piura-01-r21c19": {
+   "road_m_near_change": 464,
+   "road_m_total": 1708
+  },
+  "piura-01-r21c20": {
+   "road_m_near_change": 4270,
+   "road_m_total": 11522
+  },
+  "piura-01-r21c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 7281
+  },
+  "piura-01-r21c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 745
+  },
+  "piura-01-r21c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r21c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r21c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r21c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r21c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r22c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r22c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r22c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r22c03": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r22c04": {
+   "road_m_near_change": 2355,
+   "road_m_total": 2355
+  },
+  "piura-01-r22c05": {
+   "road_m_near_change": 3521,
+   "road_m_total": 3521
+  },
+  "piura-01-r22c06": {
+   "road_m_near_change": 2010,
+   "road_m_total": 2590
+  },
+  "piura-01-r22c07": {
+   "road_m_near_change": 3692,
+   "road_m_total": 4810
+  },
+  "piura-01-r22c08": {
+   "road_m_near_change": 1728,
+   "road_m_total": 4550
+  },
+  "piura-01-r22c09": {
+   "road_m_near_change": 0,
+   "road_m_total": 4277
+  },
+  "piura-01-r22c10": {
+   "road_m_near_change": 0,
+   "road_m_total": 4681
+  },
+  "piura-01-r22c11": {
+   "road_m_near_change": 2696,
+   "road_m_total": 3937
+  },
+  "piura-01-r22c12": {
+   "road_m_near_change": 5288,
+   "road_m_total": 7433
+  },
+  "piura-01-r22c13": {
+   "road_m_near_change": 1744,
+   "road_m_total": 6121
+  },
+  "piura-01-r22c14": {
+   "road_m_near_change": 338,
+   "road_m_total": 1703
+  },
+  "piura-01-r22c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 940
+  },
+  "piura-01-r22c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 2235
+  },
+  "piura-01-r22c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 2648
+  },
+  "piura-01-r22c18": {
+   "road_m_near_change": 72,
+   "road_m_total": 2979
+  },
+  "piura-01-r22c19": {
+   "road_m_near_change": 766,
+   "road_m_total": 2353
+  },
+  "piura-01-r22c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 17726
+  },
+  "piura-01-r22c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 3047
+  },
+  "piura-01-r22c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r22c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r22c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r22c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r22c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r22c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r23c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r23c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r23c02": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r23c03": {
+   "road_m_near_change": 407,
+   "road_m_total": 407
+  },
+  "piura-01-r23c04": {
+   "road_m_near_change": 515,
+   "road_m_total": 515
+  },
+  "piura-01-r23c05": {
+   "road_m_near_change": 4024,
+   "road_m_total": 4206
+  },
+  "piura-01-r23c06": {
+   "road_m_near_change": 89,
+   "road_m_total": 507
+  },
+  "piura-01-r23c07": {
+   "road_m_near_change": 1951,
+   "road_m_total": 4212
+  },
+  "piura-01-r23c08": {
+   "road_m_near_change": 1998,
+   "road_m_total": 7117
+  },
+  "piura-01-r23c09": {
+   "road_m_near_change": 1887,
+   "road_m_total": 7179
+  },
+  "piura-01-r23c10": {
+   "road_m_near_change": 193,
+   "road_m_total": 7891
+  },
+  "piura-01-r23c11": {
+   "road_m_near_change": 1987,
+   "road_m_total": 3418
+  },
+  "piura-01-r23c12": {
+   "road_m_near_change": 7057,
+   "road_m_total": 10172
+  },
+  "piura-01-r23c13": {
+   "road_m_near_change": 1596,
+   "road_m_total": 4915
+  },
+  "piura-01-r23c14": {
+   "road_m_near_change": 2698,
+   "road_m_total": 6166
+  },
+  "piura-01-r23c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 4413
+  },
+  "piura-01-r23c16": {
+   "road_m_near_change": 0,
+   "road_m_total": 3847
+  },
+  "piura-01-r23c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 1143
+  },
+  "piura-01-r23c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 1176
+  },
+  "piura-01-r23c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 1933
+  },
+  "piura-01-r23c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 7310
+  },
+  "piura-01-r23c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 5608
+  },
+  "piura-01-r23c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 761
+  },
+  "piura-01-r23c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r23c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r23c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r23c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r23c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r24c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r24c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r24c02": {
+   "road_m_near_change": 559,
+   "road_m_total": 723
+  },
+  "piura-01-r24c03": {
+   "road_m_near_change": 1490,
+   "road_m_total": 1490
+  },
+  "piura-01-r24c04": {
+   "road_m_near_change": 2761,
+   "road_m_total": 4892
+  },
+  "piura-01-r24c05": {
+   "road_m_near_change": 3173,
+   "road_m_total": 5412
+  },
+  "piura-01-r24c06": {
+   "road_m_near_change": 425,
+   "road_m_total": 2135
+  },
+  "piura-01-r24c07": {
+   "road_m_near_change": 2328,
+   "road_m_total": 5389
+  },
+  "piura-01-r24c08": {
+   "road_m_near_change": 128,
+   "road_m_total": 5258
+  },
+  "piura-01-r24c09": {
+   "road_m_near_change": 373,
+   "road_m_total": 2591
+  },
+  "piura-01-r24c10": {
+   "road_m_near_change": 879,
+   "road_m_total": 4974
+  },
+  "piura-01-r24c11": {
+   "road_m_near_change": 1529,
+   "road_m_total": 3178
+  },
+  "piura-01-r24c12": {
+   "road_m_near_change": 0,
+   "road_m_total": 3528
+  },
+  "piura-01-r24c13": {
+   "road_m_near_change": 4487,
+   "road_m_total": 10570
+  },
+  "piura-01-r24c14": {
+   "road_m_near_change": 30,
+   "road_m_total": 4850
+  },
+  "piura-01-r24c15": {
+   "road_m_near_change": 0,
+   "road_m_total": 8241
+  },
+  "piura-01-r24c16": {
+   "road_m_near_change": 1070,
+   "road_m_total": 3623
+  },
+  "piura-01-r24c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 1469
+  },
+  "piura-01-r24c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 2275
+  },
+  "piura-01-r24c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 3287
+  },
+  "piura-01-r24c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 10306
+  },
+  "piura-01-r24c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 5109
+  },
+  "piura-01-r24c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 1019
+  },
+  "piura-01-r24c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 785
+  },
+  "piura-01-r24c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r24c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r24c26": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r24c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r25c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 2168
+  },
+  "piura-01-r25c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 5905
+  },
+  "piura-01-r25c02": {
+   "road_m_near_change": 1001,
+   "road_m_total": 4534
+  },
+  "piura-01-r25c03": {
+   "road_m_near_change": 559,
+   "road_m_total": 1097
+  },
+  "piura-01-r25c04": {
+   "road_m_near_change": 1663,
+   "road_m_total": 2379
+  },
+  "piura-01-r25c05": {
+   "road_m_near_change": 3657,
+   "road_m_total": 6450
+  },
+  "piura-01-r25c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 4466
+  },
+  "piura-01-r25c07": {
+   "road_m_near_change": 342,
+   "road_m_total": 2803
+  },
+  "piura-01-r25c08": {
+   "road_m_near_change": 53,
+   "road_m_total": 4417
+  },
+  "piura-01-r25c09": {
+   "road_m_near_change": 107,
+   "road_m_total": 5331
+  },
+  "piura-01-r25c10": {
+   "road_m_near_change": 4956,
+   "road_m_total": 6525
+  },
+  "piura-01-r25c11": {
+   "road_m_near_change": 2420,
+   "road_m_total": 2420
+  },
+  "piura-01-r25c12": {
+   "road_m_near_change": 84,
+   "road_m_total": 1863
+  },
+  "piura-01-r25c13": {
+   "road_m_near_change": 4201,
+   "road_m_total": 6533
+  },
+  "piura-01-r25c14": {
+   "road_m_near_change": 3272,
+   "road_m_total": 7892
+  },
+  "piura-01-r25c15": {
+   "road_m_near_change": 882,
+   "road_m_total": 21204
+  },
+  "piura-01-r25c16": {
+   "road_m_near_change": 1407,
+   "road_m_total": 2945
+  },
+  "piura-01-r25c17": {
+   "road_m_near_change": 3053,
+   "road_m_total": 5248
+  },
+  "piura-01-r25c18": {
+   "road_m_near_change": 280,
+   "road_m_total": 5483
+  },
+  "piura-01-r25c19": {
+   "road_m_near_change": 705,
+   "road_m_total": 2905
+  },
+  "piura-01-r25c20": {
+   "road_m_near_change": 50,
+   "road_m_total": 3081
+  },
+  "piura-01-r25c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 4162
+  },
+  "piura-01-r25c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 1467
+  },
+  "piura-01-r25c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 1412
+  },
+  "piura-01-r25c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 2159
+  },
+  "piura-01-r25c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 3295
+  },
+  "piura-01-r25c26": {
+   "road_m_near_change": 30,
+   "road_m_total": 3263
+  },
+  "piura-01-r25c27": {
+   "road_m_near_change": 246,
+   "road_m_total": 650
+  },
+  "piura-01-r26c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r26c01": {
+   "road_m_near_change": 460,
+   "road_m_total": 1102
+  },
+  "piura-01-r26c02": {
+   "road_m_near_change": 3342,
+   "road_m_total": 3640
+  },
+  "piura-01-r26c03": {
+   "road_m_near_change": 2646,
+   "road_m_total": 3869
+  },
+  "piura-01-r26c04": {
+   "road_m_near_change": 910,
+   "road_m_total": 1000
+  },
+  "piura-01-r26c05": {
+   "road_m_near_change": 1758,
+   "road_m_total": 4052
+  },
+  "piura-01-r26c06": {
+   "road_m_near_change": 622,
+   "road_m_total": 8326
+  },
+  "piura-01-r26c07": {
+   "road_m_near_change": 428,
+   "road_m_total": 2867
+  },
+  "piura-01-r26c08": {
+   "road_m_near_change": 192,
+   "road_m_total": 4388
+  },
+  "piura-01-r26c09": {
+   "road_m_near_change": 3627,
+   "road_m_total": 8081
+  },
+  "piura-01-r26c10": {
+   "road_m_near_change": 1696,
+   "road_m_total": 3713
+  },
+  "piura-01-r26c11": {
+   "road_m_near_change": 2528,
+   "road_m_total": 6914
+  },
+  "piura-01-r26c12": {
+   "road_m_near_change": 905,
+   "road_m_total": 1080
+  },
+  "piura-01-r26c13": {
+   "road_m_near_change": 3101,
+   "road_m_total": 3551
+  },
+  "piura-01-r26c14": {
+   "road_m_near_change": 2331,
+   "road_m_total": 3129
+  },
+  "piura-01-r26c15": {
+   "road_m_near_change": 1809,
+   "road_m_total": 2358
+  },
+  "piura-01-r26c16": {
+   "road_m_near_change": 86,
+   "road_m_total": 1308
+  },
+  "piura-01-r26c17": {
+   "road_m_near_change": 0,
+   "road_m_total": 2503
+  },
+  "piura-01-r26c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 455
+  },
+  "piura-01-r26c19": {
+   "road_m_near_change": 66,
+   "road_m_total": 1269
+  },
+  "piura-01-r26c20": {
+   "road_m_near_change": 0,
+   "road_m_total": 2693
+  },
+  "piura-01-r26c21": {
+   "road_m_near_change": 0,
+   "road_m_total": 17551
+  },
+  "piura-01-r26c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 1522
+  },
+  "piura-01-r26c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r26c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 626
+  },
+  "piura-01-r26c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 534
+  },
+  "piura-01-r26c26": {
+   "road_m_near_change": 930,
+   "road_m_total": 1508
+  },
+  "piura-01-r26c27": {
+   "road_m_near_change": 558,
+   "road_m_total": 558
+  },
+  "piura-01-r27c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r27c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 397
+  },
+  "piura-01-r27c02": {
+   "road_m_near_change": 4641,
+   "road_m_total": 6876
+  },
+  "piura-01-r27c03": {
+   "road_m_near_change": 2858,
+   "road_m_total": 3545
+  },
+  "piura-01-r27c04": {
+   "road_m_near_change": 112,
+   "road_m_total": 2410
+  },
+  "piura-01-r27c05": {
+   "road_m_near_change": 18,
+   "road_m_total": 5211
+  },
+  "piura-01-r27c06": {
+   "road_m_near_change": 2028,
+   "road_m_total": 10636
+  },
+  "piura-01-r27c07": {
+   "road_m_near_change": 121,
+   "road_m_total": 1938
+  },
+  "piura-01-r27c08": {
+   "road_m_near_change": 540,
+   "road_m_total": 2895
+  },
+  "piura-01-r27c09": {
+   "road_m_near_change": 6455,
+   "road_m_total": 12336
+  },
+  "piura-01-r27c10": {
+   "road_m_near_change": 946,
+   "road_m_total": 13217
+  },
+  "piura-01-r27c11": {
+   "road_m_near_change": 2042,
+   "road_m_total": 4943
+  },
+  "piura-01-r27c12": {
+   "road_m_near_change": 2772,
+   "road_m_total": 2962
+  },
+  "piura-01-r27c13": {
+   "road_m_near_change": 2195,
+   "road_m_total": 2490
+  },
+  "piura-01-r27c14": {
+   "road_m_near_change": 2273,
+   "road_m_total": 3257
+  },
+  "piura-01-r27c15": {
+   "road_m_near_change": 1135,
+   "road_m_total": 7400
+  },
+  "piura-01-r27c16": {
+   "road_m_near_change": 518,
+   "road_m_total": 518
+  },
+  "piura-01-r27c17": {
+   "road_m_near_change": 946,
+   "road_m_total": 2194
+  },
+  "piura-01-r27c18": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r27c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 2407
+  },
+  "piura-01-r27c20": {
+   "road_m_near_change": 1384,
+   "road_m_total": 4933
+  },
+  "piura-01-r27c21": {
+   "road_m_near_change": 445,
+   "road_m_total": 2103
+  },
+  "piura-01-r27c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 1212
+  },
+  "piura-01-r27c23": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r27c24": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r27c25": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r27c26": {
+   "road_m_near_change": 176,
+   "road_m_total": 5379
+  },
+  "piura-01-r27c27": {
+   "road_m_near_change": 0,
+   "road_m_total": 6869
+  },
+  "piura-01-r28c00": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r28c01": {
+   "road_m_near_change": 0,
+   "road_m_total": 1129
+  },
+  "piura-01-r28c02": {
+   "road_m_near_change": 2075,
+   "road_m_total": 3148
+  },
+  "piura-01-r28c03": {
+   "road_m_near_change": 726,
+   "road_m_total": 1405
+  },
+  "piura-01-r28c04": {
+   "road_m_near_change": 1534,
+   "road_m_total": 2985
+  },
+  "piura-01-r28c05": {
+   "road_m_near_change": 0,
+   "road_m_total": 2272
+  },
+  "piura-01-r28c06": {
+   "road_m_near_change": 0,
+   "road_m_total": 5020
+  },
+  "piura-01-r28c07": {
+   "road_m_near_change": 0,
+   "road_m_total": 2706
+  },
+  "piura-01-r28c08": {
+   "road_m_near_change": 894,
+   "road_m_total": 2875
+  },
+  "piura-01-r28c09": {
+   "road_m_near_change": 1764,
+   "road_m_total": 7860
+  },
+  "piura-01-r28c10": {
+   "road_m_near_change": 1900,
+   "road_m_total": 6161
+  },
+  "piura-01-r28c11": {
+   "road_m_near_change": 177,
+   "road_m_total": 2593
+  },
+  "piura-01-r28c12": {
+   "road_m_near_change": 1913,
+   "road_m_total": 2810
+  },
+  "piura-01-r28c13": {
+   "road_m_near_change": 815,
+   "road_m_total": 1532
+  },
+  "piura-01-r28c14": {
+   "road_m_near_change": 598,
+   "road_m_total": 2364
+  },
+  "piura-01-r28c15": {
+   "road_m_near_change": 122,
+   "road_m_total": 4300
+  },
+  "piura-01-r28c16": {
+   "road_m_near_change": 1971,
+   "road_m_total": 3704
+  },
+  "piura-01-r28c17": {
+   "road_m_near_change": 1299,
+   "road_m_total": 1299
+  },
+  "piura-01-r28c18": {
+   "road_m_near_change": 97,
+   "road_m_total": 499
+  },
+  "piura-01-r28c19": {
+   "road_m_near_change": 0,
+   "road_m_total": 0
+  },
+  "piura-01-r28c20": {
+   "road_m_near_change": 1997,
+   "road_m_total": 2274
+  },
+  "piura-01-r28c21": {
+   "road_m_near_change": 598,
+   "road_m_total": 4690
+  },
+  "piura-01-r28c22": {
+   "road_m_near_change": 0,
+   "road_m_total": 2529
+  },
+  "piura-01-r28c23": {
+   "road_m_near_change": 588,
+   "road_m_total": 1106
+  },
+  "piura-01-r28c24": {
+   "road_m_near_change": 43,
+   "road_m_total": 1003
+  },
+  "piura-01-r28c25": {
+   "road_m_near_change": 340,
+   "road_m_total": 1000
+  },
+  "piura-01-r28c26": {
+   "road_m_near_change": 697,
+   "road_m_total": 3246
+  },
+  "piura-01-r28c27": {
+   "road_m_near_change": 974,
+   "road_m_total": 4159
+  }
+ }
+}

@@ -109,10 +109,12 @@ Lectura:
 - **Hasta el 11 de noviembre, la lluvia fuerte está en Tumbes y Piura.** En la costa de Áncash, Lima e Ica prácticamente no ha llovido; en Lambayeque, poco.
 - **El estado de emergencia del 3 de noviembre (D.S. 149-2026-PCM) es preventivo**: declara 1 380 distritos de 25 regiones por riesgo ante El Niño 2026-2027, no por daños ya ocurridos. Que una región esté en la lista no significa que ya tenga un evento que mapear.
 - Lo reportado en Áncash es en Huaraz: zona urbana de sierra, donde el radar falla por el relieve.
-- Lima e Ica están en la zona UTM 18S (`EPSG:32718`); el contrato v1 solo admite `EPSG:32717`.
+- Lima, Ica y Huaraz están en la zona UTM 18S (`EPSG:32718`), válida desde el contrato v1.1.0.
 - La temporada de lluvias de El Niño suele ir de diciembre a marzo: es probable que estas regiones tengan eventos más adelante, no ahora.
 
-El barrido OPERA de la costa norte llega hasta la latitud −6,6 y cubre la mayor parte del llano de Lambayeque: ahí no hay aumento neto de agua. No se barrió Áncash, Lima ni Ica.
+El barrido OPERA de la costa norte llega hasta la latitud −6,6 y cubre la mayor parte del llano de Lambayeque: ahí no hay aumento neto de agua. No se barrió Áncash, Lima ni Ica con OPERA.
+
+Con NISAR sí se leyeron todas: ver `ciudades/README.md`. Lambayeque, Chimbote, Lima e Ica son estables. **Huaraz muestra un cambio grande el 17 de octubre** (58,7 % del área subió ≥ 3 dB, par de igual madurez; 0,0 % en el par previo sin evento), compatible con terreno mojado y no con agua abierta: OPERA no ve agua nueva ahí.
 
 ## Humedad de suelo (SMAP `SPL3SMP_E`, 9 km) frente a NISAR
 
@@ -174,6 +176,7 @@ Lectura: el brillo de NISAR en banda L sigue a la humedad del suelo en ambas zon
 | `humedad-smap.json` | Humedad de suelo SMAP por fecha, pasada y celda |
 | `nisar-gamma0-medio.json` | γ⁰ HHHH medio de NISAR por fecha en Piura y Tumbes |
 | `sechura-01/` | Sechura preparado para NISAR: plan, grilla, par previo y control |
+| `ciudades/` | **NISAR por ciudad**: serie de fechas en Áncash, Lambayeque, Lima, Ica, Tumbes y Piura, y carpetas de Huaraz, Tumbes, Piura y Jequetepeque con el mismo contenido que el par completo de Tailandia (cambio NISAR, OPERA y vías por celda; cumplen el contrato v1.1.0) |
 
 Es material de exploración, no un bundle. No se incluyen los rásteres ni los mapas OPERA descargados: se regeneran. Las salidas de trabajo están en `data-pipeline/out/validacion/`, que no entra al repositorio.
 

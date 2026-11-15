@@ -1,0 +1,24 @@
+{
+  "pixels": 24000,
+  "valid_fraction": 0.9999583333333333,
+  "warnings": [
+    "casi sin cambio (riesgo 2 del plan: contar como linea base)"
+  ],
+  "decrease_fraction": 0.00033334722280095006,
+  "increase_fraction": 0.0004583524313513063,
+  "mean_db": -0.10983651876449585,
+  "std_db": 0.4578816592693329,
+  "p02_db": -1.0652457666397095,
+  "p50_db": -0.096904456615448,
+  "p98_db": 0.812082211971283,
+  "delta_db_threshold": 3.0,
+  "mask_rule_confirmed": true,
+  "native_pixel_m": 10.0,
+  "multilook_meters": 100,
+  "analysis_pixel_m": 100.0,
+  "excluded_fraction": null,
+  "native_looks_median": 4.67,
+  "effective_looks": 467.0,
+  "speckle_std_db": 0.284,
+  "expected_false_change_fraction": 0.0
+}

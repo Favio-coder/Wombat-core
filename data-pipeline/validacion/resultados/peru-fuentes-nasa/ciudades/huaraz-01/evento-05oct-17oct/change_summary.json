@@ -1,0 +1,24 @@
+{
+  "pixels": 24000,
+  "valid_fraction": 0.9920833333333333,
+  "warnings": [
+    "mediana lejos de 0 dB: posible diferencia de calibracion o de modo"
+  ],
+  "decrease_fraction": 8.399832003359933e-05,
+  "increase_fraction": 0.5867702645947082,
+  "mean_db": 3.47251296043396,
+  "std_db": 1.5112895965576172,
+  "p02_db": 0.8332214677333831,
+  "p50_db": 3.3303263187408447,
+  "p98_db": 6.954026317596435,
+  "delta_db_threshold": 3.0,
+  "mask_rule_confirmed": true,
+  "native_pixel_m": 10.0,
+  "multilook_meters": 100,
+  "analysis_pixel_m": 100.0,
+  "excluded_fraction": 0.0079,
+  "native_looks_median": 4.67,
+  "effective_looks": 467.0,
+  "speckle_std_db": 0.284,
+  "expected_false_change_fraction": 0.0
+}

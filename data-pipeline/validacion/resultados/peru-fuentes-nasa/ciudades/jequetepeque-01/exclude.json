@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-11-15T05:59:25Z",
+  "base_pair": {
+    "t1": {
+      "granule": "NISAR_L2_PR_GCOV_034_011_D_092_4005_DHDH_A_20261024T233232_20261024T233306_P05036_N_F_J_001",
+      "datetime": "2026-10-24T23:32:32Z"
+    },
+    "t2": {
+      "granule": "NISAR_L2_PR_GCOV_035_011_D_092_4005_DHDH_A_20261105T233229_20261105T233306_P05036_N_F_J_001",
+      "datetime": "2026-11-05T23:32:29Z"
+    },
+    "maturity": "VALIDATED"
+  },
+  "block_m": 100,
+  "water_source": "raster externo: agua_opera_25oct.tif",
+  "water_db": null,
+  "change_db": 999.0,
+  "grow_blocks": 1,
+  "fraction_water": 0.2159,
+  "fraction_habitual_change": 0.0,
+  "fraction_excluded": 0.2236,
+  "rule": "R13: agua permanente y zonas que cambian sin evento se enmascaran y se declara"
+}

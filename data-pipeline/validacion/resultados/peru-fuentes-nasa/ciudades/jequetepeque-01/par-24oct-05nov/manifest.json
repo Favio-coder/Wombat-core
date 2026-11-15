@@ -1,0 +1,67 @@
+{
+  "aoi_id": "jequetepeque-01",
+  "aoi_name": "Valle bajo del Jequetepeque: Chepen - Pacasmayo (recuadro provisional)",
+  "data_origin": "nisar_real",
+  "crs_compute": "EPSG:32717",
+  "bbox_wgs84": [
+    -79.659582,
+    -7.407316,
+    -79.396256,
+    -7.198475
+  ],
+  "nisar": {
+    "product": "NISAR_L2_GCOV",
+    "maturity": "VALIDATED",
+    "frame": "092",
+    "orbit_direction": "descending",
+    "mode": "4005",
+    "frequency": "A",
+    "polarization": "HHHH",
+    "pixel_spacing_m": 10,
+    "t1": {
+      "granule": "NISAR_L2_PR_GCOV_034_011_D_092_4005_DHDH_A_20261024T233232_20261024T233306_P05036_N_F_J_001",
+      "datetime": "2026-10-24T23:32:32Z"
+    },
+    "t2": {
+      "granule": "NISAR_L2_PR_GCOV_035_011_D_092_4005_DHDH_A_20261105T233229_20261105T233306_P05036_N_F_J_001",
+      "datetime": "2026-11-05T23:32:29Z"
+    },
+    "comparable": true,
+    "comparable_checks": {
+      "same_frame": true,
+      "same_orbit_direction": true,
+      "same_mode": true,
+      "same_frequency": true,
+      "same_polarization": true,
+      "same_maturity": true
+    }
+  },
+  "opera": {
+    "product": "OPERA_L3_DSWx-S1",
+    "derived_from": "Sentinel-1",
+    "status": "available",
+    "t1": {
+      "granules": [
+        "OPERA_L3_DSWx-S1_T17MPM_20261025T105352Z_20261026T015425Z_S1C_30_v1.0",
+        "OPERA_L3_DSWx-S1_T17MPN_20261025T105321Z_20261025T230955Z_S1C_30_v1.0"
+      ],
+      "gap_days": 1
+    },
+    "t2": {
+      "granules": [
+        "OPERA_L3_DSWx-S1_T17MPM_20261106T105352Z_20261108T090436Z_S1C_30_v1.0",
+        "OPERA_L3_DSWx-S1_T17MPN_20261106T105322Z_20261108T072413Z_S1C_30_v1.0"
+      ],
+      "gap_days": 1
+    }
+  },
+  "pipeline": {
+    "commit": "b9782df",
+    "risk_config_version": "risk-config/0.1"
+  },
+  "osm": {
+    "query": "[out:json][timeout:180];way[\"highway\"](-7.41,-79.66,-7.19,-79.39);out geom; filtrado a clases de red vial (sin service, footway, path, steps, construction)",
+    "retrieved_at": "2026-11-15T05:53:47Z",
+    "attribution": "© OpenStreetMap contributors"
+  }
+}

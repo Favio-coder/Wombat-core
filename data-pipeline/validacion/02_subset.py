@@ -97,7 +97,8 @@ def main(argv=None) -> int:
         t1=scenes["t1"], t2=scenes["t2"], pixel_spacing_m=round(info["pixel_spacing_m"]),
         pipeline_commit=_commit(), crs_compute=grid.crs)
     if grid.crs != "EPSG:32717":
-        print(f"NOTA: AOI en {grid.crs}, fuera del contrato v1 (EPSG:32717): corrida de validacion.")
+        print(f"NOTA: AOI en {grid.crs}, no en la zona de piura-01 (EPSG:32717). "
+              "Valido desde el contrato v1.1.0.")
     out.mkdir(parents=True, exist_ok=True)
     (out / "manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n",
                                        encoding="utf-8")
